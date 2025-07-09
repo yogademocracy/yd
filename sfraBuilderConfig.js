@@ -36,8 +36,7 @@ module.exports.excludeJS = {
  */
 module.exports.cartridges = [
     'cartridges/app_storefront_base',
-    'cartridges/app_yd_core',
-    'cartridges/app_yd_b2c'
+    'cartridges/app_yd_core'
 ];
 
 /**

@@ -1,0 +1,142 @@
+// Atom Classes are used by content managers directly:
+// <h1 class="a-headline-xl">Headline XL</h1>
+
+// Devs should use them too (most effective way to minimize final CSS file),
+// but if for some reason some custom element should not have this class name in markup
+// then it's possible to use it
+// a) via extend (will add one more classname to final CSS for this atom):
+//    .custom-headline {
+//        @extend .a-headline-xl;
+//        ...
+//    }
+// b) via direct mixin include (will create copy of styles in final CSS!):
+//    .custom-headline {
+//        @include a-headline-lg;
+//        ...
+//    }
+
+// ********************
+// TEXT ATOMS: Headline
+
+/* stylelint-disable-next-line */
+/*md
+
+# Typography
+
+## Headlines (.a-headline-*)
+
+```html_example
+<h1 class="a-headline-lg">Headline lg</h1>
+<h2 class="a-headline-md">Headline md</h2>
+<h3 class="a-headline-sm">Headline sm</h3>
+```
+
+## Headlines (h1, h2, h3, h4, h5, h6)
+
+```html_example
+<h1>Headline h1 .h1</h1>
+<h2>Headline h2 .h2</h2>
+<h3>Headline h3 .h3</h3>
+<h4>Headline h4 .h4</h4>
+<h5>Headline h5 .h5</h5>
+<h6>Headline h6 .h6</h6>
+```
+
+## Text color/fonts/background
+
+```html_example
+<p>Default paragraph</p>
+
+<p class="p-3 mb-2 bg-primary text-secondary">.bg-primary .text-secondary</p>
+<p class="p-3 mb-2 bg-secondary text-primary">.bg-secondary .text-primary</p>
+<p class="p-3 mb-2 bg-warning text-dark">.bg-warning</p>
+<p class="p-3 mb-2 bg-info text-white">.bg-info</p>
+<p class="p-3 mb-2 bg-light text-dark">.bg-light</p>
+<p class="p-3 mb-2 bg-dark text-white">.bg-dark</p>
+<p class="p-3 mb-2 bg-white text-dark">.bg-white</p>
+<p class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</p>
+```
+*/
+
+$headlines: () !default;
+$headlines: map-merge(
+  (
+    lg: (font-size: rem(49), line-height: 1.1, letter-spacing: 0.015em),
+    md:  (font-size: rem(21), line-height: 1.6, letter-spacing: 0.015em),
+    sm:  (font-size: rem(12), line-height: 1.8, letter-spacing: 0.015em),
+  ),
+  $headlines
+);
+
+// use refApp mixin
+@include build-headlines($headlines);
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    line-height: 1.2;
+    color: $headline-color;
+}
+
+h1,
+.h1 {
+    font-size: rem(28);
+
+    @include media-breakpoint-down(lg) {
+        font-size: rem(22);
+    }
+}
+
+h2,
+.h2 {
+    font-size: rem(25);
+
+    @include media-breakpoint-down(lg) {
+        font-size: rem(21);
+    }
+}
+
+h3,
+.h3 {
+    font-size: rem(23);
+
+    @include media-breakpoint-down(lg) {
+        font-size: rem(19);
+    }
+}
+
+h4,
+.h4 {
+    font-size: rem(21);
+
+    @include media-breakpoint-down(lg) {
+        font-size: rem(18);
+    }
+}
+
+h5,
+.h5 {
+    font-size: rem(19);
+
+    @include media-breakpoint-down(lg) {
+        font-size: rem(17);
+    }
+}
+
+h6,
+.h6 {
+    font-size: rem(17);
+
+    @include media-breakpoint-down(lg) {
+        font-size: rem(16);
+    }
+}

@@ -23,9 +23,10 @@
     "lint:scss": "stylelint cartridges/**/cartridge/client/**/*.scss",
     "lint:scss:fix": "stylelint cartridges/**/cartridge/client/**/*.scss --fix",
     "prepare": "husky",
+    "styleguide:yd": "atlas-guide --build=./cartridges/app_yd_core/.atlasrc.json",
     "library:build": "node ./bin/libraryMerge.js --path=/../site_template/",
     "library:page": "node ./bin/libraryExtractPage.js --path=/../site_template/",
-    "icons:yd": "fantasticon --config cartridges/app_yd_b2c/fantasticonrc.json"
+    "icons:yd": "fantasticon --config cartridges/app_yd_core/fantasticonrc.json"
   },
   "dependencies": {
     "atlas-guide": "^2.2.10",

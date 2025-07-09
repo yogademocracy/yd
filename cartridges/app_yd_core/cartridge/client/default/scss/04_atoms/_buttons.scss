@@ -1,0 +1,59 @@
+/* stylelint-disable-next-line */
+/*md
+
+## Buttons (.btn-*)
+
+### Default buttons state
+
+### Default
+#### White background
+```html_example
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+```
+
+### Disabled buttons state
+
+```html_example
+<button type="button" class="btn btn-primary" disabled>Primary</button>
+<button type="button" class="btn btn-secondary" disabled>Secondary</button>
+```
+
+### Full width buttons state (.btn-block)
+
+```html_example
+<button type="button" class="btn btn-primary btn-block">Primary</button>
+<button type="button" class="btn btn-secondary btn-block">Secondary</button>
+```
+
+ */
+
+// bootstrap-override and extends
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(15) rem(25);
+}
+
+.btn-primary {
+    color: $white;
+    background: $c-yd-forest-sage;
+    border: rem(1) solid $c-yd-forest-sage;
+
+    @include hover-and-focus() {
+        background-color: $c-yd-forest-green;
+        border-color: $c-yd-forest-green;
+    }
+}
+
+.btn-secondary {
+    color: $black;
+    background: $white;
+    border: rem(1) solid $black;
+
+    @include hover-and-focus() {
+        color: $white;
+        background: $black;
+    }
+}
