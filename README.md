@@ -142,7 +142,7 @@ npm run styleguide:b2c
 ```
 Styleguide will be accessible locally via
 ```
-cartridges/app_yd_b2c/cartridge/static/default/styleguide/guide/index.html
+cartridges/app_yd_core/cartridge/static/default/styleguide/guide/index.html
 ```
 
 ## Icons
