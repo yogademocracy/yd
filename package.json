@@ -1,0 +1,89 @@
+{
+  "name": "yoga-democracy",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "postinstall": "npm run swb:install",
+    "swb:install": "cd swb && npm install",
+    "compile:fonts": "node ./swb/scripts/Makefile.js compileFonts",
+    "compile:dev": "node ./swb/webpackHandling/webpack.js --config ./swb/webpack.config.js --env dev --env local",
+    "compile:prod": "node ./swb/webpackHandling/webpack.js --config ./swb/webpack.config.js --env local",
+    "dev": "npm run compile:dev",
+    "prod": "npm run compile:prod",
+    "wba": "node ./swb/webpackHandling/webpack.js --config ./swb/webpack.config.js --env dev=false --env local --env useLinter --env wba",
+    "watch": "node ./swb/webpackHandling/webpack.js --config ./swb/webpack.config.js --env dev --watch --env local",
+    "watch:lint": "node ./swb/webpackHandling/webpack.js --config ./swb/webpack.config.js --env dev --env useLinter --watch --env local",
+    "watch:reload": "node ./swb/webpackHandling/webpack.js --config ./swb/webpack.config.js --env dev --watch --env local --env livereload",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:fix": "npm run lint:js:fix && npm run lint:scss:fix",
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint . --fix",
+    "lint:scss": "stylelint cartridges/**/cartridge/client/**/*.scss",
+    "lint:scss:fix": "stylelint cartridges/**/cartridge/client/**/*.scss --fix",
+    "prepare": "husky",
+    "library:build": "node ./bin/libraryMerge.js --path=/../site_template/",
+    "library:page": "node ./bin/libraryExtractPage.js --path=/../site_template/",
+    "icons:yd": "fantasticon --config cartridges/app_yd_b2c/fantasticonrc.json"
+  },
+  "dependencies": {
+    "atlas-guide": "^2.2.10",
+    "bootstrap": "^4.6.2",
+    "cleave.js": "^1.6.0",
+    "datatables.net": "^2.2.2",
+    "datatables.net-dt": "^2.2.2",
+    "datatables.net-responsive-dt": "^3.0.4",
+    "datatables.net-searchpanes-dt": "^2.3.3",
+    "datatables.net-select": "^3.0.0",
+    "dompurify": "^3.2.4",
+    "flag-icons": "7.3.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.7.1",
+    "js-cookie": "^3.0.5",
+    "lodash": "^4.17.21",
+    "swiper": "^11.2.5",
+    "url": "^0.11.4",
+    "web-vitals": "^5.0.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@twbs/fantasticon": "^3.1.0",
+    "app-root-path": "^3.1.0",
+    "command-line-args": "^6.0.1",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "events": "^3.3.0",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "isml-linter": "^5.43.9",
+    "lint-staged": "^15.4.3",
+    "stylelint": "^16.15.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-prettier": "^5.0.3",
+    "stylelint-scss": "^6.11.1",
+    "xml-formatter": "^3.6.4",
+    "xml2js": "^0.6.2"
+  },
+  "lint-staged": {
+    "*.{js,ds}": [
+      "eslint"
+    ],
+    "*.scss": [
+      "stylelint --fix --allow-empty-input"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "iOS >= 15.7",
+    "Safari >= 15.7",
+    "last 5 Chrome versions",
+    "last 4 Edge versions"
+  ],
+  "commitMessage": {
+    "commitMessageRegex": "^[A-Z0-9]{2,10}-[0-9]{2,5}:(FIX|CHANGE|ADD): [a-zA-Z0-9 \\.,\\'\"\\[\\]]+|^(Merge|Revert|Finish).+",
+    "commitMessageComment": "Your message format is slightly different than required. 'Please use 'TICKET-ID:TYPE: Comment' format. Ex. 'COL-123:ADD: Added cookie banner'"
+  },
+  "sfraBuilderConfig": "./sfraBuilderConfig"
+}

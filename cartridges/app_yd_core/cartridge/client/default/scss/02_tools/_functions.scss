@@ -1,0 +1,35 @@
+@use "sass:math";
+
+// Remove the unit of a length
+// @param {Number} $number - Number to remove unit from
+// @return {Number} - Unitless number
+@function strip-unit($number) {
+    @if type-of($number) == "number" and not unitless($number) {
+        @return math.div($number, $number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+@function to-base64($url) {
+    // @return $url;
+    @return "b64---" + str-replace($url, "../") + "---";
+}
+
+// Replace `$search` with `$replace` in `$string`
+// Used on our SVG icon backgrounds for custom forms.
+//
+// @param {String} $string - Initial string
+// @param {String} $search - Substring to replace
+// @param {String} $replace ('') - New value
+// @return {String} - Updated string
+//
+// NOTE: REUSABLE FROM BOOTSTRAP. Here - just for visibility
+// @function str-replace($string, $search, $replace: "") {...}
+
+
+// Escape-SVG function
+// Requires the use of quotes around data URIs.
+//
+// NOTE: REUSABLE FROM BOOTSTRAP. Here - just for visibility
+// @function escape-svg($string) {...}

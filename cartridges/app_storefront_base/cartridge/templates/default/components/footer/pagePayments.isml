@@ -1,0 +1,39 @@
+<iscomment>
+    from scripts.isml (int_cybs_sfra)
+</iscomment>
+<isset name="googlePayMerchantIdPref" value="${require('*/cartridge/configuration/index').googlePayMerchantId}" scope="page" />
+<isset name="merchantIDPref" value="${require('*/cartridge/configuration/index').merchantID}" scope="page" />
+<isset name="googlePayEnabled" value="${require('*/cartridge/configuration/index').googlePayEnabled}" scope="page" />
+<isset name="googlePayEnvironmentPref" value="${require('*/cartridge/configuration/index').googlePayEnvironment}" scope="page" />
+
+<input type="hidden" name="googlePayMerchantID" id="googlePayMerchantID" value="${googlePayMerchantIdPref}"/>
+<input type="hidden" name="googlePaygatewayMerchantId" id="googlePaygatewayMerchantId" value="${merchantIDPref}"/>
+<input type="hidden" name="isGooglePayEnabled" id="isGooglePayEnabled" value="${googlePayEnabled}"/>
+<input type="hidden" name="googlePayEnvironment" id="googlePayEnvironment" value="${googlePayEnvironmentPref}"/>
+<input type="hidden" name="gPayPaymentMethodEnabled" id="gPayPaymentMethodEnabled" value="${dw.order.PaymentMgr.getPaymentMethod('DW_GOOGLE_PAY').isActive()}"/>
+
+<iscomment>
+    from page.isml (int_cybs_sfra)
+</iscomment>
+<isset name="enableGooglePayOnMiniCart" value="${require('*/cartridge/configuration/index').enableGooglePayOnMiniCart}" scope="page" />
+<isset name="enableGooglePayOnCart" value="${require('*/cartridge/configuration/index').enableGooglePayOnCart}" scope="page" />
+
+<input type="hidden" name="isGooglePayEnabledOnMiniCart" id="isGooglePayEnabledOnMiniCart" value="${enableGooglePayOnMiniCart}"/>
+	<input type="hidden" name="isGooglePayEnabledOnCart" id="isGooglePayEnabledOnCart" value="${enableGooglePayOnCart}"/>
+	<input type="hidden" name="cartridgeEnabled" id="cartridgeEnabled" value="${require('*/cartridge/configuration/index').cartridgeEnabled}"/>
+
+	<isif condition="${pdict.currentStage == null}">
+		<script defer src="${URLUtils.staticURL('/js/googlePayBilling.js')}" type="text/javascript"></script>
+
+		<script>
+	 var googlePayVariables = {
+		currencyCode: "${session.getCurrency().getCurrencyCode()}",
+		totalPriceStatus: 'FINAL',
+		sessionCallBack : "${dw.web.URLUtils.url('CheckoutServices-GetGooglePayToken')}",
+		returnURL : "${dw.web.URLUtils.https('Checkout-Begin', 'stage', 'placeOrder')}",
+		cartURL : "${dw.web.URLUtils.https('Checkout-Begin', 'stage', 'payment','payerAuthError', Resource.msg('message.payerAuthError', 'error', null))}"
+		//"${dw.web.URLUtils.https('Cart-Show')}",
+	 	}
+	 window.googlepayval = googlePayVariables;
+	</script>
+	</isif>

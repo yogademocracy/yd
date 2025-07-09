@@ -1,0 +1,12 @@
+{
+    "caches": [
+        {
+            "id": "SitePreferences",
+            "expireAfterSeconds": 14400
+        },
+        {
+            "id": "Affiliate",
+            "expireAfterSeconds": 900
+        }
+    ]
+}

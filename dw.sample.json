@@ -1,0 +1,9 @@
+{
+    "hostname": "XXXX-XXX.sandbox.XXXX.dx.commercecloud.salesforce.com",
+    "username": "<YOUR_EMAIL>",
+    "password": "<YOUR_PASWORD>",
+    "code-version": "<YOUR_CODE_VERSION>",
+    "cartridgeResolution": "ask",
+    "client-id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "client-secret": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+}

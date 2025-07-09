@@ -1,0 +1,154 @@
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
+
+@mixin visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    font-size: 0;
+    height: 1px;
+    margin: -1px;
+    max-width: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@mixin custom-scrollbar($bg-color: $grey, $thumb-color: $grey, $scrollbar-width: 6px, $scrollbar-height: 6px, $border-radius: 3px) {
+    &::-webkit-scrollbar {
+        width: $scrollbar-width;
+        height: $scrollbar-height;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $thumb-color;
+        border-radius: $border-radius;
+        margin: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $bg-color;
+        border-radius: $border-radius;
+    }
+}
+
+@mixin line-clamping($lines: 3) {
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/// Generates @font-face declarations from a map of fonts.
+/// @param {Map} $fonts - A map where each key is the font name and the value is the font weight.
+/// @param {String} $path - Optional. The path to the fonts folder. Defaults to "../fonts".
+@mixin font-faces($font-family, $fonts, $path: "../fonts") {
+    @each $fontName, $fontWeight in $fonts {
+        @font-face {
+            font-family: "#{$font-family}";
+            src: url("#{$path}/#{$fontName}.woff2") format("woff2");
+            font-weight: $fontWeight;
+            font-style: normal;
+            font-display: swap;
+        }
+    }
+}
+
+@mixin hover-and-focus() {
+    &:not(.disabled, [disabled]) {
+        @include hover {
+            @content;
+        }
+
+        &:focus,
+        &.focus {
+            @content;
+        }
+    }
+}
+
+// Styleguuide additional mixins
+
+// Mixin for a single headline
+@mixin headline($size, $default-color: $headline-color, $default-fw: $headline-weight) {
+    $styles: map-get($headlines, $size);
+
+    @if $styles {
+        @each $property, $value in $styles {
+            #{$property}: $value;
+        }
+
+        // Apply default values only if they are missing in the map
+        @if not map-has-key($styles, color) {
+            color: var(--text-color, $default-color);
+        }
+        @if not map-has-key($styles, font-weight) {
+            font-weight: $default-fw;
+        }
+    } @else {
+        @warn "No headline settings defined for `#{$size}`.";
+    }
+}
+
+// Mixin to generate all headlines
+@mixin build-headlines($headlines, $color: $headline-color, $fw: $headline-weight) {
+    @each $size, $styles in $headlines {
+        .a-headline-#{$size} {
+            @include headline($size, $color, $fw);
+        }
+    }
+}
+
+// Mixin to generate all color helpers
+@mixin build-color-helpers($color-map) {
+    @each $name, $color in $color-map {
+        .bg-#{$name} {
+            background-color: $color !important;
+        }
+        .text-#{$name} {
+            color: $color !important;
+        }
+    }
+}
+
+@mixin build-site-width-helpers($container-max-widths) {
+    @each $breakpoint, $max-width in $container-max-widths {
+        .u-site-width-#{$breakpoint} {
+            max-width: $max-width !important;
+        }
+    }
+}
+
+@mixin build-gap-helpers($spacers, $breakpoints) {
+    // Generate base classes (for xs breakpoint - no media query)
+    @each $size, $value in $spacers {
+        .gap-#{$size} {
+            gap: $value !important;
+        }
+    }
+
+    // Generate responsive classes for breakpoints (excluding xs)
+    @each $breakpoint, $min in $breakpoints {
+        @if $breakpoint != xs {
+            @media (min-width: $min) {
+                @each $size, $value in $spacers {
+                    .gap-#{$breakpoint}-#{$size} {
+                        gap: $value !important;
+                    }
+                }
+            }
+        }
+    }
+}

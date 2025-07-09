@@ -1,0 +1,395 @@
+[
+    {
+        "countryCode": "US",
+        "name": {
+            "en_US": "USA"
+        },
+        "continent": "northamerica",
+        "locales": [
+            "en_US"
+        ],
+        "currencyCode": "USD",
+        "taxation": {
+            "type": "net"
+        },
+        "priceBooks": [
+            "b2c-na-us-usd-list",
+            "b2c-na-us-usd-sale"
+        ],
+        "dynamicForms": {
+            "addressDetails": {
+				"addressId": {
+					"skip": true
+				},
+                "country": {
+                    "type": "select",
+                    "rowclass": "col-sm-6 js-country",
+                    "attributes": {
+                        "data-cmp": "inputSelectCountry"
+                    }
+                },
+                "postal": {
+                    "rowclass": "hidden",
+                    "inputFieldClass": ""
+                },
+                "postalcodes": [
+                    {
+                        "rowclass": "col-sm-6 js-postal",
+                        "fieldName": "postal",
+                        "required": true,
+                        "type": "input"
+                    }
+                ],
+                "states": [
+                    {
+                        "fieldName": "state",
+                        "type": "select",
+                        "required": true,
+                        "rowclass": "col-sm-6 js-state"
+                    }
+                ],
+                "address1": {
+                    "rowclass": "col-sm-12 js-address1",
+                    "required": true,
+                    "type": "input"
+                },
+                "phone": {
+                    "attributes": {
+                        "pattern": "[0-9]*",
+                        "maxlength": 25
+                    },
+                    "type": "tel",
+                    "inputFieldClass": "",
+					"rowclass": "col-sm-12 js-phone",
+                    "skippIn": "billing"
+                },
+                "firstName": {
+                    "rowclass": "col-sm-6 js-firstName",
+                    "type": "input"
+                },
+                "lastName": {
+                    "rowclass": "col-sm-6 js-lastName",
+                    "type": "input"
+                },
+                "region": {
+                    "label": {
+                            "property": "label.region",
+                            "file": "forms"
+                        },
+                    "rowclass": "col-sm-6 js-region hidden",
+                    "type": "input"
+                },
+                "county": {
+                    "rowclass": "col-sm-6 js-county hidden",
+                    "type": "input"
+                },
+                "address2": {
+                    "rowclass": "col-sm-12 js-address2",
+                    "type": "input"
+                },
+                "city": {
+                    "rowclass": "col-sm-6 js-city",
+                    "type": "input"
+                }
+            }
+        }
+    },{
+        "countryCode": "CA",
+        "name": {
+            "en_CA": "CAD"
+        },
+        "continent": "northamerica",
+        "locales": [
+            "en_CA"
+        ],
+        "currencyCode": "CAD",
+        "taxation": {
+            "type": "gross"
+        },
+        "priceBooks": [
+            "b2c-na-ca-cad-list",
+            "b2c-na-ca-cad-sale"
+        ],
+        "dynamicForms": {
+            "addressDetails": {
+                "country": {
+                    "type": "select",
+                    "rowclass": "js-country"
+                },
+                "title": {
+                    "type": "select"
+                },
+                "postalcodes": [
+                    {
+                        "fieldName": "postal",
+                        "required": true,
+                        "rowclass": "col-sm-6 js-postal"
+                    }
+                ],
+                "states": [
+                    {
+                        "fieldName": "state",
+                        "type": "select",
+                        "required": true,
+                        "rowclass": "col-sm-6 js-state"
+                    }
+                ],
+                "postal": {
+                    "inputFieldClass": ""
+                },
+                "address1": {
+                    "required": true,
+                    "inputFieldClass": ""
+                },
+                "phone": {
+                    "attributes": {
+                        "pattern": "[0-9]*",
+                        "maxlength": 25
+                    },
+                    "type": "tel",
+                    "required": true,
+                    "inputFieldClass": ""
+                },
+                "firstName": {
+                    "rowclass": "col-sm-6 js-firstName",
+                    "required": true,
+                    "inputFieldClass": ""
+                },
+                "lastName": {
+                    "rowclass": "col-sm-6 js-lastName",
+                    "required": true,
+                    "inputFieldClass": ""
+                },
+                "address2": {
+                    "inputFieldClass": ""
+                },
+                "city": {
+                    "rowclass": "col-sm-6 js-city",
+                    "type": "input"
+                },
+                "region": {
+                    "label": {
+                        "property": "label.region",
+                        "file": "forms"
+                    },
+                    "rowclass": "col-sm-6 js-region hidden",
+                    "type": "input"
+                },
+                "county": {
+                    "rowclass": "col-sm-6 js-county hidden",
+                    "type": "input"
+                }
+            }
+        }
+    },
+    {
+        "countryCode": "AU",
+        "name": {
+            "en_AU": "AUD"
+        },
+        "continent": "australia",
+        "locales": [
+            "en_AU"
+        ],
+        "currencyCode": "AUD",
+        "taxation": {
+            "type": "net"
+        },
+        "priceBooks": [
+            "b2c-anz-au-aud-list",
+            "b2c-anz-au-aud-sale"
+        ],
+        "dynamicForms": {
+            "addressDetails": {
+                "country": {
+                    "type": "select",
+                    "rowclass": "js-country"
+                },
+                "title": {
+                    "type": "select"
+                },
+                "postalcodes": [
+                    {
+                        "fieldName": "postal",
+                        "rowclass": "js-postal"
+                    }
+                ],
+                "states": [
+                    {
+                        "fieldName": "state",
+                        "type": "select",
+                        "required": true,
+                        "rowclass": "js-state"
+                    }
+                ],
+                "region": {
+                    "rowclass": "hidden",
+                    "inputFieldClass": ""
+                },
+                "county": {
+                    "rowclass": "hidden",
+                    "inputFieldClass": ""
+                },
+                "phone": {
+                    "attributes": {
+                        "pattern": "[0-9]*",
+                        "maxlength": 25
+                    },
+                    "type": "tel",
+                    "inputFieldClass": ""
+                },
+                "firstName": {
+                    "inputFieldClass": ""
+                },
+                "lastName": {
+                    "inputFieldClass": ""
+                },
+                "postal": {
+                    "inputFieldClass": ""
+                },
+                "address1": {
+                    "inputFieldClass": ""
+                },
+                "address2": {
+                    "inputFieldClass": ""
+                },
+                "city": {
+                    "inputFieldClass": ""
+                }
+            }
+        }
+    },
+    {
+        "countryCode": "GB",
+        "name": {
+            "en_GB": "GBP"
+        },
+        "continent": "europe",
+        "locales": [
+            "en_GB"
+        ],
+        "currencyCode": "GBP",
+        "taxation": {
+            "type": "net"
+        },
+        "priceBooks": [
+            "b2c-uk-gb-gbp-list",
+            "b2c-uk-gb-gbp-sale"
+        ],
+        "dynamicForms": {
+            "addressDetails": {
+                "firstName": {
+                    "inputFieldClass": ""
+                },
+                "lastName": {
+                    "inputFieldClass": ""
+                },
+                "country": {
+                    "type": "select",
+                    "rowclass": "js-country"
+                },
+                "title": {
+                    "type": "select"
+                },
+                "postalcodes": [
+                    {
+                        "fieldName": "postal",
+                        "rowclass": "js-postal"
+                    }
+                ],
+                "states": [
+                    {
+                        "fieldName": "state",
+                        "type": "select",
+                        "required": true,
+                        "rowclass": "js-state"
+                    }
+                ],
+                "postal": {
+                    "inputFieldClass": "gb "
+                },
+                "address1": {
+                    "inputFieldClass": ""
+                },
+                "address2": {
+                    "inputFieldClass": ""
+                },
+                "city": {
+                    "inputFieldClass": ""
+                },
+                "region": {
+                    "inputFieldClass": "js-region"
+                },
+                "county": {
+                    "inputFieldClass": ""
+                },
+                "phone": {
+                    "attributes": {
+                        "pattern": "[0-9]*",
+                        "maxlength": 25,
+                        "minlength": 9
+                    },
+                    "type": "tel",
+                    "inputFieldClass": "validateWithoutSpaces"
+                }
+            }
+        }
+    },
+    {
+        "countryCode": "default",
+        "dynamicForms": {
+            "addressDetails": {
+                "country": {
+                    "type": "select",
+                    "rowclass": "col-sm-6 js-country"
+                },
+                "postalcodes": [
+                    {
+                        "fieldName": "postal",
+                        "rowclass": "col-sm-6 js-postal"
+                    }
+                ],
+                "phone": {
+                    "attributes": {
+                        "pattern": "[0-9]*",
+                        "maxlength": 25
+                    },
+                    "type": "tel",
+                    "rowclass": "col-sm-12 js-phone"
+                },
+                "firstName": {
+                    "rowclass": "col-sm-6 js-firstName",
+                    "type": "input"
+                },
+                "lastName": {
+                    "rowclass": "col-sm-6 js-lastName",
+                    "type": "input"
+                },
+                "region": {
+                    "label": {
+                            "property": "label.region",
+                            "file": "forms"
+                        },
+                    "rowclass": "col-sm-6 js-region hidden",
+                    "type": "input"
+                },
+                "postal": {
+                    "inputFieldClass": ""
+                },
+                "address1": {
+                    "rowclass": "col-sm-12 js-address1",
+                    "required": true,
+                    "type": "input"
+                },
+                "address2": {
+                    "rowclass": "col-sm-12 js-address2",
+                    "type": "input"
+                },
+                "city": {
+                    "rowclass": "col-sm-6 js-city",
+                    "type": "input"
+                }
+            }
+        }
+    }
+]

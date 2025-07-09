@@ -1,0 +1,13 @@
+module.exports = {
+    useTabs: false,
+    singleQuote: true,
+    trailingComma: 'none',
+    overrides: [
+        {
+            files: ['**/*.css', '**/*.scss', '**/*.html'],
+            options: {
+                singleQuote: false
+            }
+        }
+    ]
+};

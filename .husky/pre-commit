@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+COMMIT_EMAIL=$(git config user.email)
+
+if [[ ! "$COMMIT_EMAIL" =~ discoverember ]]; then
+  echo "❌ Commit is blocked! Invalid email: $COMMIT_EMAIL. Allowed with the domain: discoverember.com"
+  exit 1
+fi
+
+#npx lint-staged --quiet

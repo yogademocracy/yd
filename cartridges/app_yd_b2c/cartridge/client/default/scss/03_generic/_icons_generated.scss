@@ -1,0 +1,79 @@
+$icons-font: "icons";
+// This file generated automatically. Please do not change it manually.
+// To see the list of available icons - please open the html document cartridges/app_brand_[BRANDNAME]/cartridge/static/default/fonts/icons/icons.html
+// To add new icon please add this icon to the 
+// cartridges/app_brand_[NAME]/cartridge/client/default/svg/icons/ folder
+// (try to keep file naming code style as it will match 1:1 with classname. All lowercased with dashes is preferred)
+// and run the command "npm run icons:[BRANDNAME]" in the terminal.
+// After this the icon font will be generated automatically and
+// will be created class ".icon-[[filename]]" for using this icon like "icon icon-[filename]"
+// and icon variable like $icon-[[filename]] if you need to add this icon manually
+// Please don't use generated code for the icon, because this code can change after the next icon generation
+// After this please build the scss via command "npm run watch", "npm run prod" or "npm run dev".
+
+@font-face {
+    font-family: 'icons';
+    src: url('../fonts/icons/icons.woff2?abw49b') format('woff2');
+}
+
+@mixin icon($icon-code: null) {
+  font-family: 'icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @if $icon-code {
+    &::after {
+      content: $icon-code;
+      display: inline-block;
+    }
+  }
+}
+
+@mixin icon-pseudo($icon-code: null, $pseudo: after) {
+  @if $icon-code {
+    &::#{$pseudo} {
+      font-family: 'icons' !important;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      content: $icon-code;
+      display: inline-block;
+
+      @content;
+    }
+  }
+}
+
+.icon {
+  @include icon;
+}
+
+/*md
+
+# Icons
+
+## Brand custom icon-font (icon.woff2)
+```html_example
+<i class="icon icon-bars" style="font-size: 48px"></i>
+```
+
+*Note: Additionally Font-Awesome can be available for brand*
+
+*/
+
+$icon-bars: "\f101"; // file client/default/svg/icons/bars.svg
+
+.icon-bars::before {
+    content: $icon-bars !important;
+}
+

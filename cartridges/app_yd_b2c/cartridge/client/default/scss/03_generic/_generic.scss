@@ -1,0 +1,20 @@
+// class-based generic styling
+
+.pd-components {
+    // reset inner containers extra styling
+    .container {
+        .container {
+            max-width: none;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.w-fit-content {
+    width: fit-content;
+}
+
+.h-fit-content {
+    height: fit-content;
+}
