@@ -185,6 +185,100 @@ function getOrderSummaryQuery(orderNumbers, orderSummaryId, filters) {
 }
 
 /**
+ * Creates the SOM query to get orders from SOM, if there is an error this function will return null
+ * @param {Object} filters - filters to apply to the query.
+ * @returns {string|null} api query.
+ */
+function getCustomerOrdersQueryForSOM(filters) {
+    var query = '';
+    var select = 'SELECT+Id,+OrderedDate,+OrderNumber';
+    var from = 'FROM+OrderSummary';
+    var where = 'WHERE+OrderedDate+<>+NULL';
+    var orderBy = 'ORDER+BY+OrderedDate+DESC';
+    var filtersObj = filters || {};
+
+    where += '+AND+AccountId+=+\'@{getContact.records[0].AccountId}\'';
+
+    if ('fromDate' in filtersObj) {
+        where += '+AND+OrderedDate+>+' + filtersObj.fromDate;
+    }
+
+    if ('toDate' in filtersObj) {
+        where += '+AND+OrderedDate+<+' + filtersObj.toDate;
+    }
+
+    if ('year' in filtersObj) {
+        where += '+AND+CALENDAR_YEAR(OrderedDate)+=+' + filtersObj.year;
+    }
+
+    if (where.length <= 4000) {
+        query = select + '+' + from + '+' + where + '+' + orderBy;
+        return query;
+    }
+
+    Logger.error('Where clause has exceeded length limit of 4000 characters');
+
+    return null;
+}
+
+/**
+ * Creates the SOM query to get the Account ID by email
+ * @param {string} email - email associated with current customer
+ * @returns {string} api query.
+ */
+function getAccountByEmailQuery(email) {
+    var encodedEmail = encodeURIComponent(email);
+    var quotedEmail = "'" + encodedEmail + "'";
+
+    var query = 'SELECT+Id,+AccountId+FROM+Contact+WHERE+Email=' + quotedEmail;
+
+    return query;
+}
+
+/**
+ * Forms a query to get orders from SOM
+ * @param {Object} filters - filters to apply to the query.
+ * @param {string} email - email associated with current customer
+ * @returns {Array} orders from SOM.
+ */
+function getCustomerOrdersFromSOM(filters, email) {
+    var apiResponse;
+    var somOrders = [];
+
+    var svc = ServiceMgr.restComposite();
+    var query = getCustomerOrdersQueryForSOM(filters);
+
+    if (query && query.length && query.length < 100000) {
+        var payload = {
+            compositeRequest: [
+                {
+                    method: 'GET',
+                    url: ServiceMgr.restEndpoints.query + '/?q=' + getAccountByEmailQuery(email),
+                    referenceId: 'getContact'
+                },
+                {
+                    method: 'GET',
+                    url: ServiceMgr.restEndpoints.query + '/?q=' + query,
+                    referenceId: 'refOrderQuery'
+                }
+            ]
+        };
+
+        var apiResponse = svc.call(JSON.stringify(payload));
+
+        if (!apiResponse || !apiResponse.ok) {
+            Logger.error('Error getting order ID`s');
+        } else {
+            somOrders = apiResponse.object.responseObj.compositeResponse[1].body.records;
+        }
+    } else if (query && query.length > 100000) {
+        Logger.error('Query has exceeded length limit of 100000 characters');
+    }
+
+    return somOrders;
+}
+
+/**
  * Creates the SOM query to get the FulfillmentOrderLineItem
  * @returns {string} api query.
  */
@@ -390,15 +484,13 @@ function getDeliveryMethodQuery(ref) {
 
 /**
  * Forms a query to get orderSummaries and fulfillments from SOM
- * @param {dw.util.SeekableIterator} customerOrders - orders connected to current customer
+ * @param {Array} orders - orders connected to current customer
  * @param {Object} filters - filter object
  * @returns {string} query string.
  */
-function getOrdersWithOneRequest(customerOrders, filters) {
+function getOrdersWithOneRequest(orders, filters) {
     var apiResponse;
-    var orders = collections.map(customerOrders, function (customerOrder) {
-        return customerOrder.orderNo;
-    });
+
     var svc = ServiceMgr.restComposite();
     var query = getOrderSummaryQuery(orders, null, filters);
     if (query && query.length && query.length < 100000) {
@@ -609,16 +701,14 @@ function createReturnOrder(returnOrderData) {
 
 /**
  * Performs two queries to get orders summaries then fulfillments from SOM
- * @param {dw.util.SeekableIterator} customerOrders - orders connected to current customer
+ * @param {Array} orders - orders connected to current customer
  * @param {Object} filters - filter Obj
  * @returns {Object} with two properties apiResponseOrdersummaries & apiResponseFulfillments.
  */
-function getOrdersWithTwoRequests(customerOrders, filters) {
+function getOrdersWithTwoRequests(orders, filters) {
     var apiResponseOrdersummaries;
     var apiResponseFulfillments;
-    var orders = collections.map(customerOrders, function (customerOrder) {
-        return customerOrder.orderNo;
-    });
+
     var query = getOrderSummaryQuery(orders, null, filters);
 
     if (query && query.length && query.length < 100000) {
@@ -692,20 +782,42 @@ function getOrdersWithTwoRequests(customerOrders, filters) {
  * Return an object containing response from SOM for orders and fulfillments by customer
  * @param {dw.customer.Customer} customer - current customer number
  * @param {Object} filters - filters object
+ * @param {boolean} isSOMOrders - identify if orders from SOM should be used instead of SFCC
  * @returns {Object} apiResponse - response from SOM query
  */
-function getOrders(customer, filters) {
-    // NOTE: currently we are using an existing orderID from within
-    // digital to fill out the SOQL query string
-    var orderHistory = customer.getOrderHistory();
-    var customerOrders = orderHistory.getOrders(
-        'status!={0}',
-        'creationDate desc',
-        Order.ORDER_STATUS_REPLACED
-    );
+function getOrders(customer, filters,isSOMOrders) {
+    var customerOrders = null;
+    var numberOfOrders = 0;
+
+    if (isSOMOrders) {
+        var customerEmail = customer.getProfile().getEmail();
+        var somOrders = getCustomerOrdersFromSOM(filters, customerEmail);
+
+        numberOfOrders = somOrders && somOrders.length;
+
+        if (numberOfOrders > 0) {
+            customerOrders = somOrders.map(function (somOrder) {
+                return somOrder.OrderNumber;
+            });
+        }
+    } else {
+        var orderHistory = customer.getOrderHistory();
+        customerOrders = orderHistory.getOrders(
+            'status!={0}',
+            'creationDate desc',
+            Order.ORDER_STATUS_REPLACED
+        );
+
+        numberOfOrders = customerOrders.getCount();
+
+        if (numberOfOrders > 0) {
+            customerOrders = collections.map(customerOrders, function (customerOrder) {
+                return customerOrder.orderNo;
+            });
+        }
+    }
 
     var apiResponse;
-    var numberOfOrders = customerOrders.getCount();
 
     if (numberOfOrders > 0 && numberOfOrders <= 4) {
         // will make one request to SOM
@@ -1008,22 +1120,36 @@ function getShipments(fulfillmentOrderIDs) {
 /**
  * Return customer most recent order, in the case of an error this function can return undefined
  * @param {dw.customer.Customer} customer - current customer number
+ * @param {boolean} isSOMOrders - identify if orders from SOM should be used instead of SFCC
  * @returns {OrderSummary} order summary instance.
  */
-function getLastOrder(customer) {
-    // NOTE: currently we are using an existing orderID from within
-    // digital to fill out the SOQL query string
-    var orderHistory = customer.getOrderHistory();
-    var customerOrders = orderHistory.getOrders(
-        'status!={0}',
-        'creationDate desc',
-        Order.ORDER_STATUS_REPLACED
-    );
+function getLastOrder(customer, isSOMOrders) {
+    var orderNo = '';
 
-    var apiResponse;
-    if (customerOrders.getCount() > 0) {
-        var order = customerOrders.first();
-        apiResponse = getOrdersSummary([order.orderNo]);
+    if (isSOMOrders) {
+        var customerEmail = customer.getProfile().getEmail();
+        var somOrders = getCustomerOrdersFromSOM(null, customerEmail);
+
+        if (somOrders) {
+            orderNo = somOrders[0].OrderNumber;
+        }
+    } else {
+        var orderHistory = customer.getOrderHistory();
+        var customerOrders = orderHistory.getOrders(
+            'status!={0}',
+            'creationDate desc',
+            Order.ORDER_STATUS_REPLACED
+        );
+
+        var apiResponse;
+        if (customerOrders.getCount() > 0) {
+            var order = customerOrders.first();
+            orderNo = order.orderNo;
+        }
+    }
+
+    if (orderNo) {
+        apiResponse = getOrdersSummary([orderNo]);
     }
 
     return apiResponse;

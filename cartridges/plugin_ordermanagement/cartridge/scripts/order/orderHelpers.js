@@ -4,6 +4,7 @@ var Logger = require('dw/system/Logger');
 var ProductMgr = require('dw/catalog/ProductMgr');
 var Resource = require('dw/web/Resource');
 var URLUtils = require('dw/web/URLUtils');
+var Site = require('dw/system/Site');
 
 var som = require('*/cartridge/scripts/som');
 var somHelper = require('*/cartridge/scripts/helpers/somHelpers');
@@ -186,8 +187,10 @@ function getOrderSummary(orderNumber) {
  * @returns {Object} an object of the customer's last order
  */
 function getLastOrder(req) {
+    var enableSOMOrderHistory = Site.getCurrent().getCustomPreferenceValue('enableSOMOrderHistory');
+
     var orderModel = null;
-    var somApiResponse = som.getLastOrder(req.currentCustomer.raw);
+    var somApiResponse = som.getLastOrder(req.currentCustomer.raw, enableSOMOrderHistory);
 
     var compositeResponses = null;
     if (somApiResponse && somApiResponse.ok) {
@@ -297,16 +300,18 @@ function getOrders(currentCustomer, queryString) {
     var orders = [];
     var filters = getFilters(queryString);
 
-    var somApiResponse = som.getOrders(currentCustomer.raw, filters);
+    var enableSOMOrderHistory = Site.getCurrent().getCustomPreferenceValue('enableSOMOrderHistory');
 
-    if (somApiResponse.ok) {
+    var somApiResponse = som.getOrders(currentCustomer.raw, filters, enableSOMOrderHistory);
+
+    if (somApiResponse && somApiResponse.ok) {
         orders = createOrderModels(somApiResponse);
     } else {
         Logger.error('Error getting orders from SOM. \n ' + JSON.stringify(somApiResponse, null, 4));
     }
 
     return {
-        ok: somApiResponse.ok,
+        ok: somApiResponse && somApiResponse.ok,
         orders: orders,
         filterValues: somPreferences.filters ? somPreferences.filters : []
     };

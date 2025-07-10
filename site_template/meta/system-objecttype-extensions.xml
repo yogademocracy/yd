@@ -31,4 +31,21 @@
             </attribute-group>
         </group-definitions>
     </type-extension>
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="enableSOMOrderHistory">
+                <display-name xml:lang="x-default">Enable the use of SOM to retrieve order IDs history, otherwise the SFCC database of order IDs is used. Details for both options are retrieved from SOM.</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="SOM">
+                <display-name xml:lang="x-default">Salesforce Order Management</display-name>
+                <attribute attribute-id="enableSOMOrderHistory"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
 </metadata>
