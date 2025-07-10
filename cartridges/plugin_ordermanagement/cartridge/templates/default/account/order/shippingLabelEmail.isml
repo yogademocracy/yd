@@ -1,0 +1,9 @@
+<body>
+
+    <h1>${Resource.msg('subject.shipping.label.email', 'orderReturn', null)}</h1>
+
+    <p>
+        ${Resource.msgf('copy.shipping.label.email', 'orderReturn', null, pdict.shippingLabelLink)}
+    </p>
+
+</body>
