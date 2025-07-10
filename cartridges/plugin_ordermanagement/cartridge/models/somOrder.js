@@ -73,7 +73,7 @@ function SomOrderModel(somApiOrderSummary, somOrderToOrderItemSummariesMap, somO
 
         this.currencyCode = ecomOrder.currencyCode;
         this.id = somApiOrderSummary.Id;
-        this.paymentMethodId = somApiOrderSummary.OrderPaymentSummaries.records[0].PaymentMethodId;
+        this.paymentMethodId = somApiOrderSummary.OrderPaymentSummaries && somApiOrderSummary.OrderPaymentSummaries.records[0].PaymentMethodId;
         this.sfccOrderNumber = somApiOrderSummary.OrderNumber;
         this.orderedDate = utilHelpers.convertDateStringToDateObject(somApiOrderSummary.OrderedDate);
         this.orderedTime = this.orderedDate.toLocaleTimeString('en-US', { hour12: true });
