@@ -1,0 +1,47 @@
+<isloop items="${orderItems}" var="orderItem" status="itemsLoopState">
+    <isif condition="${pdict.orderCardContext === 'account' && itemsLoopState.count > 5}">
+        <isbreak/>
+    </isif>
+
+    <isset name="quantity" value="${orderItem.quantityOrdered}" scope="page"/>
+    <isif condition="${groupedItem.status === somPreferences.statusReturnInitiated}">
+        <isset name="quantity" value="${orderItem.quantityReturnInitiated}" scope="page"/>
+    <iselseif condition="${groupedItem.status === somPreferences.statusReturned}">
+        <isset name="quantity" value="${orderItem.quantityReturned}" scope="page"/>
+    <iselseif condition="${groupedItem.status === somPreferences.statusCancelled}">
+        <isset name="quantity" value="${orderItem.quantityCancelled}" scope="page"/>
+    </isif>
+    <isset name="totalPrice" value="${new dw.value.Money(quantity * orderItem.price, orderItem.currencyCode).toFormattedString()}" scope="page"/>
+
+    <div class="row order-history-card-details">
+        <div class="col-4">
+            <img class="img-fluid" src="${orderItem.images.small[0].url}"
+                alt="${orderItem.images.small[0].alt}"
+                title="${orderItem.images.small[0].title}">
+        </div>
+        <div class="col-8 item-details">
+            <p class="item-detail">
+                <isprint value="${orderItem.productName}"/>
+                <isif condition="${quantity > 1}">
+                    (x<isprint value="${quantity}" formatter="#"/>)
+                </isif>
+            </p>
+
+            <p class="item-detail"> ${orderItem.getTotalPriceByStatus(groupedItem.status)} </p>
+
+            <isloop items="${orderItem.variationAttributes}" var="attribute">
+                <p class="line-item-attributes item-details">${attribute.displayName}: ${attribute.displayValue}</p>
+            </isloop>
+        </div>
+        <iscomment>
+            The following section is only displayed in the return flow.
+        </iscomment>
+        <isif condition="${orderItemsOptions}">
+            <div class="col-12">
+                <div class="return-quantity"><span>${Resource.msg('label.order.return.number','orderReturn',null)}:</span> ${orderItem.quantity} of ${orderItem.qMax}</div>
+                <div class="return-reason"><span>${Resource.msg('label.order.return.reason','orderReturn',null)}:</span> ${orderItem.reason} </div>
+                <div class="return-amount"><span>${Resource.msg('label.order.return.amount','orderReturn',null)}:</span> ${orderItem.totalPrice}</div>
+            </div>
+        </isif>
+    </div>
+</isloop>

@@ -1,0 +1,124 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/account/orderTrack.css');
+        assets.addCss('/css/account/profile.css');
+    </isscript>
+
+    <isset name="somPreferences" value="${require('*/cartridge/config/somPreferences')}" scope="page"/>
+
+    <div class="hero slant-down account-image">
+        <h1 class="page-title">${Resource.msg('title.orders', 'orderDetails', null)}</h1>
+    </div>
+
+    <isset name="order" value="${pdict.order}" scope="page"/>
+    <div class="container">
+        <!---Breadcrumbs--->
+        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+
+        <div class="row">
+            <div class="col">
+                <h2>${Resource.msg('title.order.detail', 'orderDetails', null)}</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <isset name="groupedItems" value="${order.orderedStatusGroupItems}" scope="page"/>
+                <isinclude template="account/order/orderStatusGroupedItems"/>
+
+                <isset name="groupedItems" value="${order.inProgressStatusGroupItems}" scope="page"/>
+                <isinclude template="account/order/orderStatusGroupedItems"/>
+
+                <isset name="groupedItems" value="${order.shippedStatusGroupItems}" scope="page"/>
+                <isinclude template="account/order/orderStatusGroupedItems"/>
+
+                <isset name="groupedItems" value="${order.canceledStatusGroupItems}" scope="page"/>
+                <isinclude template="account/order/orderStatusGroupedItems"/>
+
+                <isset name="groupedItems" value="${order.returnInitiatedStatusGroupItems}" scope="page"/>
+                <isinclude template="account/order/orderStatusGroupedItems"/>
+
+                <isset name="groupedItems" value="${order.returnedStatusGroupItems}" scope="page"/>
+                <isinclude template="account/order/orderStatusGroupedItems"/>
+            </div>
+            <div class="col-sm-6">
+
+                <div class="card">
+                    <div class="card-header clearfix">
+                        <h2 class="pull-left">${Resource.msg('heading.order.details', 'orderDetails', null)}</h2>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="summary-details order-number-summary">
+                            <div class="summary-section-label order-number-info-label">
+                                ${Resource.msg('label.order.details.number', 'orderDetails', null)}
+                            </div>
+                            <div class="order-number-details">
+                                <isprint value="${pdict.order.sfccOrderNumber}"/>
+                            </div>
+                        </div>
+
+                        <div class="summary-details order-date-summary">
+                            <div class="summary-section-label order-date-info-label">
+                                ${Resource.msg('label.order.details.date', 'orderDetails', null)}
+                            </div>
+                            <div class="order-date-details">
+                                <isset name="orderedDate" value="${pdict.order.orderedDate}" scope="page"/>
+                                <span class="date"><isprint value="${orderedDate}" style = "DATE_SHORT" /></span>
+                                <span class="time"><isprint value="${orderedDate}" style = "DATE_TIME" /></span>
+                            </div>
+                        </div>
+
+                        <div class="summary-details shipping-method-summary">
+                            <div class="summary-section-label shipping-method-info-label">
+                                ${Resource.msg('label.order.details.shipping.method', 'orderDetails', null)}
+                            </div>
+                            <isif condition="${!empty(pdict.order.deliveryMethodName)}">
+                                <div class="shipping-method-details row leading-lines">
+                                    <div class="col-8 start-lines">
+                                        <div class="shipping-method">
+                                            <span class="shipping-method-title" title="${pdict.order.deliveryMethodDescription}">${pdict.order.deliveryMethodName}</span>
+                                            <span class="shipping-method-arrival-time"><!-- arrival time decriptoin --></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 end-lines">
+                                        <div class="text-right shipping-method-price">${pdict.order.totals.shipping}</div>
+                                    </div>
+                                </div>
+                            </isif>
+                        </div>
+
+                        <isset name="billing" value="${pdict.order.billing}" scope="page" />
+                        <isinclude template="account/order/billingAddress"/>
+
+                        <isset name="payment" value="${billing.payment}" scope="page" />
+                        <isinclude template="account/order/paymentSummary"/>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header clearfix">
+                        <h2 class="pull-left">
+                            <isif condition="${pdict.order.totals.isUpdatedTotal}">
+                                ${Resource.msg('heading.order.total.updated', 'orderDetails', null)}
+                            <iselseif condition="${pdict.order.totals.isPendingTotal}">
+                                ${Resource.msg('heading.order.total.pending', 'orderDetails', null)}
+                            </isif>
+                            ${Resource.msg('heading.order.total', 'orderDetails', null)}
+                        </h2>
+                    </div>
+                    <isset name="totals" value="${pdict.order.totals}" scope="page" />
+                    <isinclude template="account/orderTotalSummary"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-account">
+            <a href="${pdict.exitLinkUrl}" title="${Resource.msg('link.orderdetails.myaccount','account',null)}" aria-label="${Resource.msg('link.orderdetails.myaccount','account',null)}">
+                ${pdict.exitLinkText}
+            </a>
+        </div>
+
+    </div>
+</isdecorate>
