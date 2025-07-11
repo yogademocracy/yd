@@ -1,2 +1,4 @@
-<a href="${URLUtils.url('Product-SizeChart', 'cid', product.sizeChartId)}">${Resource.msg('link.size_chart', 'product', null)}</a>
-<div class="size-chart-collapsible"></div>
+<span class="js-open-custom-modal"
+    data-action-url="${URLUtils.url('Modals-GetCustomModal', 'modalID', 'sizeChartModal', 'params', product.sizeChartModalParams)}">
+    ${Resource.msg('link.size_chart', 'product', null)}
+</span>
