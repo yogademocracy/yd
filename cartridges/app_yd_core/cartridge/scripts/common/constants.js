@@ -4,7 +4,6 @@
 function Constants() {}
 
 Constants.ALLOWED_CUSTOM_MODALS = [
-    'courseDetailsModal',
     'sizeChartModal'
 ];
 
