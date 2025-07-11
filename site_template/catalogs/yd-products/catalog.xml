@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.demandware.com/xml/impex/catalog/2006-10-31" catalog-id="yd-products">
+    <header>
+        <image-settings>
+            <internal-location base-path="/"/>
+            <view-types>
+                <view-type>large</view-type>
+                <view-type>medium</view-type>
+                <view-type>small</view-type>
+                <view-type>swatch</view-type>
+            </view-types>
+            <alt-pattern>${productname}</alt-pattern>
+            <title-pattern>${productname}</title-pattern>
+        </image-settings>
+    </header>
+
+    <category category-id="root">
+        <display-name xml:lang="x-default">Yoga democracy products</display-name>
+        <online-flag>true</online-flag>
+        <template/>
+        <page-attributes/>
+    </category>
+
+    <product product-id="1117L2507">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="size">L</custom-attribute>
+        </custom-attributes>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="1117M2507">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="size">M</custom-attribute>
+        </custom-attributes>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="1117S2507">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="size">S</custom-attribute>
+        </custom-attributes>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="1117XL2507">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="size">XL</custom-attribute>
+        </custom-attributes>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="1117XS2507">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="size">XS</custom-attribute>
+        </custom-attributes>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="1117XXL2507">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="size">2XL</custom-attribute>
+        </custom-attributes>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="1117XXXL2507">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="size">3XL</custom-attribute>
+        </custom-attributes>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="sunday-jogger-overcast">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <display-name xml:lang="x-default">Sunday Jogger - Overcast</display-name>
+        <long-description xml:lang="x-default">&lt;p&gt;Meet the Sunday Jogger, your perfect companion for days of relaxation. With a comfy fit and a slightly cropped inseam, this pant is ideal for everything from lounging around to casual outings. We’ve also included a tie detail at the ankle, providing effortless style on a lazy day. Embrace ease and luxury with the Sunday Jogger—an essential for your everyday wardrobe.&lt;/p&gt;</long-description>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <images>
+            <image-group view-type="large">
+                <image path="Sunday_Jogger_-_Overcast.png">
+                    <alt xml:lang="x-default">Sunday Jogger - Overcast</alt>
+                </image>
+                <image path="Sunday_Jogger_-_Overcast_front.png">
+                    <alt xml:lang="x-default">Sunday Jogger - Overcast  front</alt>
+                </image>
+                <image path="Sunday_Jogger_-_Overcast_side.png">
+                    <alt xml:lang="x-default">Sunday Jogger - Overcast  side</alt>
+                </image>
+                <image path="Sunday_Jogger_-_Overcast_full.png">
+                    <alt xml:lang="x-default">Sunday Jogger - Overcast  full</alt>
+                </image>
+            </image-group>
+            <image-group view-type="medium">
+                <image path="Sunday_Jogger_-_Overcast.png"/>
+            </image-group>
+        </images>
+        <page-attributes>
+            <page-title xml:lang="x-default">Sunday Jogger in Overcast | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Shop our eco-friendly Sunday Jogger flare legging yoga pants in Overcast and stay groovy. Leading brand in recycled, eco-friendly women's activewear. Sustainable workout clothes made from recycled plastic bottles. Sizes XS-XL. Free Shipping and Returns. Shop new flare leggings here</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="cost">22.5</custom-attribute>
+            <custom-attribute attribute-id="productType">Leggings</custom-attribute>
+            <custom-attribute attribute-id="seoAgeGroup">adult</custom-attribute>
+            <custom-attribute attribute-id="seoCategory">Apparel &amp; Accessories &gt; Clothing &gt; Activewear</custom-attribute>
+            <custom-attribute attribute-id="seoGender">female</custom-attribute>
+            <custom-attribute attribute-id="seoLabels">Yoga, recycled, eco-friendly, fitness wear</custom-attribute>
+            <custom-attribute attribute-id="status">active</custom-attribute>
+            <custom-attribute attribute-id="tags" xml:lang="x-default">
+                <value>2XL</value>
+                <value>35 off</value>
+                <value>3XL</value>
+                <value>best seller</value>
+                <value>Bottoms</value>
+                <value>Bottoms Product Type: Leggings</value>
+                <value>Bottoms Product Type: With Pockets</value>
+                <value>divine mix match</value>
+                <value>Grape Vine</value>
+                <value>L</value>
+                <value>Leggings</value>
+                <value>Leggings Style: With Pockets</value>
+                <value>M</value>
+                <value>memday</value>
+                <value>Monochromatic</value>
+                <value>new mix</value>
+                <value>newest</value>
+                <value>newsolids</value>
+                <value>not sale</value>
+                <value>notmaverick</value>
+                <value>overcast</value>
+                <value>pinkmix</value>
+                <value>Pockets</value>
+                <value>prints and solids</value>
+                <value>S</value>
+                <value>Set</value>
+                <value>sf</value>
+                <value>solid</value>
+                <value>sunday jogger</value>
+                <value>valentines</value>
+                <value>Wholesale</value>
+                <value>XL</value>
+                <value>XS</value>
+                <value>Yoga Democracy</value>
+                <value>zen mix match</value>
+            </custom-attribute>
+        </custom-attributes>
+        <variations>
+            <attributes>
+                <variation-attribute attribute-id="size" variation-attribute-id="size">
+                    <display-name xml:lang="x-default">Size</display-name>
+                    <variation-attribute-values>
+                        <variation-attribute-value value="XS">
+                            <display-value xml:lang="x-default">XS</display-value>
+                        </variation-attribute-value>
+                        <variation-attribute-value value="S">
+                            <display-value xml:lang="x-default">S</display-value>
+                        </variation-attribute-value>
+                        <variation-attribute-value value="M">
+                            <display-value xml:lang="x-default">M</display-value>
+                        </variation-attribute-value>
+                        <variation-attribute-value value="L">
+                            <display-value xml:lang="x-default">L</display-value>
+                        </variation-attribute-value>
+                        <variation-attribute-value value="XL">
+                            <display-value xml:lang="x-default">XL</display-value>
+                        </variation-attribute-value>
+                        <variation-attribute-value value="2XL">
+                            <display-value xml:lang="x-default">2XL</display-value>
+                        </variation-attribute-value>
+                        <variation-attribute-value value="3XL">
+                            <display-value xml:lang="x-default">3XL</display-value>
+                        </variation-attribute-value>
+                    </variation-attribute-values>
+                </variation-attribute>
+            </attributes>
+            <variants>
+                <variant product-id="1117XS2507"/>
+                <variant product-id="1117S2507"/>
+                <variant product-id="1117M2507"/>
+                <variant product-id="1117L2507"/>
+                <variant product-id="1117XL2507"/>
+                <variant product-id="1117XXL2507"/>
+                <variant product-id="1117XXXL2507"/>
+            </variants>
+        </variations>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+</catalog>

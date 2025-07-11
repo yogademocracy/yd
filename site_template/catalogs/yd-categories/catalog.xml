@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.demandware.com/xml/impex/catalog/2006-10-31" catalog-id="yd-categories">
+    <header>
+        <image-settings>
+            <internal-location base-path="/"/>
+            <view-types>
+                <view-type>large</view-type>
+                <view-type>medium</view-type>
+                <view-type>small</view-type>
+                <view-type>swatch</view-type>
+            </view-types>
+            <alt-pattern>${productname}</alt-pattern>
+            <title-pattern>${productname}</title-pattern>
+        </image-settings>
+    </header>
+
+    <category category-id="root">
+        <display-name xml:lang="x-default">Yoga democracy categories</display-name>
+        <online-flag>true</online-flag>
+        <template/>
+        <page-attributes/>
+        <refinement-definitions>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="tags" system="false">
+                <display-name xml:lang="x-default">Color</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="values" attribute-id="size" system="false">
+                <display-name xml:lang="x-default">Size</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <unbucketed-values-mode>show-values</unbucketed-values-mode>
+                <cutoff-threshold>10</cutoff-threshold>
+                <bucket-definitions>
+                    <attribute-bucket>
+                        <display-name xml:lang="x-default">XS</display-name>
+                        <value-list xml:lang="x-default">XS</value-list>
+                    </attribute-bucket>
+                    <attribute-bucket>
+                        <display-name xml:lang="x-default">S</display-name>
+                        <value-list xml:lang="x-default">S</value-list>
+                    </attribute-bucket>
+                    <attribute-bucket>
+                        <display-name xml:lang="x-default">M</display-name>
+                        <value-list xml:lang="x-default">M</value-list>
+                    </attribute-bucket>
+                    <attribute-bucket>
+                        <display-name xml:lang="x-default">L</display-name>
+                        <value-list xml:lang="x-default">L</value-list>
+                    </attribute-bucket>
+                    <attribute-bucket>
+                        <display-name xml:lang="x-default">XL</display-name>
+                        <value-list xml:lang="x-default">XL</value-list>
+                    </attribute-bucket>
+                    <attribute-bucket>
+                        <display-name xml:lang="x-default">2XL</display-name>
+                        <value-list xml:lang="x-default">2XL</value-list>
+                    </attribute-bucket>
+                    <attribute-bucket>
+                        <display-name xml:lang="x-default">3XL</display-name>
+                        <value-list xml:lang="x-default">3XL</value-list>
+                    </attribute-bucket>
+                </bucket-definitions>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="length" system="false">
+                <display-name xml:lang="x-default">Length</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+        </refinement-definitions>
+    </category>
+
+    <category category-id="best-sellers">
+        <display-name xml:lang="x-default">Best Sellers</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Best Sellers | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Shop our hottest styles in Women's leggings, yoga crops, joggers, bell bottoms, sports bras, graphic tees, hoodies, and more! Leading brand in recycled, eco-friendly, zero-waste women's activewear! Sustainable workout clothes made from recycled plastic in USA. Sun protection, wicking, anti-microbial. Sizes XS-XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+        <categorization-rules-and-excluded-products>
+            <categorization-rules xml:lang="x-default" primary-category-assignment="false" classification-category-assignment="false">
+                <categorization-rule id="rule-32" enabled-flag="true" exclusion="false">
+                    <categorization-condition id="condition-cyvy" attribute-id="tags" operator="is_one_of">
+                        <attribute-value>best seller</attribute-value>
+                    </categorization-condition>
+                </categorization-rule>
+            </categorization-rules>
+        </categorization-rules-and-excluded-products>
+    </category>
+
+    <category category-id="newest-releases">
+        <display-name xml:lang="x-default">New</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Yoga Democracy | Eco-Friendly Sustainable Activewear | Newest Releases</page-title>
+            <page-description xml:lang="x-default">Shop our newest releases in Women's leggings, yoga crops, joggers, bell bottoms, sports bras, graphic tees, hoodies, and more! Leading brand in recycled, eco-friendly women's activewear. Sustainable workout clothes made from recycled plastic in USA. Sizes XS-XL. Free Shipping and Returns. Shop stylish new prints here</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+        <categorization-rules-and-excluded-products>
+            <categorization-rules xml:lang="x-default" primary-category-assignment="false" classification-category-assignment="false">
+                <categorization-rule id="rule-32" enabled-flag="true" exclusion="false">
+                    <categorization-condition id="condition-il2n" attribute-id="tags" operator="is_one_of">
+                        <attribute-value>newest</attribute-value>
+                    </categorization-condition>
+                </categorization-rule>
+            </categorization-rules>
+        </categorization-rules-and-excluded-products>
+    </category>
+
+    <category category-id="sale">
+        <display-name xml:lang="x-default">Sale</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Sale | Eco-Friendly Women's Activewear | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Shop major discounts on select styles + sizes in leggings, Crops, Yoga Pants, bras, bell bottoms and more. The leading brand in eco-friendly, sustainable women's activewear! Zero waste sweat shop free made from recycled plastic. UPF sun protection, sweat wicking, anti microbial. Free Shipping + Returns. Sizes XS - XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="clear-the-rack">
+        <display-name xml:lang="x-default">Clear The Rack</display-name>
+        <online-flag>true</online-flag>
+        <parent>sale</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Clear The Rack Sale | Eco-Friendly Women's Activewear | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Shop major discounts on select styles + sizes in leggings, Crops, Yoga Pants, bras + more. The leading brand in eco-friendly, sustainable women's activewear! Zero waste + sweat shop free made from recycled plastic. UPF sun protection, sweat wicking, anti microbial. Free Shipping + Returns. Sizes XS - XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="holiday-sale">
+        <display-name xml:lang="x-default">Holiday Sale</display-name>
+        <online-flag>true</online-flag>
+        <parent>sale</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Holiday Sale | Yoga Democracy | Eco-friendly Activewear</page-title>
+            <page-description xml:lang="x-default">Shop Yoga Democracy's Holiday Sale Collection. Our newest addition to our prints for purpose line. Zero waste + sweat shop free activewear made from recycled plastic. Fabrics are UPF sun protection sweat wicking anti microbial. Free Shipping..</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="low-stock">
+        <display-name xml:lang="x-default">Low Stock</display-name>
+        <online-flag>true</online-flag>
+        <parent>sale</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Low Stock | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Grab these popular Yoga Democracy products before they're gone! Limited stock available.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="sales-shop-all">
+        <display-name xml:lang="x-default">Shop All</display-name>
+        <online-flag>true</online-flag>
+        <parent>sale</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">All Sale Items | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Shop major discounts on select styles + sizes in leggings, Crops, Yoga Pants, bras + more. The leading brand in eco-friendly, sustainable women's activewear! Zero waste + sweat shop free made from recycled plastic. UPF sun protection, sweat wicking, anti microbial. Free Shipping + Returns.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="shop">
+        <display-name xml:lang="x-default">Shop</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="bottoms">
+        <display-name xml:lang="x-default">Bottoms</display-name>
+        <online-flag>true</online-flag>
+        <parent>shop</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Yoga Democracy | Eco-Friendly Sustainable Activewear | Women's Bottoms</page-title>
+            <page-description xml:lang="x-default">Shop all women's hot yoga shorts, biker shorts, leggings, yoga crops, bell bottoms and more! The leading brand in eco-friendly, sustainable women's activewear! Zero waste and sweat shop free activewear made from recycled plastic bottles in USA. Our fabrics are sun protection, sweat wicking, anti-microbial. Sizes XS-XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="gift-cards">
+        <display-name xml:lang="x-default">Gift Cards</display-name>
+        <online-flag>true</online-flag>
+        <parent>shop</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Yoga Democracy | Eco-Friendly Sustainable Activewear | Gift Cards</page-title>
+            <page-description xml:lang="x-default">Shopping for someone but not sure what to get? Give them the gift of conscious consumerism with a Yoga Democracy gift card. Customers have the option of a physical or digital gift card. Leading brand in eco-friendly, sustainable activewear! Zero waste and sweat shop free made from recycled plastic in USA. Sizes XS-XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="shorts">
+        <display-name xml:lang="x-default">Shorts</display-name>
+        <online-flag>true</online-flag>
+        <parent>shop</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Yoga Democracy | Eco-Friendly Sustainable Activewear | Women's Shorts</page-title>
+            <page-description xml:lang="x-default">Step into the hottest yoga class with ease. Made out of post consumer recycled plastic bottles. Rated excellent UPF protection. Chlorine, sun screen, oil resistant, non-pilling Eco-friendly, non-toxic dyeing process produces fade-free color. Sizes XS-XL. Free Shipping and Returns.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="tops">
+        <display-name xml:lang="x-default">Tops</display-name>
+        <online-flag>true</online-flag>
+        <parent>shop</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Yoga Democracy | Eco-Friendly Sustainable Activewear | Women's Tops</page-title>
+            <page-description xml:lang="x-default">All the women's activewear and athleisure tops you can ask for. Our collection of eco-friendly, sustainable tops include funny yoga graphic tees, chic sports bras, reversible knot top throw overs, tanks, crop tops and more. All the streetwear and activewear you can get. USA made eco-friendly women's tops. Size XS-XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="solids">
+        <display-name xml:lang="x-default">Solids</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Solids Collection | Yoga Democracy | Sustainable Activewear</page-title>
+            <page-description xml:lang="x-default">The Solids Collection, built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level. Women's eco-friendly activewear. Sustainable workout clothes made from recycled plastic in USA. Free Shipping + Returns. Size XS-XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="burnt-orange">
+        <display-name xml:lang="x-default">Burnt Orange</display-name>
+        <online-flag>true</online-flag>
+        <parent>solids</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Burnt Orange | Yoga Democracy | Activewear</page-title>
+            <page-description xml:lang="x-default">hop Yoga Democracy's women's Burnt Orange Collection. Our newest addition to our prints for purpose line. Zero waste + sweat shop free activewear made from recycled plastic. Fabrics are UPF sun protection sweat wicking anti microbial. Free Shipping+ Returns.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="forest-green">
+        <display-name xml:lang="x-default">Forest Green</display-name>
+        <online-flag>true</online-flag>
+        <parent>solids</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Forest Green | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">The Forest GreenCollection, built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level. Women's eco-friendly activewear. Sustainable workout clothes made from recycled plastic. Free Shipping. Size XS-XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="hiking-trail">
+        <display-name xml:lang="x-default">Hiking Trail</display-name>
+        <online-flag>true</online-flag>
+        <parent>solids</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Hiking Trail | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Hiking Trail Collection, built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level. Women's eco-friendly activewear.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="jet-black">
+        <display-name xml:lang="x-default">Jet Black</display-name>
+        <online-flag>true</online-flag>
+        <parent>solids</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Jet Black Collection | Yoga Democracy | Sustainable Activewear</page-title>
+            <page-description xml:lang="x-default">The Jet Black Solids Collection, built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level. Women's eco-friendly activewear. Sustainable workout clothes made from recycled plastic. Free Shipping + Returns. Size XS-XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="maroon">
+        <display-name xml:lang="x-default">Maroon</display-name>
+        <online-flag>true</online-flag>
+        <parent>solids</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Maroon | Yoga Democracy | Sustainable Activewear</page-title>
+            <page-description xml:lang="x-default">The Maroon Solids Collection, built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level. Women's eco-friendly activewear. Sustainable workout clothes made from recycled plastic. Free Shipping + Returns. Size XS-XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="mulberry">
+        <display-name xml:lang="x-default">Mulberry</display-name>
+        <online-flag>true</online-flag>
+        <parent>solids</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Mulberry Collection | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Mulberry Collection, built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level. Women's eco-friendly activewear.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="mushroom-overcast">
+        <display-name xml:lang="x-default">Mushroom &amp; Overcast</display-name>
+        <online-flag>true</online-flag>
+        <parent>solids</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Mushroom &amp; Overcast | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">The Overcast and Mushroom Collection by Yoga Democracy. New performance fabric that takes your fitness to the next level. Women's eco-friendly activewear. Free Shipping + Returns. Size XS-XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+        <categorization-rules-and-excluded-products>
+            <categorization-rules xml:lang="x-default" primary-category-assignment="false" classification-category-assignment="false">
+                <categorization-rule id="rule-32" enabled-flag="true" exclusion="false">
+                    <categorization-condition id="condition-fcjt" attribute-id="tags" operator="is_one_of">
+                        <attribute-value>overcast,mushroom</attribute-value>
+                    </categorization-condition>
+                </categorization-rule>
+            </categorization-rules>
+        </categorization-rules-and-excluded-products>
+    </category>
+
+    <category category-id="nocturnal">
+        <display-name xml:lang="x-default">Nocturnal</display-name>
+        <online-flag>true</online-flag>
+        <parent>solids</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Nocturnal | Yoga Democracy | Sustainable Activewear</page-title>
+            <page-description xml:lang="x-default">The Nocturnal Solids Collection, built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level. Women's eco-friendly activewear. Sustainable workout clothes made from recycled plastic. Free Shipping + Returns. Size XS-XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="sage-green">
+        <display-name xml:lang="x-default">Sage Green</display-name>
+        <online-flag>true</online-flag>
+        <parent>solids</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Sage Green | Yoga Democracy | Sustainable Activewear</page-title>
+            <page-description xml:lang="x-default">The Sage Green Solids Collection, built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level. Women's eco-friendly activewear. Sustainable workout clothes made from recycled plastic. Free Shipping + Returns. Size XS-XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="twig">
+        <display-name xml:lang="x-default">Twig</display-name>
+        <online-flag>true</online-flag>
+        <parent>solids</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Twig | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Twig Collection, built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level. Women's eco-friendly activewear.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="white">
+        <display-name xml:lang="x-default">White</display-name>
+        <online-flag>true</online-flag>
+        <parent>solids</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">White | Yoga Democracy | Sustainable Activewear</page-title>
+            <page-description xml:lang="x-default">The White Solids Collection, built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level. Women's eco-friendly activewear. Sustainable workout clothes made from recycled plastic. Size XS-XL</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="сollections">
+        <display-name xml:lang="x-default">Collections</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="botanical">
+        <display-name xml:lang="x-default">Botanical</display-name>
+        <online-flag>true</online-flag>
+        <parent>сollections</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Botanical | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Shop the Yoga Democracy Botanical collection. Built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="elemental">
+        <display-name xml:lang="x-default">Elemental</display-name>
+        <online-flag>true</online-flag>
+        <parent>сollections</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Elemental | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Shop the Yoga Democracy Elemental collection. Built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="flora-fauna">
+        <display-name xml:lang="x-default">Flora &amp; Fauna</display-name>
+        <online-flag>true</online-flag>
+        <parent>сollections</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Flora and Fauna | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Shop the Yoga Democracy Flora and Fauna collection. Built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="geometry">
+        <display-name xml:lang="x-default">Geometry</display-name>
+        <online-flag>true</online-flag>
+        <parent>сollections</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Geometry | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Shop the Yoga Democracy Geometry collection. Built with YD Endurance Fabric by Yoga Democracy. New performance fabric that takes your fitness to the next level.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="shop-all">
+        <display-name xml:lang="x-default">Shop All</display-name>
+        <online-flag>true</online-flag>
+        <parent>сollections</parent>
+        <template/>
+        <page-attributes>
+            <page-title xml:lang="x-default">Shop All | Yoga Democracy</page-title>
+            <page-description xml:lang="x-default">Shop our hottest styles in Women's leggings, yoga crops, joggers, bell bottoms, sports bras, and more! Leading brand in recycled, eco-friendly, zero-waste women's activewear! Sustainable workout clothes. Sun protection, wicking, anti-microbial.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category-assignment category-id="best-sellers" product-id="sunday-jogger-overcast"/>
+
+    <category-assignment category-id="mushroom-overcast" product-id="sunday-jogger-overcast"/>
+
+    <category-assignment category-id="newest-releases" product-id="sunday-jogger-overcast"/>
+
+</catalog>
