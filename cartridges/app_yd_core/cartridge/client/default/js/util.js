@@ -1,7 +1,5 @@
 'use strict';
 
-/* eslint-disable */
-
 var util = {
     /**
      * Sets cookies
