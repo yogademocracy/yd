@@ -1,0 +1,111 @@
+<iscomment>
+    <footer id="footercontent">
+        <div class="container">
+            <div class="footer-container row">
+                <div class="footer-item col-sm-3 store">
+                    <iscontentasset aid="footer-locate-store" />
+                </div>
+                <div class="footer-item col-sm-3 collapsible-xs">
+                    <iscontentasset aid="footer-account" />
+                </div>
+                <div class="footer-item col-sm-3 collapsible-xs">
+                    <iscontentasset aid="footer-support" />
+                </div>
+                <div class="footer-item col-sm-3 collapsible-xs">
+                    <iscontentasset aid="footer-about" />
+                </div>
+            </div>
+            <hr class="hidden-xs-down" />
+            <div class="row">
+                <div class="col-lg-4 col-sm-5 push-sm-7 push-lg-8 social">
+                    <isslot id="footer-item-m" description="Content in column 1 of the Footer" context="global" />
+                    <button class="back-to-top" title="${Resource.msg('button.back_to_top', 'common', null)}"
+                        aria-label="${Resource.msg('button.back_to_top', 'common', null)}">
+                        <span class="fa-stack fa-lg" aria-hidden="true">
+                            <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+                            <i class="fa fa-arrow-up fa-stack-1x"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="col-lg-8 col-sm-7 pull-sm-5 pull-lg-4 copyright-notice">
+                    <iscontentasset aid="footer-copy" />
+                </div>
+            </div>
+        </div>
+    </footer>
+</iscomment>
+
+
+<footer class="footer" id="footercontent">
+    <div class="container footer-container">
+        <div class="footer-item">
+            <h6 class="footer-item__tilte">Made For Free Range Humans</h6>
+            <p class="footer-item__text">
+                Our materials are made of recycled plastic bottles and fishing nets.
+                We use a no-water dyeing process that cuts down on waste.
+                We take every scrap of material that passes through our shop and
+                turn it into something of use and beauty.
+            </p>
+            <div class="footer-logo">
+                <img class="footer-logo__image" src="${URLUtils.staticURL('/images/logo-small.svg')}" alt="Yoga Democracy Logo">
+                <p>Yoga<br>Democracy</p>
+            </div>
+            <div class="social-icons">
+                <a class="social-icon" href="#"><i class="icon icon-twitter"></i></a>
+                <a class="social-icon" href="#"><i class="icon icon-facebook"></i></a>
+                <a class="social-icon" href="#"><i class="icon icon-instagram"></i></a>
+                <a class="social-icon" href="#"><i class="icon icon-pinterest"></i></a>
+                <a class="social-icon" href="#"><i class="icon icon-tiktok"></i></a>
+            </div>
+        </div>
+
+
+        <div class="footer-item">
+            <h6 class="footer-item__tilte">Customer Care</h6>
+            <ul class="footer-item__links">
+                <li class="footer-item__link-wrapper">
+                    <a href="${URLUtils.https('Account-Show')}">Customer Account Log In</a>
+                </li>
+                <li class="footer-item__link-wrapper">
+                    <a href="${'#'}">Shipping and Returns Policy</a>
+                </li>
+                <li class="footer-item__link-wrapper">
+                    <a href="${'#'}">Initiate a Return/Exchange</a>
+                </li>
+                <li class="footer-item__link-wrapper">
+                    <a href="${'#'}">Buy Now, Pay Later</a>
+                </li>
+                <li class="footer-item__link-wrapper">
+                    <a href="${'#'}">Free Hemming</a>
+                </li>
+                <li class="footer-item__link-wrapper">
+                    <a href="${'#'}">Size Chart</a>
+                </li>
+                <li class="footer-item__link-wrapper">
+                    <a href="${'#'}">Reviews</a>
+                </li>
+                <li class="footer-item__link-wrapper">
+                    <a href="${URLUtils.https('Page-Show', 'cid', 'faq')}">FAQs</a>
+                </li>
+                <li class="footer-item__link-wrapper">
+                    <a href="${URLUtils.https('Page-Show', 'cid', 'privacy-policy')}">Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-item">
+            <h6 class="footer-item__tilte">YD Community</h6>
+            <ul class="footer-item__links">
+                <li class="footer-item__link-wrapper"><a href="${URLUtils.https('Page-Show', 'cid', 'about-us')}">About Us</a></li>
+                <li class="footer-item__link-wrapper"><a href="${'#'}">Birthday Club</a></li>
+                <li class="footer-item__link-wrapper"><a href="${'#'}">VIP Text Club</a></li>
+                <li class="footer-item__link-wrapper"><a href="${'#'}">Refer a Friend Give $20/ Get $20</a></li>
+                <li class="footer-item__link-wrapper"><a href="${'#'}">Become an Affiliate</a></li>
+                <li class="footer-item__link-wrapper"><a href="${'#'}">Press</a></li>
+                <li class="footer-item__link-wrapper"><a href="${'#'}">Customer Reviews</a></li>
+                <li class="footer-item__link-wrapper"><a href="${'#'}">Instructor Program</a></li>
+                <li class="footer-item__link-wrapper"><a href="${'#'}">Blog</a></li>
+                <li class="footer-item__link-wrapper"><a href="${'#'}">Email us</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
