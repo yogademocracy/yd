@@ -17,33 +17,42 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-account:before {
     content: "\f101";
 }
-.icon-cart:before {
+.icon-bars:before {
     content: "\f102";
 }
-.icon-cube:before {
+.icon-cart:before {
     content: "\f103";
 }
-.icon-dollar:before {
+.icon-close:before {
     content: "\f104";
 }
-.icon-gift-box:before {
+.icon-cube:before {
     content: "\f105";
 }
-.icon-search:before {
+.icon-dollar:before {
     content: "\f106";
 }
-.icon-socials-facebook:before {
+.icon-gift-box:before {
     content: "\f107";
 }
-.icon-socials-instagram:before {
+.icon-menu:before {
     content: "\f108";
 }
-.icon-socials-pinterest:before {
+.icon-search:before {
     content: "\f109";
 }
-.icon-socials-tiktok:before {
+.icon-socials-facebook:before {
     content: "\f10a";
 }
-.icon-socials-twitter:before {
+.icon-socials-instagram:before {
     content: "\f10b";
+}
+.icon-socials-pinterest:before {
+    content: "\f10c";
+}
+.icon-socials-tiktok:before {
+    content: "\f10d";
+}
+.icon-socials-twitter:before {
+    content: "\f10e";
 }

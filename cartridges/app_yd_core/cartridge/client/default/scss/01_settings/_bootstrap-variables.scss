@@ -142,7 +142,6 @@ $input-btn-border-width:      rem(1);
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 $btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
-$btn-font-weight:             $font-weight-semibold;
 $btn-disabled-opacity:        .65 !default;
 $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;

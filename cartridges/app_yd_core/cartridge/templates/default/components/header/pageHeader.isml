@@ -1,0 +1,41 @@
+<isslot id="header-banner-m" description="Slot above the site header" context="global" />
+<header class="page-main-header">
+    <isinclude template="/components/header/skipNav" />
+    <nav role="navigation">
+        <div class="container-fluid header-nav">
+            <div class="search__wrapper">
+                <div class="navbar-toggler header-link d-md-none" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="icon icon-menu"></i>
+                    <span class="hidden-xs-down">Menu</span>
+                </div>
+                <div class="search">
+                    <div class="header-link js-search-toggler">
+                        <i class="icon icon-search"></i>
+                        <span class="d-none d-md-block search__title">${Resource.msg('label.header.search','common',null)}</span>
+                    </div>
+                    <isinclude template="components/header/search" />
+                </div>
+            </div>
+            <div class="logo__wrapper">
+                <a class="logo__link" href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
+                    <img class="logo__image" src="${URLUtils.staticURL('/images/logo.png')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+                </a>
+            </div>
+            <div class="actions__wrapper">
+                <div class="account">
+                    <isinclude url="${URLUtils.url('Account-Header')}" />
+                </div>
+                <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
+                    <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
+                </div>
+            </div>
+        </div>
+        <div class="main-menu navbar-toggleable-sm menu-toggleable-left multilevel-dropdown d-none d-md-block" id="sg-navbar-collapse">
+            <div class="container">
+                <div class="row">
+                    <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}"/>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
