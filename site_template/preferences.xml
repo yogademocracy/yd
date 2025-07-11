@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences>
+        <all-instances>
+            <preference preference-id="ActiveLocales">de:default:fr_CA:en_CA:en_US:en:fr:es:nl:de_DE</preference>
+            <preference preference-id="AllowedBMHostnames">cert.staging.na01.yogademocracy.demandware.net</preference>
+            <preference preference-id="CustomCartridges"/>
+            <preference preference-id="CustomEmailConfiguration">{"enabled":false}</preference>
+            <preference preference-id="CustomImpexFolders"/>
+            <preference preference-id="CustomProductListColumns">null:null:null:null:null:null:null</preference>
+            <preference preference-id="DefaultRolesBMUser"/>
+            <preference preference-id="EmailDomainConfiguration">{"Domains":[]}</preference>
+            <preference preference-id="EnableSalesforceIPAddressWhitelist">false</preference>
+            <preference preference-id="IPAddressBlacklist"/>
+            <preference preference-id="IPAddressDenyAccess">false</preference>
+            <preference preference-id="IPAddressIncreaseFailureCount">false</preference>
+            <preference preference-id="IPAddressLogAccess">false</preference>
+            <preference preference-id="IPAddressSendEmailTo"/>
+            <preference preference-id="IPAddressWhitelist"/>
+            <preference preference-id="InstanceTimezone">Etc/UTC</preference>
+            <preference preference-id="OverridingPriceBooksEnabled">false</preference>
+            <preference preference-id="QuotaNotificationEnableEmail">false</preference>
+            <preference preference-id="SSOSupportState">sso_only</preference>
+            <preference preference-id="SystemUseNotificationEnabled">false</preference>
+            <preference preference-id="SystemUseNotificationMandatory">false</preference>
+        </all-instances>
+        <development/>
+        <staging/>
+        <production/>
+    </standard-preferences>
+    <custom-preferences>
+        <all-instances/>
+        <development/>
+        <staging/>
+        <production/>
+    </custom-preferences>
+</preferences>
+

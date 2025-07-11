@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pricebooks xmlns="http://www.demandware.com/xml/impex/pricebook/2006-10-31">
+    <pricebook>
+        <header pricebook-id="yd-us-sale-pricebook">
+            <currency>USD</currency>
+            <display-name xml:lang="x-default">Sale Pricebook US</display-name>
+            <online-flag>true</online-flag>
+            <parent>yd-us-retail-pricebook</parent>
+        </header>
+
+        <price-tables/>
+    </pricebook>
+</pricebooks>
