@@ -89,28 +89,6 @@
         </content-links>
     </content>
 
-    <content content-id="homepage">
-        <display-name xml:lang="x-default">homepage</display-name>
-        <type>page.storePage</type>
-        <config>{
-  "visibility" : [ ]
-}</config>
-        <visibility-mode xml:lang="x-default">visible</visibility-mode>
-        <data xml:lang="x-default">{ }</data>
-        <online-flag>true</online-flag>
-        <searchable-flag>false</searchable-flag>
-        <page-attributes/>
-        <content-links>
-            <content-link content-id="fd58c31b72228e53bdcccc35be" type="page.storePage.main">
-                <position>0.0</position>
-            </content-link>
-            <content-link content-id="7e9f066e2cff78916babdd5a18" type="page.storePage.headerbanner">
-                <position>0.0</position>
-            </content-link>
-        </content-links>
-        <sitemap-included-flag>false</sitemap-included-flag>
-    </content>
-
     <content content-id="header-banner-top">
         <display-name xml:lang="x-default">Header Banner Top</display-name>
         <online-flag>true</online-flag>
@@ -149,6 +127,28 @@
 	&lt;/div&gt;&#13;
 &lt;/div&gt;</custom-attribute>
         </custom-attributes>
+    </content>
+
+    <content content-id="homepage">
+        <display-name xml:lang="x-default">homepage</display-name>
+        <type>page.storePage</type>
+        <config>{
+  "visibility" : [ ]
+}</config>
+        <visibility-mode xml:lang="x-default">visible</visibility-mode>
+        <data xml:lang="x-default">{ }</data>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <content-links>
+            <content-link content-id="fd58c31b72228e53bdcccc35be" type="page.storePage.main">
+                <position>0.0</position>
+            </content-link>
+            <content-link content-id="7e9f066e2cff78916babdd5a18" type="page.storePage.headerbanner">
+                <position>0.0</position>
+            </content-link>
+        </content-links>
+        <sitemap-included-flag>false</sitemap-included-flag>
     </content>
 
 </library>
