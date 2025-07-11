@@ -1,0 +1,31 @@
+<div class="site-search collapse" id="collapse-search">
+    <form role="search"
+          action="${URLUtils.url('Search-Show')}"
+          method="get"
+          name="simpleSearch"
+          class="site-search__form">
+        <input class="form-control search-field"
+               type="text"
+               name="q"
+               value=""
+               placeholder="${Resource.msg('label.header.searchwatermark', 'common', null)}"
+               role="combobox"
+               aria-describedby="search-assistive-text"
+               aria-haspopup="listbox"
+               aria-owns="search-results"
+               aria-expanded="false"
+               aria-autocomplete="list"
+               aria-activedescendant=""
+               aria-controls="search-results"
+               aria-label="${Resource.msg('simplesearch.searchtext', 'common', null)}"
+               autocomplete="off" />
+        <button class="btn site-search__search-btn" type="submit" name="search-button" aria-label="${Resource.msg('label.header.search.go', 'common', null)}">
+            <i class="icon icon-search"></i>
+        </button>
+        <div class="suggestions-wrapper" data-url="${URLUtils.url('SearchServices-GetSuggestions', 'q')}"></div>
+        <input type="hidden" value="${pdict.locale}" name="lang">
+    </form>
+    <button class="btn site-search__close-btn" type="button" data-toggle="collapse" data-target="#collapse-search" aria-expanded="false" aria-controls="collapse-search">
+        <i class="icon icon-close"></i>
+    </button>
+</div>

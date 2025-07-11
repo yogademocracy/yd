@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <folder folder-id="root">
+        <online-flag>true</online-flag>
+        <page-attributes/>
+    </folder>
+
+    <content content-id="header-banner-top">
+        <display-name xml:lang="x-default">Header Banner Top</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="header-banner bg-magenta-plum slide-up d-none"&gt;&#13;
+	&lt;div class="container-fluid"&gt;&#13;
+		&lt;div class="d-flex justify-content-between"&gt;&#13;
+			&lt;div class="content"&gt;&#13;
+				&lt;div class="d-flex"&gt;&#13;
+					&lt;div class="header-banner__links"&gt; &lt;a class="header-banner__link" href="https://twitter.com/yogademocracy" target="_blank" rel="noopener"&gt;&#13;
+                                &lt;i class="icon icon-socials-twitter"&gt;&lt;/i&gt;&#13;
+                            &lt;/a&gt;&#13;
+ &lt;a class="header-banner__link" href="https://www.facebook.com/yogademocracy/" target="_blank" rel="noopener"&gt;&#13;
+                                &lt;i class="icon icon-socials-facebook"&gt;&lt;/i&gt;&#13;
+                            &lt;/a&gt;&#13;
+ &lt;a class="header-banner__link" href="https://www.instagram.com/yoga_democracy/" target="_blank" rel="noopener"&gt;&#13;
+                                &lt;i class="icon icon-socials-instagram"&gt;&lt;/i&gt;&#13;
+                            &lt;/a&gt;&#13;
+ &lt;a class="header-banner__link" href="https://www.pinterest.com/yogademocracy/_shop/" target="_blank" rel="noopener"&gt;&#13;
+                                &lt;i class="icon icon-socials-pinterest"&gt;&lt;/i&gt;&#13;
+                            &lt;/a&gt;&#13;
+ &lt;a class="header-banner__link" href="https://www.tiktok.com/@yoga_democracy/" target="_blank" rel="noopener"&gt;&#13;
+                                &lt;i class="icon icon-socials-tiktok"&gt;&lt;/i&gt;&#13;
+                            &lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="header-banner__title"&gt; &lt;a class="header-banner__title-link" href="$url('Search-Show', 'cgid', 'mushroom-overcast')$"&gt;Check Out Our New Solids: Mushroom &amp; Overcast! | Get Free US Shipping On Orders over $49!&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="header-banner__right"&gt;&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+	&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+</library>
