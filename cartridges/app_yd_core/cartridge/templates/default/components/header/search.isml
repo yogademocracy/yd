@@ -1,4 +1,4 @@
-<div class="js-site-search site-search d-none">
+<div class="site-search collapse" id="collapse-search">
     <form role="search"
           action="${URLUtils.url('Search-Show')}"
           method="get"
@@ -25,7 +25,7 @@
         <div class="suggestions-wrapper" data-url="${URLUtils.url('SearchServices-GetSuggestions', 'q')}"></div>
         <input type="hidden" value="${pdict.locale}" name="lang">
     </form>
-    <button class="btn site-search__close-btn js-search-toggler">
+    <button class="btn site-search__close-btn" type="button" data-toggle="collapse" data-target="#collapse-search" aria-expanded="false" aria-controls="collapse-search">
         <i class="icon icon-close"></i>
     </button>
 </div>

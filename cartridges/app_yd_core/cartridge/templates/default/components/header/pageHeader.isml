@@ -9,10 +9,10 @@
                     <span class="hidden-xs-down">Menu</span>
                 </div>
                 <div class="search">
-                    <div class="header-link js-search-toggler">
+                    <a class="header-link" data-toggle="collapse" href="#collapse-search" role="button" aria-expanded="false" aria-controls="collapse-search">
                         <i class="icon icon-search"></i>
                         <span class="d-none d-md-block search__title">${Resource.msg('label.header.search','common',null)}</span>
-                    </div>
+                    </a>
                     <isinclude template="components/header/search" />
                 </div>
             </div>
