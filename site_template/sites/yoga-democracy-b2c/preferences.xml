@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences>
+        <all-instances>
+            <preference preference-id="AccountNumberRetentionDays">30</preference>
+            <preference preference-id="AddProductToBasketBehavior">IncrementQuantities</preference>
+            <preference preference-id="BogoProrationEnabled">legacy</preference>
+            <preference preference-id="BonusProductProrationEnabled">true</preference>
+            <preference preference-id="CouponGeneratorIncludeDashes">true</preference>
+            <preference preference-id="CouponGeneratorIncludeVowels">true</preference>
+            <preference preference-id="EnableSiteOrderNumbers">false</preference>
+            <preference preference-id="IntegrationOrderCenterIncludeSite">true</preference>
+            <preference preference-id="SiteCatalog">yd-categories</preference>
+            <preference preference-id="SiteCurrencies">USD</preference>
+            <preference preference-id="SiteCustomerList">yoga-democracy-b2c</preference>
+            <preference preference-id="SiteDefaultLocale">default</preference>
+            <preference preference-id="SiteInventoryList">yd-inventory</preference>
+            <preference preference-id="SiteLibrary">yoga-democracy-b2c</preference>
+            <preference preference-id="SiteLocales">default</preference>
+            <preference preference-id="SitePriceBooks">yd-us-sale-pricebook</preference>
+            <preference preference-id="SiteTimezone">US/Central</preference>
+            <preference preference-id="StorefrontOrderAccess">customer_or_session_match</preference>
+            <preference preference-id="StorefrontOrderFiltering">true</preference>
+            <preference preference-id="StorefrontURLsEnabled">true</preference>
+        </all-instances>
+        <development>
+            <preference preference-id="AvailabilityFiltering">Disabled</preference>
+            <preference preference-id="AvailabilityLowRankingThreshold">0.0</preference>
+            <preference preference-id="EnableShopTheStoreForStorefrontSearch">false</preference>
+            <preference preference-id="ExternallyPublishProductIndex">false</preference>
+            <preference preference-id="IncludePromotionIDInProductIndex">false</preference>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="PersonalizedSearchRecommendations">Disabled</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+            <preference preference-id="SearchAutoCorrection">Disabled</preference>
+            <preference preference-id="SearchDictionaryLocaleFallback">Disabled</preference>
+            <preference preference-id="SearchIgnoreLeadingZeros">Disabled</preference>
+            <preference preference-id="SearchRedirectKeywordRuleEnabled">Disabled</preference>
+            <preference preference-id="SearchSuggestions">Disabled</preference>
+        </development>
+        <staging>
+            <preference preference-id="AvailabilityFiltering">Disabled</preference>
+            <preference preference-id="AvailabilityLowRankingThreshold">0.0</preference>
+            <preference preference-id="EnableShopTheStoreForStorefrontSearch">false</preference>
+            <preference preference-id="ExternallyPublishProductIndex">false</preference>
+            <preference preference-id="IncludePromotionIDInProductIndex">false</preference>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="PersonalizedSearchRecommendations">Disabled</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+            <preference preference-id="SearchAutoCorrection">Disabled</preference>
+            <preference preference-id="SearchDictionaryLocaleFallback">Disabled</preference>
+            <preference preference-id="SearchIgnoreLeadingZeros">Disabled</preference>
+            <preference preference-id="SearchRedirectKeywordRuleEnabled">Disabled</preference>
+            <preference preference-id="SearchSuggestions">Disabled</preference>
+        </staging>
+        <production>
+            <preference preference-id="AvailabilityFiltering">Disabled</preference>
+            <preference preference-id="AvailabilityLowRankingThreshold">0.0</preference>
+            <preference preference-id="EnableShopTheStoreForStorefrontSearch">false</preference>
+            <preference preference-id="ExternallyPublishProductIndex">false</preference>
+            <preference preference-id="IncludePromotionIDInProductIndex">false</preference>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="PersonalizedSearchRecommendations">Disabled</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+            <preference preference-id="SearchAutoCorrection">Disabled</preference>
+            <preference preference-id="SearchDictionaryLocaleFallback">Disabled</preference>
+            <preference preference-id="SearchIgnoreLeadingZeros">Disabled</preference>
+            <preference preference-id="SearchRedirectKeywordRuleEnabled">Disabled</preference>
+            <preference preference-id="SearchSuggestions">Disabled</preference>
+        </production>
+    </standard-preferences>
+    <custom-preferences>
+        <all-instances/>
+        <development/>
+        <staging/>
+        <production/>
+    </custom-preferences>
+</preferences>
+
