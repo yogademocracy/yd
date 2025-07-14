@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sort xmlns="http://www.demandware.com/xml/impex/sort/2009-05-15">
+    <sorting-rule rule-id="Alphabetical A-Z">
+        <sorting-attributes>
+            <attribute>
+                <attribute-path>product.name</attribute-path>
+                <direction>ascending</direction>
+                <include-text-relevance>false</include-text-relevance>
+            </attribute>
+        </sorting-attributes>
+    </sorting-rule>
+
+    <sorting-options>
+        <sorting-option option-id="a-z">
+            <rule-id>Alphabetical A-Z</rule-id>
+            <rule-context>site</rule-context>
+            <display-name xml:lang="x-default">A-Z</display-name>
+        </sorting-option>
+    </sorting-options>
+
+</sort>

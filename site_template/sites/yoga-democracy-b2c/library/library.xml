@@ -5,6 +5,90 @@
         <page-attributes/>
     </folder>
 
+    <content content-id="140a019ad65217ac2863814a70">
+        <type>component.commerce_assets.imageAndText</type>
+        <config>{
+  "visibility" : [ ]
+}</config>
+        <data xml:lang="x-default">{
+  "ITCLink" : null,
+  "ITCText" : null,
+  "image" : {
+    "path" : "sale-new-desk_1296x.png",
+    "focal_point" : {
+      "x" : 0.5,
+      "y" : 0.5
+    }
+  },
+  "heading" : "&lt;p&gt;&lt;a href=\"$url('Search-Show', 'cgid', 'new')$\" target=\"_self\" data-link-type=\"category\" data-link-label=\"New\" data-category-id=\"new\" data-category-catalog-id=\"yd-categories\"&gt;New&lt;/a&gt;&lt;/p&gt;",
+  "alt" : null
+}</data>
+        <online-flag>true</online-flag>
+        <page-attributes/>
+    </content>
+
+    <content content-id="673a5a90a6e4068d1c5e4ff06a">
+        <type>component.commerce_assets.imageAndText</type>
+        <config>{
+  "visibility" : [ ]
+}</config>
+        <data xml:lang="x-default">{
+  "ITCLink" : null,
+  "ITCText" : null,
+  "image" : {
+    "path" : "sale-new-desk_1296x.png",
+    "focal_point" : {
+      "x" : 0.5,
+      "y" : 0.5
+    }
+  },
+  "heading" : null,
+  "alt" : null
+}</data>
+        <online-flag>true</online-flag>
+        <page-attributes/>
+    </content>
+
+    <content content-id="7e9f066e2cff78916babdd5a18">
+        <type>component.commerce_assets.campaignBanner</type>
+        <config>{
+  "visibility" : [ ]
+}</config>
+        <data xml:lang="x-default">{
+  "bannerMessage" : "&lt;p&gt;Check Out Our New Solids: Mushroom &amp;amp; Overcast! | Get Free US Shipping On Orders over $49!&lt;/p&gt;"
+}</data>
+        <online-flag>true</online-flag>
+        <page-attributes/>
+    </content>
+
+    <content content-id="fd58c31b72228e53bdcccc35be">
+        <type>component.commerce_layouts.carousel</type>
+        <config>{
+  "visibility" : [ ]
+}</config>
+        <data xml:lang="x-default">{
+  "xsCarouselIndicators" : false,
+  "smCarouselControls" : true,
+  "mdCarouselIndicators" : true,
+  "xsCarouselControls" : false,
+  "smCarouselIndicators" : true,
+  "xsCarouselSlidesToDisplay" : 1,
+  "mdCarouselSlidesToDisplay" : 1,
+  "textHeadline" : "hero banner",
+  "smCarouselSlidesToDisplay" : 1
+}</data>
+        <online-flag>true</online-flag>
+        <page-attributes/>
+        <content-links>
+            <content-link content-id="140a019ad65217ac2863814a70" type="component.commerce_layouts.carousel.slides">
+                <position>0.0</position>
+            </content-link>
+            <content-link content-id="673a5a90a6e4068d1c5e4ff06a" type="component.commerce_layouts.carousel.slides">
+                <position>1.0</position>
+            </content-link>
+        </content-links>
+    </content>
+
     <content content-id="header-banner-top">
         <display-name xml:lang="x-default">Header Banner Top</display-name>
         <online-flag>true</online-flag>
@@ -321,6 +405,28 @@
 	&lt;/div&gt;&#13;
 &lt;/div&gt;</custom-attribute>
         </custom-attributes>
+    </content>
+
+    <content content-id="homepage">
+        <display-name xml:lang="x-default">homepage</display-name>
+        <type>page.storePage</type>
+        <config>{
+  "visibility" : [ ]
+}</config>
+        <visibility-mode xml:lang="x-default">visible</visibility-mode>
+        <data xml:lang="x-default">{ }</data>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <content-links>
+            <content-link content-id="fd58c31b72228e53bdcccc35be" type="page.storePage.main">
+                <position>0.0</position>
+            </content-link>
+            <content-link content-id="7e9f066e2cff78916babdd5a18" type="page.storePage.headerbanner">
+                <position>0.0</position>
+            </content-link>
+        </content-links>
+        <sitemap-included-flag>false</sitemap-included-flag>
     </content>
 
 </library>

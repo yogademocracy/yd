@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pricebooks xmlns="http://www.demandware.com/xml/impex/pricebook/2006-10-31">
+    <pricebook>
+        <header pricebook-id="yd-us-retail-pricebook">
+            <currency>USD</currency>
+            <display-name xml:lang="x-default">Retail Pricebook US</display-name>
+            <online-flag>true</online-flag>
+        </header>
+
+        <price-tables>
+            <price-table product-id="1117L2507">
+                <amount quantity="1">58.00</amount>
+            </price-table>
+
+            <price-table product-id="1117M2507">
+                <amount quantity="1">58.00</amount>
+            </price-table>
+
+            <price-table product-id="1117S2507">
+                <amount quantity="1">58.00</amount>
+            </price-table>
+
+            <price-table product-id="1117XL2507">
+                <amount quantity="1">58.00</amount>
+            </price-table>
+
+            <price-table product-id="1117XS2507">
+                <amount quantity="1">58.00</amount>
+            </price-table>
+
+            <price-table product-id="1117XXL2507">
+                <amount quantity="1">58.00</amount>
+            </price-table>
+
+            <price-table product-id="1117XXXL2507">
+                <amount quantity="1">58.00</amount>
+            </price-table>
+
+        </price-tables>
+    </pricebook>
+</pricebooks>

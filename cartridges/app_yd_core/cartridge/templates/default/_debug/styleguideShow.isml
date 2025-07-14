@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Styleguide - ${pdict.siteName}</title>
+        <style>
+            .fullscreen-iframe {
+                width: 100%;
+                height: 100vh;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe class="fullscreen-iframe" src="${URLUtils.staticURL('/styleguide/guide/index.html')}"
+        sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups allow-modals allow-pointer-lock allow-forms 'src'"></iframe>
+    </body>
+</html>
