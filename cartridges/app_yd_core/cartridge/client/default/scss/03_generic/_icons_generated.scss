@@ -67,6 +67,8 @@ $icons-font: "icons";
 <i class="icon icon-account" style="font-size: 48px"></i>
 <i class="icon icon-bars" style="font-size: 48px"></i>
 <i class="icon icon-cart" style="font-size: 48px"></i>
+<i class="icon icon-chevron-left" style="font-size: 48px"></i>
+<i class="icon icon-chevron-right" style="font-size: 48px"></i>
 <i class="icon icon-close" style="font-size: 48px"></i>
 <i class="icon icon-cube" style="font-size: 48px"></i>
 <i class="icon icon-dollar" style="font-size: 48px"></i>
@@ -87,17 +89,19 @@ $icons-font: "icons";
 $icon-account: "\f101"; // file client/default/svg/icons/account.svg
 $icon-bars: "\f102"; // file client/default/svg/icons/bars.svg
 $icon-cart: "\f103"; // file client/default/svg/icons/cart.svg
-$icon-close: "\f104"; // file client/default/svg/icons/close.svg
-$icon-cube: "\f105"; // file client/default/svg/icons/cube.svg
-$icon-dollar: "\f106"; // file client/default/svg/icons/dollar.svg
-$icon-gift-box: "\f107"; // file client/default/svg/icons/gift-box.svg
-$icon-menu: "\f108"; // file client/default/svg/icons/menu.svg
-$icon-search: "\f109"; // file client/default/svg/icons/search.svg
-$icon-socials-facebook: "\f10a"; // file client/default/svg/icons/socials-facebook.svg
-$icon-socials-instagram: "\f10b"; // file client/default/svg/icons/socials-instagram.svg
-$icon-socials-pinterest: "\f10c"; // file client/default/svg/icons/socials-pinterest.svg
-$icon-socials-tiktok: "\f10d"; // file client/default/svg/icons/socials-tiktok.svg
-$icon-socials-twitter: "\f10e"; // file client/default/svg/icons/socials-twitter.svg
+$icon-chevron-left: "\f104"; // file client/default/svg/icons/chevron-left.svg
+$icon-chevron-right: "\f105"; // file client/default/svg/icons/chevron-right.svg
+$icon-close: "\f106"; // file client/default/svg/icons/close.svg
+$icon-cube: "\f107"; // file client/default/svg/icons/cube.svg
+$icon-dollar: "\f108"; // file client/default/svg/icons/dollar.svg
+$icon-gift-box: "\f109"; // file client/default/svg/icons/gift-box.svg
+$icon-menu: "\f10a"; // file client/default/svg/icons/menu.svg
+$icon-search: "\f10b"; // file client/default/svg/icons/search.svg
+$icon-socials-facebook: "\f10c"; // file client/default/svg/icons/socials-facebook.svg
+$icon-socials-instagram: "\f10d"; // file client/default/svg/icons/socials-instagram.svg
+$icon-socials-pinterest: "\f10e"; // file client/default/svg/icons/socials-pinterest.svg
+$icon-socials-tiktok: "\f10f"; // file client/default/svg/icons/socials-tiktok.svg
+$icon-socials-twitter: "\f110"; // file client/default/svg/icons/socials-twitter.svg
 
 .icon-account::before {
     content: $icon-account !important;
@@ -109,6 +113,14 @@ $icon-socials-twitter: "\f10e"; // file client/default/svg/icons/socials-twitter
 
 .icon-cart::before {
     content: $icon-cart !important;
+}
+
+.icon-chevron-left::before {
+    content: $icon-chevron-left !important;
+}
+
+.icon-chevron-right::before {
+    content: $icon-chevron-right !important;
 }
 
 .icon-close::before {
