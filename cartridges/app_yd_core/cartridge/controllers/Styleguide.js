@@ -8,7 +8,7 @@ var server = require('server');
 
 /**
  * Styleguide-Show : This end point will show rendered atlas styleguide static pages
- * /on/demandware.store/Sites-becker-Site/en_US/Styleguide-Show
+ * /on/demandware.store/Sites-yoga-democracy-b2c-Site/en_US/Styleguide-Show
  */
 server.get('Show', function (req, res, next) {
     var currentSite = require('dw/system/Site').current;
