@@ -23,36 +23,42 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-cart:before {
     content: "\f103";
 }
-.icon-close:before {
+.icon-chevron-left:before {
     content: "\f104";
 }
-.icon-cube:before {
+.icon-chevron-right:before {
     content: "\f105";
 }
-.icon-dollar:before {
+.icon-close:before {
     content: "\f106";
 }
-.icon-gift-box:before {
+.icon-cube:before {
     content: "\f107";
 }
-.icon-menu:before {
+.icon-dollar:before {
     content: "\f108";
 }
-.icon-search:before {
+.icon-gift-box:before {
     content: "\f109";
 }
-.icon-socials-facebook:before {
+.icon-menu:before {
     content: "\f10a";
 }
-.icon-socials-instagram:before {
+.icon-search:before {
     content: "\f10b";
 }
-.icon-socials-pinterest:before {
+.icon-socials-facebook:before {
     content: "\f10c";
 }
-.icon-socials-tiktok:before {
+.icon-socials-instagram:before {
     content: "\f10d";
 }
-.icon-socials-twitter:before {
+.icon-socials-pinterest:before {
     content: "\f10e";
+}
+.icon-socials-tiktok:before {
+    content: "\f10f";
+}
+.icon-socials-twitter:before {
+    content: "\f110";
 }

@@ -6,7 +6,7 @@
             <div class="search__wrapper">
                 <div class="navbar-toggler header-link d-md-none" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="icon icon-menu"></i>
-                    <span class="hidden-xs-down">Menu</span>
+                    <span class="d-none">Menu</span>
                 </div>
                 <div class="search">
                     <a class="header-link" data-toggle="collapse" href="#collapse-search" role="button" aria-expanded="false" aria-controls="collapse-search">
@@ -31,11 +31,7 @@
             </div>
         </div>
         <div class="main-menu navbar-toggleable-sm menu-toggleable-left multilevel-dropdown d-none d-md-block" id="sg-navbar-collapse">
-            <div class="container">
-                <div class="row">
-                    <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}"/>
-                </div>
-            </div>
+            <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}"/>
         </div>
     </nav>
 </header>
