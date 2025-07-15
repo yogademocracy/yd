@@ -5,10 +5,6 @@
             "script": "./cartridge/scripts/hooks/mock"
         },
         {
-            "name": "dw.order.calculate",
-            "script": "./cartridge/scripts/hooks/cart/calculate.js"
-        },
-        {
             "name": "app.payment.form.processor.zero_order_amount",
             "script": "./cartridge/scripts/hooks/payment/processor/zero_order_amount_form_processor"
         },
@@ -39,10 +35,6 @@
         {
             "name": "app.payment.processor.flex_pay",
             "script": "./cartridge/scripts/hooks/payment/processor/flex_pay"
-        },
-        {
-            "name": "app.post.auth",
-            "script": "./cartridge/scripts/hooks/postAuth"
         }
     ]
 }
