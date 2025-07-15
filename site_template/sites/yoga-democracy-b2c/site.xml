@@ -3,7 +3,7 @@
     <name>Yoga Democracy B2C</name>
     <currency>USD</currency>
     <taxation>net</taxation>
-    <custom-cartridges>app_yd_b2c:app_yd_core:app_storefront_base_ext:plugin_sitemap:app_storefront_base</custom-cartridges>
+    <custom-cartridges>app_yd_b2c:app_yd_core:int_cybs_sfra:int_cybs_sfra_base:app_storefront_base_ext:plugin_sitemap:app_storefront_base</custom-cartridges>
     <storefront-status>protected</storefront-status>
     <storefront-password>$s0$b0401$9NHCVR+J968pjVakf4wERw==$BYzs7jKDpXeqwwPeypSos5GPmlCo7fxme5W/x69oZm0=</storefront-password>
 </site>
