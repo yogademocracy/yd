@@ -1,0 +1,4 @@
+<link rel="stylesheet" href="${URLUtils.staticURL('/css/deviceDataCollection.css')}">
+<isif condition="${pdict.getDeviceFingerprint}">
+    <script src="${pdict.url}"></script>
+</isif>

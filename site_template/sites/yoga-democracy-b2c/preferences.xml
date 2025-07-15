@@ -74,8 +74,22 @@
     </standard-preferences>
     <custom-preferences>
         <all-instances/>
-        <development/>
-        <staging/>
+        <development>
+            <preference preference-id="Cybersource_CardTransactionType">auth</preference>
+            <preference preference-id="Cybersource_CartridgeEnabled">false</preference>
+            <preference preference-id="Cybersource_DeveloperId">123456</preference>
+            <preference preference-id="Cybersource_MerchantID">123456</preference>
+            <preference preference-id="Cybersource_MerchantKeyId">123456</preference>
+            <preference preference-id="Cybersource_MerchantKeySecret">123456</preference>
+        </development>
+        <staging>
+            <preference preference-id="Cybersource_CardTransactionType">auth</preference>
+            <preference preference-id="Cybersource_CartridgeEnabled">false</preference>
+            <preference preference-id="Cybersource_DeveloperId">123456</preference>
+            <preference preference-id="Cybersource_MerchantID">123456</preference>
+            <preference preference-id="Cybersource_MerchantKeyId">123456</preference>
+            <preference preference-id="Cybersource_MerchantKeySecret">123456</preference>
+        </staging>
         <production/>
     </custom-preferences>
 </preferences>
