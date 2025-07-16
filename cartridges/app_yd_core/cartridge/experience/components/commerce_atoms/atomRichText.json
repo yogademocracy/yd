@@ -1,0 +1,44 @@
+{
+    "name": "Atom: Rich Text",
+    "group": "commerce_atoms",
+    "attribute_definition_groups": [
+        {
+            "id": "common",
+            "name": "Common attributes",
+            "attribute_definitions": [
+                {
+                    "id": "wrapperCSSClasses",
+                    "name": "CSS helper classes for the wrapper",
+                    "description": "Please use any Bootstrap helpers (https://getbootstrap.com/docs/4.6/utilities/) for top/bottom paddings, margins for banner etc (i.e. 'mb-2 mb-lg-0')",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "textContent",
+            "name": "Text Content",
+            "description": "The content to show in this component",
+            "attribute_definitions": [
+                {
+                    "id": "richText",
+                    "name": "content",
+                    "description": "This is the rich text content area",
+                    "type": "markup",
+                    "required": true
+                },
+                {
+                    "id": "textColor",
+                    "name": "Text color",
+                    "description": "Hexadecimal color code (ex: #000000)",
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    },
+                    "required": false
+                }
+            ]
+          }
+    ],
+    "region_definitions": []
+}

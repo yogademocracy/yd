@@ -1,0 +1,31 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceLayouts/gridContainer.css');
+</isscript>
+
+<div class="grid-container
+    ${pdict.containerWidthClass || ''}
+    ${pdict.id}
+    ${pdict.wrapperCSSClasses || ''}"
+
+    style="
+        <isif condition="${!empty(pdict.textColor)}">--text-color: ${pdict.textColor};</isif>
+        <isif condition="${!empty(pdict.containerBgColor)}">--js-container-bg-color: ${pdict.containerBgColor};</isif>
+        <isif condition="${!empty(pdict.contentBgColor)}">--js-content-bg-color: ${pdict.contentBgColor};</isif>"
+>
+        <isdecorate template="${pdict.decorator}">
+
+            <isif condition="${pdict.renderedCustomColumns}">
+                <isprint value="${pdict.renderedCustomColumns}" encoding="off"/>
+            <iselse/>
+                <isprint value="${pdict.regions.columns
+                    .setClassName(pdict.rowClass)
+                    .setComponentAttribute("class", pdict.columnClass)
+                    .render()}" encoding="off"/>
+            </isif>
+
+        </isdecorate>
+
+</div>

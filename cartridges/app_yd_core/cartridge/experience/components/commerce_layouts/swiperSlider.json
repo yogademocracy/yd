@@ -1,0 +1,26 @@
+{
+    "name": "Swiper Slider",
+    "description": "Swiper Slider Wrapper",
+    "group": "commerce_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "sliderSettings",
+            "name": "Slider Settings",
+            "attribute_definitions": [
+                {
+                    "id": "sliderSettingsJSON",
+                    "name": "Slider setting JSON",
+                    "description": "Please use Swiper settings format (https://swiperjs.com/swiper-api#parameters)",
+                    "type": "text",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id": "slides",
+            "name": "Slides"
+        }
+    ]
+}

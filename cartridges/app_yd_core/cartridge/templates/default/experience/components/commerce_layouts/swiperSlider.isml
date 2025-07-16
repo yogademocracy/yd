@@ -1,0 +1,17 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+
+<div class="swiper" data-swiper-setting='${pdict.sliderSettingsJSON}' style="--swiper-wrapper-transition-timing-function: linear">
+    <isprint value="${pdict.regions.slides
+        .setClassName('swiper-wrapper')
+        .setComponentAttribute("class", "swiper-slide")
+        .render()}" encoding="off"/>
+
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev">
+    </div>
+    <div class="swiper-button-next">
+    </div>
+
+    <div class="swiper-scrollbar"></div>
+</div>
