@@ -42,14 +42,14 @@
                     "id": "prevClass",
                     "name": "Prev arrow class",
                     "type": "string",
-                    "description": "Unique class for previous navigation arrow",
+                    "description": "Unique class for previous navigation arrow (example - js-home-page-products-prev)",
                     "required": true
                 },
                 {
                     "id": "nextClass",
                     "name": "Next arrow class",
                     "type": "string",
-                    "description": "Unique class for next navigation arrow",
+                    "description": "Unique class for next navigation arrow (example - js-home-page-products-next)",
                     "required": true
                 }
             ]

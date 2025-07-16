@@ -3,7 +3,7 @@
 
 <isscript>
     var assets = require('*/cartridge/scripts/assets.js');
-    assets.addCss('/css/experience/components/commerce_components/imageTile.css');
+    assets.addCss('/css/experience/components/commerce_components/imageTitle.css');
 </isscript>
 
 <div class="c-image-title ${pdict.wrapperCSSClasses || ''}">
