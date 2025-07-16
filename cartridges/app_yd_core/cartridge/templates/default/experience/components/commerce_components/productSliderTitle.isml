@@ -15,7 +15,7 @@
     </div>
     <div class="c-product-slider-title__link">
         <a class="" href="${pdict.link}">
-            <isprint value="${pdict.linkText}" encoding="on" />
+            <isprint value="${pdict.linkText || ''}" encoding="on" />
         </a>
     </div>
 </div>

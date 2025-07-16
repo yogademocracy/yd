@@ -18,7 +18,7 @@
                 img_class="${pdict.imgClass}"
                 alt="${pdict.imgAlt}"
             />
-            <p class="h5 c-image-title__text"><isprint value="${pdict.title}" encoding="on" /></p>
+            <p class="h5 c-image-title__text"><isprint value="${pdict.title || ''}" encoding="on" /></p>
         </a>
     <iselse/>
         <ispicturetag
@@ -30,6 +30,6 @@
             img_class="${pdict.imgClass}"
             alt="${pdict.imgAlt}"
         />
-        <p class="h5 c-image-title__text"><isprint value="${pdict.title}" encoding="on" /></p>
+        <p class="h5 c-image-title__text"><isprint value="${pdict.title || ''}" encoding="on" /></p>
     </isif>
 </div>
