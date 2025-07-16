@@ -1,0 +1,35 @@
+<iscomment>
+    Page Designer image objects that might be passed to this module and that contain
+    metaData.width and metaData.height of loaded image. Used to insert place-holders
+    for lazy-loading to keep width and height and avoid page jumps (aka "Layout shifts").
+     pd_obj: default desktop image (assumed image proportions or aspect-ratio is the same for all desktop sizes)
+     pd_obj_mobile: mobile image (supports different aspect-ratio then desktop's one)
+</iscomment>
+
+<picture class="a-picture ${pdict.picture_class || ''}"
+    <isif condition="${pdict.inlineStyle}">style="${pdict.inlineStyle}"</isif>
+>
+    <isif condition="${!empty(pdict.desktop_src) && !empty(pdict.mobile_src)}">
+        <source
+            srcset="${pdict.mobile_src}"
+            media="(max-width: 768px)"
+            <isif condition="${pdict.image_pd_mobile}">
+                width="${pdict.image_pd_mobile.metaData.width}"
+                height="${pdict.image_pd_mobile.metaData.height}"
+            </isif>
+        />
+    </isif>
+
+    <img
+        src="${pdict.desktop_src || pdict.mobile_src || URLUtils.staticURL('/images/noimagelarge.png')}"
+        class="a-picture__image ${pdict.img_class || ''}"
+        alt="${pdict.alt || ''}"
+        loading="${pdict.lazyload_off === true ? 'eager' : 'lazy'}"
+        <isif condition="${pdict.lazyload_off === true}">fetchpriority="high"</isif>
+        <isif condition="${!empty(pdict.image_pd_desktop) || !empty(pdict.image_pd_mobile)}">
+            width="${(pdict.image_pd_desktop ? pdict.image_pd_desktop : pdict.image_pd_mobile).metaData.width}"
+            height="${(pdict.image_pd_desktop ? pdict.image_pd_desktop : pdict.image_pd_mobile).metaData.height}"
+        </isif>
+    />
+</picture>
+

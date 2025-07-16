@@ -1,0 +1,26 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<isinclude template="/components/modules" />
+
+<div class="c-main-banner ${pdict.wrapperCSSClasses || ''}">
+    <isif condition="${!empty(pdict.link)}">
+        <a class="c-main-banner__link" href="${pdict.link}">
+            <ispicturetag
+                desktop_src="${pdict.imgDesktopSrc}"
+                mobile_src="${pdict.imgMobileSrc}"
+                image_pd_desktop="${pdict.imgDesktop}"
+                image_pd_mobile="${pdict.imgMobile}"
+                picture_class="c-main-banner__image"
+                alt="${pdict.imgAlt}"
+            />
+        </a>
+    <iselse/>
+        <ispicturetag
+            desktop_src="${pdict.imgDesktopSrc}"
+            mobile_src="${pdict.imgMobileSrc}"
+            image_pd_desktop="${pdict.imgDesktop}"
+            image_pd_mobile="${pdict.imgMobile}"
+            picture_class="c-main-banner__image"
+            alt="${pdict.imgAlt}"
+        />
+    </isif>
+</div>

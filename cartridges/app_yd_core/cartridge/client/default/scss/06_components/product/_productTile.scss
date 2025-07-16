@@ -1,0 +1,53 @@
+.page .product-tile-pd {
+    font-family: $font-family-base;
+
+    .product-tile {
+        &-component-image {
+            aspect-ratio: 2/3;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &-body {
+            font-size: rem(14);
+            text-align: center;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: rem(8);
+            margin-top: rem(10);
+
+            .product-name-link a {
+                color: $c-yd-jet-black;
+            }
+
+            .product-price {
+                font-weight: $font-weight-base;
+                color: $c-yd-jet-black;
+
+                .strike-through {
+                    color: rgba($c-yd-jet-black, .5);
+                    text-decoration-color: rgba($c-yd-jet-black, .5);
+                    margin-right: rem(8);
+                }
+
+                .sales.reduced-price {
+                    color: $c-yd-jet-black;
+                }
+            }
+
+            .product-ratings {
+                justify-content: center;
+
+                .fa {
+                    color: $c-yd-jet-black;
+                }
+
+                .rating-number {
+                    color: $c-yd-jet-black;
+                    font-size: rem(14);
+                }
+            }
+        }
+    }
+}

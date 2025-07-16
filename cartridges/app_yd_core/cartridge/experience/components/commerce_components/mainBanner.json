@@ -1,0 +1,58 @@
+{
+    "name": "Component: Main Banner",
+    "group": "commerce_components",
+    "attribute_definition_groups": [
+        {
+            "id": "common",
+            "name": "Common attributes",
+            "attribute_definitions": [
+                {
+                    "id": "wrapperCSSClasses",
+                    "name": "CSS helper classes for the wrapper",
+                    "description": "Please use any Bootstrap helpers (https://getbootstrap.com/docs/4.6/utilities/) for top/bottom paddings, margins for banner etc (i.e. 'mb-2 mb-lg-0')",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "picture",
+            "name": "Picture",
+            "description": "Apply images here. Different aspect ratio images can be assigned for desktop and mobile views",
+            "attribute_definitions": [
+                {
+                    "id": "imgDesktop",
+                    "name": "Desktop (default) Image",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "imgMobile",
+                    "name": "Mobile Image",
+                    "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "imgAlt",
+                    "name": "Image Alt text",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "wrapperLink",
+            "name": "Link",
+            "description": "Link for image wrapper",
+            "attribute_definitions": [
+                {
+                    "id": "link",
+                    "name": "Link",
+                    "type": "url",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

@@ -123,6 +123,17 @@
     }
 }
 
+// Mixin to generate all aspect ratio helpers
+@mixin build-aspect-ratio-helpers($ratios) {
+    @each $name, $value in $ratios {
+        .aspect-ratio-#{$name} {
+            aspect-ratio: #{$value};
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
 @mixin build-site-width-helpers($container-max-widths) {
     @each $breakpoint, $max-width in $container-max-widths {
         .u-site-width-#{$breakpoint} {

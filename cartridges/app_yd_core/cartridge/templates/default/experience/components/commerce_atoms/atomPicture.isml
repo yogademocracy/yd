@@ -1,0 +1,13 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<isinclude template="/components/modules" />
+
+<ispicturetag
+    desktop_src="${pdict.imgDesktopSrc}"
+    mobile_src="${pdict.imgMobileSrc}"
+    image_pd_desktop="${pdict.imgDesktop}"
+    image_pd_mobile="${pdict.imgMobile}"
+    picture_class="${pdict.wrapperCSSClasses}"
+    picture_style="${pdict.inlineStyle}"
+    alt="${pdict.imgAlt}"
+    lazyload_off="${pdict.disableLazyload === true}"
+/>

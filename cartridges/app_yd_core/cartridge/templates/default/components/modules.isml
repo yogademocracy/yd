@@ -1,0 +1,18 @@
+<ismodule template="/components/content/contentAsset"
+    name="contentasset"
+    attribute="aid"
+/>
+
+<ismodule
+    template="/components/modules/picturetag"
+    name="picturetag"
+    attribute="image_pd_desktop"
+    attribute="desktop_src"
+    attribute="image_pd_mobile"
+    attribute="mobile_src"
+    attribute="picture_class"
+    attribute="picture_style"
+    attribute="img_class"
+    attribute="alt"
+    attribute="lazyload_off"
+/>

@@ -1,0 +1,5 @@
+<div class="row container-decorator">
+    <div class="${pdict.contentWidthConfig.contentClass}">
+        <isreplace/>
+    </div>
+</div>

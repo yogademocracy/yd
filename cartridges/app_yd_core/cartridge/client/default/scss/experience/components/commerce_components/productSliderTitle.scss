@@ -1,0 +1,34 @@
+@import "../../../init-all";
+
+.c-product-slider-title {
+    &__navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(30);
+
+        &-link {
+            margin-bottom: 0;
+
+            @include hover-and-focus() {
+                color: $c-yd-jet-black;
+            }
+        }
+
+        .icon {
+            font-size: rem(14);
+            font-weight: $font-weight-semibold;
+            color: $c-yd-jet-black;
+            cursor: pointer;
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+        text-align: center;
+
+        &:hover {
+            text-decoration-color: $c-yd-jet-black;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import "../../../init-all";
+
+.c-image-title {
+    &__image {
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        margin: rem(16) 0;
+    }
+}

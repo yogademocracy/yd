@@ -1,0 +1,8 @@
+.grid-container {
+    background-color: var(--js-container-bg-color, none);
+
+    &__content {
+        background-color: var(--js-content-bg-color, none);
+        color: var(--text-color, inherit);
+    }
+}

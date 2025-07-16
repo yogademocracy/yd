@@ -1,0 +1,59 @@
+{
+    "name": "Component: Product Slider Title",
+    "group": "commerce_components",
+    "attribute_definition_groups": [
+        {
+            "id": "common",
+            "name": "Common attributes",
+            "attribute_definitions": [
+                {
+                    "id": "wrapperCSSClasses",
+                    "name": "CSS helper classes for the wrapper",
+                    "description": "Please use any Bootstrap helpers (https://getbootstrap.com/docs/4.6/utilities/) for top/bottom paddings, margins for banner etc (i.e. 'mb-2 mb-lg-0')",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "title",
+            "name": "Title",
+            "description": "Title for Product Slider",
+            "attribute_definitions": [
+                {
+                    "id": "titleText",
+                    "name": "Title text",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "linkText",
+                    "name": "Link text",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "link",
+                    "name": "Link",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "prevClass",
+                    "name": "Prev arrow class",
+                    "type": "string",
+                    "description": "Unique class for previous navigation arrow",
+                    "required": true
+                },
+                {
+                    "id": "nextClass",
+                    "name": "Next arrow class",
+                    "type": "string",
+                    "description": "Unique class for next navigation arrow",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

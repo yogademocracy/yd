@@ -12,11 +12,19 @@ $('.swiper').each(function () {
     }
 
     if (options.navigation?.nextEl) {
-        options.navigation.nextEl = $swiperEl.find(options.navigation.nextEl)[0];
+        if (options.navigation?.nextEl != '.swiper-button-next') {
+            $swiperEl.find('.swiper-button-next').hide();
+        }
+
+        options.navigation.nextEl = $swiperEl.find(options.navigation.nextEl)[0] || $(options.navigation.nextEl)[0];
     }
 
     if (options.navigation?.prevEl) {
-        options.navigation.prevEl = $swiperEl.find(options.navigation.prevEl)[0];
+        if (options.navigation?.prevEl != '.swiper-button-prev') {
+            $swiperEl.find('.swiper-button-prev').hide();
+        }
+
+        options.navigation.prevEl = $swiperEl.find(options.navigation.prevEl)[0] || $(options.navigation.prevEl)[0];
     }
 
     if (options.scrollbar?.el) {
@@ -25,4 +33,3 @@ $('.swiper').each(function () {
 
     new Swiper($swiperEl[0], options);
 });
-
