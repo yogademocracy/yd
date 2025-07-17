@@ -1,11 +1,15 @@
-#paFrame { border: none; width:100%; min-height:755px;}
-#deviceDataCollection{
+#paFrame {
+    border: none; width:100%; min-height:755px;
+}
+
+#deviceDataCollection {
     margin: 0 auto
 }
-#paymentprocessingmessage{
+
+#paymentprocessingmessage {
     text-align: center; padding: 1em;
 }
 
-#deviceFPC{
+#deviceFPC {
     width: 100px; height: 100px; border: 0; position:absolute; top: -5000px;
 }

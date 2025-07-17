@@ -28,3 +28,10 @@
         flex: 1;
     }
 }
+
+.site-container {
+    @include media-breakpoint-up(md) {
+        padding-left: rem(40);
+        padding-right: rem(40);
+    }
+}
