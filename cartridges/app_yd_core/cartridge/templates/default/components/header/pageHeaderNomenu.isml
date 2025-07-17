@@ -1,7 +1,7 @@
 <header>
     <isinclude template="/components/header/skipNav" />
     <div class="header-banner slide-up d-none">
-        <div class="container-fluid">
+        <div class="container-fluid site-container">
             <div class="d-flex justify-content-between">
                 <div class="content">
                     <isslot id="header-banner-m" description="Slot above the site header" context="global" />
@@ -15,7 +15,7 @@
         </div>
     </div>
     <nav role="navigation">
-        <div class="container-fluid header-nav justify-content-center">
+        <div class="container-fluid site-container header-nav justify-content-center">
             <div class="logo__wrapper">
                 <a class="logo__link" href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
                     <img class="logo__image" src="${URLUtils.staticURL('/images/logo.png')}" alt="${Resource.msg('global.storename', 'common', null)}" />

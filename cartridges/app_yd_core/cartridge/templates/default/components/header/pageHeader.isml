@@ -2,7 +2,7 @@
 <header class="page-main-header">
     <isinclude template="/components/header/skipNav" />
     <nav role="navigation">
-        <div class="container-fluid header-nav">
+        <div class="container-fluid site-container header-nav">
             <div class="search__wrapper">
                 <div class="navbar-toggler header-link d-md-none" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="icon icon-menu"></i>

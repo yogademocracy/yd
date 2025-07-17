@@ -32,7 +32,7 @@
                     "name": "Container width",
                     "description": "Please specify Container max-width (by default - u-site-width)",
                     "type": "enum",
-                    "values": ["full-width", "u-site-width-xxl", "u-site-width-xl", "u-site-width-lg", "u-site-width-md", "u-site-width-sm"],
+                    "values": ["full-width", "site-container", "u-site-width-xxl", "u-site-width-xl", "u-site-width-lg", "u-site-width-md", "u-site-width-sm"],
                     "default_value": "u-site-width-xxl",
                     "required": false
                 },
