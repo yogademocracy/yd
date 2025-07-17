@@ -55,7 +55,7 @@
                 transition: transform 0.3s ease;
             }
 
-            @include hover-and-focus() {
+            @include hover-and-focus {
                 color: $c-yd-steel-gray;
                 outline: none;
 
@@ -109,7 +109,7 @@
             width: auto;
             padding: 0;
 
-            @include hover-and-focus() {
+            @include hover-and-focus {
                 background: none;
             }
 
@@ -118,7 +118,7 @@
                 padding: rem(18);
                 color: $c-yd-jet-black;
 
-                @include hover-and-focus() {
+                @include hover-and-focus {
                     color: $c-yd-steel-gray;
                 }
 

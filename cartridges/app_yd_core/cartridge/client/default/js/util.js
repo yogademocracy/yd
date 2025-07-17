@@ -18,10 +18,10 @@ var util = {
      *  Set cookie by name
      *  @param {string} name of cookie
      *  @param {string} value of cookie
-     *  @param {Object} options options
+     *  @param {Object} _options options
      */
-    setCookie: function (name, value, options) {
-        options = options || {};
+    setCookie: function (name, value, _options) {
+        var options = _options || {};
 
         options.path = options.path || '/';
 
@@ -36,12 +36,12 @@ var util = {
             options.expires = expires.toUTCString();
         }
 
-        value = encodeURIComponent(value);
+        var encodedValue = encodeURIComponent(value);
 
-        var updatedCookie = name + '=' + value + ';secure';
+        var updatedCookie = name + '=' + encodedValue + ';secure';
 
         for (var propName in options) {
-            if (!options.hasOwnProperty(propName)) {
+            if (!Object.prototype.hasOwnProperty.call(options, propName)) {
                 continue;
             }
             updatedCookie += '; ' + propName;

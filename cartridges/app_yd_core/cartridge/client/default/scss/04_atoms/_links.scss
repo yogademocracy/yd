@@ -19,7 +19,7 @@
 .a-link-dark {
     color: $c-yd-jet-black;
 
-    @include hover-and-focus() {
+    @include hover-and-focus {
         color: rgba($c-yd-jet-black, .75);
     }
 }

@@ -51,7 +51,7 @@
             font-size: rem(22);
             margin: 0 rem(10) rem(5) 0;
 
-            @include hover-and-focus() {
+            @include hover-and-focus {
                 color: $c-yd-steel-gray;
             }
         }
@@ -85,7 +85,7 @@
         }
 
         &__link {
-            @include hover-and-focus() {
+            @include hover-and-focus {
                 color: $c-yd-steel-gray;
             }
         }
@@ -102,7 +102,7 @@
     }
 
     &__link {
-        @include hover-and-focus() {
+        @include hover-and-focus {
             color: $c-yd-steel-gray;
         }
     }
