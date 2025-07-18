@@ -24,7 +24,8 @@
                                 <div class="tab-pane ${pdict.navTabValue === 'login' ? 'active' : ''}" id="login" role="tabpanel" aria-labelledby="login-tab">
                                     <isinclude template="account/components/loginForm" />
                                     <isinclude template="account/password/requestPasswordResetModal"/>
-                                    <isinclude template="account/components/oauth" />
+                                    <iscomment> TODO: uncomment after Oauth configuration </iscomment>
+                                    <iscomment> <isinclude template="account/components/oauth" /> </iscomment>
                                 </div>
                                 <div class="tab-pane ${pdict.navTabValue === "register" ? 'active' : ''}" id="register" role="tabpanel" aria-labelledby="register-tab">
                                     <isinclude template="account/components/registerForm" />
