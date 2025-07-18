@@ -242,7 +242,6 @@ function getAccountByEmailQuery(email) {
  * @returns {Array} orders from SOM.
  */
 function getCustomerOrdersFromSOM(filters, email) {
-    var apiResponse;
     var somOrders = [];
 
     var svc = ServiceMgr.restComposite();

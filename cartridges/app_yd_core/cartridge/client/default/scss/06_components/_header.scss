@@ -35,7 +35,7 @@
         color: $white;
         font-size: rem(16);
 
-        @include hover-and-focus() {
+        @include hover-and-focus {
             color: $white;
         }
     }
@@ -48,7 +48,7 @@
         color: $white;
         font-size: rem(12);
 
-        @include hover-and-focus() {
+        @include hover-and-focus {
             color: $white;
         }
     }

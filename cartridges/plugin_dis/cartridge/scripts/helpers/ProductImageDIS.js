@@ -105,7 +105,9 @@ function ProductImage(imageObject, viewType, index) {
     // --> defines if the image needs to be scaled. That's not necessary if a product has an image for the given view type configured
     this.scaleImage = false;
 
-    this.transformationObj = cvDISConfiguration.hasOwnProperty(viewType) ? cvDISConfiguration[viewType] : {};
+    this.transformationObj = Object.prototype.hasOwnProperty.call(cvDISConfiguration, viewType)
+        ? cvDISConfiguration[viewType]
+        : {};
 
     // determine the scaleableImageType that correspoonds with the viewType
     // set the default viewtype if no specific configuration was found
@@ -212,7 +214,7 @@ ProductImage.prototype.getFinalUrlAsString = function (imageURL) {
         return current.replace(/(^.*_)[a-zA-Z0-9]{3}(\/on\/demandware.*$)/, '$1' + replacement.value + '$2');
     }
     return current;
-}
+};
 
 /**
  * Gets the tile for images.

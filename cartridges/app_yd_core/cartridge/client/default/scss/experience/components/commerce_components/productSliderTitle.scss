@@ -10,7 +10,7 @@
         &-link {
             margin-bottom: 0;
 
-            @include hover-and-focus() {
+            @include hover-and-focus {
                 color: $c-yd-jet-black;
             }
         }

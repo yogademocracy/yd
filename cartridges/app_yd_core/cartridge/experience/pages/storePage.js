@@ -1,8 +1,5 @@
 'use strict';
 
-// eslint-disable-next-line no-unused-vars
-/* global response */
-
 var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
 var PageRenderHelper = require('*/cartridge/experience/utilities/PageRenderHelper.js');
