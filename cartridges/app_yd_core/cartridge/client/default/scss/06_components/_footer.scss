@@ -35,6 +35,12 @@
             margin-bottom: rem(8);
             list-style: none;
         }
+    
+        &__text-limited {
+            @include media-breakpoint-up(md) {
+                max-width: 75%;
+            }
+        }
     }
 
     .footer-col:last-child {
