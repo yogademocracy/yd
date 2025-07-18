@@ -53,6 +53,8 @@ function formatAttributes(context, model) {
 
         // End debug code
 
+        // attrID: imgDesktop, imgMobile
+
         switch (attrType) {
             case 'image':
                 // model[attrID] = DISHelpers.getScaledImageFromPageDesigner(attrID, attrValue);

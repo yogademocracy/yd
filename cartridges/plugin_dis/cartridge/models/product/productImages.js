@@ -23,12 +23,9 @@ function Images(product, imageConfig) {
             }
         } else {
             var images = ProductImageDIS.getImages(product, type);
-            result = collections.map(images, function (image) {
-                return {
-                    alt: image.getAlt(),
-                    url: image.getURL().toString(),
-                    title: image.getTitle()
-                };
+
+            result = collections.map(images, function (image, index) {
+                return image.generateImageModel({ index: index });
             });
         }
         this[type] = result;

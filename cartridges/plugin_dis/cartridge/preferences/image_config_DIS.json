@@ -1,23 +1,31 @@
 {
-	"viewTypeMapping": {
-		"medium": "large",
-		"small": "large"
-	},
-	"large": {
-		"scaleWidth": 800,
-		"scaleHeight": 800
-	},
-	"medium": {
-		"scaleWidth": 400,
-		"scaleHeight": 400
-	},
-	"small": {
-		"scaleWidth": 140,
-		"scaleHeight": 140
-	},
-	"missingImages": {
-		"large": "large_missing.jpg",
-		"medium": "medium_missing.jpg",
-		"small": "small_missing.jpg"
-	}
+    "product": {
+        "viewTypeMapping": {
+            "medium": "large",
+            "small": "large"
+        },
+        "large": {
+            "scaleWidth": 800,
+            "scaleHeight": 800
+        },
+        "medium": {
+            "scaleWidth": 1400,
+            "scaleHeight": 1400
+        },
+        "small": {
+            "scaleWidth": 140,
+            "scaleHeight": 140
+        },
+        "missingImages": {
+            "large": "images/noimage/noimagelarge.png",
+            "medium": "images/noimage/noimagemedium.png",
+            "small": "images/noimage/noimagesmall.png"
+	    }
+    },
+    "categoryBanner": {
+        "large": {
+            "scaleWidth": 1800
+        }
+    }
+    
 }
