@@ -14,8 +14,12 @@
             srcset="${pdict.mobile_src}"
             media="(max-width: 768px)"
             <isif condition="${pdict.image_pd_mobile}">
-                width="${pdict.image_pd_mobile.metaData.width}"
-                height="${pdict.image_pd_mobile.metaData.height}"
+                <isif condition="${!empty(pdict.image_pd_mobile.metaData.width)}">
+                    width="${pdict.image_pd_mobile.metaData.width}"
+                </isif>
+                <isif condition="${!empty(pdict.image_pd_mobile.metaData.height)}">
+                    height="${pdict.image_pd_mobile.metaData.height}"
+                </isif>
             </isif>
         />
     </isif>
