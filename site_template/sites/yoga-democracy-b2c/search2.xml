@@ -31,9 +31,9 @@
             <unit>days</unit>
         </full-reindexing-schedule>
         <indexed-locales>
-            <locale>x-default</locale>
+            <locale>en-US</locale>
         </indexed-locales>
-        <stemming xml:lang="x-default">English</stemming>
+        <stemming xml:lang="en-US">English</stemming>
     </index-settings>
 
 </search>
