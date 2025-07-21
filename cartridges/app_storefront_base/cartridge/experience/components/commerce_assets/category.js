@@ -47,8 +47,6 @@ module.exports.render = function (context, modelIn) {
         model.changeTextColor = content.changeTextColor;
     }
 
-    // TODO: add dis function and put the attrid manually
-
     // instruct 24 hours relative pagecache
     var expires = new Date();
     expires.setDate(expires.getDate() + 1); // this handles overflow automatically

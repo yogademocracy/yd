@@ -190,10 +190,11 @@ ProductImage.prototype.getImageURL = function (imageFunctionID) {
 
         if (testImage) {
             if (this.scaleImage) {
-                imageURL = URLUtils.imageURL(URLUtils.CONTEXT_LIBRARY, null, testImage, this.transformationObj).toString();
+                imageURL = URLUtils[imageFunctionID ? (imageFunctionID.toLowerCase() + 'Static') : 'imageURL'](URLUtils.CONTEXT_LIBRARY, null, testImage, this.transformationObj);
             } else {
-                imageURL = URLUtils.imageURL(URLUtils.CONTEXT_LIBRARY, null, testImage, null).toString();
+                imageURL = URLUtils[finalStaticFunctionID](URLUtils.CONTEXT_LIBRARY, null, testImage);
             }
+
             return this.getFinalUrlAsString(imageURL);
         }
         return URLUtils[finalStaticFunctionID]('/images/noimage' + this.viewType + '.png');
@@ -233,7 +234,7 @@ ProductImage.prototype.getTitle = function () {
         return this.imageObject.master.name;
     }
     if (!this.image || !this.image.title) {
-        var DISConfiguration = DISHelpers.getDISConfiguration();
+        var DISConfiguration = DISHelpers.getDISConfigurationForType(this.referenceType);
         if (DISConfiguration && DISConfiguration.imageMissingText) {
             return DISConfiguration.imageMissingText;
         } else if (this.referenceType === 'Product') {

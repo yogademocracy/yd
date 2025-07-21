@@ -1,7 +1,5 @@
 'use strict';
 
-var sitePrefUtil = require('util/sitepref');
-
 var disConfig = null;
 var disLibraryConfig = null;
 var disDevices = ['desktop', 'mobile', 'tablet'];
@@ -11,8 +9,11 @@ var disDevices = ['desktop', 'mobile', 'tablet'];
  * @returns {Object} disConfig
  */
 function getDISConfiguration() {
+    var sitePrefUtil = require('*/cartridge/scripts/util/sitepref');
+
     if (disConfig === null) {
-        disConfig = sitePrefUtil.getJSONValue('disConfiguration') || require('*/cartridge/preferences/image_config_DIS');
+        disConfig = sitePrefUtil.getCachedSitePref('disConfiguration', true)
+            || require('*/cartridge/preferences/image_config_DIS');
     }
 
     return disConfig;
@@ -23,8 +24,11 @@ function getDISConfiguration() {
  * @returns {Object} json configuration object.
  */
 function getDISPageDesignerImageConfig() {
+    var sitePrefUtil = require('*/cartridge/scripts/util/sitepref');
+
     if (disLibraryConfig === null) {
-        disLibraryConfig = sitePrefUtil.getJSONValue('disLibraryConfiguration') || require('*/cartridge/preferences/image_config_library_DIS');
+        disLibraryConfig = sitePrefUtil.getCachedSitePref('disLibraryConfiguration', true) 
+            || require('*/cartridge/preferences/image_config_library_DIS');
     }
 
     return disLibraryConfig;
@@ -67,10 +71,10 @@ function getDISConfigurationForType(type) {
  * @returns {string} imageDIS path
  */
 function getCategorySlotBannerImageDIS(category, viewType) {
-    var objectUtil = require('util/object');
+    var objectUtil = require('*/cartridge/scripts/util/object');
 
     var DISConfiguration = getDISConfigurationForType('categoryBanner');
-    var slotBannerImage = objectUtil.get(category, 'custom.slotBannerImage');
+    var slotBannerImage = objectUtil.getPropertyByPath(category, 'custom.slotBannerImage', '');
     var slotBannerImageConfig = DISConfiguration[viewType];
     var slotBannerImageDIS = '';
 
@@ -99,9 +103,9 @@ function getScaledImageFromPageDesigner(fieldID, image) {
     var devicesConfig = getPDConfigByFieldID(fieldID);
 
     var result = {
-        src: encodeURI(image.file.getHttpsURL().toString()),
+        src: image.file.getHttpsURL().toString(),
         srcset: {},
-        alt: image.file.getAlt()
+        alt: image.file.getAlt() || ''
     };
 
     if ('focalPoint' in image) {
@@ -112,7 +116,7 @@ function getScaledImageFromPageDesigner(fieldID, image) {
     if (devicesConfig) {
         Object.keys(devicesConfig).forEach(function (deviceType) {
             var transformationObj = devicesConfig[deviceType];
-            var imageUrl = encodeURI(image.file.getImageURL(transformationObj).toString());
+            var imageUrl = image.file.getImageURL(transformationObj).toString();
 
             result.srcset[deviceType] = imageUrl;
         });
@@ -120,7 +124,7 @@ function getScaledImageFromPageDesigner(fieldID, image) {
 
     disDevices.forEach((disDevice) => {
         if (!result.srcset[disDevice]) {
-            var imageUrl = encodeURI(image.file.getImageURL(null).toString());
+            var imageUrl = image.file.getImageURL(null).toString();
 
             result.srcset[disDevice] = imageUrl;
         }
