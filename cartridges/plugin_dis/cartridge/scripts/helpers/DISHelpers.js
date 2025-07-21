@@ -82,8 +82,8 @@ function getCategorySlotBannerImageDIS(category, viewType) {
 
     if (categoryImage) {
         slotBannerImageDIS = slotBannerImageConfig 
-            ? encodeURI(categoryImage.getImageURL(slotBannerImageConfig))
-            : encodeURI(categoryImage.getImageURL(null));
+            ? categoryImage.getImageURL(slotBannerImageConfig)
+            : categoryImage.getImageURL(null);
     }
 
     return slotBannerImageDIS;
