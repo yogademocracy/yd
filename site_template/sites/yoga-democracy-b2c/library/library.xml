@@ -96,7 +96,7 @@
         <page-attributes/>
         <custom-attributes>
             <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="header-banner bg-magenta-plum slide-up d-none"&gt;&#13;
-	&lt;div class="container-fluid"&gt;&#13;
+	&lt;div class="container-fluid site-container"&gt;&#13;
 		&lt;div class="d-flex justify-content-between"&gt;&#13;
 			&lt;div class="content"&gt;&#13;
 				&lt;div class="d-flex"&gt;&#13;
@@ -135,11 +135,11 @@
         <searchable-flag>false</searchable-flag>
         <page-attributes/>
         <custom-attributes>
-            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="container-fluid"&gt;&#13;
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="container-fluid site-container"&gt;&#13;
 	&lt;div class="footer-nav footer-section row"&gt;&#13;
-		&lt;div class="footer-col col-12 col-md-4"&gt;&#13;
+		&lt;div class="footer-col col-12 col-md-6"&gt;&#13;
 			&lt;h6 class="footer-col__title"&gt;Made For Free Range Humans&lt;/h6&gt;&#13;
-			&lt;p class="footer-col__text w-75"&gt;Our materials are made of recycled plastic bottles and fishing nets. We use a no-water dyeing process that cuts down on waste. We take every scrap of material that passes through our shop and turn it into something of use and beauty.&lt;/p&gt;&#13;
+			&lt;p class="footer-col__text footer-col__text-limited"&gt;Our materials are made of recycled plastic bottles and fishing nets. We use a no-water dyeing process that cuts down on waste. We take every scrap of material that passes through our shop and turn it into something of use and beauty.&lt;/p&gt;&#13;
 			&lt;div class="footer-banner"&gt;&#13;
 				&lt;div class="footer-banner__image-wrapper"&gt;&#13;
 					&lt;img alt="" class="footer-banner__image" src="images/footer/footer-logo.png?$staticlink$" title="" /&gt;&#13;
@@ -169,7 +169,7 @@
 				&lt;/div&gt;&#13;
 			&lt;/div&gt;&#13;
 		&lt;/div&gt;&#13;
-		&lt;div class="footer-col col-12 col-md-4"&gt;&#13;
+		&lt;div class="footer-col col-12 col-md-3"&gt;&#13;
 			&lt;h6 class="footer-col__title"&gt;Customer Care&lt;/h6&gt;&#13;
 			&lt;ul class="footer-col__links"&gt;&#13;
 				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="$url('Account-Show')$"&gt;Customer Account Log In&lt;/a&gt;&#13;
@@ -201,7 +201,7 @@
 				&lt;/li&gt;&#13;
 			&lt;/ul&gt;&#13;
 		&lt;/div&gt;&#13;
-		&lt;div class="footer-col col-12 col-md-4"&gt;&#13;
+		&lt;div class="footer-col col-12 col-md-3"&gt;&#13;
 			&lt;h6 class="footer-col__title"&gt;YD Community&lt;/h6&gt;&#13;
 			&lt;ul class="footer-col__links"&gt;&#13;
 				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;About Us&lt;/a&gt;&#13;
@@ -313,7 +313,7 @@
         <page-attributes/>
         <custom-attributes>
             <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="footer-copyright-payment footer-section"&gt;&#13;
-	&lt;div class="container-fluid"&gt;&#13;
+	&lt;div class="container-fluid site-container"&gt;&#13;
 		&lt;div class="row"&gt;&#13;
 			&lt;div class="col-6"&gt;&#13;
 				&lt;span class="footer-copyright-payment__text"&gt;© 2025 &lt;a class="footer-copyright-payment__link" href="/"&gt;Yoga Democracy.&lt;/a&gt;&#13;

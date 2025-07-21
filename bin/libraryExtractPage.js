@@ -15,15 +15,15 @@ var sitesPath = options.path + 'sites';
  * npm run library:page -- --<siteid|lib>=<site-id|libraryid> --page=<page-id>
  *
  * Samples For Shared library:
- * npm run library:page -- --lib=becker-shared-library --page="homepage"
- * npm run library:page -- --lib=becker-shared-library --page="homepage" --remove
- * npm run library:page -- --lib=becker-shared-library --content=07939eee95931ed1f5c1c110c9
- * npm run library:page -- --lib=becker-shared-library --folder="blog"
- * todo: npm run library:page -- --lib=becker-shared-library --all --remove
+ * npm run library:page -- --lib=yoga-shared-library --page="homepage"
+ * npm run library:page -- --lib=yoga-shared-library --page="homepage" --remove
+ * npm run library:page -- --lib=yoga-shared-library --content=07939eee95931ed1f5c1c110c9
+ * npm run library:page -- --lib=yoga-shared-library --folder="blog"
+ * todo: npm run library:page -- --lib=yoga-shared-library --all --remove
  *
  * Sample For Private library:
- * npm run library:page -- --siteid=becker --page="homepage"
- * npm run library:page -- --siteid=becker --content=07939eee95931ed1f5c1c110c9
+ * npm run library:page -- --siteid=yoga-democracy-b2c --page="homepage"
+ * npm run library:page -- --siteid=yoga-democracy-b2c --content=07939eee95931ed1f5c1c110c9
 */
 
 if ((options.lib || options.siteid) && (options.page || options.all || options.content || options.folder)) {

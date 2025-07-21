@@ -7,4 +7,4 @@ if [[ ! "$COMMIT_EMAIL" =~ discoverember ]]; then
   exit 1
 fi
 
-#npx lint-staged --quiet
+npx lint-staged --quiet

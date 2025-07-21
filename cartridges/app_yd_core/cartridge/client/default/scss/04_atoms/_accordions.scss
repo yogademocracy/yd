@@ -68,7 +68,7 @@
         padding-right: rem(30);
         position: relative;
 
-        @include hover-and-focus() {
+        @include hover-and-focus {
             color: $c-yd-jet-black;
         }
 

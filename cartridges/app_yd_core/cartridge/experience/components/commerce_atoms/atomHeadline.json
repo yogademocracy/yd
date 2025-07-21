@@ -18,7 +18,7 @@
         {
             "id": "cta",
             "name": "Headline",
-            "description": "Configure Headline. Can contain basic html markup i.e. for colors etc: '<strong class=\"text-primary\">1 million+ candidates</strong> have prepared with Becker'",
+            "description": "Configure Headline. Can contain basic html markup i.e. for colors etc: '<strong class=\"text-primary\">1 million+ candidates</strong> have prepared with Yoga Democracy'",
             "attribute_definitions": [
                 {
                     "id": "title",

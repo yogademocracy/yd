@@ -60,10 +60,10 @@
                 </div>
             </div>
         </isloop>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mb-3">
             <div class="col-6">
                 <div class="row">
-                    <div class="col text-center">
+                    <div class="col text-center mb-1">
                         <a href="${URLUtils.url('Account-Show')}" class="normal" aria-label="${Resource.msg('label.addressbook.myaccount','account',null)}">
                             ${Resource.msg('link.profile.backtomyaccount','account',null)}
                         </a>
