@@ -4588,6 +4588,20 @@
                     </value-definition>
                 </value-definitions>
             </attribute-definition>
+            <attribute-definition attribute-id="disConfiguration">
+                <display-name xml:lang="x-default">DIS Configuration</display-name>
+                <description xml:lang="x-default">Contains DIS configuration to be used on site images. [CACHED]</description>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="disLibraryConfiguration">
+                <display-name xml:lang="x-default">DIS Library Configuration</display-name>
+                <description xml:lang="x-default">Contains DIS configuration to be used on images from Library (PD components). [CACHED]</description>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
         </custom-attribute-definitions>
         <group-definitions>
             <attribute-group group-id="SFRA Unified Feature Cartridge">
@@ -4701,6 +4715,8 @@
             <attribute-group group-id="Dynamic Imaging Service">
                 <display-name xml:lang="x-default">Dynamic Imaging Service</display-name>
                 <attribute attribute-id="disImageSourceEnvironment"/>
+                <attribute attribute-id="disConfiguration"/>
+                <attribute attribute-id="disLibraryConfiguration"/>
             </attribute-group>
         </group-definitions>
     </type-extension>

@@ -62,7 +62,7 @@ var Site = require('dw/system/Site');
 var ProductVariationAttributeValue = require('dw/catalog/ProductVariationAttributeValue');
 var ProductVariationModel = require('dw/catalog/ProductVariationModel');
 // configuration 'singleton' for the duration of a request
-var cvDISConfiguration = require('*/cartridge/preferences/image_config_DIS');
+var DISHelpers = require('*/cartridge/scripts/helpers/DISHelpers');
 
 /**
 * Initializes the ProductImage wrapper object
@@ -102,20 +102,17 @@ function ProductImage(imageObject, viewType, index) {
     this.scalableViewType = null;
     // --> index of the image
     this.index = !index ? 0 : index;
-    // --> defines if the image needs to be scaled. That's not necessary if a product has an image for the given view type configured
-    this.scaleImage = false;
 
-    this.transformationObj = Object.prototype.hasOwnProperty.call(cvDISConfiguration, viewType)
-        ? cvDISConfiguration[viewType]
-        : {};
+    var config = DISHelpers.getDISConfigurationForType(this.referenceType);
+
+    this.transformationObj = config[viewType] || {};
 
     // determine the scaleableImageType that correspoonds with the viewType
     // set the default viewtype if no specific configuration was found
     this.scalableViewType = this.viewType;
 
-    // use the JSON configuration in 'disConfiguration' to determine scaleableImageType
-    if (Object.prototype.hasOwnProperty.call(cvDISConfiguration, 'viewTypeMapping') && cvDISConfiguration.viewTypeMapping[this.viewType]) {
-        this.scalableViewType = cvDISConfiguration.viewTypeMapping[this.viewType];
+    if (config.viewTypeMapping[this.viewType]) {
+        this.scalableViewType = config.viewTypeMapping[this.viewType];
     }
 
     this.scaleableImage = this.imageObject.getImage(this.scalableViewType, this.index);
@@ -177,29 +174,36 @@ ProductImage.prototype.getImageURL = function (imageFunctionID) {
     if (!this.image) {
         // check if test images should be used --> makes sense in cases where the product images haven't yet been configured
         let testImage = null;
-        if (cvDISConfiguration.missingImages) {
-            if (cvDISConfiguration.missingImages[this.viewType]) {
-                testImage = cvDISConfiguration.missingImages[this.viewType];
+
+        var config = DISHelpers.getDISConfigurationForType(this.referenceType);
+
+        if (config.missingImages) {
+            if (config.missingImages[this.viewType]) {
+                testImage = config.missingImages[this.viewType];
                 this.scaleImage = false;
             }
-            if (!testImage && this.scalableViewType !== this.viewType && cvDISConfiguration.missingImages[this.scalableViewType]) {
-                testImage = cvDISConfiguration.missingImages[this.scalableViewType];
+            if (!testImage && this.scalableViewType !== this.viewType && config.missingImages[this.scalableViewType]) {
+                testImage = config.missingImages[this.scalableViewType];
                 this.scaleImage = true;
             }
         }
+
         if (testImage) {
             if (this.scaleImage) {
-                imageURL = URLUtils[imageFunctionID ? (imageFunctionID.toLowerCase() + 'Static') : 'imageURL'](URLUtils.CONTEXT_SITE, Site.current.ID, testImage, this.transformationObj);
+                imageURL = URLUtils[imageFunctionID ? (imageFunctionID.toLowerCase() + 'Static') : 'imageURL'](URLUtils.CONTEXT_LIBRARY, null, testImage, this.transformationObj);
             } else {
-                imageURL = URLUtils[finalStaticFunctionID](URLUtils.CONTEXT_SITE, Site.current.ID, testImage);
+                imageURL = URLUtils[finalStaticFunctionID](URLUtils.CONTEXT_LIBRARY, null, testImage);
             }
+
             return this.getFinalUrlAsString(imageURL);
         }
         return URLUtils[finalStaticFunctionID]('/images/noimage' + this.viewType + '.png');
     }
+
     if (this.scaleImage) {
         return this.getFinalUrlAsString(this.image[imageFunctionID ? ('get' + imageFunctionID + 'ImageURL') : 'getImageURL'](this.transformationObj));
     }
+
     return this.getFinalUrlAsString(this.image[imageFunctionID ? ('get' + imageFunctionID + 'URL') : 'getURL']());
 };
 
@@ -230,8 +234,9 @@ ProductImage.prototype.getTitle = function () {
         return this.imageObject.master.name;
     }
     if (!this.image || !this.image.title) {
-        if (cvDISConfiguration.imageMissingText) {
-            return cvDISConfiguration.imageMissingText;
+        var DISConfiguration = DISHelpers.getDISConfigurationForType(this.referenceType);
+        if (DISConfiguration && DISConfiguration.imageMissingText) {
+            return DISConfiguration.imageMissingText;
         } else if (this.referenceType === 'Product') {
             return this.imageObject.name;
         }
@@ -239,7 +244,6 @@ ProductImage.prototype.getTitle = function () {
     }
     return this.image.title;
 };
-
 
 /**
  * Gets the alternative text for images.
@@ -255,8 +259,10 @@ ProductImage.prototype.getAlt = function () {
         return this.imageObject.master.name;
     }
     if (!this.image || !this.image.alt) {  // same as above
-        if (cvDISConfiguration.imageMissingText) {
-            return cvDISConfiguration.imageMissingText;
+        var config = DISHelpers.getDISConfigurationForType(this.referenceType);
+
+        if (config.imageMissingText) {
+            return config.imageMissingText;
         } else if (this.referenceType === 'Product') {
             return this.imageObject.name;
         }
@@ -326,6 +332,45 @@ ProductImage.getImages = function (imageObject, viewType) {
         return null;
     }
     return ProductImage.getImage(imageObject, viewType, 0).getImages();
+};
+
+/**
+ * Generates HTML-safe image url
+ * @returns {string} url
+ */
+ProductImage.prototype.getSafeUrl = function () {
+    return encodeURI(this.getURL().toString());
+};
+
+/**
+ * Generates image tag configuration
+ * @param {Object} [customOptions] - options for image
+ * @param {number} [customOptions.index] - image index
+ * @returns {Object} image tag configs
+ */
+ProductImage.prototype.generateImageModel = function (customOptions) {
+    var devicesConfig = this.transformationObj;
+    var options = customOptions || {};
+
+    var result = {
+        alt: this.getAlt(),
+        title: this.getTitle(),
+        index: options.index || 0,
+        url: this.getSafeUrl(),
+        srcset: {}
+    };
+
+    Object.keys(devicesConfig).forEach(function (deviceType) {
+        this.transformationObj = devicesConfig[deviceType];
+
+        if (this.transformationObj instanceof Object) {
+            result.srcset[deviceType] = this.getSafeUrl();
+        }
+    }, this);
+
+    this.transformationObj = devicesConfig;
+
+    return result;
 };
 
 module.exports = ProductImage;

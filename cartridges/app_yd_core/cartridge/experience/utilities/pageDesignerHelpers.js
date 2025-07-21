@@ -26,9 +26,9 @@ function getJSONAttrs(cmpDefinition) {
  */
 function formatAttributes(context, model) {
     const ProductFactory = require('*/cartridge/scripts/factories/product');
-    // TODO: resolve DIS images
-    // const DISHelpers = require('*/cartridge/scripts/helpers/DISHelpers');
-    const ImageTransformation = require('*/cartridge/experience/utilities/ImageTransformation.js');
+    const DISHelpers = require('*/cartridge/scripts/helpers/DISHelpers');
+    // const ImageTransformation = require('*/cartridge/experience/utilities/ImageTransformation.js');
+
     let content = context.content;
 
     let isPage = context instanceof PageScriptContext;
@@ -53,13 +53,15 @@ function formatAttributes(context, model) {
 
         // End debug code
 
+        // attrID: imgDesktop, imgMobile
+
         switch (attrType) {
             case 'image':
-                // model[attrID] = DISHelpers.getScaledImageFromPageDesigner(attrID, attrValue);
-                model[attrID] = ImageTransformation.getScaledImage(attrValue);
-                model[attrID + 'Src'] = attrValue
-                    ? ImageTransformation.url(attrValue, { device: attrID.toLowerCase().includes('mobile') ? 'mobile' : 'full' })
-                    : null;
+                model[attrID] = DISHelpers.getScaledImageFromPageDesigner(attrID, attrValue);
+                // model[attrID] = ImageTransformation.getScaledImage(attrValue);
+                // model[attrID + 'Src'] = attrValue
+                //     ? ImageTransformation.url(attrValue, { device: attrID.toLowerCase().includes('mobile') ? 'mobile' : 'full' })
+                //     : null;
                 break;
             case 'product':
                 if (attrValue && attrValue.ID) {
