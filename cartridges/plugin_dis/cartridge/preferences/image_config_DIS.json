@@ -9,8 +9,8 @@
             "scaleHeight": 800
         },
         "medium": {
-            "scaleWidth": 1400,
-            "scaleHeight": 1400
+            "scaleWidth": 400,
+            "scaleHeight": 400
         },
         "small": {
             "scaleWidth": 140,
@@ -22,9 +22,9 @@
             "small": "images/noimage/noimagesmall.png"
 	    }
     },
-    "categoryBanner": {
+    "categoryBanner_example": {
         "large": {
-            "scaleWidth": 1800
+            "scaleWidth": 1920
         }
     }
     

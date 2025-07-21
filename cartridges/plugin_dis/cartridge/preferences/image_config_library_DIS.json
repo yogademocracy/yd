@@ -1,16 +1,16 @@
 {
-    "mainBanner_imgDesktop": {
-		"desktop": {
-			"scaleWidth": 1440,
-			"scaleMode": "fit"
-		},
+    "attrID_example": {
+        "desktop": {
+            "scaleWidth": 1440,
+            "scaleMode": "fit"
+        },
         "tablet": {
-			"scaleWidth": 1024,
-			"scaleMode": "fit"
-		},
-		"mobile": {
-			"scaleWidth": 768,
-			"scaleMode": "fit"
-		}
+            "scaleWidth": 1024,
+            "scaleMode": "fit"
+        },
+        "mobile": {
+            "scaleWidth": 768,
+            "scaleMode": "fit"
+        }
     }
 }
