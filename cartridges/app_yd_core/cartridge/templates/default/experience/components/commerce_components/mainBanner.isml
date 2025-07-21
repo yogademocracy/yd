@@ -5,8 +5,8 @@
     <isif condition="${!empty(pdict.link)}">
         <a class="c-main-banner__link" href="${pdict.link}">
             <ispicturetag
-                desktop_src="${pdict.imgDesktopSrc}"
-                mobile_src="${pdict.imgMobileSrc}"
+                desktop_src="${pdict.mainBanner_imgDesktop && pdict.mainBanner_imgDesktop.srcset.desktop}"
+                mobile_src="${pdict.mainBanner_imgMobile && pdict.mainBanner_imgMobile.srcset.mobile}"
                 image_pd_desktop="${pdict.imgDesktop}"
                 image_pd_mobile="${pdict.imgMobile}"
                 picture_class="c-main-banner__image"
@@ -15,8 +15,8 @@
         </a>
     <iselse/>
         <ispicturetag
-            desktop_src="${pdict.imgDesktopSrc}"
-            mobile_src="${pdict.imgMobileSrc}"
+            desktop_src="${pdict.mainBanner_imgDesktop && pdict.mainBanner_imgDesktop.srcset.desktop}"
+            mobile_src="${pdict.mainBanner_imgMobile && pdict.mainBanner_imgMobile.srcset.mobile}"
             image_pd_desktop="${pdict.imgDesktop}"
             image_pd_mobile="${pdict.imgMobile}"
             picture_class="c-main-banner__image"

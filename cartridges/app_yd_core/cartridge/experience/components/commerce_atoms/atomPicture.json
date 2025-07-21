@@ -21,13 +21,13 @@
             "description": "Apply images here. Different aspect ratio images can be assigned for desktop and mobile views",
             "attribute_definitions": [
                 {
-                    "id": "imgDesktop",
+                    "id": "atomPicture_imgDesktop",
                     "name": "Desktop (default) Image",
                     "type": "image",
                     "required": true
                 },
                 {
-                    "id": "imgMobile",
+                    "id": "atomPicture_imgMobile",
                     "name": "Mobile Image",
                     "type": "image",
                     "required": false

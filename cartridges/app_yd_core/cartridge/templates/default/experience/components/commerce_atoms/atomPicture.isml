@@ -2,8 +2,8 @@
 <isinclude template="/components/modules" />
 
 <ispicturetag
-    desktop_src="${pdict.imgDesktopSrc}"
-    mobile_src="${pdict.imgMobileSrc}"
+    desktop_src="${pdict.atomPicture_imgDesktop && pdict.atomPicture_imgDesktop.srcset.desktop}"
+    mobile_src="${pdict.atomPicture_imgMobile && pdict.atomPicture_imgMobile.srcset.mobile}"
     image_pd_desktop="${pdict.imgDesktop}"
     image_pd_mobile="${pdict.imgMobile}"
     picture_class="${pdict.wrapperCSSClasses}"

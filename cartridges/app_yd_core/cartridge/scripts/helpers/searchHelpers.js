@@ -9,7 +9,7 @@ var base = module.superModule;
  * @return {string} - Banner's image URL
  */
 base.getBannerImageUrl = function (category) {
-    var DISHelpers = require('*/cartridge/scripts/helpers/categoryImageDISHelpers');
+    var DISHelpers = require('*/cartridge/scripts/helpers/DISHelpers');
 
     var DISImageURL = DISHelpers.getCategorySlotBannerImageDIS(category, 'large');
 
