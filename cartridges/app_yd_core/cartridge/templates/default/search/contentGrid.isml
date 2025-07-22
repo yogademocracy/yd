@@ -15,7 +15,6 @@
     </div>
 </isif>
 
-
 <div>
     <isloop items="${pdict.contentSearch.contents}" var="contentAsset">
         <div class="row">
