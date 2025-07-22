@@ -142,10 +142,15 @@ $base16-14px: 0.875em !default;
 
 $font-brand-primary: 'Poppins';
 $custom-fonts: (
-  "Poppins-Regular":  400,
-  "Poppins-Medium": 500,
-  "Poppins-SemiBold": 600,
-  "Poppins-Bold":     700,
+    "Poppins-Regular":  400,
+    "Poppins-Medium": 500,
+    "Poppins-SemiBold": 600,
+    "Poppins-Bold":     700
+);
+
+$font-druk-wide: 'Druk-Wide';
+$druk-wide-fonts: (
+    "Druk-Wide-Medium": 500
 );
 
 $font-family-base: $font-brand-primary, Helvetica, Arial, sans-serif;

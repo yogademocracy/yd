@@ -30,6 +30,8 @@
 }
 
 .site-container {
+    max-width: none;
+
     @include media-breakpoint-up(md) {
         padding-left: rem(40);
         padding-right: rem(40);
