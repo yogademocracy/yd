@@ -6,7 +6,7 @@
 <!--- Search Results Banner --->
 <isif condition="${pdict.productSearch.isCategorySearch}">
     <div class="search-category-banner__wrapper ${pdict.productSearch.bannerImageUrl ? '' : 'py-0'}">
-        <isif condition="${pdict.productSearch.bannerImageUrl}">
+        <isif condition="${!empty(pdict.productSearch.bannerImageUrl)}">
             <ispicturetag
                 desktop_src="${pdict.productSearch.bannerImageUrl}"
                 mobile_src="${pdict.productSearch.bannerImageUrl}"
