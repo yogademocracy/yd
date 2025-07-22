@@ -34,12 +34,16 @@
 
 */
 
-.nav-tabs .nav-item .nav-link {
-  color: $c-yd-jet-black;
+.nav-tabs .nav-item {
+    flex: 1;
 
-    &.active,
-    &.active:focus,
-    &.active:hover {
-        border-bottom: rem(5) solid $c-yd-forest-sage;
+    .nav-link {
+        color: $c-yd-jet-black;
+
+        &.active,
+        &.active:focus,
+        &.active:hover {
+            border-bottom: rem(5) solid $c-yd-forest-sage;
+        }
     }
 }

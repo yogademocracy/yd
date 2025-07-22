@@ -5,7 +5,9 @@
 
 // LEGACY CODE
 
-@import "base/bootstrap-custom-import"; // review and add only needed for specific cartridge
+// @import "base/skin/skinVariables";
+
+@import "base/bootstrap-custom-import"; // review and add only needed for specific cartrige
 
 @import "03_generic/all";
 @import "04_atoms/all";
@@ -17,6 +19,8 @@
 @import "legacy/components/common";
 @import "base/components/header";
 @import "base/components/hero";
+
+/* @import "base/components/headers"; */
 
 @import "base/components/notification";
 @import "base/components/pricing";
@@ -30,3 +34,4 @@
 // END OF LEGACY CODE
 
 @import "06_components/all";
+@import "search";

@@ -214,6 +214,11 @@
             display: block;
             position: absolute;
         }
+
+        .swatch-circle {
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
     }
 }
 

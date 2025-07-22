@@ -12,7 +12,8 @@
 */
 
 .a-input,
-input.form-control {
+input.form-control,
+.custom-select {
     font-size: rem(16);
     line-height: 1;
     color: $c-yd-jet-black;
