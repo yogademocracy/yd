@@ -1,0 +1,3 @@
+<body>
+    <isprint value="${pdict.message}" encoding="off" />
+</body>

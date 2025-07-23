@@ -4602,6 +4602,15 @@
                 <mandatory-flag>false</mandatory-flag>
                 <externally-managed-flag>false</externally-managed-flag>
             </attribute-definition>
+            <attribute-definition attribute-id="contactUsEmailReceivers">
+                <display-name xml:lang="x-default">Contact Us Email Receivers</display-name>
+                <description xml:lang="x-default">Contains comma separated list of emails who receive information submitted by contact us form.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
         </custom-attribute-definitions>
         <group-definitions>
             <attribute-group group-id="SFRA Unified Feature Cartridge">
@@ -4619,7 +4628,6 @@
                 <attribute attribute-id="listPriceDefault"/>
                 <attribute attribute-id="GoogleVerificationTag"/>
                 <attribute attribute-id="countryCode"/>
-                <attribute attribute-id="customerServiceEmail"/>
                 <attribute attribute-id="mapAPI"/>
             </attribute-group>
             <attribute-group group-id="Cybersource_Core">
@@ -4717,6 +4725,11 @@
                 <attribute attribute-id="disImageSourceEnvironment"/>
                 <attribute attribute-id="disConfiguration"/>
                 <attribute attribute-id="disLibraryConfiguration"/>
+            </attribute-group>
+            <attribute-group group-id="Email Notifications">
+                <display-name xml:lang="x-default">Email Notifications</display-name>
+                <attribute attribute-id="customerServiceEmail"/>
+                <attribute attribute-id="contactUsEmailReceivers"/>
             </attribute-group>
         </group-definitions>
     </type-extension>
