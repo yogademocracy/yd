@@ -27,4 +27,302 @@
         </triggers>
     </job>
 
+    <job job-id="Inventory Import from Global">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Inventory from Global" type="ImportSiteArchive" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ImportFile">inventorySyncGlobal.zip</parameter>
+                    <parameter name="ImportMode">merge</parameter>
+                    <parameter name="ImportFromRealm">true</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="yoga-democracy-b2c"/>
+            <step step-id="Index Rebuild" type="SearchReindex" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="Product related search indexes">false</parameter>
+                    <parameter name="Active data search index">false</parameter>
+                    <parameter name="Content search index">false</parameter>
+                    <parameter name="Indexer Type">Full Index Rebuild</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2025-07-24Z</date>
+                <time>15:02:00.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="Inventory Sync from ShipStation">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="yoga-democracy-b2c"/>
+            <step step-id="Download ShipStation Inventory" type="custom.ShipStationInventory" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="IsDisabled">false</parameter>
+                    <parameter name="StorefrontCatalogID">yd-categories</parameter>
+                    <parameter name="SiteInventoryID">yd-inventory</parameter>
+                    <parameter name="InventoryFilename">yd-inventory.xml</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR,WARN">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Inventory" type="ImportInventoryLists" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="InventoryListLockWaitSeconds">10</parameter>
+                    <parameter name="WorkingFolder">inventory</parameter>
+                    <parameter name="FileNamePattern">yd-inventory\.xml</parameter>
+                    <parameter name="NoFilesFoundHandling">NO_FILES_FOUND</parameter>
+                    <parameter name="ImportMode">Replace</parameter>
+                    <parameter name="ImportFailedHandling">WARN</parameter>
+                    <parameter name="AfterImportFileHandling">Keep</parameter>
+                    <parameter name="ArchiveFolder">archive</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="NO_FILES_FOUND,WARN">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="yoga-democracy-b2c"/>
+            <step step-id="Rebuild Index" type="SearchReindex" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="Product related search indexes">false</parameter>
+                    <parameter name="Active data search index">false</parameter>
+                    <parameter name="Content search index">false</parameter>
+                    <parameter name="Indexer Type">Full Index Rebuild</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Save Global Sync File" type="SiteExport" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ExportFile">inventorySyncGlobal</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="SaveOnRealm">true</parameter>
+                    <parameter name="DataUnits">{"export_data_units_configuration":{"inventory_lists":{"all":true}}}</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2025-07-23Z</date>
+                <time>16:26:00.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="Update Category Rules">
+        <description/>
+        <parameters>
+            <parameter name="CatalogID">yd-categories</parameter>
+        </parameters>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="newest-releases" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">newest-releases</parameter>
+                </parameters>
+            </step>
+            <step step-id="best-sellers" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">best-sellers</parameter>
+                </parameters>
+            </step>
+            <step step-id="mushroom-overcast" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">mushroom-overcast</parameter>
+                </parameters>
+            </step>
+            <step step-id="botanical" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">botanical</parameter>
+                </parameters>
+            </step>
+            <step step-id="elemental" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">elemental</parameter>
+                </parameters>
+            </step>
+            <step step-id="flora-fauna" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">flora-fauna</parameter>
+                </parameters>
+            </step>
+            <step step-id="geometry" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">geometry</parameter>
+                </parameters>
+            </step>
+            <step step-id="bottoms" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">bottoms</parameter>
+                </parameters>
+            </step>
+            <step step-id="shorts" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">shorts</parameter>
+                </parameters>
+            </step>
+            <step step-id="tops" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">tops</parameter>
+                </parameters>
+            </step>
+            <step step-id="shop-all" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">shop-all</parameter>
+                </parameters>
+            </step>
+            <step step-id="mulberry" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">mulberry</parameter>
+                </parameters>
+            </step>
+            <step step-id="hiking-trail" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">hiking-trail</parameter>
+                </parameters>
+            </step>
+            <step step-id="twig" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">twig</parameter>
+                </parameters>
+            </step>
+            <step step-id="burnt-orange" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">burnt-orange</parameter>
+                </parameters>
+            </step>
+            <step step-id="sage-green" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">sage-green</parameter>
+                </parameters>
+            </step>
+            <step step-id="forest-green" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">forest-green</parameter>
+                </parameters>
+            </step>
+            <step step-id="nocturnal" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">nocturnal</parameter>
+                </parameters>
+            </step>
+            <step step-id="maroon" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">maroon</parameter>
+                </parameters>
+            </step>
+            <step step-id="jet-black" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">jet-black</parameter>
+                </parameters>
+            </step>
+            <step step-id="low-stock" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">low-stock</parameter>
+                </parameters>
+            </step>
+            <step step-id="clear-the-rack" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">clear-the-rack</parameter>
+                </parameters>
+            </step>
+            <step step-id="holiday-sale" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">holiday-sale</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="yoga-democracy-b2c"/>
+            <step step-id="reindex product" type="SearchReindex" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="Product related search indexes">true</parameter>
+                    <parameter name="Active data search index">false</parameter>
+                    <parameter name="Content search index">false</parameter>
+                    <parameter name="Indexer Type">Full Index Rebuild</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2025-07-11Z</date>
+                <time>17:55:00.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
 </jobs>
