@@ -2,7 +2,7 @@
     "hooks": [
         {
             "name": "app.contactUs.subscribe",
-            "script": "./cartridge/scripts/hooks/contactus/contactUs.subscribe"
+            "script": "./cartridge/scripts/hooks/contactUs/contactUs.subscribe"
         }
     ]
 }
