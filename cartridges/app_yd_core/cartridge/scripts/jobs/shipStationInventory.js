@@ -12,7 +12,6 @@ var ISLogger = Logger.getLogger('InventorySync', 'InventorySync');
  * @returns {File} file object
  */
 function createFile(fileName) {
-    // var timestamp = StringUtils.formatCalendar(new Calendar(), 'yyyy-MM-dd-HH-mm-ss');
     var catalogName = fileName;
     var targetFolder = new File(File.IMPEX + File.SEPARATOR + 'src' + File.SEPARATOR + 'inventory');
 
