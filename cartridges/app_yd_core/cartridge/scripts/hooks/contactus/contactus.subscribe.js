@@ -11,9 +11,9 @@
  * @returns {void}
  */
 function subscribe(firstName, lastName, email, topic, message) {
-    var accountHelpers = require('*/cartridge/scripts/helpers/accountHelpers');
+    var contactUsHelpers = require('*/cartridge/scripts/helpers/contactUsHelpers');
 
-    accountHelpers.sendContactUsSubmittedEmail(email);
+    contactUsHelpers.sendContactUsSubmittedEmail(email);
 
     var userObj = {
         firstName: firstName,
@@ -23,7 +23,7 @@ function subscribe(firstName, lastName, email, topic, message) {
         message: message
     };
 
-    accountHelpers.sendContactUsSupportEmail(userObj);
+    contactUsHelpers.sendContactUsSupportEmail(userObj);
 }
 
 module.exports.subscribe = subscribe;

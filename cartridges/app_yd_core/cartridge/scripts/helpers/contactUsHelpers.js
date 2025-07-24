@@ -1,14 +1,12 @@
 'use strict';
 
-var base = module.superModule;
-
 /**
  * Sends an email that would notify the user that the request was received by support
  * 
  * @param {string} email - user's email
  * @returns {void}
  */
-base.sendContactUsSubmittedEmail = function (email) {
+function sendContactUsSubmittedEmail(email) {
     var Site = require('dw/system/Site');
     var Resource = require('dw/web/Resource');
 
@@ -16,7 +14,7 @@ base.sendContactUsSubmittedEmail = function (email) {
     var contentHelpers = require('*/cartridge/scripts/helpers/contentHelpers');
 
     var params = {
-        message: contentHelpers.getContentById('contact-us-submitted-email-message'),
+        message: contentHelpers.getContentById('email-contactus-submitted-message'),
     };
 
     var emailObj = {
@@ -35,7 +33,7 @@ base.sendContactUsSubmittedEmail = function (email) {
  * @param {object} userObj - information provided by user in form
  * @returns {void}
  */
-base.sendContactUsSupportEmail = function (userObj) {
+function sendContactUsSupportEmail(userObj) {
     var Site = require('dw/system/Site');
     var Resource = require('dw/web/Resource');
 
@@ -44,6 +42,12 @@ base.sendContactUsSupportEmail = function (userObj) {
     var contactUsEmailReceivers = Site.current.getCustomPreferenceValue('contactUsEmailReceivers');
 
     if (contactUsEmailReceivers) {
+        var contentHelpers = require('*/cartridge/scripts/helpers/contentHelpers');
+
+        var params = {
+            message: contentHelpers.getContentById('email-contactus-support-message', userObj),
+        };
+    
         var emailObj = {
             to: contactUsEmailReceivers,
             subject: Resource.msg('email.subject.contact.us.received', 'contactUs', null),
@@ -51,8 +55,11 @@ base.sendContactUsSupportEmail = function (userObj) {
             type: emailHelpers.emailTypes.contactUsSupport
         };
 
-        emailHelpers.sendEmail(emailObj, 'contactUs/components/contactUsSupportEmail', userObj);
+        emailHelpers.sendEmail(emailObj, 'contactUs/components/contactUsSupportEmail', params);
     }
 };
 
-module.exports = base;
+module.exports = {
+    sendContactUsSubmittedEmail: sendContactUsSubmittedEmail,
+    sendContactUsSupportEmail: sendContactUsSupportEmail
+};

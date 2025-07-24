@@ -1,21 +1,3 @@
 <body>
-    <div>
-        ${Resource.msg('email.label.contact.topic', 'contactUs', null)}&nbsp;${Resource.msg('email.contact.topic.' + pdict.topic, 'contactUs', null)}
-    </div>
-
-    <div>
-        ${Resource.msg('email.label.first.name', 'contactUs', null)}&nbsp;${pdict.firstName}
-    </div>
-
-    <div>
-        ${Resource.msg('email.label.last.name', 'contactUs', null)}&nbsp;${pdict.lastName}
-    </div>
-
-    <div>
-        ${Resource.msg('email.label.email', 'contactUs', null)}&nbsp;${pdict.email}
-    </div>
-
-    <div>
-        ${Resource.msg('email.label.message', 'contactUs', null)}&nbsp;${pdict.message}
-    </div>
+    <isprint value="${pdict.message}" encoding="off" />
 </body>
