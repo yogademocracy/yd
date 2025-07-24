@@ -4397,6 +4397,14 @@
                 <externally-managed-flag>false</externally-managed-flag>
                 <default-value>true</default-value>
             </attribute-definition>
+            <attribute-definition attribute-id="shipStationApiKey">
+                <display-name xml:lang="x-default">ShipStation Api Key V2</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>zf2IYFrC0En/p9MWoAAF53thMWLsh9t0IgpgbEuW6wQ</default-value>
+            </attribute-definition>
             <attribute-definition attribute-id="slideshoweffect">
                 <display-name xml:lang="x-default">Slide Slow effect</display-name>
                 <description xml:lang="x-default">Please visit http://jquery.malsup.com/cycle/browser.html for complete visual effects</description>
@@ -4719,6 +4727,10 @@
             <attribute-group group-id="SOM">
                 <display-name xml:lang="x-default">Salesforce Order Management</display-name>
                 <attribute attribute-id="enableSOMOrderHistory"/>
+            </attribute-group>
+            <attribute-group group-id="shipStation">
+                <display-name xml:lang="x-default">ShipStation</display-name>
+                <attribute attribute-id="shipStationApiKey"/>
             </attribute-group>
             <attribute-group group-id="Dynamic Imaging Service">
                 <display-name xml:lang="x-default">Dynamic Imaging Service</display-name>
