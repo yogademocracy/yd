@@ -456,4 +456,55 @@
         <sitemap-included-flag>false</sitemap-included-flag>
     </content>
 
+    <content content-id="contactus-details-message">
+        <display-name xml:lang="x-default">Contact US Details Message</display-name>
+        <description xml:lang="x-default">Message rendered on contact us page with additional details or general information.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+	&lt;p class="text-center"&gt;We love hearing from you!&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+	&lt;p class="text-center font-weight-bold"&gt;Please submit your question or request. We will respond within 24 hours Monday-Friday&lt;/p&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="email-contactus-submitted-message">
+        <display-name xml:lang="x-default">Contact US Submitted Email Message</display-name>
+        <description xml:lang="x-default">Message received by customer submiteed contact us form.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&#13;
+	&lt;strong&gt;Thank you for reaching out to us.&lt;/strong&gt;&#13;
+&lt;/p&gt;&#13;
+&lt;p&gt;We have received your inquiry and our team is currently reviewing it. You can expect a response shortly. If you have any additional details to share, feel free to reply to this email.&lt;/p&gt;&#13;
+&lt;p&gt;Best regards, YD Support Team&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="email-contactus-support-message">
+        <display-name xml:lang="x-default">Contact US Support Email Message</display-name>
+        <description xml:lang="x-default">Message received by support with information provided by user</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&#13;
+	&lt;strong&gt;Topic:&lt;/strong&gt;${topic}&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+	&lt;strong&gt;First Name:&lt;/strong&gt;${firstName}&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+	&lt;strong&gt;Last Name:&lt;/strong&gt;${lastName}&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+	&lt;strong&gt;Email:&amp;nbsp;&lt;/strong&gt;${email}&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+	&lt;strong&gt;Message:&lt;/strong&gt;${message}&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
 </library>
