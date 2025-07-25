@@ -38,6 +38,10 @@ function getOrderItemSummariesQuery() {
             + 'FROM+OrderItemSummaries';
     }
 
+    var where = "WHERE+OrderItemSummary.Type+!=+'Delivery Charge'";
+
+    orderItemSummariesQuery += '+' + where;
+
     return orderItemSummariesQuery;
 }
 
@@ -1129,7 +1133,7 @@ function getLastOrder(customer, isSOMOrders) {
         var customerEmail = customer.getProfile().getEmail();
         var somOrders = getCustomerOrdersFromSOM(null, customerEmail);
 
-        if (somOrders) {
+        if (somOrders && somOrders[0]) {
             orderNo = somOrders[0].OrderNumber;
         }
     } else {
