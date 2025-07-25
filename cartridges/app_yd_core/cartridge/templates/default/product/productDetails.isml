@@ -107,7 +107,7 @@
             </div>
 
             <div class="row description-and-detail">
-                <isif condition="${product.shortDescription}">
+                <isif condition="${!empty(product.shortDescription)}">
                     <div class="col-12 mb-3">
                         <h2 class="title">${Resource.msg('label.description', 'product', null)}</h2>
                         <div>
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                 </isif>
-                <isif condition="${product.longDescription}">
+                <isif condition="${!empty(product.longDescription)}">
                     <div class="col-12">
                         <h2 class="title">${Resource.msg('label.details', 'product', null)}</h2>
                         <div>

@@ -1,7 +1,6 @@
 import Drift from 'drift-zoom';
 
 $('.js-image-zoom').each(function () {
-    const $image = $(this);
     const settings = {
         inlinePane: true,
         injectBaseStyles: true,
@@ -9,5 +8,5 @@ $('.js-image-zoom').each(function () {
         sourceAttribute: 'src'
     };
 
-    new Drift($image[0], settings);
+    new Drift(this, settings);
 });
