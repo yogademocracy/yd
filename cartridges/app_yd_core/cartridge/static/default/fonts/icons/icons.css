@@ -47,18 +47,21 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-search:before {
     content: "\f10b";
 }
-.icon-socials-facebook:before {
+.icon-size-chart:before {
     content: "\f10c";
 }
-.icon-socials-instagram:before {
+.icon-socials-facebook:before {
     content: "\f10d";
 }
-.icon-socials-pinterest:before {
+.icon-socials-instagram:before {
     content: "\f10e";
 }
-.icon-socials-tiktok:before {
+.icon-socials-pinterest:before {
     content: "\f10f";
 }
-.icon-socials-twitter:before {
+.icon-socials-tiktok:before {
     content: "\f110";
+}
+.icon-socials-twitter:before {
+    content: "\f111";
 }

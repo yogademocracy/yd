@@ -1,0 +1,10 @@
+.drift-zoom-pane {
+    width: 300px !important;
+    height: 300px !important;
+    max-width: none !important;
+    max-height: none !important;
+    box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.5);
+    border: rem(1) solid $c-yd-silver-gray;
+    border-radius: rem(16) !important;
+    z-index: 20;
+}
