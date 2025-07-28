@@ -199,6 +199,7 @@ function getCustomerOrdersQueryForSOM(filters) {
     var from = 'FROM+OrderSummary';
     var where = 'WHERE+OrderedDate+<>+NULL';
     var orderBy = 'ORDER+BY+OrderedDate+DESC';
+    var limit = '';
     var filtersObj = filters || {};
 
     where += '+AND+AccountId+=+\'@{getContact.records[0].AccountId}\'';
@@ -215,8 +216,17 @@ function getCustomerOrdersQueryForSOM(filters) {
         where += '+AND+CALENDAR_YEAR(OrderedDate)+=+' + filtersObj.year;
     }
 
+    if ('limit' in filtersObj) {
+        limit += 'limit+' + filtersObj.limit;
+    }
+
     if (where.length <= 4000) {
         query = select + '+' + from + '+' + where + '+' + orderBy;
+
+        if (!empty(limit)) {
+            query+= '+' + limit;
+        }
+    
         return query;
     }
 
@@ -1131,7 +1141,7 @@ function getLastOrder(customer, isSOMOrders) {
 
     if (isSOMOrders) {
         var customerEmail = customer.getProfile().getEmail();
-        var somOrders = getCustomerOrdersFromSOM(null, customerEmail);
+        var somOrders = getCustomerOrdersFromSOM({ limit: 1 }, customerEmail);
 
         if (somOrders && somOrders[0]) {
             orderNo = somOrders[0].OrderNumber;
