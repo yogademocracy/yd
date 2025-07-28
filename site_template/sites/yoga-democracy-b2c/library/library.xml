@@ -546,4 +546,37 @@
         <folder-links>
         </folder-links>
     </content>
+
+    <content content-id="email-password-reset">
+        <display-name xml:lang="x-default">Password Reset Email</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;	&lt;img src=&quot;images/email/email-logo.png?$staticlink$&quot; style=&quot;width: 250px; height: auto; margin-bottom: 20px;&quot;&gt;&#13;	&lt;h2&gt;Reset your password&lt;/h2&gt;&#13;	&lt;p&gt;Follow this link to reset your customer account password at &lt;a href=&quot;${resetUrl}&quot;&gt;Yoga Democracy&lt;/a&gt;. If you didn't request a new password, you can safely delete this email.&lt;/p&gt;&#13;	&lt;div&gt; &lt;a href=&quot;${resetBtnUrl}&quot; style=&quot;color: #fff; background: #5e7461; border: 0.0625rem solid #5e7461; display: inline-flex; align-items: center; justify-content: center; padding: 0.9375rem 1.5625rem; text-decoration: none; border-radius: 25px;&quot;&gt;Reset your password&lt;/a&gt; or &lt;a href=&quot;$url('Home-Show')$&quot;&gt;Visit our store&lt;/a&gt;&#13;	&lt;/div&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+  </content>
+
+    <content content-id="email-account-registered">
+        <display-name xml:lang="x-default">Account Registered Email</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&#13;	Dear ${firstName} ${lastName},&lt;/p&gt;&#13;&lt;p&gt;&#13;	This is to confirm that your account for the shop Yoga Democracy is now active. Stand by for your welcome email with the deets on our amazing new YD Loyalty Program and your 1,500 point bonus!&lt;/p&gt;&#13;&lt;p&gt;&#13;	The next time you shop at Yoga Democracy, you can save time at checkout by logging into your account. This will prefill your address information at the checkout and it will give you access to all your wonderful YD loyalty rewards!&lt;/p&gt;&#13;&lt;p&gt;&#13;	Thank you, &lt;br&gt;&#13;        Yoga Democracy&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="email-save-new-password">
+        <display-name xml:lang="x-default">Save New Password Email</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;	&lt;img src=&quot;images/email/email-logo.png?$staticlink$&quot; style=&quot;width: 250px; height: auto; margin-bottom: 20px;&quot;&gt;&#13;	&lt;h2&gt;Dear ${firstName} ${lastName}&lt;/h2&gt;&#13;	&lt;p&gt;You have successfully created a new password for your account.&lt;/p&gt;&#13;	&lt;p&gt;You can visit your account at: &lt;a href=&quot;${url}&quot;&gt;Log In page&lt;/a&gt;&#13;	&lt;/p&gt;&#13;	&lt;p&gt;This is an automatically generated email, please do not reply.&lt;/p&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
 </library>
