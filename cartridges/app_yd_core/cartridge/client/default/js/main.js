@@ -2,6 +2,7 @@ import './thirdParty/jquery';
 import './slider/initSlider';
 import 'base/thirdParty/bootstrap';
 import './components/spinner';
+import './components/imageZoom';
 
 import processInclude from 'base/util';
 
