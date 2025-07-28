@@ -1,0 +1,12 @@
+<isinclude template="/components/modules" />
+
+<isset name="productRecommendations" value="${require('*/cartridge/scripts/helpers/recommendationHelpers').getRecommendationsForProduct(pdict.contextAUID)}" scope="page" />
+
+<isif condition="${!empty(productRecommendations)}">
+    <isloop items="${productRecommendations}" var="product">
+        <div class="col-6 col-md-4 product-tile__wrapper">
+            <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.productID, 'showQuickView', false, 'swatches', false, 'ratings', false)}" />
+        </div>
+    </isloop> 
+</isif>
+

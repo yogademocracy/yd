@@ -10,4 +10,12 @@
         </content>
     </slot-configuration>
 
+    <slot-configuration slot-id="product-recommendations-m" context="global" configuration-id="product-recommendations" assigned-to-site="true">
+        <template>slots/product/recommendations.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <products/>
+        </content>
+    </slot-configuration>
+
 </slot-configurations>
