@@ -17,7 +17,7 @@ server.extend(module.superModule);
  * @param {renders} - isml
  * @param {serverfunction} - post
  */
-server.replace('SaveNewPassword', server.middleware.https, function (req, res, next) {
+server.replace('SaveNewPassword', server.middleware.post, server.middleware.https, function (req, res, next) {
     var Transaction = require('dw/system/Transaction');
     var Resource = require('dw/web/Resource');
 
@@ -75,7 +75,7 @@ server.replace('SaveNewPassword', server.middleware.https, function (req, res, n
                 };
 
                 var params = {
-                    message: contentHelpers.getContentById('save-new-password-email', objectForEmail),
+                    message: contentHelpers.getContentById('email-save-new-password', objectForEmail),
                 };
 
                 var emailObj = {

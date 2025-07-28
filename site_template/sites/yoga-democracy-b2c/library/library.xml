@@ -547,18 +547,18 @@
         </folder-links>
     </content>
 
-    <content content-id="password-reset-email">
+    <content content-id="email-password-reset">
         <display-name xml:lang="x-default">Password Reset Email</display-name>
         <online-flag>true</online-flag>
         <searchable-flag>false</searchable-flag>
         <custom-attributes>
-        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;	&lt;img src=&quot;images/email/email-logo.png?$staticlink$&quot; style=&quot;width: 250px; height: auto; margin-bottom: 20px;&quot;&gt;&#13;	&lt;h2&gt;Reset your password&lt;/h2&gt;&#13;	&lt;p&gt;Follow this link to reset your customer account password at &lt;a href=&quot;${resetUrl}&quot;&gt;Yoga Democracy&lt;/a&gt;. If you didn't request a new password, you can safely delete this email.&lt;/p&gt;&#13;	&lt;div style=&quot;align-items: center; display: flex; gap: 8px;&quot;&gt; &lt;a href=&quot;${resetBtnUrl}&quot; style=&quot;color: #fff; background: #5e7461; border: 0.0625rem solid #5e7461; display: inline-flex; align-items: center; justify-content: center; padding: 0.9375rem 1.5625rem; text-decoration: none; border-radius: 25px;&quot;&gt;Reset your password&lt;/a&gt; or &lt;a href=&quot;$url('Home-Show')$&quot;&gt;Visit our store&lt;/a&gt;&#13;	&lt;/div&gt;&#13;&lt;/div&gt;</custom-attribute>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;	&lt;img src=&quot;images/email/email-logo.png?$staticlink$&quot; style=&quot;width: 250px; height: auto; margin-bottom: 20px;&quot;&gt;&#13;	&lt;h2&gt;Reset your password&lt;/h2&gt;&#13;	&lt;p&gt;Follow this link to reset your customer account password at &lt;a href=&quot;${resetUrl}&quot;&gt;Yoga Democracy&lt;/a&gt;. If you didn't request a new password, you can safely delete this email.&lt;/p&gt;&#13;	&lt;div&gt; &lt;a href=&quot;${resetBtnUrl}&quot; style=&quot;color: #fff; background: #5e7461; border: 0.0625rem solid #5e7461; display: inline-flex; align-items: center; justify-content: center; padding: 0.9375rem 1.5625rem; text-decoration: none; border-radius: 25px;&quot;&gt;Reset your password&lt;/a&gt; or &lt;a href=&quot;$url('Home-Show')$&quot;&gt;Visit our store&lt;/a&gt;&#13;	&lt;/div&gt;&#13;&lt;/div&gt;</custom-attribute>
         </custom-attributes>
         <folder-links>
         </folder-links>
-    </content>
+  </content>
 
-    <content content-id="account-registered-email">
+    <content content-id="email-account-registered">
         <display-name xml:lang="x-default">Account Registered Email</display-name>
         <online-flag>true</online-flag>
         <searchable-flag>false</searchable-flag>
@@ -569,7 +569,7 @@
         </folder-links>
     </content>
 
-    <content content-id="save-new-password-email">
+    <content content-id="email-save-new-password">
         <display-name xml:lang="x-default">Save New Password Email</display-name>
         <online-flag>true</online-flag>
         <searchable-flag>false</searchable-flag>

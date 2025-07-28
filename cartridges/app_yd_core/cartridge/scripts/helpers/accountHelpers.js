@@ -35,7 +35,7 @@ baseHelper.sendCreateAccountEmail = function (registeredUser) {
     };
 
     var params = {
-        message: contentHelpers.getContentById('account-registered-email', userObject),
+        message: contentHelpers.getContentById('email-account-registered', userObject),
     };
 
     var emailObj = {
@@ -68,7 +68,7 @@ baseHelper.sendPasswordResetEmail = function (email, resettingCustomer) {
     };
 
     var params = {
-        message: contentHelpers.getContentById('password-reset-email', objectForEmail),
+        message: contentHelpers.getContentById('email-password-reset', objectForEmail),
     };
 
     var emailObj = {
