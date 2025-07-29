@@ -19,9 +19,7 @@ function getRecommendationsForProduct(pid) {
     }
 
     collections.forEach(product.recommendations, (recommendation) => {
-        recommendations.push({
-            productID: recommendation.recommendedItemID,
-        });
+        recommendations.push(recommendation.recommendedItem);
     });
 
     return recommendations;
