@@ -1,0 +1,21 @@
+.page {
+    .checkout-continue {
+        @include media-breakpoint-down(xs) {
+            div {
+                padding: 0;
+            }
+
+            #cart-checkout-button {
+                padding: 0 rem(15);
+            }
+
+            .checkout-and-applepay {
+                padding: rem(15);
+            }
+        }
+    }
+
+    .promo-code-form {
+        display: block;
+    }
+}

@@ -1,3 +1,7 @@
+#footercontent {
+    margin-top: rem(40);
+}
+
 .footer-nav {
     padding-top: rem(40);
     padding-bottom: rem(40);
@@ -35,7 +39,7 @@
             margin-bottom: rem(8);
             list-style: none;
         }
-    
+
         &__text-limited {
             @include media-breakpoint-up(md) {
                 max-width: 75%;
