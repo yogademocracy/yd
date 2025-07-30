@@ -41,6 +41,10 @@
     background: $c-yd-forest-sage;
     border: rem(1) solid $c-yd-forest-sage;
 
+    &:disabled {
+        border: rem(1) solid $c-yd-forest-sage;
+    }
+
     @include hover-and-focus {
         background-color: $c-yd-forest-green;
         border-color: $c-yd-forest-green;
@@ -51,6 +55,10 @@
     color: $black;
     background: $white;
     border: rem(1) solid $black;
+
+    &:disabled {
+        border: rem(1) solid $black;
+    }
 
     @include hover-and-focus {
         color: $white;
