@@ -15,8 +15,8 @@ import search from 'base/components/search';
 import clientSideValidation from 'base/components/clientSideValidation';
 import countrySelector from 'base/components/countrySelector';
 import toolTip from 'base/components/toolTip';
-import miniCart from 'base/components/miniCart';
 import customModal from './components/customModal';
+import miniCart from './components/miniCart';
 
 $(document).ready(() => {
     processInclude(menu);
@@ -29,6 +29,7 @@ $(document).ready(() => {
     processInclude(clientSideValidation);
     processInclude(countrySelector);
     processInclude(toolTip);
+    processInclude(miniCart);
     processInclude(customModal);
 });
 
