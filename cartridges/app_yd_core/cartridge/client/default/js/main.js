@@ -23,7 +23,6 @@ $(document).ready(() => {
     processInclude(cookie);
     processInclude(consentTracking);
     processInclude(footer);
-    processInclude(miniCart);
     processInclude(collapsibleItem);
     processInclude(search);
     processInclude(clientSideValidation);
