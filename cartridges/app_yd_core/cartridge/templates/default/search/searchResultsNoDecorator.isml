@@ -3,20 +3,6 @@
 </isif>
 <isinclude template="/components/modules" />
 
-<!--- Close button --->
-<div class="filter-header">
-    <div class="header-bar mb-3 d-md-none">
-        <div class="d-md-none result-count">
-            <isinclude template="search/resultsCount" />
-        </div>
-        <isif condition="${pdict.productSearch && pdict.productSearch.productIds.length > 0}">
-            <button class="close">
-                <i class="icon icon-close"></i>
-            </button>
-        </isif>
-    </div>
-</div>
-
 <!--- Search Results Banner --->
 <isif condition="${pdict.productSearch.isCategorySearch}">
     <div class="search-category-banner__wrapper ${pdict.productSearch.bannerImageUrl ? '' : 'py-0'}">
@@ -105,6 +91,19 @@
                              <div class="row product-grid" itemtype="http://schema.org/SomeProducts" itemid="#product">
                                  <isinclude template="search/productGrid" />
                              </div>
+                        </div>
+                    </div>
+                <iselse>
+                    <div class="filter-header">
+                        <div class="header-bar mb-3 d-md-none">
+                            <div class="d-md-none result-count">
+                                <isinclude template="search/resultsCount" />
+                            </div>
+                            <isif condition="${pdict.productSearch && pdict.productSearch.productIds.length > 0}">
+                                <button class="close">
+                                    <i class="icon icon-close"></i>
+                                </button>
+                            </isif>
                         </div>
                     </div>
                 </isif>
