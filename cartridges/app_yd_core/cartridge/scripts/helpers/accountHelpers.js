@@ -81,4 +81,34 @@ baseHelper.sendPasswordResetEmail = function (email, resettingCustomer) {
     emailHelpers.sendEmail(emailObj, 'email/assetContentEmail', params);
 };
 
+/**
+ * Send an email that would notify the user that account was edited
+ * @param {obj} profile - object that contains user's profile information.
+ */
+baseHelper.sendAccountEditedEmail = function (profile) {
+    var emailHelpers = require('*/cartridge/scripts/helpers/emailHelpers');
+    var contentHelpers = require('*/cartridge/scripts/helpers/contentHelpers');
+    var Site = require('dw/system/Site');
+    var Resource = require('dw/web/Resource');
+
+    var userObject = {
+        firstName: profile.firstName,
+        lastName: profile.lastName,
+        url: URLUtils.https('Login-Show')
+    };
+
+    var params = {
+        message: contentHelpers.getContentById('email-account-edited', userObject),
+    };
+
+    var emailObj = {
+        to: profile.email,
+        subject: Resource.msg('email.subject.account.edited', 'account', null),
+        from: Site.current.getCustomPreferenceValue('customerServiceEmail') || 'no-reply@testorganization.com',
+        type: emailHelpers.emailTypes.accountEdited
+    };
+
+    emailHelpers.sendEmail(emailObj, 'email/assetContentEmail', params);
+};
+
 module.exports = baseHelper;
