@@ -325,4 +325,40 @@
             </run-once>
         </triggers>
     </job>
+
+    <job job-id="importGiftCertificates">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="yoga-democracy-b2c"/>
+            <step step-id="Creates Gift Certificates XML from CSV file." type="custom.importGiftCertificates" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="IsDisabled">false</parameter>
+                    <parameter name="sourceFolder">src/gc/import</parameter>
+                    <parameter name="fileNamePattern">^.*[.]csv</parameter>
+                    <parameter name="targetFolder">src/gc/import/processed</parameter>
+                </parameters>
+            </step>
+            <step step-id="ImportGiftCertificates" type="ImportGiftCertificates" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="WorkingFolder">gc/import/processed</parameter>
+                    <parameter name="FileNamePattern">^.*[.]xml</parameter>
+                    <parameter name="NoFilesFoundHandling">NO_FILES_FOUND</parameter>
+                    <parameter name="ImportMode">Merge</parameter>
+                    <parameter name="ImportFailedHandling">WARN</parameter>
+                    <parameter name="AfterImportFileHandling">Archive</parameter>
+                    <parameter name="ArchiveFolder">archive</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2025-07-31Z</date>
+                <time>09:52:00.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
 </jobs>

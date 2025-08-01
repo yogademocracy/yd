@@ -579,4 +579,15 @@
         <folder-links>
         </folder-links>
     </content>
+
+    <content content-id="email-gift-certificate">
+        <display-name xml:lang="x-default">Email Gift Certificate</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;Dear ${customerName},&lt;/p&gt;&#13;&lt;p&gt;A Gift Certificate has been issued to you in the amount of ${balance}&lt;/p&gt;&#13;&lt;p&gt;You can redeem your gift certificate at our online store.&lt;/p&gt;&#13;&lt;p&gt;Your gift certificate code is ${id}.&lt;/p&gt;&#13;&lt;p&gt;Sincerely,&lt;/p&gt;&#13;&lt;p&gt;CustomerSupport&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
 </library>
