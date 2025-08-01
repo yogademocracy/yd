@@ -6,6 +6,9 @@ var FileWriter = require('dw/io/FileWriter');
 var Logger = require('dw/system/Logger');
 var ISLogger = Logger.getLogger('InventorySync', 'InventorySync');
 
+var ArrayList = require('dw/util/ArrayList');
+var preSaleVariantArray = new ArrayList();
+
 /**
  * Create file
  * @param {string} fileName - The file name
@@ -25,18 +28,26 @@ function createFile(fileName) {
 }
 
 /**
- * Write inventory record
+ * Write inventory xml record
  * @param {File} fw - The file name
  * @param {string} productID - Product ID
+ * @param {number} allocation - Allocation
+ * @param {boolean} preorder - Pre-order
  */
-function writeInventoryRecord(fw, productID, ats) { // eslint-disable-line
+function writeInventoryRecord(fw, productID, allocation, preorder) { // eslint-disable-line
     fw.writeLine('<record product-id="' + productID + '">');
-    fw.writeLine('    <allocation>' + ats + '</allocation>');
+    fw.writeLine('    <allocation>' + allocation + '</allocation>');
+    if (preorder === true) {
+        fw.writeLine('    <preorder-backorder-handling>preorder</preorder-backorder-handling>');
+        fw.writeLine('    <preorder-backorder-allocation>999.0</preorder-backorder-allocation>');
+        fw.writeLine('    <in-stock-date>2099-01-01Z</in-stock-date>');
+        fw.writeLine('    <in-stock-datetime>2099-01-01T06:00:00.000Z</in-stock-datetime>');
+    }
     fw.writeLine('</record>');
 }
 
 /**
- * Write inventory
+ * Write inventory xml start
  * @param {File} fw - The file name
  * @param {string} siteInventoryID - Product ID
  */
@@ -54,7 +65,7 @@ function writeInventoryStart(fw, siteInventoryID) { // eslint-disable-line
 }
 
 /**
- * Write inventory
+ * Write inventory xml end
  * @param {File} fw - The file name
  * @param {string} productID - Product ID
  */
@@ -62,6 +73,18 @@ function writeInventoryEnd(fw) { // eslint-disable-line
     fw.writeLine('        </records>');
     fw.writeLine('    </inventory-list>');
     fw.writeLine('</inventory>');
+}
+
+/**
+ * Get preSaleOverSaleEnabled from master product
+ * @param {string} sku - sku
+ * @returns {boolean} is the master preSaleOverSaleEnabled
+ */
+function isPreSaleOverSale(sku) {
+    if (preSaleVariantArray.indexOf(sku) !== -1) {
+        return true;
+    }
+    return false;
 }
 
 /**
@@ -163,10 +186,16 @@ function zeroInventory(fw, storefrontCatalogID) {
         // Loop through products
         while (si.hasNext()) {
             var product = si.next();
-
             // master, variant, bundle, productSet, productSetProduct, bundled
             if (product.variant || product.product === true && product.master === false && product.variant === false) { // Only variants
-                writeInventoryRecord(fw, product.ID, 0); // Zero the inventory
+                var preSaleOverSaleEnabled = false;
+                var master = product.variationModel.master;
+                if (!empty(master) && (master.custom.preSaleOverSaleEnabled === true)) {
+                    preSaleVariantArray.add(product.ID);
+                    preSaleOverSaleEnabled = true;
+                    ISLogger.info('Presale: Master "{0}" / SKU "{1}"', master.ID, product.ID);
+                }
+                writeInventoryRecord(fw, product.ID, 0, preSaleOverSaleEnabled); // Zero the inventory
                 outputCount++;
             }
         }
@@ -214,7 +243,7 @@ function execute(args) {
             // Write page 1 records
             var i;
             for (i = 0; i < data.inventory.length; i++) {
-                writeInventoryRecord(fw, data.inventory[i].sku, data.inventory[i].available);
+                writeInventoryRecord(fw, data.inventory[i].sku, data.inventory[i].available, isPreSaleOverSale(data.inventory[i].sku));
                 outputCount++;
             }
 
@@ -238,7 +267,7 @@ function execute(args) {
                         // Write page X records
                         if (data.inventory !== undefined && data.inventory.length) {
                             for (i = 0; i < data.inventory.length; i++) {
-                                writeInventoryRecord(fw, data.inventory[i].sku, data.inventory[i].available);
+                                writeInventoryRecord(fw, data.inventory[i].sku, data.inventory[i].available, isPreSaleOverSale(data.inventory[i].sku));
                                 outputCount++;
                             }
                         } else {
