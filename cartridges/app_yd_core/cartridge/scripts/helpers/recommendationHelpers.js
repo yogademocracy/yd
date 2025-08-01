@@ -25,31 +25,6 @@ function getRecommendationsForProduct(pid) {
     return recommendations;
 };
 
-/**
- * Returns configuration settings for the recommendations slider.
- *
- * @returns {string} JSON string of slider settings
- */
-function getRecommendationsSliderSettings() {
-    var settings = {
-        loop: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-        spaceBetween: 20,
-        slidesPerView: 2,
-        breakpoints: {
-            769: {
-                slidesPerView: 4
-            }
-        }
-    };
-
-    return JSON.stringify(settings);
-}
-
 module.exports = {
-    getRecommendationsForProduct: getRecommendationsForProduct,
-    getRecommendationsSliderSettings: getRecommendationsSliderSettings
+    getRecommendationsForProduct: getRecommendationsForProduct
 };

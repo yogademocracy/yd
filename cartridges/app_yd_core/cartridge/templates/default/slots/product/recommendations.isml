@@ -1,10 +1,10 @@
 <isinclude template="/components/modules" />
 
 <isset name="productRecommendations" value="${require('*/cartridge/scripts/helpers/recommendationHelpers').getRecommendationsForProduct(pdict.contextAUID)}" scope="page" />
-<isset name="sliderSettingsJSON" value="${require('*/cartridge/scripts/helpers/recommendationHelpers').getRecommendationsSliderSettings()}" scope="page" />
+<isset name="sliderSettingsJSON" value="${JSON.stringify(require('*/cartridge/config/recommendationSlider'))}" scope="page" />
 
 <isif condition="${!empty(productRecommendations)}">
-    <h2 class="text-center text-jet-black h4">${Resource.msg('recomendation.title', 'product', null)}</h2>
+    <h2 class="text-center text-jet-black h4 mb-4">${Resource.msg('recomendation.title', 'product', null)}</h2>
     <div class="swiper" data-swiper-setting='${sliderSettingsJSON}' style="--swiper-wrapper-transition-timing-function: linear">
         <div class="swiper-wrapper">
             <isloop items="${productRecommendations}" var="product">
