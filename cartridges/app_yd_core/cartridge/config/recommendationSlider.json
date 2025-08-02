@@ -1,0 +1,14 @@
+{
+    "loop": true,
+    "navigation": {
+        "nextEl": ".swiper-button-next",
+        "prevEl": ".swiper-button-prev"
+    },
+    "spaceBetween": 20,
+    "slidesPerView": 2,
+    "breakpoints": {
+        "769": {
+            "slidesPerView": 4
+        }
+    }
+}
