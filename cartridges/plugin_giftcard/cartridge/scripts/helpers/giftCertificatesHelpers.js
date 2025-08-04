@@ -18,7 +18,7 @@ function sendEmail(record) {
 
     var emailObj = {
         to: record.email,
-        subject: Resource.msg('email.subject.gift.certificate', 'registration', null),
+        subject: Resource.msg('email.subject.gift.card', 'registration', null),
         from: Site.current.getCustomPreferenceValue('customerServiceEmail') || 'no-reply@testorganization.com',
         type: emailHelpers.emailTypes.registration
     };
