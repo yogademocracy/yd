@@ -87,13 +87,12 @@
             <step step-id="Import Inventory" type="ImportInventoryLists" enforce-restart="false">
                 <description/>
                 <parameters>
-                    <parameter name="InventoryListLockWaitSeconds">10</parameter>
                     <parameter name="WorkingFolder">inventory</parameter>
                     <parameter name="FileNamePattern">yd-inventory\.xml</parameter>
                     <parameter name="NoFilesFoundHandling">NO_FILES_FOUND</parameter>
                     <parameter name="ImportMode">Replace</parameter>
                     <parameter name="ImportFailedHandling">WARN</parameter>
-                    <parameter name="AfterImportFileHandling">Keep</parameter>
+                    <parameter name="AfterImportFileHandling">Archive</parameter>
                     <parameter name="ArchiveFolder">archive</parameter>
                 </parameters>
                 <rules>
@@ -302,6 +301,13 @@
                 <parameters>
                     <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
                     <parameter name="CategoryID">holiday-sale</parameter>
+                </parameters>
+            </step>
+            <step step-id="clover" type="ExecuteCategorizationRules" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID" job-parameter-ref="CatalogID"/>
+                    <parameter name="CategoryID">clover</parameter>
                 </parameters>
             </step>
         </flow>

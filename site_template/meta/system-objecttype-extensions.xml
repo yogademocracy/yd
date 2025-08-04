@@ -2467,6 +2467,17 @@
                 <order-required-flag>false</order-required-flag>
                 <externally-defined-flag>false</externally-defined-flag>
             </attribute-definition>
+            <attribute-definition attribute-id="preSaleOverSaleEnabled">
+                <display-name xml:lang="x-default">Pre/Over Sale Enabled</display-name>
+                <description xml:lang="x-default">Enable product pre-order. Product can be sold without inventory. Run "Inventory Sync" after changes.</description>
+                <type>boolean</type>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
             <attribute-definition attribute-id="productType">
                 <display-name xml:lang="x-default">Product Type</display-name>
                 <type>string</type>
@@ -2720,6 +2731,7 @@
             </attribute-group>
             <attribute-group group-id="yogaDemocracy">
                 <display-name xml:lang="x-default">Yoga Democracy</display-name>
+                <attribute attribute-id="preSaleOverSaleEnabled"/>
                 <attribute attribute-id="size"/>
                 <attribute attribute-id="length"/>
                 <attribute attribute-id="tags"/>

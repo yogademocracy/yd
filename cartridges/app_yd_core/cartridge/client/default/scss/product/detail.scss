@@ -1,5 +1,9 @@
 @import "../init-all";
 
+.add-to-cart-messages {
+    top: 25%;
+}
+
 .primary-images .carousel-item img {
     width: 100%;
 }
@@ -43,5 +47,23 @@
 
     .icon {
         font-size: rem(20);
+    }
+}
+
+.recommendations {
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $c-yd-jet-black;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    @include hover-and-focus {
+        .swiper-button-prev,
+        .swiper-button-next {
+            opacity: 0.8;
+            visibility: visible;
+        }
     }
 }

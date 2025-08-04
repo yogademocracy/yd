@@ -2,7 +2,7 @@
 
 /**
  * Gets recommendations for given product Id
- * 
+ *
  * @param {string} pid - product ID
  * @returns {Array<Object>} Array of recommendation objects
  */
