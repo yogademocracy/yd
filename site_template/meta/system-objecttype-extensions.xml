@@ -1203,6 +1203,27 @@
                 <field-length>0</field-length>
             </attribute-definition>
         </system-attribute-definitions>
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="initialAmount">
+                <display-name xml:lang="x-default">Initial Amount</display-name>
+                <type>double</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="isLegacy">
+                <display-name xml:lang="x-default">Is Legacy</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="custom">
+                <display-name xml:lang="x-default">Custom</display-name>
+                <attribute attribute-id="isLegacy"/>
+                <attribute attribute-id="initialAmount"/>
+            </attribute-group>
+        </group-definitions>
     </type-extension>
 
     <type-extension type-id="GiftCertificateLineItem">

@@ -1,0 +1,60 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.importGiftCertificates",
+                "module": "plugin_giftcard/cartridge/scripts/jobs/importGiftCertificates.js",
+                "description": "Creates stores XML from CSV file.",
+                "@supports-parallel-execution": "true",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "function": "execute",
+                "parameters": {
+                    "parameter": [
+                        {
+                            "@name": "IsDisabled",
+                            "description": "Mark the step as disabled. This will skip the step and returns a OK status",
+                            "@type": "boolean",
+                            "@required": false,
+                            "default-value": "false"
+                        },
+                        {
+                            "@name": "sourceFolder",
+                            "description": "The relative file path where the CSV will be taken (relative to IMPEX/).",
+                            "@type": "string",
+                            "@required": true,
+                            "default-value": "src/gc/import"
+                        },
+                        {
+                            "@name": "fileNamePattern",
+                            "description": "Only files which is matching this regular expression will be processed.",
+                            "@type": "string",
+                            "@required": true,
+                            "@trim": "true",
+                            "default-value": "^.*[.]csv"
+                        },
+                        {
+                            "@name": "targetFolder",
+                            "description": "The relative file path where the XML will be saved (relative to IMPEX/).",
+                            "@type": "string",
+                            "@required": true,
+                            "default-value": "src/gc/import/processed"
+                        }
+                    ]
+                },
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
