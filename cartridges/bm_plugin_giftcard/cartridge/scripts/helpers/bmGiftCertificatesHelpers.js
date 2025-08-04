@@ -43,7 +43,7 @@ function getEmailMessage(giftCertificateBM) {
         balance: giftCertificate.balance ? giftCertificate.balance.value : 0
     };
 
-    var message = getContentById('email-gift-certificate', giftCertificateObj);
+    var message = getContentById('email-gift-certificate-created', giftCertificateObj);
 
     return message;
 };

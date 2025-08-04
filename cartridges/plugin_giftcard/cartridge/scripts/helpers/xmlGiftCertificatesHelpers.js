@@ -8,11 +8,16 @@ var xmlWriteHelpers = require('*/cartridge/scripts/helpers/xmlGiftCertificatesWr
  * Writes custom attributes in xml file
  *
  * @param {dw.io.XMLStreamWriter} xsw - XML stream writer
+ * @param {object} record - attributes object from file
  */
-function writeCustomAttributes(xsw) {
+function writeCustomAttributes(xsw, record) {
     xsw.writeStartElement('custom-attributes');
 
     xmlWriteHelpers.writeCustomAttribute(xsw, 'isLegacy', 'true');
+
+    if (record.amount) {
+        xmlWriteHelpers.writeCustomAttribute(xsw, 'initialAmount', record.amount);
+    }
 
     xsw.writeEndElement();
 }
@@ -22,7 +27,6 @@ function writeCustomAttributes(xsw) {
  *
  * @param {dw.io.XMLStreamWriter} xsw - XML stream writer
  * @param {object} record - attributes object from file
- * @param {object} columnIndexes - indexes of columns from file
  */
 function writeSystemAttributes(xsw, record) {
     if (record.createDate) {
@@ -70,23 +74,6 @@ function writeSystemAttributes(xsw, record) {
     if (record.balance) {
         xmlWriteHelpers.writeXMLElement(xsw, 'amount', record.balance);
     }
-
-    // if (record.balance) {
-    //     // xmlWriteHelpers.writeXMLElement(xsw, 'balance', record.balance);
-    //     xsw.writeStartElement('redemptions');
-    //     xsw.writeStartElement('redemption');
-
-    //     // <redeem-date>2025-07-30T15:30:00.000Z</redeem-date>
-    //     // <redeem-amount>20.00</redeem-amount>
-    //     // <order-no>00012345</order-no>
-    //     xmlWriteHelpers.writeXMLElement(xsw, 'date', '2025-07-30T15:30:00.000Z');
-    //     xmlWriteHelpers.writeXMLElement(xsw, 'amount', '20.00');
-    //     xmlWriteHelpers.writeXMLElement(xsw, 'order-no', '00012345');
-
-
-    //     xsw.writeEndElement();
-    //     xsw.writeEndElement();
-    // }
 }
 
 /**
@@ -103,7 +90,7 @@ function writeGiftCertificate(xsw, record) {
     xsw.writeAttribute('gc-id', record.id);
 
     writeSystemAttributes(xsw, record);
-    writeCustomAttributes(xsw);
+    writeCustomAttributes(xsw, record);
 
     xsw.writeEndElement();
 

@@ -622,7 +622,7 @@
         <folder-links>
         </folder-links>
     </content>
-    <content content-id="email-gift-certificate">
+    <content content-id="email-gift-certificate-created">
         <display-name xml:lang="x-default">Email Gift Certificate</display-name>
         <online-flag>true</online-flag>
         <searchable-flag>false</searchable-flag>

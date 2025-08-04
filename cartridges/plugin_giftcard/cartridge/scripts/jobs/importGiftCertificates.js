@@ -93,14 +93,6 @@ function getStatus(record) {
         return 'REDEEMED';
     }
 
-    // if (amount !== balance) {
-    //     return 'PART_REDEEMED';
-    // }
-
-    // if (amount === balance) {
-    //     return 'ISSUED';
-    // }
-
     return 'ISSUED';
 }
 

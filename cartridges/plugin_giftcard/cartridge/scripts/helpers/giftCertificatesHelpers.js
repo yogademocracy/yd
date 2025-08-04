@@ -13,7 +13,7 @@ function sendEmail(record) {
     var Resource = require('dw/web/Resource');
 
     var params = {
-        message: contentHelpers.getContentById('email-gift-certificate', record),
+        message: contentHelpers.getContentById('email-gift-certificate-created', record),
     };
 
     var emailObj = {

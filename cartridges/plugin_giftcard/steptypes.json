@@ -3,7 +3,7 @@
         "script-module-step": [
             {
                 "@type-id": "custom.importGiftCertificates",
-                "module": "plugin_giftcertificates/cartridge/scripts/jobs/importGiftCertificates.js",
+                "module": "plugin_giftcard/cartridge/scripts/jobs/importGiftCertificates.js",
                 "description": "Creates stores XML from CSV file.",
                 "@supports-parallel-execution": "true",
                 "@supports-site-context": "true",
