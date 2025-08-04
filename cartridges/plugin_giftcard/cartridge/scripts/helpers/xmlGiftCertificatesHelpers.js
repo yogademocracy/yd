@@ -67,10 +67,6 @@ function writeSystemAttributes(xsw, record) {
         xmlWriteHelpers.writeXMLElement(xsw, 'currency', record.currency);
     }
 
-    // if (record.amount) {
-    //     xmlWriteHelpers.writeXMLElement(xsw, 'amount', record.amount);
-    // }
-
     if (record.balance) {
         xmlWriteHelpers.writeXMLElement(xsw, 'amount', record.balance);
     }
