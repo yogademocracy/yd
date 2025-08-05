@@ -20,7 +20,11 @@ module.exports.aliasConfig = {
         gtm: path.resolve(
             process.cwd(),
             'cartridges/plugin_gtm/cartridge/client/default/'
-        )
+        ),
+        cybersource: path.resolve(
+            process.cwd(),
+            'cartridges/int_cybs_sfra/cartridge/client/default/'
+        ),
     }
 };
 
@@ -49,12 +53,14 @@ module.exports.lintConfig = {
 };
 
 module.exports.copyConfig = {
-    'cartridges/app_yd_core': [
+    'cartridges/int_cybs_sfra': [
         {
-            from: './cartridges/int_cybs_sfra/cartridge/client/default/custom/flexMicroform.js', to: 'default/js/custom/flexMicroform.js'
+            from: './cartridges/int_cybs_sfra/cartridge/client/default/custom/flexMicroform.js', 
+            to: 'default/js/custom/flexMicroform.js'
         },
         {
-            from: './cartridges/int_cybs_sfra/cartridge/client/default/custom/lib/jquery/jquery-3.7.1.min.js', to: 'default/js/custom/lib/jquery-3.7.1.min.js'
+            from: './cartridges/int_cybs_sfra/cartridge/client/default/custom/lib/jquery/jquery-3.7.1.min.js', 
+            to: 'default/js/custom/lib/jquery-3.7.1.min.js'
         }
     ]
 };
