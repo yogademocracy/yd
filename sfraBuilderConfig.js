@@ -51,10 +51,10 @@ module.exports.lintConfig = {
 module.exports.copyConfig = {
     'cartridges/app_yd_core': [
         {
-            from: './cartridges/app_yd_core/cartridge/client/default/js/custom/flexMicroform.js', to: 'default/js/custom/flexMicroform.js'
+            from: './cartridges/int_cybs_sfra/cartridge/client/default/custom/flexMicroform.js', to: 'default/js/custom/flexMicroform.js'
         },
         {
-            from: './cartridges/app_yd_core/cartridge/client/default/js/custom/lib/jquery-3.7.1.min.js', to: 'default/js/custom/lib/jquery-3.7.1.min.js'
+            from: './cartridges/int_cybs_sfra/cartridge/client/default/custom/lib/jquery/jquery-3.7.1.min.js', to: 'default/js/custom/lib/jquery-3.7.1.min.js'
         }
     ]
 };
