@@ -47,3 +47,15 @@ module.exports.lintConfig = {
     eslintFix: true,
     stylelintFix: true
 };
+
+module.exports.copyConfig = {
+    'cartridges/app_yd_core': [
+        {
+            from: './cartridges/app_yd_core/cartridge/client/default/js/custom/flexMicroform.js', to: 'default/js/custom/flexMicroform.js'
+        },
+        {
+            from: './cartridges/app_yd_core/cartridge/client/default/js/custom/lib/jquery-3.7.1.min.js', to: 'default/js/custom/lib/jquery-3.7.1.min.js'
+        }
+    ]
+};
+

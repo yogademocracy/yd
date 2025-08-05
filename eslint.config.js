@@ -15,6 +15,7 @@ module.exports = [
             'cartridges/int_cybs_sfra',
             'cartridges/int_cybs_sfra_base',
             'cartridges/modules/',
+            'cartridges/app_yd_core/cartridge/client/default/js/custom/',
 
             'bin/',
             'docs/',
