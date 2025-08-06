@@ -1,0 +1,8 @@
+<div class="tab-pane ${paymentOption.ID}-content gift-certificate-wrapper ${pdict.order.GCAreOtherPaymentsAvailable ? '' : 'active'}" id="${paymentOption.ID}-content" role="tabpanel">
+    <input type="hidden" class="form-control"
+        name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+        value="GIFT_CERTIFICATE"
+    />
+
+    <isinclude template="checkout/billing/paymentOptions/giftCertificateField" />
+</div>
