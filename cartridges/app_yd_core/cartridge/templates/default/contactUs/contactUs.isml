@@ -29,7 +29,14 @@
                                         <label class="form-control-label" for="contact-first-name">
                                             ${Resource.msg('label.input.contact-us-first-name', 'contactUs', null)}
                                         </label>
-                                        <input type="text" required class="form-control required" aria-describedby="form-contact-first-name-error" id="contact-first-name" name="contactFirstName">
+                                        <input type="text" required class="form-control required" 
+                                            aria-describedby="form-contact-first-name-error" 
+                                            id="contact-first-name" 
+                                            name="contactFirstName" 
+                                            pattern="[A-Za-z]"
+                                            data-pattern-mismatch="${Resource.msg('contact.us.first.name.error', 'contactUs', null)}"
+                                            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+                                            >
                                         <div class="invalid-feedback" id="form-contact-first-name-error"></div>
                                     </div>
                                 </div>
@@ -38,8 +45,15 @@
                                         <label class="form-control-label" for="contact-last-name">
                                             ${Resource.msg('label.input.contact-us-last-name', 'contactUs', null)}
                                         </label>
-                                        <input type="text" required class="form-control required" aria-describedby="form-contact-last-name-error" id="contact-last-name" name="contactLastName">
+                                        <input type="text" required class="form-control required" 
+                                            aria-describedby="form-contact-last-name-error" 
+                                            id="contact-last-name" name="contactLastName" 
+                                            pattern="[A-Za-z]"
+                                            data-pattern-mismatch="${Resource.msg('contact.us.last.name.error', 'contactUs', null)}"
+                                            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+                                            >
                                         <div class="invalid-feedback" id="form-contact-last-name-error"></div>
+
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +65,7 @@
                                         <label class="form-control-label" for="contact-email">
                                             ${Resource.msg('label.input.contact-us-email', 'contactUs', null)}
                                         </label>
-                                        <input type="email" required class="form-control required" aria-describedby="form-contact-email-error" id="contact-email" name="contactEmail">
+                                        <input type="email" required class="form-control required" aria-describedby="form-contact-email-error" id="contact-email" name="contactEmail" data-missing-error="${Resource.msg('error.message.required', 'forms', null)}">
                                         <div class="invalid-feedback" id="form-contact-email-error"></div>
                                     </div>
                                 </div>
