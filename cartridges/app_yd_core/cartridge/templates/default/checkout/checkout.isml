@@ -92,6 +92,8 @@
 					</div>
 				</div>
 
+                <isinclude template="checkout/billing/paymentOptions/giftCertificateSection" />
+
 				<!-- Step 2: Payment and Billing-->
 				<isinclude template="checkout/billing/billing" />
 				<div class="card payment-summary">

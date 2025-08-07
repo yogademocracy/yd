@@ -1,0 +1,64 @@
+<fieldset class="payment-form-fields">
+    <fieldset class="gift-cert-form">
+        <div class="row">
+            <div class="col-12 gift-cert-fields">
+                <div class="form-group
+                            ${giftCertFields.giftCertCode.htmlName}">
+                    <div class="gift-cert-wrapper"
+                        data-missing-error="${Resource.msg('error.missing', 'giftcard', null)}">
+                        <input type="hidden" class="payment-method"
+                            name="${pdict.forms.billingForm.paymentMethod.htmlName}" value="${paymentOption.ID}" />
+                        <input type="text" class="form-control giftCertCode" id="giftCert"
+                            aria-describedby="giftCertInvalidMessage"
+                            placeholder="${Resource.msg('billing.entercode', 'giftcard', null)}" <isprint
+                            value=${giftCertFields.giftCertCode.attributes} encoding="off" />
+                        />
+                        <label class="form-control-label d-none" for="giftCert">${Resource.msg('billing.entercode', 'giftcard', null)}</label>
+
+                        <div class="invalid-feedback input-feedback" id="giftCertInvalidMessage"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <isif condition="${pdict.order.totalGrossPrice.value <= gcPITotal}">
+            <div class="row gift-cert-used mb-3">
+                <div class="col-12">
+                    <isif condition="${gcPITotal > 0}">${Resource.msg('billing.no.method', 'giftcard', null)}
+                    <iselse/><span class="gc-zero-balance">
+                            ${Resource.msg('billing.zerobalance', 'giftcert', null)}</span></isif>
+                    <input type="hidden" name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+                        value="${dw.order.PaymentInstrument.METHOD_GIFT_CERTIFICATE}" />
+                    <input type="hidden" id="noPaymentNeeded" name="noPaymentNeeded" value="true" />
+                </div>
+            </div>
+        </isif>
+    </fieldset>
+    <div class="btn-fields gift-cert-buttons d-flex justify-content-between flex-column flex-sm-row">
+        <button class="btn btn-outline-primary text-center submit-giftCert mb-2" type="button" name="submitGift"
+            value="submit-gifrcert" data-url="${URLUtils.https('CheckoutServices-AddGiftCertificate')}">
+            <isprint value="${Resource.msg('button.submit', 'giftcard', null)}" />
+        </button>
+        <button class="btn btn-outline-primary text-center check-balance mb-2" type="button" name="checkBalance"
+            value="gift-cert-balance" data-url="${URLUtils.https('CheckoutServices-CheckBalance')}">
+            <isprint value="${Resource.msg('button.checkbalance', 'giftcard', null)}" />
+        </button>
+    </div>
+
+    <div class="current-balance"></div>
+    <div class="balance"></div>
+    <div class="redemption giftcert">
+        <isloop items="${gcPIs}" var="gcPi">
+            <div class="success giftcert-pi" id="gc-${gcPi.giftCertCode}">
+                <span class="message">
+                    <isprint
+                        value="${Resource.msgf('billing.redeemed', 'giftcard', null, gcPi.amount, gcPi.maskedGiftCertifiacte)}" />
+                </span>
+                <a id="rgc-${gcPi.giftCertCode}" class="remove"
+                    href="${URLUtils.https('CheckoutServices-RemoveGiftCertificate', 'giftCertificateID', gcPi.giftCertCode, 'format', 'old')}">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </isloop>
+    </div>
+</fieldset>

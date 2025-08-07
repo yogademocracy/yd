@@ -1,0 +1,18 @@
+<isif condition="${!empty(pdict.order.gcPaymentInstrument)}">
+    <isset name="gcPIs" value="${pdict.order.gcPaymentInstrument.gcPIs}" scope="page" />
+    <isset name="gcPITotal" value="${pdict.order.gcPaymentInstrument.total}" scope="page" />
+</isif>
+
+<isset name="giftCertFields" value="${pdict.forms.billingForm.giftCertFields}" scope="page" />
+
+<div class="card gift-certificate-section gift-certificate-wrapper">
+    <div class="card-header">
+        <span class="card-label js-giftcard-toggle">
+            ${Resource.msg('action.have.gift.certificate', 'checkout', null)}
+            <i class="fa fa-chevron-down"></i>
+        </span>
+    </div>
+    <div class="card-body js-giftcard-fieldset ${pdict.order.totalGrossPrice.value <= gcPITotal  || gcPIs.length > 0 ? '' : 'd-none'}">
+        <isinclude template="checkout/billing/paymentOptions/giftCertificateField" />
+    </div>
+</div>
