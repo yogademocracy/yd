@@ -20,7 +20,7 @@ function totals(lineItemContainer) {
         var giftCertificatesApplied = new Money(0, lineItemContainer.getCurrencyCode());
 
         collections.forEach(lineItemContainer.giftCertificatePaymentInstruments, function (giftCertificatePi) {
-            if (giftCertificatePi.paymentTransaction && giftCertificatePi.paymentTransaction.amount && giftCertificatePi.paymentTransaction.amount.getValue()) {
+            if (giftCertificatePi.paymentTransaction && giftCertificatePi.paymentTransaction.amount && giftCertificatePi.paymentTransaction.amount.getValue() > 0) {
                 giftCertificatesApplied = giftCertificatesApplied.add(giftCertificatePi.paymentTransaction.amount);
             }
         });
