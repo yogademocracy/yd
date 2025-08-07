@@ -4,11 +4,12 @@
 
 var customerHelpers = require('base/checkout/customer');
 var addressHelpers = require('base/checkout/address');
-var shippingHelpers = require('base/checkout/shipping');
+var shippingHelpers = require('cybersource/checkout/shipping');
 var billingHelpers = require('./billing');
 var summaryHelpers = require('base/checkout/summary');
 var formHelpers = require('base/checkout/formErrors');
 var scrollAnimate = require('base/components/scrollAnimate');
+
 var location = window.location;
 var history = window.history;
 
