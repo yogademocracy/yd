@@ -192,15 +192,26 @@ function updatePaymentInformation(order) {
 
     if (order.billing.payment && order.billing.payment.selectedPaymentInstruments
         && order.billing.payment.selectedPaymentInstruments.length > 0) {
-        htmlToAppend += '<span>' + order.resources.cardType + ' '
-            + order.billing.payment.selectedPaymentInstruments[0].type
-            + '</span><div>'
-            + order.billing.payment.selectedPaymentInstruments[0].maskedCreditCardNumber
-            + '</div><div><span>'
-            + order.resources.cardEnding + ' '
-            + order.billing.payment.selectedPaymentInstruments[0].expirationMonth
-            + '/' + order.billing.payment.selectedPaymentInstruments[0].expirationYear
-            + '</span></div>';
+        var paymentInstruments = order.billing.payment.selectedPaymentInstruments;
+
+        for (var i = 0; i < paymentInstruments.length; i++) {
+            if (paymentInstruments[i].paymentMethod === 'GIFT_CERTIFICATE') {
+                htmlToAppend += '<div class=""><span>' + order.resources.giftCertificateMessage + ' '
+                    + '</span><div>'
+                    + paymentInstruments[i].maskedGiftCertificateCode
+                    + '</div></div>';
+            } else {
+                htmlToAppend += '<div class=""><span>' + order.resources.cardType + ' '
+                    + paymentInstruments[i].type
+                    + '</span><div>'
+                    + paymentInstruments[i].maskedCreditCardNumber
+                    + '</div><div><span>'
+                    + order.resources.cardEnding + ' '
+                    + paymentInstruments[i].expirationMonth
+                    + '/' + paymentInstruments[i].expirationYear
+                    + '</span></div></div>';
+            }
+        }
     }
 
     $paymentSummary.empty().append(htmlToAppend);

@@ -43,6 +43,8 @@ function OrderModel(lineItemContainer, options) {
 
         const gcPaymentInstrumentTotal = this.gcPaymentInstrument.total ? this.gcPaymentInstrument.total : 0;
         this.GCAreOtherPaymentsAvailable = lineItemContainer.totalGrossPrice.value ? lineItemContainer.totalGrossPrice.value > gcPaymentInstrumentTotal : true;
+
+        this.resources.giftCertificateMessage = Resource.msg('msg.payment.method', 'giftcard', null);
     } else {
         this.giftCertificateItems = [];
         this.gcPaymentInstrument = [];

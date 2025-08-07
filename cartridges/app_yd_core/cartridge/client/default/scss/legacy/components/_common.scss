@@ -21,11 +21,19 @@ input[placeholder] {
     display: none;
 }
 
+.hide-gift-certificates {
+    display: none;
+}
+
 .order-discount {
     color: $success;
 }
 
 .shipping-discount {
+    color: $success;
+}
+
+.gift-certificates-discount {
     color: $success;
 }
 
