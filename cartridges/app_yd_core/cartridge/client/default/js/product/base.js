@@ -71,7 +71,7 @@ function getQuantitySelected($el) {
  */
 function processSwatchValues(attr, $productContainer, msgs) {
     attr.values.forEach(function (attrValue) {
-        var $attrValue = $productContainer.find('[data-attr="' + attr.id + '"] [data-attr-value="'
+        var $attrValue = $productContainer.find('[data-attr="' + CSS.escape(attr.id) + '"] [data-attr-value="'
             + attrValue.value + '"]');
         var $swatchButton = $attrValue.parent();
 
