@@ -16,15 +16,13 @@
         <div class="row">
             <div class="col-5 card-info-group">
                 <h3>
-                    <a href="${URLUtils.https('Order-Details', 'orderSummaryId', order.id,
-                            'orderID', order.sfccOrderNumber)}">
-                        <isprint value="${order.totals.totalQuantity}" formatter="#"/>
-                        <isif condition="${order.totals.totalQuantity > 1}">
-                            ${Resource.msg('label.orderhistory.total.items','account',null)}
-                        <iselse>
-                            ${Resource.msg('label.orderhistory.total.item','account',null)}
-                        </isif>
-                    </a>
+                    <isif condition="${order.existsInSFCC}">
+                        <a href="${URLUtils.https('Order-Details', 'orderSummaryId', order.id, 'orderID', order.sfccOrderNumber)}">
+                            ${Resource.msgf('label.orderhistory.total.item', 'account', null, order.totals.totalQuantity)}
+                        </a>
+                    <iselse/>
+                        <span>${Resource.msgf('label.orderhistory.total.item', 'account', null, order.totals.totalQuantity)}</span>
+                    </isif>
                 </h3>
             </div>
             <div class="col-7 card-info-group">

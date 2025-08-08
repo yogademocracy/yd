@@ -59,6 +59,7 @@ function SomOrderModel(somApiOrderSummary, somOrderToOrderItemSummariesMap, somO
     this.currencyCode = null;
     this.billing = null;
     this.totals = null;
+    this.existsInSFCC = true;
 
     this.orderedStatusGroupItems = [];
     this.inProgressStatusGroupItems = [];
@@ -71,7 +72,8 @@ function SomOrderModel(somApiOrderSummary, somOrderToOrderItemSummariesMap, somO
         // get the currency code from eCom order as the code is not easily available in SOM
         var ecomOrder = OrderMgr.getOrder(somApiOrderSummary.OrderNumber);
 
-        this.currencyCode = ecomOrder.currencyCode;
+        this.existsInSFCC = !empty(ecomOrder);
+        this.currencyCode = ecomOrder ? ecomOrder.currencyCode : 'USD';
         this.id = somApiOrderSummary.Id;
         this.paymentMethodId = somApiOrderSummary.OrderPaymentSummaries && somApiOrderSummary.OrderPaymentSummaries.records[0].PaymentMethodId;
         this.sfccOrderNumber = somApiOrderSummary.OrderNumber;
