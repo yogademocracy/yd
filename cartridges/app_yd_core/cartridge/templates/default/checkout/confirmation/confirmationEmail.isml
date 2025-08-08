@@ -116,7 +116,7 @@
 						</div>
                     <iselseif condition="${payment.paymentMethod === 'GIFT_CERTIFICATE'}">
                         <div>
-                            ${Resource.msg('msg.payment.method', 'giftcard', null)}
+                            ${Resource.msg('msg.payment.type.gift.certificate', 'confirmation', null)}
                         </div>
                         <div>
                             ${payment.maskedGiftCertificateCode}
