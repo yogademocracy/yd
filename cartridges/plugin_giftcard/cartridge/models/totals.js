@@ -26,9 +26,9 @@ function totals(lineItemContainer) {
         });
 
         if (giftCertificatesApplied.getValue() > 0) {
-            var totalGrossPrice = lineItemContainer.totalGrossPrice.subtract(giftCertificatesApplied);
-
-            this.grandTotal = totalGrossPrice.available ? formatMoney(totalGrossPrice) : '-';
+            this.grandTotal = lineItemContainer.totalGrossPrice.available
+                ? formatMoney(lineItemContainer.totalGrossPrice.subtract(giftCertificatesApplied))
+                : '-';
         }
 
         this.giftCertificatesTotal = {

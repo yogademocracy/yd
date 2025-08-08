@@ -196,12 +196,12 @@ function updatePaymentInformation(order) {
 
         for (var i = 0; i < paymentInstruments.length; i++) {
             if (paymentInstruments[i].paymentMethod === 'GIFT_CERTIFICATE') {
-                htmlToAppend += '<div class=""><span>' + order.resources.giftCertificateMessage + ' '
+                htmlToAppend += '<div><span>' + order.resources.giftCertificateMessage + ' '
                     + '</span><div>'
                     + paymentInstruments[i].maskedGiftCertificateCode
                     + '</div></div>';
             } else {
-                htmlToAppend += '<div class=""><span>' + order.resources.cardType + ' '
+                htmlToAppend += '<div><span>' + order.resources.cardType + ' '
                     + paymentInstruments[i].type
                     + '</span><div>'
                     + paymentInstruments[i].maskedCreditCardNumber
