@@ -142,7 +142,7 @@ function getOrderSummaryQuery(orderNumbers, orderSummaryId, filters) {
         if (orderNumbers && typeof orderNumbers === 'object') {
             // if there is an array of order id's
             orderNumbers.forEach(function (orderNo) {
-                ordersStr += "'" + orderNo + "'";
+                ordersStr += "'" + encodeURIComponent(orderNo) + "'";
                 if (
                     orderNumbers.length > 1
                     && orderNo !== orderNumbers[orderNumbers.length - 1]

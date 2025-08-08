@@ -200,7 +200,10 @@ function getLastOrder(req) {
     }
 
     // If there is an order
-    if (compositeResponses && compositeResponses.compositeResponse[0].body.records.length > 0) {
+    if (compositeResponses 
+        && compositeResponses.compositeResponse
+        && compositeResponses.compositeResponse[0].body.records
+        && compositeResponses.compositeResponse[0].body.records.length > 0) {
         // Create the OrderSummary to FulfillmentOrders map
         var somApiFulfillmentOrders = compositeResponses.compositeResponse[1];
         var orderSummaryToFulfillmentMap = null;
@@ -480,6 +483,7 @@ function addProductData(orderItem, currencyCode) {
             attributes: 'selected'
         });
 
+        orderItem.existsInSFCC = true;
         orderItem.productName = product.productName; // eslint-disable-line no-param-reassign
         orderItem.variationAttributes = product.variationAttributes; // eslint-disable-line no-param-reassign
         orderItem.images = product.images; // eslint-disable-line no-param-reassign
