@@ -9,7 +9,7 @@
 
     <payment-method method-id="GIFT_CERTIFICATE">
         <name xml:lang="x-default">Gift Certificate</name>
-        <enabled-flag>false</enabled-flag>
+        <enabled-flag>true</enabled-flag>
         <processor-id>BASIC_GIFT_CERTIFICATE</processor-id>
     </payment-method>
 
