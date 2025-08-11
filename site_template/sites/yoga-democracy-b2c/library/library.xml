@@ -374,11 +374,21 @@
         <searchable-flag>false</searchable-flag>
         <page-attributes/>
         <custom-attributes>
-            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&#13;
-	&lt;strong&gt;Thank you for reaching out to us.&lt;/strong&gt;&#13;
-&lt;/p&gt;&#13;
-&lt;p&gt;We have received your inquiry and our team is currently reviewing it. You can expect a response shortly. If you have any additional details to share, feel free to reply to this email.&lt;/p&gt;&#13;
-&lt;p&gt;Best regards, YD Support Team&lt;/p&gt;</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p data-renderer-start-pos="501"&gt;Thank you for reaching out to Customer Service at Yoga Democracy! We can't wait to help you - your request has been received and is being reviewed by our support staff.&lt;/p&gt;&#13;
+&#13;
+&lt;p data-renderer-start-pos="501"&gt;If you have any additional concerns or comments, reply to this email and we'll receive them on our end!&lt;/p&gt;&#13;
+&#13;
+&lt;p data-renderer-start-pos="501"&gt;While your request is being reviewed, here are a few useful links we think will be helpful:&lt;/p&gt;&#13;
+&#13;
+&lt;p data-renderer-start-pos="501"&gt;View our FAQ section: &lt;a data-is-router-link="false" data-renderer-mark="true" data-testid="link-with-safety" href="https://yogademocracy.com" title="https://yogademocracy.com"&gt;&lt;u data-renderer-mark="true"&gt;Click here&lt;/u&gt;&lt;/a&gt;&lt;br /&gt;&#13;
+Need to return/ exchange: &lt;a data-is-router-link="false" data-renderer-mark="true" data-testid="link-with-safety" href="https://yogademocracy.com/" title="https://yogademocracy.com/&gt;&lt;u data-renderer-mark="true"&gt;Click here&lt;/u&gt;&lt;/a&gt;&lt;br /&gt;&#13;
+Need a size chart: &lt;a data-is-router-link="false" data-renderer-mark="true" data-testid="link-with-safety" href="https://yogademocracy.com/" title="https://yogademocracy.com/"&gt;&lt;u data-renderer-mark="true"&gt;Click here&lt;/u&gt;&lt;/a&gt;&lt;br /&gt;&#13;
+Shop YD: &lt;a data-is-router-link="false" data-renderer-mark="true" data-testid="link-with-safety" href="https://yogademocracy.com/" title="https://yogademocracy.com/"&gt;&lt;u data-renderer-mark="true"&gt;Click here&lt;/u&gt;&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p data-renderer-start-pos="501"&gt;To add additional comments, reply to this email.&lt;/p&gt;&#13;
+&#13;
+&lt;p data-renderer-start-pos="501"&gt;&lt;img alt="" src="images/footer/yd-logo_110x.avif?$staticlink$" title="" /&gt;&lt;/p&gt;&#13;
+&lt;script src="chrome-extension://hpijlohoihegkfehhibggnkbjhoemldh/inject.js"&gt;&lt;/script&gt;</custom-attribute>
         </custom-attributes>
     </content>
 
