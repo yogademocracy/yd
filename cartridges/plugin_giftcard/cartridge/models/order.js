@@ -28,6 +28,7 @@ function OrderModel(lineItemContainer, options) {
         this.totalGrossPrice = lineItemContainer.totalGrossPrice;
         this.productLineItemSize = lineItemContainer.getProductLineItems().size();
         this.resources.giftCardTypeLabel = Resource.msg('giftcert.giftCardTypeLabel', 'giftcert', null);
+        this.resources.giftCertificateMessage = Resource.msg('msg.payment.method', 'giftcard', null);
 
         var safeOptions = options || {};
         var shipmentWithPLI = [];

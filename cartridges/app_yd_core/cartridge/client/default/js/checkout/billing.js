@@ -26,6 +26,42 @@ cybersource.methods.validateAndUpdateBillingPaymentInstrument = function (order)
     }
 };
 
+/**
+ * Updates the payment information in checkout, based on the supplied order model
+ * @param {Object} order - checkout model to use as basis of new truth
+ */
+cybersource.methods.updatePaymentInformation = function (order) {
+    // update payment details
+    var $paymentSummary = $('.payment-details');
+    var htmlToAppend = '';
+
+    if (order.billing.payment && order.billing.payment.selectedPaymentInstruments
+        && order.billing.payment.selectedPaymentInstruments.length > 0) {
+        var paymentInstruments = order.billing.payment.selectedPaymentInstruments;
+
+        for (var i = 0; i < paymentInstruments.length; i++) {
+            if (paymentInstruments[i].paymentMethod === 'GIFT_CERTIFICATE') {
+                htmlToAppend += '<div><span>' + order.resources.giftCertificateMessage + ' '
+                    + '</span><div>'
+                    + paymentInstruments[i].maskedGiftCertificateCode
+                    + '</div></div>';
+            } else {
+                htmlToAppend += '<div><span>' + order.resources.cardType + ' '
+                    + paymentInstruments[i].type
+                    + '</span><div>'
+                    + paymentInstruments[i].maskedCreditCardNumber
+                    + '</div><div><span>'
+                    + order.resources.cardEnding + ' '
+                    + paymentInstruments[i].expirationMonth
+                    + '/' + paymentInstruments[i].expirationYear
+                    + '</span></div></div>';
+            }
+        }
+    }
+
+    $paymentSummary.empty().append(htmlToAppend);
+};
+
 cybersource.handleCreditCardNumber = function () {
     if ($('.cardNumber').length && $('#cardType').length) {
         cleave.handleCreditCardNumber('.cardNumber', '#cardType');
