@@ -1,11 +1,6 @@
-@import "base/variables";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins/breakpoints";
-@import "base/components/formFields";
 @import "base/components/toastMessage";
 
 .contact-us-banner {
-    background-image: url('../images/contact-us.jpg');
     background-position-y: 20%;
 }
 
