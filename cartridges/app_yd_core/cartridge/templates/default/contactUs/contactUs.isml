@@ -33,7 +33,7 @@
                                             aria-describedby="form-contact-first-name-error" 
                                             id="contact-first-name" 
                                             name="contactFirstName" 
-                                            pattern="[A-Za-z]"
+                                            pattern=".*\S.*"
                                             data-pattern-mismatch="${Resource.msg('contact.us.first.name.error', 'contactUs', null)}"
                                             data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
                                             >
@@ -48,7 +48,7 @@
                                         <input type="text" required class="form-control required" 
                                             aria-describedby="form-contact-last-name-error" 
                                             id="contact-last-name" name="contactLastName" 
-                                            pattern="[A-Za-z]"
+                                            pattern=".*\S.*"
                                             data-pattern-mismatch="${Resource.msg('contact.us.last.name.error', 'contactUs', null)}"
                                             data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
                                             >

@@ -18,4 +18,12 @@
     .promo-code-form {
         display: block;
     }
+
+    .cart-error-messaging.cart-error {
+        position: static;
+    }
+
+    .valid-cart-error {
+        min-height: 2rem;
+    }
 }
