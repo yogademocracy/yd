@@ -32,6 +32,7 @@ module.exports = [
                 ...globals.browser,
                 ...globals.node,
                 $: false,
+                jQuery: false,
                 dw: false,
                 customer: false,
                 session: false,
