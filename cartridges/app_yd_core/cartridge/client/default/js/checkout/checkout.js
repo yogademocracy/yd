@@ -1,7 +1,5 @@
 'use strict';
 
-/* eslint-disable no-undef */
-
 var customerHelpers = require('base/checkout/customer');
 var addressHelpers = require('base/checkout/address');
 var shippingHelpers = require('cybersource/checkout/shipping');
@@ -639,6 +637,7 @@ $('button[value="submit-payment"]').on('click', function () {
     $('.payerAuthError').hide();
 });
 
+// cybersource original checkout scripts begin
 /**
  * *
  * @param {*} url *
@@ -737,5 +736,6 @@ $('#visaCheckoutPaymentOptionLink').on('click', function () {
 $('#creditCardPaymentOptionLink').on('click', function () {
     $('#placeOrderButton').show();
 });
+// cybersource original checkout scripts end
 
 module.exports = exports;
