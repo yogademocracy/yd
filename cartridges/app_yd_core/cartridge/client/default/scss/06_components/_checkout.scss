@@ -1,0 +1,55 @@
+.gift-certificate-wrapper {
+    .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: rem(12);
+        border-bottom: none;
+    }
+
+    .card-label {
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .fa-chevron-up,
+    .fa-chevron-down {
+        font-size: rem(18);
+        margin-left: rem(8);
+        cursor: pointer;
+    }
+
+    .fa-times {
+        font-size: rem(24);
+        color: $black;
+    }
+
+    .gift-cert-buttons {
+        .btn {
+            @include media-breakpoint-up(md) {
+                width: 49%;
+                gap: 1%;
+            }
+        }
+    }
+
+    .giftcert-pi {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.data-checkout-stage {
+    &[data-checkout-stage="customer"] {
+        .card.gift-certificate-section {
+            display: none;
+        }
+    }
+
+    &[data-checkout-stage="shipping"] {
+        .card.gift-certificate-section {
+            display: none;
+        }
+    }
+}
