@@ -15,7 +15,7 @@ var basketCalculationHelpers = require('*/cartridge/scripts/helpers/basketCalcul
  * @param {dw.order.Basket} currentBasket - The current basket
  * @returns {dw.value.Money} The amount to be paid by a non-gift certificate payment instrument.
  */
-function getNonGiftCertificateAmount(currentBasket) {
+base.getNonGiftCertificateAmount = function (currentBasket) {
     // The total redemption amount of all gift certificate payment instruments in the basket.
     var giftCertTotal = new Money(0.0, currentBasket.getCurrencyCode());
 
@@ -39,7 +39,7 @@ function getNonGiftCertificateAmount(currentBasket) {
 
     // Returns the open amount to be paid.
     return amountOpen;
-}
+};
 
 /**
  * Sets the payment transaction amount
@@ -87,7 +87,7 @@ base.calculatePaymentTransaction = function (currentBasket) {
         Transaction.wrap(function () {
             // Calculates the amount to be charged for the
             // non-gift certificate payment instrument.
-            var amount = getNonGiftCertificateAmount(currentBasket);
+            var amount = base.getNonGiftCertificateAmount(currentBasket);
 
             // now set the non-gift certificate payment instrument total.
             if (amount.value <= 0.0) {
