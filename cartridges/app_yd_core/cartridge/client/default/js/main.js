@@ -17,6 +17,7 @@ import countrySelector from 'base/components/countrySelector';
 import toolTip from 'base/components/toolTip';
 import customModal from './components/customModal';
 import miniCart from './components/miniCart';
+import gtm from 'gtm/gtm/gtm';
 
 $(document).ready(() => {
     processInclude(menu);
@@ -30,5 +31,6 @@ $(document).ready(() => {
     processInclude(countrySelector);
     processInclude(toolTip);
     processInclude(customModal);
+    processInclude(gtm);
 });
 

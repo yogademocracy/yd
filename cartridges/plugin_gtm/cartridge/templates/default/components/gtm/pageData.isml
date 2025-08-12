@@ -1,0 +1,6 @@
+<script>
+   window.globalAnalytics = <isprint value="${JSON.stringify(pdict.globalAnalytics)}" encoding="off" />
+   window.dataLayer = (window.dataLayer || []).concat(
+    <isprint value="${pdict.dataLayer}" encoding="off" />
+   )
+</script>

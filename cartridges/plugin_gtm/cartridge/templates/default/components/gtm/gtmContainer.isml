@@ -1,0 +1,21 @@
+<isif condition="${require('dw/system/Site').getCurrent().getCustomPreferenceValue('enableGTM')}">
+    <div class="gtm-container"
+        data-gtm-shop-category="${Resource.msg('shop.root.category.id', '_preferences', null)}"
+        data-gtm-option='{
+            "gtmEnabled": ${require('dw/system/Site').getCurrent().getCustomPreferenceValue('enableGTM')},
+            "gtmContainerId": "${require('dw/system/Site').getCurrent().getCustomPreferenceValue('gtmContainerID')}",
+            "gtmInitEndPointUrl": "${URLUtils.url('Analytic-DataLayer')}",
+            "gtmPageContext": ${JSON.stringify(pdict.pageContext)}
+        }'
+    >
+    </div>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe
+            src="https://www.googletagmanager.com/ns.html?id=${require('dw/system/Site').getCurrent().getCustomPreferenceValue('gtmContainerID')}"
+            height="0" width="0" style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</isif>
