@@ -14,11 +14,12 @@ function getRecommendationsForProduct(pid) {
     var recommendations = [];
     var product = ProductMgr.getProduct(pid);
 
-    if (!product || empty(product.recommendations)) {
+    if (!product || empty(product.orderableRecommendations)) {
         return recommendations;
     }
 
-    collections.forEach(product.recommendations, (recommendation) => {
+    collections.forEach(product.orderableRecommendations, (recommendation) => {
+
         recommendations.push(recommendation.recommendedItem);
     });
 
