@@ -126,6 +126,8 @@ function createToken(
  * @return {Object} returns an error object
  */
 function Handle(basket, paymentInformation) {
+    var checkoutHelpers = require('*/cartridge/scripts/checkout/checkoutHelpers');
+
     var configObject = require('~/cartridge/configuration/index.js');
     var currentBasket = basket;
     var cardErrors = {};
@@ -146,18 +148,18 @@ function Handle(basket, paymentInformation) {
     }
     try {
         Transaction.wrap(function () {
-            currentBasket.removeAllPaymentInstruments();
-
-            var paymentInstruments = currentBasket.getPaymentInstruments(
-                PaymentInstrument.METHOD_CREDIT_CARD
-            );
+            var paymentInstruments = currentBasket.getPaymentInstruments();
 
             collections.forEach(paymentInstruments, function (item) {
-                currentBasket.removePaymentInstrument(item);
+                if (item.paymentMethod !== PaymentInstrument.METHOD_GIFT_CERTIFICATE) {
+                    currentBasket.removePaymentInstrument(item);
+                }
             });
 
+            var nonGiftCertificateAmount = checkoutHelpers.getNonGiftCertificateAmount(currentBasket);
+
             var paymentInstrument = currentBasket.createPaymentInstrument(
-                PaymentInstrument.METHOD_CREDIT_CARD, currentBasket.totalGrossPrice
+                PaymentInstrument.METHOD_CREDIT_CARD, nonGiftCertificateAmount
             );
 
             paymentInstrument.setCreditCardHolder(currentBasket.billingAddress.fullName);
@@ -248,7 +250,7 @@ function Authorize(orderNumber, paymentInstrument, paymentProcessor) {
     var order = OrderMgr.getOrder(orderNumber);
     var billingAddress = order.billingAddress;
     var shippingAddress = order.shipments[0].shippingAddress;
-    var total = order.totalGrossPrice;
+    var paymentInstrumentAmount = paymentInstrument.paymentTransaction.amount
     var paymentForm = server.forms.getForm('billing');
     // eslint-disable-next-line no-shadow
     var mapper = require('~/cartridge/scripts/util/mapper.js');
@@ -271,7 +273,7 @@ function Authorize(orderNumber, paymentInstrument, paymentProcessor) {
     try {
         // process authorization
         var lineItems = mapper.MapOrderLineItems(order.allLineItems, true);
-        var result = payments.httpAuthorizeWithToken(card, customerEmail, orderNumber, total.value, currencyCode, billingAddress, shippingAddress, lineItems);
+        var result = payments.httpAuthorizeWithToken(card, customerEmail, orderNumber, paymentInstrumentAmount.value, currencyCode, billingAddress, shippingAddress, lineItems);
 
         Transaction.wrap(function () {
             // eslint-disable-next-line no-undef
