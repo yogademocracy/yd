@@ -1,0 +1,49 @@
+<tr>
+    <td class="table-data" style="padding:20px 24px 24px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+            style="border:1px solid #CFCFCF;">
+            <tr>
+                <td
+                    style="background:#eeede9; padding:12px 18px; font-family:'Playfair Display',Georgia,'Times New Roman',Times,serif; font-size:16px; line-height:22px; color:#111827;">
+                    ${Resource.msg('label.order.contains.delivered', 'confirmation', null)}
+                </td>
+            </tr>
+
+            <isloop items="${pdict.order.items.items}" var="productLineItem">
+                <tr>
+                    <td style="padding:12px 16px; border-top:1px solid #CFCFCF">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td width="96" style="width:96px; vertical-align:top;">
+                                    <img class="product-image" width="96" style="display:block; border-radius:4px;"
+                                        src="${productLineItem.images.small[0].url}"
+                                        alt="${productLineItem.images.small[0].alt}"
+                                        title="${productLineItem.images.small[0].title}">
+                                </td>
+                                <td
+                                    style="padding-left:16px; font-family: Inter, Helvetica, Arial, sans-serif; color:#111827;">
+                                    <div style="margin:0 0 6px;">${productLineItem.productName}</div>
+
+                                    <div>
+                                        <isloop items="${productLineItem.variationAttributes}" var="attribute">
+                                            ${attribute.displayName}: ${attribute.displayValue}
+                                            <br />
+                                        </isloop>
+                                        <!--- item price --->
+                                        ${Resource.msg('label.each.item.price', 'confirmation', null)}
+                                        ${productLineItem.priceTotal.price}
+                                        <br />
+                                        <!--- quantity --->
+                                        ${Resource.msg('field.selectquantity', 'confirmation', null)}
+                                        <isprint value="${productLineItem.quantity}" formatter="##" />
+                                        <br />
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </isloop>
+        </table>
+    </td>
+</tr>
