@@ -1,7 +1,7 @@
 'use strict';
 
 var cybersource = require('cybersource/checkout/billing');
-var cleave = require('cybersource/checkout/cleave');
+var cleave = require('../components/cleave');
 
 /**
  * Validate and update payment instrument form fields
