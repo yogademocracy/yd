@@ -7,11 +7,11 @@ server.append('PlaceOrder', function (req, res, next) {
     var URLUtils = require('dw/web/URLUtils');
     var Site = require('dw/system/Site');
 
-    if (Site.current.getCustomPreferenceValue('Cybersource_CardTransactionType').value.toLowerCase() === 'sale' && !session.privacy.AuthorizeErrors) {
-        Transaction.wrap(function () {
-            var orderID = res.getViewData().orderID;
-            var order = OrderMgr.getOrder(orderID);
+    var orderID = res.getViewData().orderID;
+    var order = OrderMgr.getOrder(orderID);
 
+    if (!empty(order) && Site.current.getCustomPreferenceValue('Cybersource_CardTransactionType').value.toLowerCase() === 'sale' && !session.privacy.AuthorizeErrors) {
+        Transaction.wrap(function () {
             order.setPaymentStatus(order.PAYMENT_STATUS_PAID);
         });
 
