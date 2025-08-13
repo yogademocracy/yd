@@ -17,7 +17,7 @@ function Images(product, imageConfig) {
             if (firstImage) {
                 result = [{
                     alt: firstImage.getAlt(),
-                    url: firstImage.getURL().toString(),
+                    url: firstImage.getAbsURL().toString(),
                     title: firstImage.getTitle()
                 }];
             }

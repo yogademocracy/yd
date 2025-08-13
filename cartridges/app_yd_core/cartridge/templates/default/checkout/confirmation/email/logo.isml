@@ -1,0 +1,6 @@
+<tr>
+    <td style="padding:30px 0 20px;">
+        <img src="${URLUtils.absStatic(URLUtils.CONTEXT_LIBRARY, null, '/images/footer/yd-logo_110x.avif')}" alt="Logo" width="128" height="128"
+            style="display:block;margin:0 auto;">
+    </td>
+</tr>
