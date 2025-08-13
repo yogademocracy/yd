@@ -12,7 +12,7 @@ server.append('PlaceOrder', function (req, res, next) {
             var orderID = res.getViewData().orderID;
             var order = OrderMgr.getOrder(orderID);
 
-            order.paymentStatus = 2;
+            order.paymentStatus = order.PAYMENT_STATUS_PAID;
         });
 
         res.json({
