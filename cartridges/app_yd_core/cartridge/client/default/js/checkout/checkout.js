@@ -421,9 +421,15 @@ var history = window.history;
                     members.nextStage();
                 });
 
-                $('body').on('click', '.submit-customer', function (e) {
-                    e.preventDefault();
+                $('body').on('click', '.submit-customer', function () {
+                    const $submitCustomerButton = $(this);
+                    $submitCustomerButton.prop('disabled', true);
+
                     members.nextStage();
+
+                    setTimeout(() => {
+                        $submitCustomerButton.prop('disabled', false);
+                    }, 3000);
                 });
 
                 //
