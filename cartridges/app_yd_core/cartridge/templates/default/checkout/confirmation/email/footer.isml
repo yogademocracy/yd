@@ -4,22 +4,22 @@
             style="border-top:1px solid #CFCFCF;border-bottom: 1px solid #CFCFCF;background: #EEEDE9;">
             <tr>
                 <td style="padding:0;">
-                    <a href="https://example.com/bestsellers" target="_blank" style="display:block;text-decoration:none;text-align:center;
+                    <a href="${URLUtils.abs('Search-Show', 'cgid', 'best-sellers')}" target="_blank" style="display:block;text-decoration:none;text-align:center;
                     font:18px/56px Helvetica, Arial, sans-serif; letter-spacing:.04em;
                     text-transform:uppercase;color:#1A1A1A;border-bottom:1px solid #CFCFCF;">
                         ${Resource.msg('msg.email.shop.bestsellers', 'confirmation', null)}
                     </a>
-                    <a href="https://example.com/bell-bottoms" target="_blank" style="display:block;text-decoration:none;text-align:center;
+                    <a href="${URLUtils.abs('Search-Show', 'cgid', 'bottoms')}" target="_blank" style="display:block;text-decoration:none;text-align:center;
                     font:18px/56px Helvetica, Arial, sans-serif; letter-spacing:.04em;
                     text-transform:uppercase;color:#1A1A1A;border-bottom:1px solid #CFCFCF;">
                         ${Resource.msg('msg.email.bell.bottoms', 'confirmation', null)}
                     </a>
-                    <a href="https://example.com/solids" target="_blank" style="display:block;text-decoration:none;text-align:center;
+                    <a href="${URLUtils.abs('Search-Show', 'cgid', 'solids')}" target="_blank" style="display:block;text-decoration:none;text-align:center;
                     font:18px/56px Helvetica, Arial, sans-serif; letter-spacing:.04em;
                     text-transform:uppercase;color:#1A1A1A;border-bottom:1px solid #CFCFCF;">
                         ${Resource.msg('msg.email.shop.solids', 'confirmation', null)}
                     </a>
-                    <a href="https://example.com/new" target="_blank" style="display:block;text-decoration:none;text-align:center;
+                    <a href="${URLUtils.abs('Search-Show', 'cgid', 'newest-releases')}" target="_blank" style="display:block;text-decoration:none;text-align:center;
                     font:18px/56px Helvetica, Arial, sans-serif; letter-spacing:.04em;
                     text-transform:uppercase;color:#1A1A1A;">
                         ${Resource.msg('msg.email.shop.new.arrivals', 'confirmation', null)}
@@ -29,3 +29,5 @@
         </table>
     </td>
 </tr>
+
+
