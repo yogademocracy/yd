@@ -41,6 +41,7 @@ function OrderModel(lineItemContainer, options) {
         var usingMultiShipping = (safeOptions.usingMultiShipping
             || shipmentWithPLI.length > 1);
         this.usingMultiShipping = usingMultiShipping;
+        this.customerName = lineItemContainer.customerName;
 
         const gcPaymentInstrumentTotal = this.gcPaymentInstrument.total ? this.gcPaymentInstrument.total : 0;
         this.GCAreOtherPaymentsAvailable = lineItemContainer.totalGrossPrice.value ? lineItemContainer.totalGrossPrice.value > gcPaymentInstrumentTotal : true;
