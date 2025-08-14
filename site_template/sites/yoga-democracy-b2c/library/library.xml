@@ -527,12 +527,47 @@ Shop YD: &lt;a href="$url('Home-Show')$"&gt;Click here&lt;/a&gt;&lt;/p&gt;&#13;
         <folder-links>
         </folder-links>
     </content>
+
     <content content-id="email-gift-certificate-created">
-        <display-name xml:lang="x-default">Email Gift Certificate</display-name>
+        <display-name xml:lang="x-default">Email Gift Certificate Created</display-name>
         <online-flag>true</online-flag>
         <searchable-flag>false</searchable-flag>
+        <page-attributes/>
         <custom-attributes>
-        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;Dear ${customerName},&lt;/p&gt;&#13;&lt;p&gt;A Gift Certificate has been issued to you in the amount of ${balance}&lt;/p&gt;&#13;&lt;p&gt;You can redeem your gift certificate at our online store.&lt;/p&gt;&#13;&lt;p&gt;Your gift certificate code is ${id}.&lt;/p&gt;&#13;&lt;p&gt;Sincerely,&lt;/p&gt;&#13;&lt;p&gt;CustomerSupport&lt;/p&gt;</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"&gt;&#13;
+	&lt;tbody&gt;&#13;
+		&lt;tr&gt;&#13;
+			&lt;td align="center" style="padding:40px 10px;"&gt;&#13;
+			&lt;table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;" width="100%"&gt;&lt;!-- Logo --&gt;&#13;
+				&lt;tbody&gt;&#13;
+					&lt;tr&gt;&#13;
+						&lt;td style="padding-bottom:20px;"&gt;&lt;img alt="Yoga Democracy" src="images/email/yd_logo_no_bg.png?$staticlink$" style="display: block; border-color: initial; border-image: initial; outline: none; text-decoration: none;" title="" width="150" /&gt;&lt;/td&gt;&#13;
+					&lt;/tr&gt;&#13;
+					&lt;tr&gt;&#13;
+						&lt;td&gt;&#13;
+						&lt;h1 style="margin:0;font-size:24px;line-height:32px;"&gt;Your gift card is now available!&lt;/h1&gt;&#13;
+						&lt;/td&gt;&#13;
+					&lt;/tr&gt;&#13;
+					&lt;tr&gt;&#13;
+						&lt;td style="padding:16px 0 24px 0;"&gt;&#13;
+						&lt;p style="margin:0;font-size:16px;line-height:24px;color:#999999;"&gt;Hi ${customerName}, here is your $${balance} gift card. Treat yourself, or send it to someone else as a gift.&lt;/p&gt;&#13;
+						&lt;/td&gt;&#13;
+					&lt;/tr&gt;&#13;
+					&lt;tr&gt;&#13;
+						&lt;td style="padding-bottom:24px;"&gt;&#13;
+						&lt;p&gt;${id}&amp;nbsp;&amp;nbsp;&lt;a href="https://www.yogademocracy.com"&gt;Visit our store&lt;/a&gt;&lt;/p&gt;&#13;
+						&lt;/td&gt;&#13;
+					&lt;/tr&gt;&#13;
+				&lt;/tbody&gt;&#13;
+			&lt;/table&gt;&#13;
+			&lt;/td&gt;&#13;
+		&lt;/tr&gt;&#13;
+	&lt;/tbody&gt;&#13;
+&lt;/table&gt;&#13;
+&#13;
+&lt;hr /&gt;&#13;
+&lt;p style="text-align: center;"&gt;&lt;br /&gt;&#13;
+&lt;span style="color:#999999;"&gt;If you have any questions, reply to this email or contact us at&lt;/span&gt; &lt;a href="mailto:cs@yogademocracy.com"&gt;cs@yogademocracy.com&lt;/a&gt;&lt;/p&gt;</custom-attribute>
         </custom-attributes>
         <folder-links>
         </folder-links>
