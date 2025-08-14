@@ -2,7 +2,4 @@
     <isif condition="${paymentOption.ID === 'CREDIT_CARD' && pdict.order.totalGrossPrice.value > gcPITotal }">
         <isinclude template="checkout/billing/paymentOptions/creditCardTab" />
     </isif>
-    <isif condition="${paymentOption.ID === 'GIFT_CERTIFICATE'}">
-        <isinclude template="checkout/billing/paymentOptions/giftCertificateTab" />
-    </isif>
 </isloop>
