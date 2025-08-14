@@ -147,7 +147,8 @@ function execute(params) {
 
         if (record) {
             var columnIndexes = xmlWriteHelpers.mappingHeader(record, COLUMNS_NAME);
-            var gcCount = 0;
+            var gcProcessedCount = 0;
+            var gcRecordedCount = 0;
 
             if (!columnIndexes) {
                 return new Status(Status.ERROR, 'ERROR', 'ERROR: Incorrectly written file header');
@@ -159,19 +160,29 @@ function execute(params) {
             while (record) {
                 record = processRecord(record, columnIndexes);
                 record = xmlWriteHelpers.createsColumObject(record, columnIndexes);
-                record.status = getStatus(record);
 
-                xmlGiftCertificatesHelpers.writeGiftCertificate(xsw, record);
+                if (record.id) {
+                    record.status = getStatus(record);
 
-                if (!empty(record.email) && record.status === 'ISSUED' && record.enabled === 'true') {
-                    giftCertificatesHelpers.sendEmail(record);
+                    xmlGiftCertificatesHelpers.writeGiftCertificate(xsw, record);
+                    gcRecordedCount++;
+
+                    if (!empty(record.email) && record.status === 'ISSUED' && record.enabled === 'true') {
+                        giftCertificatesHelpers.sendEmail(record);
+                    }
                 }
 
                 record = csr.readNext();
-                gcCount++;
+                gcProcessedCount++;
             }
 
-            Logger.info('{0} Gift Certificates were processed and recorded', gcCount);
+            Logger.info('{0} Gift Certificates were processed', gcProcessedCount);
+            Logger.info('{0} Gift Certificates were recorded', gcRecordedCount);
+
+            if (gcProcessedCount > gcRecordedCount) {
+                var gcSkippedCount = gcProcessedCount - gcRecordedCount;
+                Logger.info('{0} Gift Certificates were skipped due to empty ID or empty line in provided CSV file', gcSkippedCount);    
+            }
         }
 
         xmlWriteHelpers.endXmlDocument(xsw);
