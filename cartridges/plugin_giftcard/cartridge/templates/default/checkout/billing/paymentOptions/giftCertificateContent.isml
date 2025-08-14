@@ -3,6 +3,9 @@
         name="${pdict.forms.billingForm.paymentMethod.htmlName}"
         value="GIFT_CERTIFICATE"
     />
-
-    <isinclude template="checkout/billing/paymentOptions/giftCertificateField" />
+    <fieldset class="payment-form-fields">
+        <input type="hidden" class="payment-method" name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+            value="${paymentOption.ID}" />
+        ${Resource.msg('billing.no.method', 'giftcard', null)}
+    </fieldset>
 </div>
