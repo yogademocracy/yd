@@ -1,0 +1,21 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerce_components/productSliderTitle.css');
+</isscript>
+
+<div class="c-product-slider-title ${pdict.wrapperCSSClasses || ''}">
+    <div class="c-product-slider-title__navigation">
+        <i class="icon icon-chevron-left ${pdict.prevClass}"></i>
+        <a class="h4 c-product-slider-title__navigation-link" href="${pdict.link}">
+            <isprint value="${pdict.titleText}" encoding="on" />
+        </a>
+        <i class="icon icon-chevron-right ${pdict.nextClass}"></i>
+    </div>
+    <div class="c-product-slider-title__link">
+        <a class="" href="${pdict.link}">
+            <isprint value="${pdict.linkText || ''}" encoding="on" />
+        </a>
+    </div>
+</div>

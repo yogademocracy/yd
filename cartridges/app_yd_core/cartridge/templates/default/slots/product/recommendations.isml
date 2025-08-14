@@ -1,0 +1,28 @@
+<isinclude template="/components/modules" />
+
+<isset name="productRecommendations" value="${require('*/cartridge/scripts/helpers/recommendationHelpers').getRecommendationsForProduct(pdict.contextAUID)}" scope="page" />
+<isset name="sliderSettingsJSON" value="${JSON.stringify(require('*/cartridge/config/recommendationSlider'))}" scope="page" />
+
+<isif condition="${!empty(productRecommendations)}">
+    <h2 class="text-center text-jet-black h4 mb-4">${Resource.msg('recomendation.title', 'product', null)}</h2>
+    <div class="swiper" data-swiper-setting='${sliderSettingsJSON}' style="--swiper-wrapper-transition-timing-function: linear">
+        <div class="swiper-wrapper">
+            <isloop items="${productRecommendations}" var="product">
+                <isobject object="${product}" view="recommendation">
+                    <div class="swiper-slide">
+                        <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'showQuickView', false, 'swatches', false, 'ratings', false)}" />
+                    </div>
+                </isobject>
+            </isloop>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev">
+        </div>
+        <div class="swiper-button-next">
+        </div>
+
+        <div class="swiper-scrollbar"></div>
+    </div>
+</isif>

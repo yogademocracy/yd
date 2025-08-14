@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md col-12">
+    <div class="close-menu clearfix d-lg-none">
+        <div class="back pull-left">
+            <button class="header-link" role="button" aria-label="${Resource.msg('label.header.menu.back', 'common', null)}">
+                <i class="icon icon-chevron-left"></i>
+            </button>
+        </div>
+        <div class="close-button pull-right">
+            <button class="header-link" role="button" aria-label="${Resource.msg('label.header.menu.close', 'common', null)}">
+                <i class="icon icon-close"></i>
+            </button>
+        </div>
+    </div>
+    <div class="menu-group" role="navigation">
+        <ul class="nav navbar-nav" role="menu">
+            <isif condition="${pdict.categories}">
+                <isloop items="${pdict.categories}" var="category">
+                    <isif condition="${category.subCategories}">
+                        <li class="nav-item dropdown" role="presentation">
+                            <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" id="${category.id}" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                                <span>
+                                    ${category.name}
+                                </span>
+                                <span class="header-link d-md-none">
+                                    <i class="icon icon-chevron-right"></i>
+                                </span>
+                            </a>
+                            <isset name="menuItem" value="${category}" scope="page" />
+                            <isinclude template="components/header/menuItem" />
+                        </li>
+                    <iselse/>
+                        <li class="nav-item" role="presentation">
+                            <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" id="${category.id}" class="nav-link" role="link" tabindex="0">${category.name}</a>
+                        </li>
+                    </isif>
+                </isloop>
+            </isif>
+        </ul>
+    </div>
+</nav>

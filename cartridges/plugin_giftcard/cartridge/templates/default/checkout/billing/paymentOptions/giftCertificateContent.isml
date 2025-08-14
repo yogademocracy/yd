@@ -1,0 +1,11 @@
+<div class="tab-pane ${paymentOption.ID}-content gift-certificate-wrapper active" id="${paymentOption.ID}-content" role="tabpanel">
+    <input type="hidden" class="form-control"
+        name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+        value="GIFT_CERTIFICATE"
+    />
+    <fieldset class="payment-form-fields">
+        <input type="hidden" class="payment-method" name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+            value="${paymentOption.ID}" />
+        ${Resource.msg('billing.no.method', 'giftcard', null)}
+    </fieldset>
+</div>

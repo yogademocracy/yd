@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <folder folder-id="root">
+        <online-flag>true</online-flag>
+        <page-attributes/>
+    </folder>
+
+    <content content-id="140a019ad65217ac2863814a70">
+        <type>component.commerce_assets.imageAndText</type>
+        <config>{
+  "visibility" : [ ]
+}</config>
+        <data xml:lang="x-default">{
+  "ITCLink" : null,
+  "ITCText" : null,
+  "image" : {
+    "path" : "sale-new-desk_1296x.png",
+    "focal_point" : {
+      "x" : 0.5,
+      "y" : 0.5
+    }
+  },
+  "heading" : "&lt;p&gt;&lt;a href=\"$url('Search-Show', 'cgid', 'new')$\" target=\"_self\" data-link-type=\"category\" data-link-label=\"New\" data-category-id=\"new\" data-category-catalog-id=\"yd-categories\"&gt;New&lt;/a&gt;&lt;/p&gt;",
+  "alt" : null
+}</data>
+        <online-flag>true</online-flag>
+        <page-attributes/>
+    </content>
+
+    <content content-id="673a5a90a6e4068d1c5e4ff06a">
+        <type>component.commerce_assets.imageAndText</type>
+        <config>{
+  "visibility" : [ ]
+}</config>
+        <data xml:lang="x-default">{
+  "ITCLink" : null,
+  "ITCText" : null,
+  "image" : {
+    "path" : "sale-new-desk_1296x.png",
+    "focal_point" : {
+      "x" : 0.5,
+      "y" : 0.5
+    }
+  },
+  "heading" : null,
+  "alt" : null
+}</data>
+        <online-flag>true</online-flag>
+        <page-attributes/>
+    </content>
+
+    <content content-id="7e9f066e2cff78916babdd5a18">
+        <type>component.commerce_assets.campaignBanner</type>
+        <config>{
+  "visibility" : [ ]
+}</config>
+        <data xml:lang="x-default">{
+  "bannerMessage" : "&lt;p&gt;Check Out Our New Solids: Mushroom &amp;amp; Overcast! | Get Free US Shipping On Orders over $49!&lt;/p&gt;"
+}</data>
+        <online-flag>true</online-flag>
+        <page-attributes/>
+    </content>
+
+    <content content-id="fd58c31b72228e53bdcccc35be">
+        <type>component.commerce_layouts.carousel</type>
+        <config>{
+  "visibility" : [ ]
+}</config>
+        <data xml:lang="x-default">{
+  "xsCarouselIndicators" : false,
+  "smCarouselControls" : true,
+  "mdCarouselIndicators" : true,
+  "xsCarouselControls" : false,
+  "smCarouselIndicators" : true,
+  "xsCarouselSlidesToDisplay" : 1,
+  "mdCarouselSlidesToDisplay" : 1,
+  "textHeadline" : "hero banner",
+  "smCarouselSlidesToDisplay" : 1
+}</data>
+        <online-flag>true</online-flag>
+        <page-attributes/>
+        <content-links>
+            <content-link content-id="140a019ad65217ac2863814a70" type="component.commerce_layouts.carousel.slides">
+                <position>0.0</position>
+            </content-link>
+            <content-link content-id="673a5a90a6e4068d1c5e4ff06a" type="component.commerce_layouts.carousel.slides">
+                <position>1.0</position>
+            </content-link>
+        </content-links>
+    </content>
+
+    <content content-id="header-banner-top">
+        <display-name xml:lang="x-default">Header Banner Top</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="header-banner bg-magenta-plum slide-up d-none"&gt;&#13;
+	&lt;div class="container-fluid site-container"&gt;&#13;
+		&lt;div class="d-flex justify-content-between"&gt;&#13;
+			&lt;div class="content"&gt;&#13;
+				&lt;div class="d-flex"&gt;&#13;
+					&lt;div class="header-banner__links"&gt; &lt;a class="header-banner__link" href="https://twitter.com/yogademocracy" target="_blank" rel="noopener"&gt;&#13;
+                                &lt;i class="icon icon-socials-twitter"&gt;&lt;/i&gt;&#13;
+                            &lt;/a&gt;&#13;
+ &lt;a class="header-banner__link" href="https://www.facebook.com/yogademocracy/" target="_blank" rel="noopener"&gt;&#13;
+                                &lt;i class="icon icon-socials-facebook"&gt;&lt;/i&gt;&#13;
+                            &lt;/a&gt;&#13;
+ &lt;a class="header-banner__link" href="https://www.instagram.com/yoga_democracy/" target="_blank" rel="noopener"&gt;&#13;
+                                &lt;i class="icon icon-socials-instagram"&gt;&lt;/i&gt;&#13;
+                            &lt;/a&gt;&#13;
+ &lt;a class="header-banner__link" href="https://www.pinterest.com/yogademocracy/_shop/" target="_blank" rel="noopener"&gt;&#13;
+                                &lt;i class="icon icon-socials-pinterest"&gt;&lt;/i&gt;&#13;
+                            &lt;/a&gt;&#13;
+ &lt;a class="header-banner__link" href="https://www.tiktok.com/@yoga_democracy/" target="_blank" rel="noopener"&gt;&#13;
+                                &lt;i class="icon icon-socials-tiktok"&gt;&lt;/i&gt;&#13;
+                            &lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="header-banner__title"&gt; &lt;a class="header-banner__title-link" href="$url('Search-Show', 'cgid', 'mushroom-overcast')$"&gt;Check Out Our New Solids: Mushroom &amp; Overcast! | Get Free US Shipping On Orders over $49!&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="header-banner__right"&gt;&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+	&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="footer-navigation">
+        <display-name xml:lang="x-default">Footer Navigation Section</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="container-fluid site-container"&gt;&#13;
+	&lt;div class="footer-nav footer-section row"&gt;&#13;
+		&lt;div class="footer-col col-12 col-md-6"&gt;&#13;
+			&lt;h6 class="footer-col__title"&gt;Made For Free Range Humans&lt;/h6&gt;&#13;
+			&lt;p class="footer-col__text footer-col__text-limited"&gt;Our materials are made of recycled plastic bottles and fishing nets. We use a no-water dyeing process that cuts down on waste. We take every scrap of material that passes through our shop and turn it into something of use and beauty.&lt;/p&gt;&#13;
+			&lt;div class="footer-banner"&gt;&#13;
+				&lt;div class="footer-banner__image-wrapper"&gt;&#13;
+					&lt;img alt="" class="footer-banner__image" src="images/footer/footer-logo.png?$staticlink$" title="" /&gt;&#13;
+				&lt;/div&gt;&#13;
+				&lt;div class="d-flex justify-content-between"&gt;&#13;
+					&lt;div class="content"&gt;&#13;
+						&lt;div class="d-flex"&gt;&#13;
+							&lt;div&gt; &lt;a class="footer-banner__link" href="https://twitter.com/yogademocracy" target="_blank" rel="noopener"&gt;&#13;
+                                        &lt;i class="icon icon-socials-twitter"&gt;&lt;/i&gt;&#13;
+                                    &lt;/a&gt;&#13;
+ &lt;a class="footer-banner__link" href="https://www.facebook.com/yogademocracy/" target="_blank" rel="noopener"&gt;&#13;
+                                        &lt;i class="icon icon-socials-facebook"&gt;&lt;/i&gt;&#13;
+                                    &lt;/a&gt;&#13;
+ &lt;a class="footer-banner__link" href="https://www.instagram.com/yoga_democracy/" target="_blank" rel="noopener"&gt;&#13;
+                                        &lt;i class="icon icon-socials-instagram"&gt;&lt;/i&gt;&#13;
+                                    &lt;/a&gt;&#13;
+ &lt;a class="footer-banner__link" href="https://www.pinterest.com/yogademocracy/_shop/" target="_blank" rel="noopener"&gt;&#13;
+                                        &lt;i class="icon icon-socials-pinterest"&gt;&lt;/i&gt;&#13;
+                                    &lt;/a&gt;&#13;
+ &lt;a class="footer-banner__link" href="https://www.tiktok.com/@yoga_democracy/" target="_blank" rel="noopener"&gt;&#13;
+                                        &lt;i class="icon icon-socials-tiktok"&gt;&lt;/i&gt;&#13;
+                                    &lt;/a&gt;&#13;
+&#13;
+							&lt;/div&gt;&#13;
+						&lt;/div&gt;&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;div class="footer-col col-12 col-md-3"&gt;&#13;
+			&lt;h6 class="footer-col__title"&gt;Customer Care&lt;/h6&gt;&#13;
+			&lt;ul class="footer-col__links"&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="$url('Account-Show')$"&gt;Customer Account Log In&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Shipping and Returns Policy&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Initiate a Return/Exchange&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Buy Now, Pay Later&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Free Hemming&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Size Chart&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Reviews&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;FAQs&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Privacy Policy&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+			&lt;/ul&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;div class="footer-col col-12 col-md-3"&gt;&#13;
+			&lt;h6 class="footer-col__title"&gt;YD Community&lt;/h6&gt;&#13;
+			&lt;ul class="footer-col__links"&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;About Us&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Birthday Club&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;VIP Text Club&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Refer a Friend Give $20/ Get $20&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Become an Affiliate&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Press&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Customer Reviews&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Instructor Program&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Blog&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+				&lt;li class="footer-col__link-wrapper"&gt;&lt;a class="footer-nav__link" href="/"&gt;Email us&lt;/a&gt;&#13;
+&#13;
+				&lt;/li&gt;&#13;
+			&lt;/ul&gt;&#13;
+		&lt;/div&gt;&#13;
+	&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="footer-promos">
+        <display-name xml:lang="x-default">Footer Promos Section</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="footer-promos"&gt;&#13;
+        &lt;div class="container"&gt;&#13;
+            &lt;div class="row"&gt;&#13;
+                &lt;div class="col-12 col-md-3"&gt;&#13;
+                    &lt;div class="text-center"&gt;&#13;
+                        &lt;div class="icon-with-caption"&gt;&#13;
+                            &lt;div class="icon-with-caption__icon"&gt;&#13;
+                                &lt;i class="icon icon-cube"&gt;&lt;/i&gt;&#13;
+                            &lt;/div&gt;&#13;
+                            &#13;
+                            &lt;span class="icon-with-caption__text"&gt;Free US Shipping $49+&lt;/span&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+&#13;
+                &lt;div class="col-12 col-md-3"&gt;&#13;
+                    &lt;div class="text-center"&gt;&#13;
+                        &lt;a href="https://yogademocracy.com/pages/sezzle" target="_blank" rel="noopener"&gt;&#13;
+                            &lt;div class="icon-with-caption icon-with-caption__link"&gt;&#13;
+                                &lt;div class="icon-with-caption__icon"&gt;&#13;
+                                        &lt;i class="icon icon-dollar"&gt;&lt;/i&gt;&#13;
+                                &lt;/div&gt;&#13;
+                                &lt;span class="icon-with-caption__text"&gt;Buy Now, Pay Later&lt;/span&gt;&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/a&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+&#13;
+                &lt;div class="col-12 col-md-3"&gt;&#13;
+                    &lt;div class="text-center"&gt;&#13;
+                        &lt;a href="https://yogademocracy.com/pages/save-with-yd-rewards" target="_blank" rel="noopener"&gt;&#13;
+                            &lt;div class="icon-with-caption icon-with-caption__link"&gt;&#13;
+                                &lt;div class="icon-with-caption__icon"&gt;&#13;
+                                    &lt;i class="icon icon-gift-box"&gt;&lt;/i&gt;&#13;
+                                &lt;/div&gt;&#13;
+                                &lt;span class="icon-with-caption__text"&gt;YD Rewards Points&lt;/span&gt;&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/a&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+&#13;
+                &lt;div class="col-12 col-md-3"&gt;&#13;
+                    &lt;div class="text-center"&gt;&#13;
+                        &lt;a href="https://yogademocracy.com/collections/gift-cards" target="_blank" rel="noopener"&gt;&#13;
+                            &lt;div class="icon-with-caption icon-with-caption__link"&gt;&#13;
+                                &lt;div class="icon-with-caption__icon"&gt;&#13;
+                                    &lt;i class="icon icon-gift-box"&gt;&lt;/i&gt;&#13;
+                                &lt;/div&gt;&#13;
+                                &lt;span class="icon-with-caption__text"&gt;Gift Cards&lt;/span&gt;&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/a&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="footer-copyright-payment">
+        <display-name xml:lang="x-default">Footer Copyright and Payment Section</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">
+                &lt;div class=&quot;footer-copyright-payment footer-section&quot;&gt;
+	&lt;div class=&quot;container-fluid site-container&quot;&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-6&quot;&gt;
+				&lt;span class=&quot;footer-copyright-payment__text&quot;&gt;© 2025 &lt;a class=&quot;footer-copyright-payment__link&quot; href=&quot;/&quot;&gt;Yoga Democracy.&lt;/a&gt;
+ &lt;a class=&quot;footer-copyright-payment__link&quot; href=&quot;/&quot;&gt;Powered By Free Range Humans&lt;/a&gt;
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+            </custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="homepage">
+        <display-name xml:lang="x-default">homepage</display-name>
+        <type>page.storePage</type>
+        <config>{
+  "visibility" : [ ]
+}</config>
+        <visibility-mode xml:lang="x-default">visible</visibility-mode>
+        <data xml:lang="x-default">{ }</data>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <content-links>
+            <content-link content-id="fd58c31b72228e53bdcccc35be" type="page.storePage.main">
+                <position>0.0</position>
+            </content-link>
+            <content-link content-id="7e9f066e2cff78916babdd5a18" type="page.storePage.headerbanner">
+                <position>0.0</position>
+            </content-link>
+        </content-links>
+        <sitemap-included-flag>false</sitemap-included-flag>
+    </content>
+
+    <content content-id="contactus-details-message">
+        <display-name xml:lang="x-default">Contact US Details Message</display-name>
+        <description xml:lang="x-default">Message rendered on contact us page with additional details or general information.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+	&lt;p class="text-center"&gt;We love hearing from you!&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+	&lt;p class="text-center font-weight-bold"&gt;Please submit your question or request. We will respond within 24 hours Monday-Friday&lt;/p&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="email-contactus-submitted-message">
+        <display-name xml:lang="x-default">Contact US Submitted Email Message</display-name>
+        <description xml:lang="x-default">Message received by customer submiteed contact us form.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;Thank you for reaching out to Customer Service at Yoga Democracy! We can't wait to help you - your request has been received and is being reviewed by our support staff.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;If you have any additional concerns or comments, reply to this email and we'll receive them on our end!&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;While your request is being reviewed, here are a few useful links we think will be helpful:&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;View our FAQ section: &lt;a href="$url('Page-Show', 'cid', 'about-us')$"&gt;Click here&lt;/a&gt;&lt;br /&gt;&#13;
+Need to return/ exchange: &lt;a href="https://returns.yogademocracy.com/"&gt;Click here&lt;/a&gt;&lt;br /&gt;&#13;
+Need a size chart: &lt;a href="$url('Page-Show', 'cid', 'size-chart')$"&gt;Click here&lt;/a&gt;&lt;br /&gt;&#13;
+Shop YD: &lt;a href="$url('Home-Show')$"&gt;Click here&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;To add additional comments, reply to this email.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;img alt=" " src="images/footer/yd-logo_110x.avif?$staticlink$ " title=" " /&gt;&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="email-contactus-support-message">
+        <display-name xml:lang="x-default">Contact US Support Email Message</display-name>
+        <description xml:lang="x-default">Message received by support with information provided by user</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&#13;
+	&lt;strong&gt;Topic:&lt;/strong&gt;${topic}&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+	&lt;strong&gt;First Name:&lt;/strong&gt;${firstName}&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+	&lt;strong&gt;Last Name:&lt;/strong&gt;${lastName}&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+	&lt;strong&gt;Email:&amp;nbsp;&lt;/strong&gt;${email}&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+	&lt;strong&gt;Message:&lt;/strong&gt;${message}&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="size-chart-bras-tops">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;	&lt;h2 class=&quot;text-center h5&quot;&gt;Sports Bras &amp; Crop Tops&lt;/h2&gt;&#13;	&lt;table class=&quot;table table-bordered text-center text-jet-black&quot;&gt;&#13;		&lt;thead&gt;&#13;			&lt;tr&gt;&#13;				&lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;&#13;				&lt;th scope=&quot;col&quot;&gt;30&quot;&lt;/th&gt;&#13;				&lt;th scope=&quot;col&quot;&gt;32&quot;&lt;/th&gt;&#13;				&lt;th scope=&quot;col&quot;&gt;34&quot;&lt;/th&gt;&#13;				&lt;th scope=&quot;col&quot;&gt;36&quot;&lt;/th&gt;&#13;				&lt;th scope=&quot;col&quot;&gt;38&quot;&lt;/th&gt;&#13;				&lt;th scope=&quot;col&quot;&gt;40&quot;&lt;/th&gt;&#13;				&lt;th scope=&quot;col&quot;&gt;42&quot;&lt;/th&gt;&#13;				&lt;th scope=&quot;col&quot;&gt;44&quot;&lt;/th&gt;&#13;			&lt;/tr&gt;&#13;		&lt;/thead&gt;&#13;		&lt;tbody&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;AA&lt;/td&gt;&#13;				&lt;td&gt;XS&lt;/td&gt;&#13;				&lt;td&gt;XS&lt;/td&gt;&#13;				&lt;td&gt;S&lt;/td&gt;&#13;				&lt;td&gt;M&lt;/td&gt;&#13;				&lt;td&gt;L&lt;/td&gt;&#13;				&lt;td&gt;XL&lt;/td&gt;&#13;				&lt;td&gt;2XL&lt;/td&gt;&#13;				&lt;td&gt;3XL&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;A&lt;/td&gt;&#13;				&lt;td&gt;XS&lt;/td&gt;&#13;				&lt;td&gt;XS&lt;/td&gt;&#13;				&lt;td&gt;S&lt;/td&gt;&#13;				&lt;td&gt;M&lt;/td&gt;&#13;				&lt;td&gt;L&lt;/td&gt;&#13;				&lt;td&gt;XL&lt;/td&gt;&#13;				&lt;td&gt;2XL&lt;/td&gt;&#13;				&lt;td&gt;3XL&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;B&lt;/td&gt;&#13;				&lt;td&gt;XS&lt;/td&gt;&#13;				&lt;td&gt;XS&lt;/td&gt;&#13;				&lt;td&gt;S&lt;/td&gt;&#13;				&lt;td&gt;M&lt;/td&gt;&#13;				&lt;td&gt;L&lt;/td&gt;&#13;				&lt;td&gt;XL&lt;/td&gt;&#13;				&lt;td&gt;2XL&lt;/td&gt;&#13;				&lt;td&gt;3XL&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;C&lt;/td&gt;&#13;				&lt;td&gt;XS&lt;/td&gt;&#13;				&lt;td&gt;S&lt;/td&gt;&#13;				&lt;td&gt;M&lt;/td&gt;&#13;				&lt;td&gt;M&lt;/td&gt;&#13;				&lt;td&gt;L&lt;/td&gt;&#13;				&lt;td&gt;XL&lt;/td&gt;&#13;				&lt;td&gt;2XL&lt;/td&gt;&#13;				&lt;td&gt;3XL&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;D&lt;/td&gt;&#13;				&lt;td&gt;S&lt;/td&gt;&#13;				&lt;td&gt;S&lt;/td&gt;&#13;				&lt;td&gt;M&lt;/td&gt;&#13;				&lt;td&gt;L&lt;/td&gt;&#13;				&lt;td&gt;XL&lt;/td&gt;&#13;				&lt;td&gt;XL&lt;/td&gt;&#13;				&lt;td&gt;2XL&lt;/td&gt;&#13;				&lt;td&gt;3XL&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;DD&lt;/td&gt;&#13;				&lt;td&gt;M&lt;/td&gt;&#13;				&lt;td&gt;M&lt;/td&gt;&#13;				&lt;td&gt;L&lt;/td&gt;&#13;				&lt;td&gt;XL&lt;/td&gt;&#13;				&lt;td&gt;XL&lt;/td&gt;&#13;				&lt;td&gt;2XL&lt;/td&gt;&#13;				&lt;td&gt;3XL&lt;/td&gt;&#13;				&lt;td&gt;3XL&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;DD&lt;/td&gt;&#13;				&lt;td&gt;M&lt;/td&gt;&#13;				&lt;td&gt;M&lt;/td&gt;&#13;				&lt;td&gt;L&lt;/td&gt;&#13;				&lt;td&gt;XL&lt;/td&gt;&#13;				&lt;td&gt;2XL&lt;/td&gt;&#13;				&lt;td&gt;3XL&lt;/td&gt;&#13;				&lt;td&gt;3XL&lt;/td&gt;&#13;				&lt;td&gt;3XL&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;		&lt;/tbody&gt;&#13;	&lt;/table&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="size-chart-women-bell-bottoms">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;	&lt;h2 class=&quot;text-center h5&quot;&gt;Women's Bell Bottoms&lt;/h2&gt;&#13;	&lt;ul class=&quot;nav nav-tabs nav-fill&quot; role=&quot;tablist&quot;&gt;&#13;		&lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt; &lt;a class=&quot;nav-link active&quot; href=&quot;#cm&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot; aria-controls=&quot;cm&quot; aria-selected=&quot;true&quot; tabindex=&quot;0&quot; id=&quot;cm-tab&quot;&gt;&#13;                                        CM&#13;                                    &lt;/a&gt;&#13;		&lt;/li&gt;&#13;		&lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt; &lt;a class=&quot;nav-link&quot; href=&quot;#inches&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot; aria-controls=&quot;inches&quot; aria-selected=&quot;false&quot; tabindex=&quot;0&quot; id=&quot;inches-tab&quot;&gt;&#13;                                        INCHES&#13;                                    &lt;/a&gt;&#13;		&lt;/li&gt;&#13;	&lt;/ul&gt;&#13;	&lt;div class=&quot;tab-content&quot;&gt;&#13;		&lt;div class=&quot;tab-pane active&quot; id=&quot;cm&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;cm-tab&quot;&gt;&#13;			&lt;table class=&quot;table table-bordered text-center text-jet-black&quot;&gt;&#13;				&lt;thead&gt;&#13;					&lt;tr&gt;&#13;						&lt;th scope=&quot;col&quot;&gt;SIZE&lt;/th&gt;&#13;						&lt;th scope=&quot;col&quot;&gt;WAIST (CM)&lt;/th&gt;&#13;						&lt;th scope=&quot;col&quot;&gt;HIP (CM)&lt;/th&gt;&#13;					&lt;/tr&gt;&#13;				&lt;/thead&gt;&#13;				&lt;tbody&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;XS&lt;/td&gt;&#13;						&lt;td&gt;61 - 66&lt;/td&gt;&#13;						&lt;td&gt;83.8 - 88.9&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;S&lt;/td&gt;&#13;						&lt;td&gt;66 - 71.1&lt;/td&gt;&#13;						&lt;td&gt;88.9 - 94&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;M&lt;/td&gt;&#13;						&lt;td&gt;71.1 - 78.7&lt;/td&gt;&#13;						&lt;td&gt;94 - 99.1&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;L&lt;/td&gt;&#13;						&lt;td&gt;78.7 - 83.8&lt;/td&gt;&#13;						&lt;td&gt;99.1 - 104&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;XL&lt;/td&gt;&#13;						&lt;td&gt;83.8 - 88.9&lt;/td&gt;&#13;						&lt;td&gt;104 - 109&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;				&lt;/tbody&gt;&#13;			&lt;/table&gt;&#13;		&lt;/div&gt;&#13;		&lt;div class=&quot;tab-pane&quot; id=&quot;inches&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;inches-tab&quot;&gt;&#13;			&lt;table class=&quot;table table-bordered text-center text-jet-black&quot;&gt;&#13;				&lt;thead&gt;&#13;					&lt;tr&gt;&#13;						&lt;th scope=&quot;col&quot;&gt;SIZE&lt;/th&gt;&#13;						&lt;th scope=&quot;col&quot;&gt;WAIST (INCHES)&lt;/th&gt;&#13;						&lt;th scope=&quot;col&quot;&gt;HIP (INCHES)&lt;/th&gt;&#13;					&lt;/tr&gt;&#13;				&lt;/thead&gt;&#13;				&lt;tbody&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;XS&lt;/td&gt;&#13;						&lt;td&gt;24 - 26&lt;/td&gt;&#13;						&lt;td&gt;33 - 35&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;S&lt;/td&gt;&#13;						&lt;td&gt;26 - 28&lt;/td&gt;&#13;						&lt;td&gt;35 - 37&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;M&lt;/td&gt;&#13;						&lt;td&gt;28 - 31&lt;/td&gt;&#13;						&lt;td&gt;37 - 39&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;L&lt;/td&gt;&#13;						&lt;td&gt;31 - 33&lt;/td&gt;&#13;						&lt;td&gt;39 - 41&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;XL&lt;/td&gt;&#13;						&lt;td&gt;33 - 35&lt;/td&gt;&#13;						&lt;td&gt;41 - 43&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;				&lt;/tbody&gt;&#13;			&lt;/table&gt;&#13;		&lt;/div&gt;&#13;	&lt;/div&gt;&#13;	&lt;p&gt;Products sizing and fit depend onthe construction and materials used to make the garment. Please refer to the product size chart, located under the product title, that is specific to each product. Always free Exchanges &amp; Returns&lt;/p&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="size-chart-women-leggins">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;	&lt;h2 class=&quot;text-center h5&quot;&gt;Women's Leggings&lt;/h2&gt;&#13;	&lt;table class=&quot;table table-bordered text-center text-jet-black&quot;&gt;&#13;		&lt;thead&gt;&#13;			&lt;tr&gt;&#13;				&lt;th scope=&quot;col&quot;&gt;Size&lt;/th&gt;&#13;				&lt;th scope=&quot;col&quot;&gt;Size Equivalent&lt;/th&gt;&#13;			&lt;/tr&gt;&#13;		&lt;/thead&gt;&#13;		&lt;tbody&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;2XS&lt;/td&gt;&#13;				&lt;td&gt;0&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;XS&lt;/td&gt;&#13;				&lt;td&gt;2&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;S&lt;/td&gt;&#13;				&lt;td&gt;4&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;M&lt;/td&gt;&#13;				&lt;td&gt;6&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;L&lt;/td&gt;&#13;				&lt;td&gt;8-10&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;XL&lt;/td&gt;&#13;				&lt;td&gt;12&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;2XL&lt;/td&gt;&#13;				&lt;td&gt;14-16&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;			&lt;tr&gt;&#13;				&lt;td class=&quot;font-weight-bold&quot;&gt;3XL&lt;/td&gt;&#13;				&lt;td&gt;18-20&lt;/td&gt;&#13;			&lt;/tr&gt;&#13;		&lt;/tbody&gt;&#13;	&lt;/table&gt;&#13;	&lt;p&gt;Products sizing and fit depend onthe construction and materials used to make the garment. Please refer to the product size chart, located under the product title, that is specific to each product. Always free Exchanges &amp; Returns&lt;/p&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="size-chart-women-shorts">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;	&lt;h2 class=&quot;text-center h5&quot;&gt;Women's Leggings&lt;/h2&gt;&#13;	&lt;ul class=&quot;nav nav-tabs nav-fill&quot; role=&quot;tablist&quot;&gt;&#13;		&lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt; &lt;a class=&quot;nav-link active&quot; href=&quot;#cm&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot; aria-controls=&quot;cm&quot; aria-selected=&quot;true&quot; tabindex=&quot;0&quot; id=&quot;cm-tab&quot;&gt;&#13;                                        CM&#13;                                    &lt;/a&gt;&#13;		&lt;/li&gt;&#13;		&lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt; &lt;a class=&quot;nav-link&quot; href=&quot;#inches&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot; aria-controls=&quot;inches&quot; aria-selected=&quot;false&quot; tabindex=&quot;0&quot; id=&quot;inches-tab&quot;&gt;&#13;                                        INCHES&#13;                                    &lt;/a&gt;&#13;		&lt;/li&gt;&#13;	&lt;/ul&gt;&#13;	&lt;div class=&quot;tab-content&quot;&gt;&#13;		&lt;div class=&quot;tab-pane active&quot; id=&quot;cm&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;cm-tab&quot;&gt;&#13;			&lt;table class=&quot;table table-bordered text-center text-jet-black&quot;&gt;&#13;				&lt;thead&gt;&#13;					&lt;tr&gt;&#13;						&lt;th scope=&quot;col&quot;&gt;SIZE&lt;/th&gt;&#13;						&lt;th scope=&quot;col&quot;&gt;WAIST (CM)&lt;/th&gt;&#13;						&lt;th scope=&quot;col&quot;&gt;HIP (CM)&lt;/th&gt;&#13;					&lt;/tr&gt;&#13;				&lt;/thead&gt;&#13;				&lt;tbody&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;XS&lt;/td&gt;&#13;						&lt;td&gt;61 - 66&lt;/td&gt;&#13;						&lt;td&gt;83.8 - 88.9&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;S&lt;/td&gt;&#13;						&lt;td&gt;66 - 71.1&lt;/td&gt;&#13;						&lt;td&gt;88.9 - 94&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;M&lt;/td&gt;&#13;						&lt;td&gt;71.1 - 78.7&lt;/td&gt;&#13;						&lt;td&gt;94 - 99.1&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;L&lt;/td&gt;&#13;						&lt;td&gt;78.7 - 83.8&lt;/td&gt;&#13;						&lt;td&gt;99.1 - 104&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;XL&lt;/td&gt;&#13;						&lt;td&gt;83.8 - 88.9&lt;/td&gt;&#13;						&lt;td&gt;104 - 109&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;				&lt;/tbody&gt;&#13;			&lt;/table&gt;&#13;		&lt;/div&gt;&#13;		&lt;div class=&quot;tab-pane&quot; id=&quot;inches&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;inches-tab&quot;&gt;&#13;			&lt;table class=&quot;table table-bordered text-center text-jet-black&quot;&gt;&#13;				&lt;thead&gt;&#13;					&lt;tr&gt;&#13;						&lt;th scope=&quot;col&quot;&gt;SIZE&lt;/th&gt;&#13;						&lt;th scope=&quot;col&quot;&gt;WAIST (INCHES)&lt;/th&gt;&#13;						&lt;th scope=&quot;col&quot;&gt;HIP (INCHES)&lt;/th&gt;&#13;					&lt;/tr&gt;&#13;				&lt;/thead&gt;&#13;				&lt;tbody&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;XS&lt;/td&gt;&#13;						&lt;td&gt;24 - 26&lt;/td&gt;&#13;						&lt;td&gt;33 - 35&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;S&lt;/td&gt;&#13;						&lt;td&gt;26 - 28&lt;/td&gt;&#13;						&lt;td&gt;35 - 37&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;M&lt;/td&gt;&#13;						&lt;td&gt;28 - 31&lt;/td&gt;&#13;						&lt;td&gt;37 - 39&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;L&lt;/td&gt;&#13;						&lt;td&gt;31 - 33&lt;/td&gt;&#13;						&lt;td&gt;39 - 41&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;					&lt;tr&gt;&#13;						&lt;td class=&quot;font-weight-bold&quot;&gt;XL&lt;/td&gt;&#13;						&lt;td&gt;33 - 35&lt;/td&gt;&#13;						&lt;td&gt;41 - 43&lt;/td&gt;&#13;					&lt;/tr&gt;&#13;				&lt;/tbody&gt;&#13;			&lt;/table&gt;&#13;		&lt;/div&gt;&#13;	&lt;/div&gt;&#13;	&lt;p&gt;Products sizing and fit depend onthe construction and materials used to make the garment. Please refer to the product size chart, located under the product title, that is specific to each product. Always free Exchanges &amp; Returns&lt;/p&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="email-password-reset">
+        <display-name xml:lang="x-default">Password Reset Email</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;	&lt;img src=&quot;images/email/email-logo.png?$staticlink$&quot; style=&quot;width: 250px; height: auto; margin-bottom: 20px;&quot;&gt;&#13;	&lt;h2&gt;Reset your password&lt;/h2&gt;&#13;	&lt;p&gt;Follow this link to reset your customer account password at &lt;a href=&quot;${resetUrl}&quot;&gt;Yoga Democracy&lt;/a&gt;. If you didn't request a new password, you can safely delete this email.&lt;/p&gt;&#13;	&lt;div&gt; &lt;a href=&quot;${resetBtnUrl}&quot; style=&quot;color: #fff; background: #5e7461; border: 0.0625rem solid #5e7461; display: inline-flex; align-items: center; justify-content: center; padding: 0.9375rem 1.5625rem; text-decoration: none; border-radius: 25px;&quot;&gt;Reset your password&lt;/a&gt; or &lt;a href=&quot;$url('Home-Show')$&quot;&gt;Visit our store&lt;/a&gt;&#13;	&lt;/div&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+  </content>
+
+    <content content-id="email-account-registered">
+        <display-name xml:lang="x-default">Account Registered Email</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&#13;	Dear ${firstName} ${lastName},&lt;/p&gt;&#13;&lt;p&gt;&#13;	This is to confirm that your account for the shop Yoga Democracy is now active. Stand by for your welcome email with the deets on our amazing new YD Loyalty Program and your 1,500 point bonus!&lt;/p&gt;&#13;&lt;p&gt;&#13;	The next time you shop at Yoga Democracy, you can save time at checkout by logging into your account. This will prefill your address information at the checkout and it will give you access to all your wonderful YD loyalty rewards!&lt;/p&gt;&#13;&lt;p&gt;&#13;	Thank you, &lt;br&gt;&#13;        Yoga Democracy&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="email-save-new-password">
+        <display-name xml:lang="x-default">Save New Password Email</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;	&lt;img src=&quot;images/email/email-logo.png?$staticlink$&quot; style=&quot;width: 250px; height: auto; margin-bottom: 20px;&quot;&gt;&#13;	&lt;h2&gt;Dear ${firstName} ${lastName}&lt;/h2&gt;&#13;	&lt;p&gt;You have successfully created a new password for your account.&lt;/p&gt;&#13;	&lt;p&gt;You can visit your account at: &lt;a href=&quot;${url}&quot;&gt;Log In page&lt;/a&gt;&#13;	&lt;/p&gt;&#13;	&lt;p&gt;This is an automatically generated email, please do not reply.&lt;/p&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="contactus-details-message">
+        <display-name xml:lang="x-default">Contact Us Message</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class=&quot;mb-md-3 text-center&quot;&gt;&#13;	&lt;h4 class=&quot;font-weight-normal&quot;&gt;We love hearing from you!&lt;/h4&gt;&#13;	&lt;p class=&quot;font-weight-bolder text-jet-black&quot;&gt;Please submit your question or request. We will respond within 24 hours Monday-Friday&lt;/p&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="shipping-and-returns">
+        <display-name xml:lang="x-default">Shipping and Returns</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class=&quot;container&quot;&gt;&#13;	&lt;h1 class=&quot;text-uppercase text-center mb-3&quot;&gt;Shipping and Returns Policy&lt;/h1&gt;&#13;	&lt;h2 class=&quot;h6 font-weight-bolder&quot;&gt;Fees and Timing&lt;/h2&gt;&#13;	&lt;h3 class=&quot;h6 font-weight-bolder&quot;&gt;STANDARD SHIPPING: $10 (2-7 business days)&lt;/h3&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;If your order is over $100 then you will have the option of standard shipping for free.&lt;/p&gt;&#13;	&lt;h3 class=&quot;h6 font-weight-bolder&quot;&gt;USPS PRIORITY SHIPPING: $20 (2-5 business days)&lt;/h3&gt;&#13;	&lt;h3 class=&quot;h6 font-weight-bolder&quot;&gt;FEDEX EXPRESS SHIPPING: $30 (2-4 business days)&lt;/h3&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;Shipping timelines reflect total order processing and shipping times. Your gear will be processed and shipped within 1-2 business days of the order date—you can also check on the status of your order by logging into your account &lt;a href=&quot;$url('Login-Show')$&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;Breathe deeply—we have answers to your most pressing shipping questions.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;DO YOU SHIP TO P.O. BOXES OR RURAL ZIP CODES?&#13;		&lt;br&gt;Yes, but we cannot guarantee expedited or overnight deliveries to P.O. Boxes or rural zip codes—selecting standard shipping is the way to go.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;DO YOU SHIP TO AN APO/FPO/DPO ADDRESS?&#13;		&lt;br&gt;Yes. We can ship to an APO/FPO/DPO address, however transit times can take up to 45 business days.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;WHAT DO I DO IF MY TRACKING SAYS MY ORDER HAS BEEN DELIVERED AND I HAVE NOT RECEIVED MY PACKAGE?&#13;		&lt;br&gt;Our customer service representatives are here to help. Please email us at &lt;a href=&quot;mailto:cs@yogademocracy.com&quot;&gt;cs@yogademocracy.com&lt;/a&gt; with your order and tracking ID, full name, email address, shipping address, courier name, the date it was shipped, and the missing item(s) from your order.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;If you've got more questions, we've got answers. Visit our &lt;a href=&quot;#&quot;&gt;FAQs&lt;/a&gt; for more information.&lt;/p&gt;&#13;	&lt;h3 class=&quot;h6 font-weight-bolder&quot;&gt;International Shipping&lt;/h3&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;STANDARD SHIPPING $30 USD (5-10 business days)&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;WHEN WILL MY ORDER SHIP?&#13;		&lt;br&gt;Once an order is placed, your gear will be processed and shipped as quickly as possible. Don’t worry—we'll email you tracking information when the order ships. Please note that standard international shipping fees do not include freight, taxes, or duties and they may differ depending on your region.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;HOW MUCH FREIGHT, DUTY AND TAX WILL I HAVE TO PAY?&#13;		&lt;br&gt;We're unable to supply estimated freight, duties and taxes as this information will vary by country. Please note that if you place an order online, you will be responsible for all fright, duties, taxes and customs charges. If your order is then refused, you will still be responsible for charges incurred in shipping the package.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;WILL YOU SHIP TO AN INTERNATIONAL P.O. BOX?&#13;		&lt;br&gt;We do not ship to P.O. boxes outside of Canada and the US.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;CAN YOU ADJUST THE VALUE OF MY ORDER?&#13;		&lt;br&gt;No. We are required by law to disclose the full value of the package content.&lt;/p&gt;&#13;	&lt;h2 class=&quot;font-weight-bolder&quot;&gt;Returns/Exchanges&lt;/h2&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;All U.S based customers have 14-days from the day you receive your items to return or exchange any eligible items.&#13;		&lt;strong&gt;Final Sale Items (with slash through pricing on our website) and Doorbusters are not eligible for a return or exchange.&lt;/strong&gt;If you are a US customer please visit &lt;a href=&quot;https://returns.yogademocracy.com/&quot;&gt;https://returns.yogademocracy.com/&lt;/a&gt; to initiate an exchange or return. For USA and Canada customers: a $5 restocking fee will be deducted from your return refund. For international customers: a $20 restocking fee will be deducted from your return refund.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;As a small business, we typically process our returns once a week on Wednesdays. Since we know some of you are in a hurry to get your exchange processed, we are now offering an optional instant exchange credit so that you can start shopping with your credit as soon as you select it. This option will not offer you the entirety of your exchange credit due to the convenience and instant gratification of the system. If you would like to receive your entire exchange credit or a refund you can ignore the instant exchange credit option and your return will be processed the following Wednesday after we receive your package.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;All items must be returned in unused, original condition with tags attached. We cannot make any exceptions to this policy except in the case of manufacturer defect. Just because you ship it back to us doesn’t mean we are going to approve your refund. We understand that sometimes you wear an item once and decide you no longer want it; so if your items have clearly been worn based on smell, deodorant markings, (or music festival dust), we reserve the right to ship it back to you or donate to a local charity without approving your refund.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;We take great pride in all our garments, and quality inspect everything many times before shipping out to you, but we know we aren’t perfect. We are proud to warranty all our products including those marked as final sale for 1 year after your order is placed. So if you find there is a defect or something wrong with your item, please send us a couple of pictures, and we will be happy to offer you an exchange for a brand new exact same item upon verification of the defect by our team and receipt of the item. If we no longer carry the exact same item we are happy to offer you 75% exchange credit of your original purchase price toward a replacement item. Please reach out to us at cs@yogademocracy.com if you need to initiate a manufacturers defect exchange or have any other questions.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;If you are making an exchange for items that you bought during a sale or with a discount code and you are still within the return/exchange 14-day window, we are happy to offer an even exchange for the exact same item in a different available size. If you would like to exchange for a different print or style you will receive an exchange credit for the full amount you paid and can shop the website using that credit.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;We love to follow sustainable practices and hope that you will reuse the same packaging that you received your item in. Your return will be shipped via USPS and they are very specific about their packages because they are extremely overwhelmed these days. So to help them out please make sure the package does not have any previous postage or writing visible on the outside. If you received your items in a priority bubble mailer and are only shipping one or two items back to us please turn that priority bubble mailer inside out so you can't see any priority mail red and blue print. Additionally, if you received your items in a larger box and you are only returning one or two items, we ask that you break down the box to fit snug around your items or use an envelope from another shipment you've received. If you do not do this there will be an additional charge for us to pick up your package from our post office and it could cause a further delay in getting your refund and you will be subject to the difference in cost that we incur from using improper packaging.&lt;/p&gt;&#13;	&lt;p class=&quot;text-jet-black&quot;&gt;International and Canadian Customers - Please contact us at &lt;a href=&quot;mailto:cs@yogademocracy.com&quot;&gt;cs@yogademocracy.com&lt;/a&gt; to initiate the return process. We do not offer free return shipping labels for our international customers so the customer is responsible for shipping merchandise back, and incurring the cost associated with shipping. If you purchase your own postage we definitely recommend keeping a record of tracking on returned items. We do not take responsibility for lost or damaged packages shipped to us using postage purchased by the customer.&lt;/p&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="free-hemming-service">
+        <display-name xml:lang="x-default">Free Hemming Service</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class=&quot;container&quot;&gt;&#13;    &lt;h1 class=&quot;text-uppercase text-center mb-3&quot;&gt;Free Hemming Service&lt;/h1&gt;&#13;    &lt;div class=&quot;text-center mb-3&quot;&gt;&#13;        &lt;img src=&quot;images/free-hemming-service/free-hemming-service.jpg?$staticlink$&quot; alt=&quot;&quot; class=&quot;mw-100&quot;&gt;&#13;    &lt;/div&gt;&#13;    &lt;p class=&quot;text-jet-black&quot;&gt;Length should never be a reason for not loving your YD! We offer all our US and Canadian customers a free hemming service, whether their leggings were purchased from our website or through one of our retail partners.&lt;/p&gt;&#13;    &lt;p class=&quot;text-jet-black&quot;&gt;We recommend that our customers make sure they are otherwise happy with fit and fabrication before requesting that we hem their leggings, as once hemmed our leggings are non-returnable and non-exchangeable except in case of defect.&lt;/p&gt;&#13;    &lt;p class=&quot;text-jet-black&quot;&gt;We offer as standard 32&quot; and 28&quot; options for our leggings. If you would like us to hem to a non-standard length you can ship yours to the address below and include a note telling us how many inches you'd like us to remove. You'll receive back a perfect hem in the exact same style as the originals. We do not charge our customers a service fee or for the cost of return shipping within the US or Canada.&lt;/p&gt;&#13;    &lt;p class=&quot;text-jet-black text-center&quot;&gt;Yoga Democracy&lt;br&gt;1724 East 86th Street&lt;br&gt;Indianapolis, IN&lt;br&gt;46240&lt;br&gt;USA&lt;/p&gt;&#13;    &lt;p class=&quot;text-jet-black&quot;&gt;Great candidates for hemming are customers who find their crops coming up a bit loose at the ankle. This means your crops are a bit too long for your height, and we recommend getting them hemmed. This is most common among our more petite customers, 5'2&quot; and shorter. Our crops are designed to end a few inches above the ankle as demonstrated by our lovely model Ellette (above, 5'6&quot;). If you find your crops are hitting you farther down at the ankle, hemming is for you. Just find the area of the leg where your crops are most comfortably fitted and tell us how many inches to cut off. Otherwise our crops come at a standard 21.5&quot; inseam across all sizes.&lt;/p&gt;&#13;    &lt;p class=&quot;text-jet-black&quot;&gt;We recommend you send your leggings by tracked mail to ensure they don't go missing en route. We also ask that you drop us a line at &lt;a href=&quot;mailto:cs@yogademocracy.com&quot;&gt;cs@yogademocracy.com&lt;/a&gt; so we know they're on their way! &lt;/p&gt;&#13;    &lt;p class=&quot;text-jet-black&quot;&gt;Because everyone deserves the perfect length!&lt;/p&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="size-chart">
+        <display-name xml:lang="x-default">Size Chart</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class=&quot;container&quot;&gt;&#13;	&lt;h1 class=&quot;text-uppercase text-center mb-3&quot;&gt;Master Size Chart&lt;/h1&gt;&#13;	&lt;div class=&quot;accordion&quot; id=&quot;accordion-size-chart&quot;&gt;&#13;		&lt;div class=&quot;accordion__card&quot;&gt;&#13;			&lt;div class=&quot;accordion__card-header&quot; id=&quot;heading-bras-tops&quot;&gt; &lt;a class=&quot;accordion__card-title&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapse-bras-tops&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapse-bras-tops&quot;&gt;&#13;                    &lt;span&gt;Sports Bras &amp; Crop Tops Size Chart&lt;/span&gt;&#13;                &lt;/a&gt;&#13;			&lt;/div&gt;&#13;			&lt;div id=&quot;collapse-bras-tops&quot; class=&quot;collapse&quot; aria-labelledby=&quot;heading-bras-tops&quot;&gt;&#13;				&lt;div class=&quot;accordion__card-body&quot;&gt;&#13;					&lt;div class=&quot;overflow-auto&quot;&gt;&#13;						&lt;h2 class=&quot;text-center font-weight-bolder h6&quot;&gt;Sports Bras &amp; Crop Tops&lt;/h2&gt;&#13;						&lt;table class=&quot;table table-bordered text-center text-jet-black&quot;&gt;&#13;							&lt;thead&gt;&#13;								&lt;tr&gt;&#13;									&lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;&#13;									&lt;th scope=&quot;col&quot;&gt;30&quot;&lt;/th&gt;&#13;									&lt;th scope=&quot;col&quot;&gt;32&quot;&lt;/th&gt;&#13;									&lt;th scope=&quot;col&quot;&gt;34&quot;&lt;/th&gt;&#13;									&lt;th scope=&quot;col&quot;&gt;36&quot;&lt;/th&gt;&#13;									&lt;th scope=&quot;col&quot;&gt;38&quot;&lt;/th&gt;&#13;									&lt;th scope=&quot;col&quot;&gt;40&quot;&lt;/th&gt;&#13;									&lt;th scope=&quot;col&quot;&gt;42&quot;&lt;/th&gt;&#13;									&lt;th scope=&quot;col&quot;&gt;44&quot;&lt;/th&gt;&#13;								&lt;/tr&gt;&#13;							&lt;/thead&gt;&#13;							&lt;tbody&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;AA&lt;/td&gt;&#13;									&lt;td&gt;XS&lt;/td&gt;&#13;									&lt;td&gt;XS&lt;/td&gt;&#13;									&lt;td&gt;S&lt;/td&gt;&#13;									&lt;td&gt;M&lt;/td&gt;&#13;									&lt;td&gt;L&lt;/td&gt;&#13;									&lt;td&gt;XL&lt;/td&gt;&#13;									&lt;td&gt;2XL&lt;/td&gt;&#13;									&lt;td&gt;3XL&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;A&lt;/td&gt;&#13;									&lt;td&gt;XS&lt;/td&gt;&#13;									&lt;td&gt;XS&lt;/td&gt;&#13;									&lt;td&gt;S&lt;/td&gt;&#13;									&lt;td&gt;M&lt;/td&gt;&#13;									&lt;td&gt;L&lt;/td&gt;&#13;									&lt;td&gt;XL&lt;/td&gt;&#13;									&lt;td&gt;2XL&lt;/td&gt;&#13;									&lt;td&gt;3XL&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;B&lt;/td&gt;&#13;									&lt;td&gt;XS&lt;/td&gt;&#13;									&lt;td&gt;XS&lt;/td&gt;&#13;									&lt;td&gt;S&lt;/td&gt;&#13;									&lt;td&gt;M&lt;/td&gt;&#13;									&lt;td&gt;L&lt;/td&gt;&#13;									&lt;td&gt;XL&lt;/td&gt;&#13;									&lt;td&gt;2XL&lt;/td&gt;&#13;									&lt;td&gt;3XL&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;C&lt;/td&gt;&#13;									&lt;td&gt;XS&lt;/td&gt;&#13;									&lt;td&gt;S&lt;/td&gt;&#13;									&lt;td&gt;M&lt;/td&gt;&#13;									&lt;td&gt;M&lt;/td&gt;&#13;									&lt;td&gt;L&lt;/td&gt;&#13;									&lt;td&gt;XL&lt;/td&gt;&#13;									&lt;td&gt;2XL&lt;/td&gt;&#13;									&lt;td&gt;3XL&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;D&lt;/td&gt;&#13;									&lt;td&gt;S&lt;/td&gt;&#13;									&lt;td&gt;S&lt;/td&gt;&#13;									&lt;td&gt;M&lt;/td&gt;&#13;									&lt;td&gt;L&lt;/td&gt;&#13;									&lt;td&gt;XL&lt;/td&gt;&#13;									&lt;td&gt;XL&lt;/td&gt;&#13;									&lt;td&gt;2XL&lt;/td&gt;&#13;									&lt;td&gt;3XL&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;DD&lt;/td&gt;&#13;									&lt;td&gt;M&lt;/td&gt;&#13;									&lt;td&gt;M&lt;/td&gt;&#13;									&lt;td&gt;L&lt;/td&gt;&#13;									&lt;td&gt;XL&lt;/td&gt;&#13;									&lt;td&gt;XL&lt;/td&gt;&#13;									&lt;td&gt;2XL&lt;/td&gt;&#13;									&lt;td&gt;3XL&lt;/td&gt;&#13;									&lt;td&gt;3XL&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;DD&lt;/td&gt;&#13;									&lt;td&gt;M&lt;/td&gt;&#13;									&lt;td&gt;M&lt;/td&gt;&#13;									&lt;td&gt;L&lt;/td&gt;&#13;									&lt;td&gt;XL&lt;/td&gt;&#13;									&lt;td&gt;2XL&lt;/td&gt;&#13;									&lt;td&gt;3XL&lt;/td&gt;&#13;									&lt;td&gt;3XL&lt;/td&gt;&#13;									&lt;td&gt;3XL&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;							&lt;/tbody&gt;&#13;						&lt;/table&gt;&#13;					&lt;/div&gt;&#13;				&lt;/div&gt;&#13;			&lt;/div&gt;&#13;		&lt;/div&gt;&#13;		&lt;div class=&quot;accordion__card&quot;&gt;&#13;			&lt;div class=&quot;accordion__card-header&quot; id=&quot;heading-women-leggins&quot;&gt; &lt;a class=&quot;accordion__card-title&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapse-women-leggins&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapse-women-leggins&quot;&gt;&#13;                    &lt;span&gt;Leggings Size Chart&lt;/span&gt;&#13;                &lt;/a&gt;&#13;			&lt;/div&gt;&#13;			&lt;div id=&quot;collapse-women-leggins&quot; class=&quot;collapse&quot; aria-labelledby=&quot;heading-women-leggins&quot;&gt;&#13;				&lt;div class=&quot;accordion__card-body&quot;&gt;&#13;					&lt;div class=&quot;overflow-auto&quot;&gt;&#13;						&lt;h2 class=&quot;text-center font-weight-bolder h6&quot;&gt;Women's Leggings&lt;/h2&gt;&#13;						&lt;table class=&quot;table table-bordered text-center text-jet-black&quot;&gt;&#13;							&lt;thead&gt;&#13;								&lt;tr&gt;&#13;									&lt;th scope=&quot;col&quot;&gt;Size&lt;/th&gt;&#13;									&lt;th scope=&quot;col&quot;&gt;Size Equivalent&lt;/th&gt;&#13;								&lt;/tr&gt;&#13;							&lt;/thead&gt;&#13;							&lt;tbody&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;2XS&lt;/td&gt;&#13;									&lt;td&gt;0&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;XS&lt;/td&gt;&#13;									&lt;td&gt;2&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;S&lt;/td&gt;&#13;									&lt;td&gt;4&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;M&lt;/td&gt;&#13;									&lt;td&gt;6&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;L&lt;/td&gt;&#13;									&lt;td&gt;8-10&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;XL&lt;/td&gt;&#13;									&lt;td&gt;12&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;2XL&lt;/td&gt;&#13;									&lt;td&gt;14-16&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;								&lt;tr&gt;&#13;									&lt;td class=&quot;font-weight-bold&quot;&gt;3XL&lt;/td&gt;&#13;									&lt;td&gt;18-20&lt;/td&gt;&#13;								&lt;/tr&gt;&#13;							&lt;/tbody&gt;&#13;						&lt;/table&gt;&#13;					&lt;/div&gt;&#13;				&lt;/div&gt;&#13;			&lt;/div&gt;&#13;		&lt;/div&gt;&#13;		&lt;div class=&quot;accordion__card&quot;&gt;&#13;			&lt;div class=&quot;accordion__card-header&quot; id=&quot;heading-bell-bottoms&quot;&gt; &lt;a class=&quot;accordion__card-title&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapse-bell-bottoms&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapse-bell-bottoms&quot;&gt;&#13;                    &lt;span&gt;Bell Bottoms Size Chart&lt;/span&gt;&#13;                &lt;/a&gt;&#13;			&lt;/div&gt;&#13;			&lt;div id=&quot;collapse-bell-bottoms&quot; class=&quot;collapse&quot; aria-labelledby=&quot;heading-bell-bottoms&quot;&gt;&#13;				&lt;div class=&quot;accordion__card-body&quot;&gt;&#13;					&lt;div class=&quot;overflow-auto&quot;&gt;&#13;						&lt;p class=&quot;text-jet-black&quot;&gt;Bell bottoms all have a 32&quot; inseam but are bartached at 32&quot;, 28&quot;, 24&quot;, 20&quot; so that you can cut them to your desired length and not worry about the thread unraveling.&lt;/p&gt;&#13;						&lt;h2 class=&quot;text-center font-weight-bolder h6&quot;&gt;Women's Bell Bottoms&lt;/h2&gt;&#13;						&lt;ul class=&quot;nav nav-tabs nav-fill&quot; role=&quot;tablist&quot;&gt;&#13;							&lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt; &lt;a class=&quot;nav-link active&quot; href=&quot;#cm-bell-bottoms&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot; aria-controls=&quot;cm-bell-bottoms&quot; aria-selected=&quot;true&quot; tabindex=&quot;0&quot; id=&quot;cm-tab-bell-bottoms&quot;&gt;&#13;                                                            CM&#13;                                                        &lt;/a&gt;&#13;							&lt;/li&gt;&#13;							&lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt; &lt;a class=&quot;nav-link&quot; href=&quot;#inches-bell-bottoms&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot; aria-controls=&quot;inches-bell-bottoms&quot; aria-selected=&quot;false&quot; tabindex=&quot;0&quot; id=&quot;inches-tab-bell-bottoms&quot;&gt;&#13;                                                            INCHES&#13;                                                        &lt;/a&gt;&#13;							&lt;/li&gt;&#13;						&lt;/ul&gt;&#13;						&lt;div class=&quot;tab-content&quot;&gt;&#13;							&lt;div class=&quot;tab-pane active&quot; id=&quot;cm-bell-bottoms&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;cm-tab-bell-bottoms&quot;&gt;&#13;								&lt;table class=&quot;table table-bordered text-center text-jet-black&quot;&gt;&#13;									&lt;thead&gt;&#13;										&lt;tr&gt;&#13;											&lt;th scope=&quot;col&quot;&gt;SIZE&lt;/th&gt;&#13;											&lt;th scope=&quot;col&quot;&gt;WAIST (CM)&lt;/th&gt;&#13;											&lt;th scope=&quot;col&quot;&gt;HIP (CM)&lt;/th&gt;&#13;										&lt;/tr&gt;&#13;									&lt;/thead&gt;&#13;									&lt;tbody&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;XS&lt;/td&gt;&#13;											&lt;td&gt;61 - 66&lt;/td&gt;&#13;											&lt;td&gt;83.8 - 88.9&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;S&lt;/td&gt;&#13;											&lt;td&gt;66 - 71.1&lt;/td&gt;&#13;											&lt;td&gt;88.9 - 94&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;M&lt;/td&gt;&#13;											&lt;td&gt;71.1 - 78.7&lt;/td&gt;&#13;											&lt;td&gt;94 - 99.1&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;L&lt;/td&gt;&#13;											&lt;td&gt;78.7 - 83.8&lt;/td&gt;&#13;											&lt;td&gt;99.1 - 104&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;XL&lt;/td&gt;&#13;											&lt;td&gt;83.8 - 88.9&lt;/td&gt;&#13;											&lt;td&gt;104 - 109&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;									&lt;/tbody&gt;&#13;								&lt;/table&gt;&#13;							&lt;/div&gt;&#13;							&lt;div class=&quot;tab-pane&quot; id=&quot;inches-bell-bottoms&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;inches-tab-bell-bottoms&quot;&gt;&#13;								&lt;table class=&quot;table table-bordered text-center text-jet-black&quot;&gt;&#13;									&lt;thead&gt;&#13;										&lt;tr&gt;&#13;											&lt;th scope=&quot;col&quot;&gt;SIZE&lt;/th&gt;&#13;											&lt;th scope=&quot;col&quot;&gt;WAIST (INCHES)&lt;/th&gt;&#13;											&lt;th scope=&quot;col&quot;&gt;HIP (INCHES)&lt;/th&gt;&#13;										&lt;/tr&gt;&#13;									&lt;/thead&gt;&#13;									&lt;tbody&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;XS&lt;/td&gt;&#13;											&lt;td&gt;24 - 26&lt;/td&gt;&#13;											&lt;td&gt;33 - 35&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;S&lt;/td&gt;&#13;											&lt;td&gt;26 - 28&lt;/td&gt;&#13;											&lt;td&gt;35 - 37&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;M&lt;/td&gt;&#13;											&lt;td&gt;28 - 31&lt;/td&gt;&#13;											&lt;td&gt;37 - 39&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;L&lt;/td&gt;&#13;											&lt;td&gt;31 - 33&lt;/td&gt;&#13;											&lt;td&gt;39 - 41&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;XL&lt;/td&gt;&#13;											&lt;td&gt;33 - 35&lt;/td&gt;&#13;											&lt;td&gt;41 - 43&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;									&lt;/tbody&gt;&#13;								&lt;/table&gt;&#13;							&lt;/div&gt;&#13;						&lt;/div&gt;&#13;					&lt;/div&gt;&#13;				&lt;/div&gt;&#13;			&lt;/div&gt;&#13;		&lt;/div&gt;&#13;		&lt;div class=&quot;accordion__card&quot;&gt;&#13;			&lt;div class=&quot;accordion__card-header&quot; id=&quot;heading-shorts&quot;&gt; &lt;a class=&quot;accordion__card-title&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapse-shorts&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapse-shorts&quot;&gt;&#13;                    &lt;span&gt;Shorts Size Chart&lt;/span&gt;&#13;                &lt;/a&gt;&#13;			&lt;/div&gt;&#13;			&lt;div id=&quot;collapse-shorts&quot; class=&quot;collapse&quot; aria-labelledby=&quot;heading-shorts&quot;&gt;&#13;				&lt;div class=&quot;accordion__card-body&quot;&gt;&#13;					&lt;div class=&quot;overflow-auto&quot;&gt;&#13;						&lt;h2 class=&quot;text-center font-weight-bolder h6&quot;&gt;Women's Shorts&lt;/h2&gt;&#13;						&lt;ul class=&quot;nav nav-tabs nav-fill&quot; role=&quot;tablist&quot;&gt;&#13;							&lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt; &lt;a class=&quot;nav-link active&quot; href=&quot;#cm-shorts&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot; aria-controls=&quot;cm-shorts&quot; aria-selected=&quot;true&quot; tabindex=&quot;0&quot; id=&quot;cm-tab-shorts&quot;&gt;&#13;                                                            CM&#13;                                                        &lt;/a&gt;&#13;							&lt;/li&gt;&#13;							&lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt; &lt;a class=&quot;nav-link&quot; href=&quot;#inches-shorts&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot; aria-controls=&quot;inches-shorts&quot; aria-selected=&quot;false&quot; tabindex=&quot;0&quot; id=&quot;inches-tab-shorts&quot;&gt;&#13;                                                            INCHES&#13;                                                        &lt;/a&gt;&#13;							&lt;/li&gt;&#13;						&lt;/ul&gt;&#13;						&lt;div class=&quot;tab-content&quot;&gt;&#13;							&lt;div class=&quot;tab-pane active&quot; id=&quot;cm-shorts&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;cm-tab-shorts&quot;&gt;&#13;								&lt;table class=&quot;table table-bordered text-center text-jet-black&quot;&gt;&#13;									&lt;thead&gt;&#13;										&lt;tr&gt;&#13;											&lt;th scope=&quot;col&quot;&gt;SIZE&lt;/th&gt;&#13;											&lt;th scope=&quot;col&quot;&gt;WAIST (CM)&lt;/th&gt;&#13;											&lt;th scope=&quot;col&quot;&gt;HIP (CM)&lt;/th&gt;&#13;										&lt;/tr&gt;&#13;									&lt;/thead&gt;&#13;									&lt;tbody&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;XS&lt;/td&gt;&#13;											&lt;td&gt;61 - 66&lt;/td&gt;&#13;											&lt;td&gt;83.8 - 88.9&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;S&lt;/td&gt;&#13;											&lt;td&gt;66 - 71.1&lt;/td&gt;&#13;											&lt;td&gt;88.9 - 94&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;M&lt;/td&gt;&#13;											&lt;td&gt;71.1 - 78.7&lt;/td&gt;&#13;											&lt;td&gt;94 - 99.1&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;L&lt;/td&gt;&#13;											&lt;td&gt;78.7 - 83.8&lt;/td&gt;&#13;											&lt;td&gt;99.1 - 104&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;XL&lt;/td&gt;&#13;											&lt;td&gt;83.8 - 88.9&lt;/td&gt;&#13;											&lt;td&gt;104 - 109&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;									&lt;/tbody&gt;&#13;								&lt;/table&gt;&#13;							&lt;/div&gt;&#13;							&lt;div class=&quot;tab-pane&quot; id=&quot;inches-shorts&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;inches-tab-shorts&quot;&gt;&#13;								&lt;table class=&quot;table table-bordered text-center text-jet-black&quot;&gt;&#13;									&lt;thead&gt;&#13;										&lt;tr&gt;&#13;											&lt;th scope=&quot;col&quot;&gt;SIZE&lt;/th&gt;&#13;											&lt;th scope=&quot;col&quot;&gt;WAIST (INCHES)&lt;/th&gt;&#13;											&lt;th scope=&quot;col&quot;&gt;HIP (INCHES)&lt;/th&gt;&#13;										&lt;/tr&gt;&#13;									&lt;/thead&gt;&#13;									&lt;tbody&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;XS&lt;/td&gt;&#13;											&lt;td&gt;24 - 26&lt;/td&gt;&#13;											&lt;td&gt;33 - 35&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;S&lt;/td&gt;&#13;											&lt;td&gt;26 - 28&lt;/td&gt;&#13;											&lt;td&gt;35 - 37&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;M&lt;/td&gt;&#13;											&lt;td&gt;28 - 31&lt;/td&gt;&#13;											&lt;td&gt;37 - 39&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;L&lt;/td&gt;&#13;											&lt;td&gt;31 - 33&lt;/td&gt;&#13;											&lt;td&gt;39 - 41&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;										&lt;tr&gt;&#13;											&lt;td class=&quot;font-weight-bold&quot;&gt;XL&lt;/td&gt;&#13;											&lt;td&gt;33 - 35&lt;/td&gt;&#13;											&lt;td&gt;41 - 43&lt;/td&gt;&#13;										&lt;/tr&gt;&#13;									&lt;/tbody&gt;&#13;								&lt;/table&gt;&#13;							&lt;/div&gt;&#13;						&lt;/div&gt;&#13;					&lt;/div&gt;&#13;				&lt;/div&gt;&#13;			&lt;/div&gt;&#13;		&lt;/div&gt;&#13;	&lt;/div&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+    <content content-id="email-gift-certificate-created">
+        <display-name xml:lang="x-default">Email Gift Certificate</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;Dear ${customerName},&lt;/p&gt;&#13;&lt;p&gt;A Gift Certificate has been issued to you in the amount of ${balance}&lt;/p&gt;&#13;&lt;p&gt;You can redeem your gift certificate at our online store.&lt;/p&gt;&#13;&lt;p&gt;Your gift certificate code is ${id}.&lt;/p&gt;&#13;&lt;p&gt;Sincerely,&lt;/p&gt;&#13;&lt;p&gt;CustomerSupport&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="email-account-edited">
+        <display-name xml:lang="x-default">Account Edited Email</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;	&lt;p&gt;Dear ${firstName} ${lastName},&lt;/p&gt;&#13;	&lt;p&gt;Your account has been successfully edited. You can visit your account at: &lt;a href=&quot;${url}&quot;&gt;Login Page&lt;/a&gt;&#13;	&lt;/p&gt;&#13;	&lt;p&gt;This is an automatically generated email, please do not reply.&lt;/p&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+</library>

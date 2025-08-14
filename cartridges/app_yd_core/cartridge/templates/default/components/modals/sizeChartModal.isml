@@ -1,0 +1,33 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+
+<!-- Modal -->
+<div id="sizeChartModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title">${pdict.productName}</h2>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-12 col-md-5 d-none d-md-block">
+						<ispicturetag
+							desktop_src="${pdict.image}"
+							mobile_src="${pdict.image}"
+							image_pd_desktop="${pdict.image}"
+							image_pd_mobile="${pdict.image}"
+							picture_class="aspect-ratio-2-1"
+							img_class="size-chart__img"
+							alt="${pdict.productName}"
+						/>
+					</div>
+					<div class="col-12 col-md-7">
+						<iscontentasset aid="${pdict.sizeChartId}"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+
+<div class="
+    a-rich-text
+    ${pdict.wrapperCSSClasses || ''}"
+
+    style="
+        <isif condition="${!empty(pdict.textColor)}">--js-text-color: ${pdict.textColor};</isif>"
+    >
+    <isprint value="${pdict.richText}" encoding="off"/>
+</div>

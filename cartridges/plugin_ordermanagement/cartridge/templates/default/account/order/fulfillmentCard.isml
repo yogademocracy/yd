@@ -1,0 +1,21 @@
+<isloop items="${groupedItems}" var="groupedItem" status="loopState">
+    <div class="card-body fulfillment-info ">
+        <div class="row fulfillment-status-row">
+            <div class="col">
+                <h3>
+                    ${groupedItem.statusDisplayLabel}
+                </h3>
+            </div>
+        </div>
+
+        <div class="row order-date-row">
+            <div class="col">
+                <p class='order-date'>
+                    ${Resource.msgf('label.orderhistory.ordered.date.label','account',null,order.orderedDate.toLocaleDateString())}
+                </p>
+            </div>
+        </div>
+        <isset name="orderItems" value="${groupedItem.orderItems.orderItems}" scope="page" />
+        <isinclude template="account/order/orderItems"/>
+    </div>
+</isloop>

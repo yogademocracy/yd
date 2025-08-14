@@ -1,6 +1,6 @@
 # Yoga democracy
 
-This repository contains the codebase of Yoga democracy's Salesforce Commerce Cloud (SFCC) project. It is based on a fork of Salesforce's Storefront Reference Architecture (SFRA) containing some changes to the included cartriges and the build process.
+This repository contains the codebase of Yoga democracy's Salesforce Commerce Cloud (SFCC) project. It is based on a fork of Salesforce's Storefront Reference Architecture (SFRA) containing some changes to the included cartridges and the build process.
 
 ## Table of contents
 
@@ -9,13 +9,13 @@ This repository contains the codebase of Yoga democracy's Salesforce Commerce Cl
 ## Introduction
 This project is based on a Salesforce Cloud Commerce platform, SFRA Architecture (https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)
 
-## Get informations
+## Get information
 
 ### Tools used on project
 
-* [Jira](https://emberagency.atlassian.net/jira/software/c/projects/COL/boards/62), ticketing tool, used to manage User Stories, backlog, sprints and reporting
-* [Gitlab](https://github.com/Yoga democracygroup/Yoga democracy-sfcc-refapp), allows users to do basic Git operations (such as reviewing or merging code)
-* [Confluence](https://emberagency.atlassian.net/wiki/spaces/Yoga democracy/overview), used to share with PM, Designers, Dev and the client.
+* [Jira](https://emberagency.atlassian.net/jira/software/c/projects/YD/boards/128), ticketing tool, used to manage User Stories, backlog, sprints and reporting
+* [Gitlab](https://github.com/yogademocracy/yd), allows users to do basic Git operations (such as reviewing or merging code)
+* [Confluence](https://emberagency.atlassian.net/wiki/spaces/YD/overview?homepageId=838533395), used to share with PM, Designers, Dev and the client.
 
 
 The following tools are needed:
@@ -42,7 +42,7 @@ Add Ons for Visual Studio Code:
 1. Clone the repo :
 
 ```
-git clone git@github.com:Yoga democracygroup/Yoga democracy-sfcc-refapp.git
+git clone git@github.com/yogademocracy/yd.git
 ```
 
 2. Install dependencies and compile assets :
@@ -121,8 +121,8 @@ Target branch - develop
 - If you fixing bug, it should be placed under bugfix/STORY_JIRA_ID
 
 Examples:
-feature/COL-10
-bugfix/COL-223
+feature/YD-10
+bugfix/YD-223
 
 ### Every feature commit and PR should consist of:
 JIRA_ID:CHANGE_CATEGORY(ADD/FIX/CHANGE): JIRA_TICKET_NAME and DESCRIPTION (optional)
@@ -142,7 +142,7 @@ npm run styleguide:b2c
 ```
 Styleguide will be accessible locally via
 ```
-cartridges/app_yd_b2c/cartridge/static/default/styleguide/guide/index.html
+cartridges/app_yd_core/cartridge/static/default/styleguide/guide/index.html
 ```
 
 ## Icons

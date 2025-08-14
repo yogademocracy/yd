@@ -1,0 +1,49 @@
+/* stylelint-disable-next-line */
+/*md
+
+## Tabs (.nav-tabs)
+
+### Standard Tabs
+
+```html_example
+<ul class="nav nav-tabs nav-fill" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active" href="#first" data-toggle="tab" role="tab" aria-controls="first" aria-selected="true" tabindex="0" id="first-tab">
+            First tab
+         </a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" href="#second" data-toggle="tab" role="tab" aria-controls="second" aria-selected="false" tabindex="0" id="second-tab">
+            Second tab
+         </a>
+    </li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane active" id="first" role="tabpanel" aria-labelledby="first-tab">
+        <p>
+            Tab content for First tab
+        <p>
+    </div>
+    <div class="tab-pane" id="second" role="tabpanel" aria-labelledby="second-tab">
+        <p>
+            Tab content for Second tab
+        <p>
+    </div>
+</div>
+```
+
+*/
+
+.nav-tabs .nav-item {
+    flex: 1;
+
+    .nav-link {
+        color: $c-yd-jet-black;
+
+        &.active,
+        &.active:focus,
+        &.active:hover {
+            border-bottom: rem(5) solid $c-yd-forest-sage;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+<div class="user">
+    <a class="user__link header-link" href="${pdict.name === null ? URLUtils.https('Login-Show') : URLUtils.https('Account-Show')}" role="button">
+        <i class="icon icon-account d-md-none"></i>
+        <span class="d-none d-md-block">${Resource.msg('link.header.account', 'account', null)}</span>
+    </a>
+</div>

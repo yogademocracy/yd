@@ -1,0 +1,5 @@
+<a href="#" class="js-open-custom-modal size-chart"
+    data-action-url="${URLUtils.url('Modals-GetCustomModal', 'modalID', 'sizeChartModal', 'params', product.sizeChartModalParams)}">
+    <i class="icon icon-size-chart"></i>
+    <span class="size-chart__text">${Resource.msg('link.size_chart', 'product', null)}</span>
+</a>

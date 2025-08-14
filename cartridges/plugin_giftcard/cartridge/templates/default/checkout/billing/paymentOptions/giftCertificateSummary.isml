@@ -1,0 +1,6 @@
+<div>
+    ${Resource.msg('msg.payment.method', 'giftcard', null)}
+</div>
+<div>
+    ${payment.maskedGiftCertificateCode}
+</div>

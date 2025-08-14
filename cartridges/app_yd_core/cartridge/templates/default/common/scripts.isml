@@ -1,0 +1,24 @@
+<script>//common/scripts.isml</script>
+<script defer type="text/javascript" src="${URLUtils.staticURL('/js/main.js')}"></script>
+<isloop items="${ require('*/cartridge/scripts/assets.js').scripts }" var="script">
+
+    <script defer type="text/javascript" src="${script.src}" <isif condition="${script.integrity != null}">integrity="${script.integrity}" crossorigin="anonymous"></isif>>
+    </script>
+</isloop>
+
+<script src="https://pay.google.com/gp/p/js/pay.js" type="text/javascript"></script>
+
+<script>
+
+
+	 var   googlePayVariables = {
+                        currencyCode: "${session.getCurrency().getCurrencyCode()}",
+                        countryCode: "${countryCode}",
+                        totalPriceStatus: 'FINAL',
+                        sessionCallBack : "${dw.web.URLUtils.url('CheckoutServices-SubmitPaymentGP')}",
+                        submitURL : "${dw.web.URLUtils.https('Checkout-Begin', 'stage', 'placeOrder')}"
+                    }
+
+ window.googlepayval = googlePayVariables;
+
+</script>

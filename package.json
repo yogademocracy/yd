@@ -23,28 +23,24 @@
     "lint:scss": "stylelint cartridges/**/cartridge/client/**/*.scss",
     "lint:scss:fix": "stylelint cartridges/**/cartridge/client/**/*.scss --fix",
     "prepare": "husky",
+    "styleguide:yd": "atlas-guide --build=./cartridges/app_yd_core/.atlasrc.json",
     "library:build": "node ./bin/libraryMerge.js --path=/../site_template/",
     "library:page": "node ./bin/libraryExtractPage.js --path=/../site_template/",
-    "icons:yd": "fantasticon --config cartridges/app_yd_b2c/fantasticonrc.json"
+    "icons:yd": "fantasticon --config cartridges/app_yd_core/fantasticonrc.json"
   },
   "dependencies": {
     "atlas-guide": "^2.2.10",
     "bootstrap": "^4.6.2",
     "cleave.js": "^1.6.0",
-    "datatables.net": "^2.2.2",
-    "datatables.net-dt": "^2.2.2",
-    "datatables.net-responsive-dt": "^3.0.4",
-    "datatables.net-searchpanes-dt": "^2.3.3",
-    "datatables.net-select": "^3.0.0",
     "dompurify": "^3.2.4",
+    "drift-zoom": "^1.5.1",
     "flag-icons": "7.3.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.7.1",
     "js-cookie": "^3.0.5",
     "lodash": "^4.17.21",
     "swiper": "^11.2.5",
-    "url": "^0.11.4",
-    "web-vitals": "^5.0.2"
+    "url": "^0.11.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
@@ -82,8 +78,8 @@
     "last 4 Edge versions"
   ],
   "commitMessage": {
-    "commitMessageRegex": "^[A-Z0-9]{2,10}-[0-9]{2,5}:(FIX|CHANGE|ADD): [a-zA-Z0-9 \\.,\\'\"\\[\\]]+|^(Merge|Revert|Finish).+",
-    "commitMessageComment": "Your message format is slightly different than required. 'Please use 'TICKET-ID:TYPE: Comment' format. Ex. 'COL-123:ADD: Added cookie banner'"
+    "commitMessageRegex": "^[A-Z0-9]{2,10}-[0-9]{1,5}:(FIX|CHANGE|ADD): [a-zA-Z0-9 \\.,\\'\"\\[\\]]+|^(Merge|Revert|Finish).+",
+    "commitMessageComment": "Your message format is slightly different than required. 'Please use 'TICKET-ID:TYPE: Comment' format. Ex. 'YD-123:ADD: Added cookie banner'"
   },
   "sfraBuilderConfig": "./sfraBuilderConfig"
 }

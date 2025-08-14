@@ -1,0 +1,23 @@
+<ul class="filter-bar__list col-12">
+    <isloop items="${pdict.productSearch.selectedFilters}" var="refinement">
+        <isif condition="${refinement.type === 'color'}">
+            <li class="filter-bar__item swatch-filter swatch-filter-${refinement.presentationId}">
+                <button data-href="${refinement.url}" data-seo-href="${refinement.seoRefineUrl || refinement.url}" class="btn filter-bar__btn">
+                    <span class="sr-only">
+                        ${Resource.msgf('assistive.text.remove.filter.button', 'search', null, refinement.title)}
+                    </span>
+                </button>
+            </li>
+        <iselse>
+            <li class="filter-value filter-bar__item">
+                <button data-href="${refinement.url}" class="btn text-left filter-bar__btn">
+                    <span aria-hidden="true">${refinement.displayValue}</span>
+                    <i class="icon icon-close"></i>
+                    <span class="sr-only">
+                        ${Resource.msgf('assistive.text.remove.filter.button', 'search', null, refinement.title)}
+                    </span>
+                </button>
+            </li>
+        </isif>
+    </isloop>
+</ul>

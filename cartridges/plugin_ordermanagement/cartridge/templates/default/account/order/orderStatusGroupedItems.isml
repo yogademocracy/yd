@@ -1,0 +1,41 @@
+<isif condition="${groupedItems.length > 0}">
+    <h3>${groupedItems[0].statusDisplayLabel}</h3>
+
+    <isloop items="${groupedItems}" var="groupedItem">
+        <div class="card">
+            <div class="card-body">
+                <div class="order-details-date">
+                    ${Resource.msgf('label.orderhistory.ordered.date.label','account',null,order.orderedDate.toLocaleDateString())}
+                </div>
+                <isif condition="${groupedItem.status === 'Ordered'}">
+                    <div class="order-details-cancel">
+                        <a href="${URLUtils.https('Order-Cancel',
+                            'orderSummaryId', pdict.orderSummaryId,
+                            'orderID', pdict.orderID)}" class="btn btn-outline-primary btn-block">${Resource.msg('order.cancel.btn', 'orderDetails', null)}</a>
+                    </div>
+                </isif>
+                <isif condition="${groupedItem.status === 'Shipped'}">
+                    <div class="order-details-return">
+                        <a href="${URLUtils.https('Order-Return',
+                            'orderSummaryId', pdict.orderSummaryId,
+                            'orderID', pdict.orderID)}" class="btn btn-outline-primary btn-block">${Resource.msg('order.return.btn', 'orderDetails', null)}</a>
+                    </div>
+                </isif>
+            </div>
+        </div>
+        <div class="card">
+            <isif condition="${!empty(groupedItem.fulfilledToAddress)}">
+                <isset name="fulfilledToAddress" value="${groupedItem.fulfilledToAddress}" scope="page" />
+            <iselse>
+                <isset name="fulfilledToAddress" value="${order.shipping.deliverToAddress}" scope="page" />
+            </isif>
+            <div class="card-header clearfix">
+                <isinclude template="account/order/orderStatusGroupedItemsAddress" scope="page" />
+            </div>
+            <div class="card-body">
+                <isset name="orderItems" value="${groupedItem.orderItems.orderItems}" scope="page" />
+                <isinclude template="account/order/orderItems"/>
+            </div>
+        </div>
+    </isloop>
+</isif>

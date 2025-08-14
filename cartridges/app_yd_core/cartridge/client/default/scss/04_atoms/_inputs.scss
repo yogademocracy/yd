@@ -1,0 +1,33 @@
+/* stylelint-disable-next-line */
+/*md
+
+## Inputs (.a-input)
+
+### Standard Inputs
+
+```html_example
+<input type="" name="" value="" class="a-input" >
+```
+
+*/
+
+.a-input,
+input.form-control,
+.custom-select {
+    font-size: rem(16);
+    line-height: normal;
+    color: $c-yd-jet-black;
+    border: rem(1) solid $c-yd-ash-gray;
+    padding: rem(13) rem(15);
+    margin: 0;
+    vertical-align: middle;
+    max-width: 100%;
+    border-radius: rem(3);
+    height: auto;
+
+    &:focus,
+    &:focus-visible {
+        outline: none;
+        border-color: $c-yd-jet-black;
+    }
+}

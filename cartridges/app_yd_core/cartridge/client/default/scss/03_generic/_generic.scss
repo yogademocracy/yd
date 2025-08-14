@@ -1,3 +1,24 @@
+// class-based generic styling
+
+.pd-components {
+    // reset inner containers extra styling
+    .container {
+        .container {
+            max-width: none;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.w-fit-content {
+    width: fit-content;
+}
+
+.h-fit-content {
+    height: fit-content;
+}
+
 .page {
     display: flex;
     flex-direction: column;
@@ -6,4 +27,21 @@
     #maincontent {
         flex: 1;
     }
+}
+
+.site-container {
+    max-width: none;
+
+    @include media-breakpoint-up(md) {
+        padding-left: rem(40);
+        padding-right: rem(40);
+    }
+}
+
+.carousel-control-prev {
+    left: rem(1);
+}
+
+.carousel-control-next {
+    right: rem(1);
 }

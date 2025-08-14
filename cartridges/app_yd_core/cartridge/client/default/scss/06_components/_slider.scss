@@ -1,0 +1,21 @@
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/effect-fade";
+@import "swiper/scss/pagination";
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: $white;
+}
+
+.swiper-button-prev {
+    left: rem(15);
+}
+
+.swiper-button-next {
+    right: rem(15);
+}
+
+.swiper-pagination-bullet-active {
+    background: $white;
+}

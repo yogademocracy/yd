@@ -1,2 +1,159 @@
-// Additional refApp variables
+// Brand variables
 
+// Styleguide
+
+
+// YD color palette
+// Background colors
+$c-yd-forest-sage:      #5e7461;     // primary
+$c-yd-white:            #fff;     // secondary
+$c-yd-light-gray:       #f6f6f6;
+$c-yd-soft-gray:        #f0f0f0;
+$c-yd-warm-beige:       #f0eee8;
+$c-yd-misty-gray:       #e6e3e3;
+$c-yd-neutral-gray:     #c9c9c9;
+$c-yd-terracotta:       #c56746;
+$c-yd-rust-brown:       #a15a40;
+$c-yd-slate-teal:       #4e6866;
+$c-yd-mocha-brown:      #64544c;
+$c-yd-deep-moss-green:  #455851;
+$c-yd-dark-sage:        #434d40;
+$c-yd-plum-brown:       #604151;
+$c-yd-deep-teal-blue:   #0b4d67;
+$c-yd-burgundy-brown:   #5f3e45;
+$c-yd-charcoal-blue:    #3b414f;
+$c-yd-graphite-gray:    #3e4043;
+$c-yd-pine-green:       #324140;
+$c-yd-jet-black:        #202223;
+$c-yd-forest-green:     #488851;
+$c-yd-magenta-plum:     #ab1a67;
+$c-yd-snow-gray:        #f2f2f2;
+
+// Text colors
+$c-yd-gold:             #ffd700;
+$c-yd-amber-gold:       #edc80a;
+$c-yd-medium-gray:      #aaa;
+$c-yd-stone-gray:       #a2a2a2;
+$c-yd-coral-red:        #df5641;
+$c-yd-dark-gray:        #777;
+$c-yd-steel-gray:       #6d7175;
+$c-yd-midnight-indigo:  #2e2c40;
+$c-yd-midnight-navy:    #041324;
+
+// Fill colors
+$c-yd-golden-amber:     #fbbc04;
+$c-yd-amber-orange:     #f79e1b;
+$c-yd-bright-orange:    #f90;
+$c-yd-pumpkin-orange:   #f48120;
+$c-yd-vivid-orange:     #ff5f00;
+$c-yd-emerald-green:    #34a853;
+$c-yd-bright-blue:      #4285f4;
+$c-yd-azure-blue:       #3086c8;
+$c-yd-tomato-red:       #ea4335;
+$c-yd-cardinal-red:     #eb001b;
+$c-yd-royal-blue:       #006fcf;
+$c-yd-slate-gray:       #5f6368;
+$c-yd-electric-violet:  #5a31f4;
+$c-yd-deep-navy-blue:   #003087;
+$c-yd-midnight-blue:    #142688;
+$c-yd-royal-navy-blue:  #012169;
+$c-yd-onyx:             #231f20;
+$c-yd-dark-charcoal:    #221f1f;
+
+// Border colors
+$c-yd-silver-gray:      #e0e0e0;
+$c-yd-cloud-gray:       #ddd;
+$c-yd-ash-gray:         #c7c8c8;
+$c-yd-copper-brown:     #9f5135;
+
+// Color Map will is used to auto-generate color helper classes (used mostly by content managers in PD)
+// Please always keep synced these two sections.
+// Other option - is to have single map but all styles should be rewritten to use some mag.get of color() function with is less pleasant to code
+$colors: (
+    "light-gray":       #f6f6f6,
+    "soft-gray":        #f0f0f0,
+    "warm-beige":       #f0eee8,
+    "misty-gray":       #e6e3e3,
+    "neutral-gray":     #c9c9c9,
+    "terracotta":       #c56746,
+    "rust-brown":       #a15a40,
+    "slate-teal":       #4e6866,
+    "mocha-brown":      #64544c,
+    "deep-moss-green":  #455851,
+    "dark-sage":        #434d40,
+    "plum-brown":       #604151,
+    "deep-teal-blue":   #0b4d67,
+    "burgundy-brown":   #5f3e45,
+    "charcoal-blue":    #3b414f,
+    "graphite-gray":    #3e4043,
+    "pine-green":       #324140,
+    "jet-black":        #202223,
+    "forest-green":     #488851,
+    "gold":             #ffd700,
+    "amber-gold":       #edc80a,
+    "medium-gray":      #aaa,
+    "stone-gray":       #a2a2a2,
+    "coral-red":        #df5641,
+    "dark-gray":        #777,
+    "steel-gray":       #6d7175,
+    "midnight-indigo":  #2e2c40,
+    "midnight-navy":    #041324,
+    "golden-amber":     #fbbc04,
+    "amber-orange":     #f79e1b,
+    "bright-orange":    #f90,
+    "pumpkin-orange":   #f48120,
+    "vivid-orange":     #ff5f00,
+    "emerald-green":    #34a853,
+    "bright-blue":      #4285f4,
+    "azure-blue":       #3086c8,
+    "tomato-red":       #ea4335,
+    "cardinal-red":     #eb001b,
+    "royal-blue":       #006fcf,
+    "slate-gray":       #5f6368,
+    "electric-violet":  #5a31f4,
+    "deep-navy-blue":   #003087,
+    "midnight-blue":    #142688,
+    "royal-navy-blue":  #012169,
+    "onyx":             #231f20,
+    "dark-charcoal":    #221f1f,
+    "silver-gray":      #e0e0e0,
+    "cloud-gray":       #ddd,
+    "ash-gray":         #c7c8c8,
+    "copper-brown":     #9f5135,
+    "magenta-plum":     #ab1a67,
+    "snow-gray":        #f2f2f2,
+);
+
+// Aspect ratio
+$ratios: (
+    "1-1": "1/1",
+    "1-2": "1/2",
+    "3-4": "3/4",
+    "4-3": "4/3",
+    "9-16": "9/16",
+    "16-9": "16/9",
+);
+
+// Typography
+$base16-14px: 0.875em !default;
+
+// fonts folder emample - static/default/fonts/Poppins-Regular.woff2
+// font mixin - font-faces
+
+$font-brand-primary: 'Poppins';
+$custom-fonts: (
+    "Poppins-Regular":  400,
+    "Poppins-Medium": 500,
+    "Poppins-SemiBold": 600,
+    "Poppins-Bold":     700
+);
+
+$font-druk-wide: 'Druk-Wide';
+$druk-wide-fonts: (
+    "Druk-Wide-Medium": 500
+);
+
+$font-family-base: $font-brand-primary, Helvetica, Arial, sans-serif;
+
+$headline-color:        $c-yd-jet-black;
+$headline-weight:       700;

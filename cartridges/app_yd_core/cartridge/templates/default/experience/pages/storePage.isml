@@ -1,0 +1,14 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/experience/pdStorePage.css');
+    </isscript>
+
+    <div class="storepage pd-components" id="${pdict.page.ID}">
+        <isprint value="${pdict.regions.headerbanner.setClassName("region-headerbanner").render()}" encoding="off" />
+        <isprint value="${pdict.regions.main.setClassName("region-main").render()}" encoding="off" />
+        <isprint value="${pdict.regions.legalnotice.setClassName("region-legalnotice").render()}" encoding="off" />
+    </div>
+</isdecorate>

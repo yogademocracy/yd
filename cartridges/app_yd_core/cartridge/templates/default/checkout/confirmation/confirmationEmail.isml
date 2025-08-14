@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        @media only screen and (max-width:600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .btn {
+                width: 100% !important;
+            }
+
+            .table-data {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+
+            .table-data-stackable {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<isscript>
+    var BG_PAGE  = '#F4F4F4';
+    var BG_CARD  = '#DCE6DD';  // sage
+    var INK_DARK = '#2F493A';  // deep green
+    var INK_BODY = '#111827';  // dark neutral
+    var INK_MUTE = '#6B7280';  // muted neutral
+</isscript>
+
+<body style="margin:0; padding:0; background:${BG_PAGE};">
+    <center role="article" aria-roledescription="email" lang="en" style="width:100%; background:${BG_PAGE};">
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+                <td align="center" style="padding:24px 12px;">
+                    <!-- ====== CONTAINER ====== -->
+                    <table role="presentation" class="container" cellspacing="0" cellpadding="0" border="0" width="600"
+                        style="width:600px; background:#FFFFFF; overflow:hidden;">
+                        <!-- ====== LOGO ====== -->
+                        <isinclude template="checkout/confirmation/email/logo" />
+
+                        <!-- ====== HEADER ====== -->
+                        <isinclude template="checkout/confirmation/email/header" />
+
+                        <!-- ====== DESCRIPTION ====== -->
+                        <isinclude template="checkout/confirmation/email/description" />
+
+                        <!-- ====== ORDER ITEMS ====== -->
+                        <isinclude template="checkout/confirmation/email/orderItems" />
+
+                        <!-- ====== BILLING / SHIPPING ====== -->
+                        <isinclude template="checkout/confirmation/email/billingShipping" />
+
+                        <!-- ====== ORDER SUMMARY ====== -->
+                        <isinclude template="checkout/confirmation/email/orderSummary" />
+
+                        <!-- ====== FOOTER ====== -->
+                        <isinclude template="checkout/confirmation/email/footer" />
+
+                        <!-- ====== FOOTER SOCIAL ====== -->
+                        <iscomment> <isinclude template="checkout/confirmation/email/social" /> </iscomment>
+                    </table>
+                    <!-- /CONTAINER -->
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

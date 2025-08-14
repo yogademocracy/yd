@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "icons";
+    src: url('icons.woff2') format('woff2');
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-account:before {
+    content: "\f101";
+}
+.icon-bars:before {
+    content: "\f102";
+}
+.icon-cart:before {
+    content: "\f103";
+}
+.icon-chevron-left:before {
+    content: "\f104";
+}
+.icon-chevron-right:before {
+    content: "\f105";
+}
+.icon-close:before {
+    content: "\f106";
+}
+.icon-cube:before {
+    content: "\f107";
+}
+.icon-dollar:before {
+    content: "\f108";
+}
+.icon-gift-box:before {
+    content: "\f109";
+}
+.icon-menu:before {
+    content: "\f10a";
+}
+.icon-search:before {
+    content: "\f10b";
+}
+.icon-size-chart:before {
+    content: "\f10c";
+}
+.icon-socials-facebook:before {
+    content: "\f10d";
+}
+.icon-socials-instagram:before {
+    content: "\f10e";
+}
+.icon-socials-pinterest:before {
+    content: "\f10f";
+}
+.icon-socials-tiktok:before {
+    content: "\f110";
+}
+.icon-socials-twitter:before {
+    content: "\f111";
+}

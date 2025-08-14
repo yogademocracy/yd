@@ -1,0 +1,175 @@
+$icons-font: "icons";
+// This file generated automatically. Please do not change it manually.
+// To see the list of available icons - please open the html document cartridges/app_brand_[BRANDNAME]/cartridge/static/default/fonts/icons/icons.html
+// To add new icon please add this icon to the 
+// cartridges/app_brand_[NAME]/cartridge/client/default/svg/icons/ folder
+// (try to keep file naming code style as it will match 1:1 with classname. All lowercased with dashes is preferred)
+// and run the command "npm run icons:[BRANDNAME]" in the terminal.
+// After this the icon font will be generated automatically and
+// will be created class ".icon-[[filename]]" for using this icon like "icon icon-[filename]"
+// and icon variable like $icon-[[filename]] if you need to add this icon manually
+// Please don't use generated code for the icon, because this code can change after the next icon generation
+// After this please build the scss via command "npm run watch", "npm run prod" or "npm run dev".
+
+@font-face {
+    font-family: 'icons';
+    src: url('../fonts/icons/icons.woff2?abw49b') format('woff2');
+}
+
+@mixin icon($icon-code: null) {
+  font-family: 'icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @if $icon-code {
+    &::after {
+      content: $icon-code;
+      display: inline-block;
+    }
+  }
+}
+
+@mixin icon-pseudo($icon-code: null, $pseudo: after) {
+  @if $icon-code {
+    &::#{$pseudo} {
+      font-family: 'icons' !important;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      content: $icon-code;
+      display: inline-block;
+
+      @content;
+    }
+  }
+}
+
+.icon {
+  @include icon;
+}
+
+/*md
+
+# Icons
+
+## Brand custom icon-font (icon.woff2)
+```html_example
+<i class="icon icon-account" style="font-size: 48px"></i>
+<i class="icon icon-bars" style="font-size: 48px"></i>
+<i class="icon icon-cart" style="font-size: 48px"></i>
+<i class="icon icon-chevron-left" style="font-size: 48px"></i>
+<i class="icon icon-chevron-right" style="font-size: 48px"></i>
+<i class="icon icon-close" style="font-size: 48px"></i>
+<i class="icon icon-cube" style="font-size: 48px"></i>
+<i class="icon icon-dollar" style="font-size: 48px"></i>
+<i class="icon icon-gift-box" style="font-size: 48px"></i>
+<i class="icon icon-menu" style="font-size: 48px"></i>
+<i class="icon icon-search" style="font-size: 48px"></i>
+<i class="icon icon-size-chart" style="font-size: 48px"></i>
+<i class="icon icon-socials-facebook" style="font-size: 48px"></i>
+<i class="icon icon-socials-instagram" style="font-size: 48px"></i>
+<i class="icon icon-socials-pinterest" style="font-size: 48px"></i>
+<i class="icon icon-socials-tiktok" style="font-size: 48px"></i>
+<i class="icon icon-socials-twitter" style="font-size: 48px"></i>
+```
+
+*Note: Additionally Font-Awesome can be available for brand*
+
+*/
+
+$icon-account: "\f101"; // file client/default/svg/icons/account.svg
+$icon-bars: "\f102"; // file client/default/svg/icons/bars.svg
+$icon-cart: "\f103"; // file client/default/svg/icons/cart.svg
+$icon-chevron-left: "\f104"; // file client/default/svg/icons/chevron-left.svg
+$icon-chevron-right: "\f105"; // file client/default/svg/icons/chevron-right.svg
+$icon-close: "\f106"; // file client/default/svg/icons/close.svg
+$icon-cube: "\f107"; // file client/default/svg/icons/cube.svg
+$icon-dollar: "\f108"; // file client/default/svg/icons/dollar.svg
+$icon-gift-box: "\f109"; // file client/default/svg/icons/gift-box.svg
+$icon-menu: "\f10a"; // file client/default/svg/icons/menu.svg
+$icon-search: "\f10b"; // file client/default/svg/icons/search.svg
+$icon-size-chart: "\f10c"; // file client/default/svg/icons/size-chart.svg
+$icon-socials-facebook: "\f10d"; // file client/default/svg/icons/socials-facebook.svg
+$icon-socials-instagram: "\f10e"; // file client/default/svg/icons/socials-instagram.svg
+$icon-socials-pinterest: "\f10f"; // file client/default/svg/icons/socials-pinterest.svg
+$icon-socials-tiktok: "\f110"; // file client/default/svg/icons/socials-tiktok.svg
+$icon-socials-twitter: "\f111"; // file client/default/svg/icons/socials-twitter.svg
+
+.icon-account::before {
+    content: $icon-account !important;
+}
+
+.icon-bars::before {
+    content: $icon-bars !important;
+}
+
+.icon-cart::before {
+    content: $icon-cart !important;
+}
+
+.icon-chevron-left::before {
+    content: $icon-chevron-left !important;
+}
+
+.icon-chevron-right::before {
+    content: $icon-chevron-right !important;
+}
+
+.icon-close::before {
+    content: $icon-close !important;
+}
+
+.icon-cube::before {
+    content: $icon-cube !important;
+}
+
+.icon-dollar::before {
+    content: $icon-dollar !important;
+}
+
+.icon-gift-box::before {
+    content: $icon-gift-box !important;
+}
+
+.icon-menu::before {
+    content: $icon-menu !important;
+}
+
+.icon-search::before {
+    content: $icon-search !important;
+}
+
+.icon-size-chart::before {
+    content: $icon-size-chart !important;
+}
+
+.icon-socials-facebook::before {
+    content: $icon-socials-facebook !important;
+}
+
+.icon-socials-instagram::before {
+    content: $icon-socials-instagram !important;
+}
+
+.icon-socials-pinterest::before {
+    content: $icon-socials-pinterest !important;
+}
+
+.icon-socials-tiktok::before {
+    content: $icon-socials-tiktok !important;
+}
+
+.icon-socials-twitter::before {
+    content: $icon-socials-twitter !important;
+}
+

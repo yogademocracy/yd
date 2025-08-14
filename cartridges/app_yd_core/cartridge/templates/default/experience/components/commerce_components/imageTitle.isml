@@ -1,0 +1,35 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<isinclude template="/components/modules" />
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerce_components/imageTitle.css');
+</isscript>
+
+<div class="c-image-title ${pdict.wrapperCSSClasses || ''}">
+    <isif condition="${!empty(pdict.link)}">
+        <a class="c-image-title__link" href="${pdict.link}">
+            <ispicturetag
+                desktop_src="${pdict.imageTitle_imgDesktop && pdict.imageTitle_imgDesktop.srcset.desktop}"
+                mobile_src="${pdict.imageTitle_imgMobile && pdict.imageTitle_imgMobile.srcset.mobile}"
+                image_pd_desktop="${pdict.imgDesktop}"
+                image_pd_mobile="${pdict.imgMobile}"
+                picture_class="c-image-title__image"
+                img_class="${pdict.imgClass}"
+                alt="${pdict.imgAlt}"
+            />
+            <p class="h5 c-image-title__text"><isprint value="${pdict.title || ''}" encoding="on" /></p>
+        </a>
+    <iselse/>
+        <ispicturetag
+            desktop_src="${pdict.imageTitle_imgDesktop && pdict.imageTitle_imgDesktop.srcset.desktop}"
+            mobile_src="${pdict.imageTitle_imgMobile && pdict.imageTitle_imgMobile.srcset.mobile}"
+            image_pd_desktop="${pdict.imgDesktop}"
+            image_pd_mobile="${pdict.imgMobile}"
+            picture_class="c-image-title__image"
+            img_class="${pdict.imgClass}"
+            alt="${pdict.imgAlt}"
+        />
+        <p class="h5 c-image-title__text"><isprint value="${pdict.title || ''}" encoding="on" /></p>
+    </isif>
+</div>

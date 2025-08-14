@@ -1,0 +1,103 @@
+<tr>
+    <td class="table-data" style="padding:0 24px 4px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <!-- Billing -->
+                <td width="50%" class="table-data-stackable" style="vertical-align:top; padding:0 12px 16px;">
+                    <div
+                        style="font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif; font-size:18px; line-height:24px; color:#111827; margin:0 0 8px;">
+                        ${Resource.msg('label.email.billing.information', 'confirmation', null)}</div>
+                    <div style="height:1px; background:#E5E7EB; margin:0 0 8px;"></div>
+
+                    <div
+                        style="font-family: Inter, Helvetica, Arial, sans-serif; font-size:14px; line-height:22px; color:#374151;">
+                        <span style="text-transform: uppercase; font-size:12px;">${Resource.msg('label.email.billing.address', 'confirmation', null)}</span>
+                        <br />
+                        <isset name="address" value="${pdict.order.billing.billingAddress.address}" scope="page" />
+                        <div
+                            style="font-family: Inter, Helvetica, Arial, sans-serif; line-height:22px; color:#374151;">
+                            <isinclude template="checkout/confirmation/email/addressSummary" />
+                        </div>
+                        <br />
+                        <span style="text-transform: uppercase; font-size:12px;">${Resource.msg('label.email.payment.method', 'confirmation', null)}</span>
+                        <!--- Payment information --->
+                        <div>
+                            <div>
+                                <isloop items="${pdict.order.billing.payment.selectedPaymentInstruments}" var="payment">
+                                    <isif condition="${payment.paymentMethod === 'CREDIT_CARD'}">
+                                        <div>
+                                            <span>${Resource.msg('msg.payment.type.credit', 'confirmation', null)}
+                                                ${payment.type}
+                                            </span>
+                                        </div>
+                                        <div>
+                                            ${payment.maskedCreditCardNumber}
+                                        </div>
+                                        <div>
+                                            <span>${Resource.msg('msg.card.type.ending', 'confirmation', null)}
+                                                ${payment.expirationMonth}/${payment.expirationYear}</span>
+                                        </div>
+                                    <iselseif condition="${payment.paymentMethod === 'DW_GOOGLE_PAY'}">
+                                            <div>
+                                                ${dw.order.PaymentMgr.getPaymentMethod(payment.paymentMethod).getName()}
+                                            </div>
+                                            <div>
+                                                <span>${Resource.msg('msg.payment.type.credit', 'confirmation', null)}
+                                                    ${payment.type}
+                                                </span>
+                                            </div>
+                                            <div>
+                                                ${payment.maskedCreditCardNumber}
+                                            </div>
+                                        <iselseif condition="${payment.paymentMethod === 'GIFT_CERTIFICATE'}">
+                                                <div>
+                                                    ${Resource.msg('msg.payment.type.gift.certificate', 'confirmation', null)}
+                                                </div>
+                                                <div>
+                                                    ${payment.maskedGiftCertificateCode}
+                                                </div>
+                                    </isif>
+                                </isloop>
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+
+                <!-- Shipping -->
+                <td width="50%" class="table-data-stackable" style="vertical-align:top; padding:0 12px 16px;">
+                    <div
+                        style="font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif; font-size:18px; line-height:24px; color:#111827; margin:0 0 8px;">
+                        ${Resource.msg('label.email.shipping.address', 'confirmation', null)}</div>
+                    <div style="height:1px; background:#E5E7EB; margin:0 0 8px;"></div>
+
+                    <!--- Shipping Address --->
+                    <isloop items="${pdict.order.shipping}" var="shippingModel" status="shippingLoop">
+                        <isset name="address" value="${shippingModel.shippingAddress}" scope="page" />
+                        <div
+                            style="font-family: Inter, Helvetica, Arial, sans-serif; font-size:14px; line-height:22px; color:#374151;">
+                            <isinclude template="checkout/confirmation/email/addressSummary" />
+                        </div>
+                        <br />
+                        <p>
+                            <span style="text-transform: uppercase; font-size:12px;">${Resource.msg('label.email.shipping.method', 'confirmation', null)}</span>
+                            <br /> ${shippingModel.selectedShippingMethod.displayName}
+                            <isif condition="${shippingModel.selectedShippingMethod.estimatedArrivalTime}">
+                                (${shippingModel.selectedShippingMethod.estimatedArrivalTime})
+                            </isif>
+                        </p>
+
+                        <isif condition="${shippingModel.isGift}">
+                            <p>
+                                <strong>
+                                    ${Resource.msg('heading.gift.message', 'checkout', null)}
+                                </strong>
+                                ${shippingModel.giftMessage}
+                            </p>
+                        </isif>
+                    </isloop>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>

@@ -2,6 +2,7 @@ import './thirdParty/jquery';
 import './slider/initSlider';
 import 'base/thirdParty/bootstrap';
 import './components/spinner';
+import './components/imageZoom';
 
 import processInclude from 'base/util';
 
@@ -14,7 +15,9 @@ import search from 'base/components/search';
 import clientSideValidation from 'base/components/clientSideValidation';
 import countrySelector from 'base/components/countrySelector';
 import toolTip from 'base/components/toolTip';
-import miniCart from 'base/components/miniCart';
+import customModal from './components/customModal';
+import miniCart from './components/miniCart';
+import gtm from 'gtm/gtm/gtm';
 
 $(document).ready(() => {
     processInclude(menu);
@@ -27,5 +30,7 @@ $(document).ready(() => {
     processInclude(clientSideValidation);
     processInclude(countrySelector);
     processInclude(toolTip);
+    processInclude(customModal);
+    processInclude(gtm);
 });
 

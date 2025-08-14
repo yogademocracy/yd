@@ -1,0 +1,19 @@
+<div>
+    ${Resource.msg('label.order.details.shipping.shipto', 'orderDetails', null)}
+</div>
+<div>
+    ${fulfilledToAddress.firstName} ${fulfilledToAddress.lastName}
+</div>
+<div>
+    ${fulfilledToAddress.street},
+    ${fulfilledToAddress.city} ${fulfilledToAddress.state} ${fulfilledToAddress.postalCode}
+</div>
+
+<isif condition="${groupedItem.shipments.length > 0}">
+    <isloop items="${groupedItem.shipments}" var="shipment">
+        <isif condition="${shipment.trackingNumber}">
+            ${Resource.msg('label.order.details.shipping.trackingnumber', 'orderDetails', null)}
+            ${shipment.trackingNumber}<br/>
+        </isif>
+    </isloop>
+</isif>

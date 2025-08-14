@@ -1,0 +1,17 @@
+{
+    "guideSrc": "./cartridges/app_yd_core/cartridge/client/default/scss/",
+    "guideDest": "./cartridges/app_yd_core/cartridge/static/default/styleguide/guide/",
+    "cssSrc": "./cartridges/app_yd_core/cartridge/static/default/",
+    "scssSrc": "./cartridges/app_yd_core/cartridge/client/default/scss/",
+    "createDestFolder": true,
+    "partials": {
+        "assetshead": "./cartridges/app_yd_core/cartridge/static/default/styleguide/project-head.mustache"
+    },
+    "projectConstants": {
+        "constantsSrc": ["./cartridges/app_yd_core/cartridge/client/default/scss/01_settings/_variables.scss"],
+        "colorPrefix": "c-"
+    },
+    "projectInfo": {
+        "name": "yd"
+    }
+}

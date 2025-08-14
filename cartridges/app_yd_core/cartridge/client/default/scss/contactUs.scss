@@ -1,0 +1,15 @@
+@import "base/components/toastMessage";
+
+.contact-us-banner {
+    background-position-y: 20%;
+}
+
+.contact-us-signup-message {
+    @include toast-message;
+
+    top: 25%;
+}
+
+.contact-us-signup-alert {
+    @include toast-alert;
+}

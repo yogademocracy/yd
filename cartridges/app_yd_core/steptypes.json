@@ -1,6 +1,68 @@
 {
     "step-types": {
         "script-module-step": [
+            {
+                "@type-id": "custom.ShipStationInventory",
+                "description": "Retrieve inventory from ShipStation API. Import inventory file.",
+                "module": "app_yd_core/cartridge/scripts/jobs/shipStationInventory",
+                "@supports-parallel-execution": "false",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "function": "execute",
+                "transactional": "false",
+                "parameters": {
+                    "parameters": [
+                        {
+                            "@name": "IsDisabled",
+                            "description": "Mark the step as disabled. This will skip the step and returns a OK status",
+                            "@type": "boolean",
+                            "@required": false,
+                            "@trim": true,
+                            "default-value": "false"
+                        },
+                        {
+                            "@name": "StorefrontCatalogID",
+                            "description": "Storefront catalog ID.",
+                            "@type": "string",
+                            "@required": false,
+                            "@trim": true,
+                            "default-value": "yd-categories"
+                        },
+                        {
+                            "@name": "SiteInventoryID",
+                            "description": "Site inventory list ID.",
+                            "@type": "string",
+                            "@required": false,
+                            "@trim": true,
+                            "default-value": "yd-inventory"
+                        },
+                        {
+                            "@name": "InventoryFilename",
+                            "description": "New inventory file name.",
+                            "@type": "string",
+                            "@required": false,
+                            "@trim": true,
+                            "default-value": "yd-inventory.xml"
+                        }
+                    ]
+                },
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        },
+                        {
+                            "@code": "WARN",
+                            "description": "Used when small, but acceptable problems occurred."
+                        }
+                    ]
+                }
+            }
         ]
     }
 }

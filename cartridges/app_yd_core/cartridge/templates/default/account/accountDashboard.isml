@@ -1,0 +1,23 @@
+<isdecorate template="common/layout/page">
+
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+
+    <div class="container">
+        <div class="row">
+            <h1 class="page-title text-jet-black">${Resource.msg('page.heading.dashboard','account',null)}</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <!---Breadcrumbs--->
+        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+        <isinclude template="account/dashboardProfileCards"/>
+        <div class="row">
+            <div class="col-12 mb-3">
+                <a class="btn btn-secondary" href="${URLUtils.url('Login-Logout')}">${Resource.msg('link.header.logout', 'account', null)}</a>
+            </div>
+        </div>
+    </div>
+</isdecorate>

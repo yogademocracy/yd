@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site xmlns="http://www.demandware.com/xml/impex/site/2007-04-30" site-id="yoga-democracy-b2c">
+    <name>Yoga Democracy B2C</name>
+    <currency>USD</currency>
+    <taxation>net</taxation>
+    <custom-cartridges>app_yd_core:plugin_gtm:plugin_giftcard:int_cybs_sfra:int_cybs_sfra_base:plugin_dis:plugin_sitemap:app_storefront_base_ext:app_storefront_base</custom-cartridges>
+    <storefront-status>protected</storefront-status>
+    <storefront-password>$s0$b0401$9NHCVR+J968pjVakf4wERw==$BYzs7jKDpXeqwwPeypSos5GPmlCo7fxme5W/x69oZm0=</storefront-password>
+</site>
+

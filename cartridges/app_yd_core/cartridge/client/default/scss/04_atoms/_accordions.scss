@@ -1,0 +1,112 @@
+/* stylelint-disable-next-line */
+/*md
+
+## Accordion (.accordion)
+
+### Standard Accordion
+
+```html_example
+<div class="accordion" id="accordionExample">
+    <div class="accordion__card">
+        <div class="accordion__card-header" id="headingOne">
+            <a class="accordion__card-title" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <span>First Description</span>
+            </a>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="accordion__card-body">
+                <p>Introducing our Original Bell, the ultimate blend of fitness and fashion. Crafted to effortlessly transition from yoga sessions to brunch dates to laid-back Sundays, these bell bottoms are a staple for any wardrobe. Embrace the fusion of vintage charm and contemporary design with these versatile and stylish bell bottoms.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion__card">
+        <div class="accordion__card-header" id="headingTwo">
+            <a class="accordion__card-title" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <span>Second Description</span>
+            </a>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="accordion__card-body">
+                <p>Introducing our Original Bell, the ultimate blend of fitness and fashion. Crafted to effortlessly transition from yoga sessions to brunch dates to laid-back Sundays, these bell bottoms are a staple for any wardrobe. Embrace the fusion of vintage charm and contemporary design with these versatile and stylish bell bottoms.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion__card">
+        <div class="accordion__card-header" id="headingThird">
+            <a class="accordion__card-title" type="button" data-toggle="collapse" data-target="#collapseThird" aria-expanded="false" aria-controls="collapseThird">
+                <span>Third Description</span>
+            </a>
+        </div>
+        <div id="collapseThird" class="collapse" aria-labelledby="headingThird" data-parent="#accordionExample">
+            <div class="accordion__card-body">
+                <p>Introducing our Original Bell, the ultimate blend of fitness and fashion. Crafted to effortlessly transition from yoga sessions to brunch dates to laid-back Sundays, these bell bottoms are a staple for any wardrobe. Embrace the fusion of vintage charm and contemporary design with these versatile and stylish bell bottoms.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+```
+
+*/
+
+.accordion {
+    border-top: rem(1) solid $c-yd-silver-gray;
+
+    &__card {
+        border-bottom: rem(1) solid $c-yd-silver-gray;
+    }
+
+    &__card-header {
+        padding: rem(15) 0;
+    }
+
+    &__card-title {
+        display: flex;
+        font-size: rem(16);
+        color: $c-yd-jet-black;
+        font-weight: $font-weight-semibold;
+        padding-right: rem(30);
+        position: relative;
+
+        @include hover-and-focus {
+            color: $c-yd-jet-black;
+        }
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: $c-yd-jet-black;
+        }
+
+        &::after {
+            top: 50%;
+            right: rem(-7);
+            transform: translate(-50%,-50%);
+            width: rem(16);
+            height: rem(1);
+        }
+
+        &::before {
+            top: 50%;
+            right: rem(8);
+            transform: translate(-50%,-50%);
+            width: rem(1);
+            height: rem(16);
+        }
+
+        &[aria-expanded="true"]::before {
+            display: none;
+        }
+    }
+
+    &__card-toggle {
+        display: block;
+        width: rem(15);
+        height: 100%;
+    }
+
+    &__card-body {
+        padding-bottom: rem(20);
+    }
+}

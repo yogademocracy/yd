@@ -1,0 +1,66 @@
+{
+    "name": "Atom: Picture",
+    "group": "commerce_atoms",
+    "attribute_definition_groups": [
+        {
+            "id": "common",
+            "name": "Common attributes",
+            "attribute_definitions": [
+                {
+                    "id": "wrapperCSSClasses",
+                    "name": "CSS helper classes for the wrapper",
+                    "description": "Please use any Bootstrap helpers (https://getbootstrap.com/docs/4.6/utilities/) for top/bottom paddings, margins for banner etc (i.e. 'mb-2 mb-lg-0')",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "picture",
+            "name": "Picture",
+            "description": "Apply images here. Different aspect ratio images can be assigned for desktop and mobile views",
+            "attribute_definitions": [
+                {
+                    "id": "atomPicture_imgDesktop",
+                    "name": "Desktop (default) Image",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "atomPicture_imgMobile",
+                    "name": "Mobile Image",
+                    "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "imgAlt",
+                    "name": "Image Alt text",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "maxWidth",
+                    "name": "Max width (px, %)",
+                    "description": "Please specify number with units (i.e. '240px', '25%')",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "maxWidthMobile",
+                    "name": "Max width (Mobile) (px, %)",
+                    "description": "Please specify number with units (i.e. '240px', '25%')",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "disableLazyload",
+                    "name": "Disable Lazy Loading of image",
+                    "description": "Normally should be checked (=disabled) if image component is the top-most when page is loaded (top banners etc) to improve LCP performance metrics",
+                    "type": "boolean",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

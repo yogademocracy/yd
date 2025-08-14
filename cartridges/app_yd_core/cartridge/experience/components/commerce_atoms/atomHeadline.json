@@ -1,0 +1,42 @@
+{
+    "name": "Atom: Headline",
+    "group": "commerce_atoms",
+    "attribute_definition_groups": [
+        {
+            "id": "common",
+            "name": "Common attributes",
+            "attribute_definitions": [
+                {
+                    "id": "contentCSSClasses",
+                    "name": "CSS helper classes for content",
+                    "description": "Please use any Bootstrap helpers (https://getbootstrap.com/docs/4.6/utilities/) for top\bottom paddings, margins for banner etc (i.e. 'mb-2 mb-lg-0')",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "cta",
+            "name": "Headline",
+            "description": "Configure Headline. Can contain basic html markup i.e. for colors etc: '<strong class=\"text-primary\">1 million+ candidates</strong> have prepared with Yoga Democracy'",
+            "attribute_definitions": [
+                {
+                    "id": "title",
+                    "name": "Title",
+                    "type": "text",
+                    "required": true
+                },
+                {
+                    "id": "tag",
+                    "name": "Tag to use",
+                    "description": "This should follow SEO best practices",
+                    "type": "enum",
+                    "values": ["h1", "h2", "h3", "h4", "h5", "h6"],
+                    "default_value": "h2",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

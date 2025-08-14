@@ -1,0 +1,5 @@
+<footer id="footercontent">
+    <iscontentasset aid="footer-promos" />
+    <iscontentasset aid="footer-navigation" />
+    <iscontentasset aid="footer-copyright-payment" />
+</footer>

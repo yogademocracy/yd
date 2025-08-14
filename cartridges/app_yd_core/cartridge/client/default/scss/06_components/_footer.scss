@@ -1,0 +1,125 @@
+#footercontent {
+    margin-top: rem(40);
+}
+
+.footer-nav {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+
+    &__link {
+        font-size: rem(15);
+        color: $c-yd-jet-black;
+
+        .icon {
+            font-size: rem(24);
+        }
+    }
+
+    .footer-col {
+        margin-bottom: rem(40);
+
+        &__title {
+            color: $c-yd-jet-black;
+            font-weight: normal;
+            margin-bottom: rem(20);
+        }
+
+        &__text {
+            font-size: rem(15);
+            color: $c-yd-jet-black;
+            margin-bottom: rem(30);
+        }
+
+        &__links {
+            padding: 0;
+            margin: 0;
+        }
+
+        &__link-wrapper {
+            margin-bottom: rem(8);
+            list-style: none;
+        }
+
+        &__text-limited {
+            @include media-breakpoint-up(md) {
+                max-width: 75%;
+            }
+        }
+    }
+
+    .footer-col:last-child {
+        margin-bottom: rem(0);
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: rem(50);
+        }
+    }
+
+    .footer-banner {
+        &__link {
+            color: $c-yd-jet-black;
+            font-size: rem(22);
+            margin: 0 rem(10) rem(5) 0;
+
+            @include hover-and-focus {
+                color: $c-yd-steel-gray;
+            }
+        }
+
+        &__image-wrapper {
+            margin-bottom: 20px;
+        }
+
+        &__image {
+            width: rem(170);
+        }
+    }
+
+}
+
+.footer-promos {
+    background: $c-yd-warm-beige;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    border-bottom: 1px solid $c-yd-silver-gray;
+
+    .icon-with-caption {
+        color: $c-yd-jet-black;
+
+        &__icon {
+            font-size: rem(24);
+        }
+
+        &__text {
+            font-size: rem(17);
+        }
+
+        &__link {
+            @include hover-and-focus {
+                color: $c-yd-steel-gray;
+            }
+        }
+    }
+}
+
+.footer-copyright-payment {
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    &__text {
+        font-size: 12px;
+        line-height: 1.4em;
+    }
+
+    &__link {
+        @include hover-and-focus {
+            color: $c-yd-steel-gray;
+        }
+    }
+
+    &__icon {
+        margin: 0 rem(3) rem(8);
+        width: auto;
+        height: rem(25);
+    }
+}

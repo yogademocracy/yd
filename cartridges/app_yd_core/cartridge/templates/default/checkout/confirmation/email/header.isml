@@ -1,0 +1,55 @@
+<tr>
+    <td style="background:${BG_CARD}; padding:28px 28px 24px; border-bottom:1px solid #E5E7EB;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+            style="background:${BG_CARD};">
+            <tr>
+                <td align="center"
+                    style="font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif; color:${INK_DARK};">
+                    <div style="font-size:44px; line-height:52px; margin:0 0 8px;">
+                        <isprint value="${Resource.msg('msg.email.get.excited', 'confirmation', null)}"
+                            encoding="off" />
+                    </div>
+                    <div
+                        style="font-family: Inter, Helvetica, Arial, sans-serif; text-transform:uppercase; letter-spacing:.06em; font-weight:700; font-size:14px; line-height:20px; color:${INK_DARK}; opacity:.8;">
+                        ${Resource.msg('msg.email.comfort.excited', 'confirmation', null)}
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Dots indicator (no timeline line) -->
+            <tr>
+                <td align="center" style="padding:20px 0 0;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <!-- ordered -->
+                            <td align="center" width="33%">
+                                <span
+                                    style="display:inline-block; width:14px; height:14px; border-radius:50%; background: ${INK_DARK};"></span>
+                                <div
+                                    style="margin-top:10px; font-family: Georgia, 'Times New Roman', Times, serif; font-size:16px; line-height:22px; color:${INK_DARK};">
+                                    ${Resource.msg('label.order.status.ordered', 'confirmation', null)}</div>
+                            </td>
+                            <!-- shipped -->
+                            <td align="center" width="33%">
+                                <span
+                                    style="display:inline-block; width:14px; height:14px; border-radius:50%; ; background:#FFFFFF; border:2px solid ${INK_DARK};"></span>
+                                <div
+                                    style="margin-top:10px; font-family: Georgia, 'Times New Roman', Times, serif; font-size:16px; line-height:22px; color:${INK_DARK};">
+                                    ${Resource.msg('label.order.status.shipped', 'confirmation', null)}</div>
+                            </td>
+                            <!-- delivered -->
+                            <td align="center" width="33%">
+                                <span
+                                    style="display:inline-block; width:14px; height:14px; border-radius:50%; background:#FFFFFF; border:2px solid ${INK_DARK};"></span>
+                                <div
+                                    style="margin-top:10px; font-family: Georgia, 'Times New Roman', Times, serif; font-size:16px; line-height:22px; color:${INK_DARK};">
+                                    ${Resource.msg('label.order.status.delivered', 'confirmation', null)}</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+    </td>
+</tr>

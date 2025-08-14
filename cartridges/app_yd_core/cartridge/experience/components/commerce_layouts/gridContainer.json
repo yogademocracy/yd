@@ -1,0 +1,101 @@
+{
+    "name": "Grid container",
+    "description": "Applies container that supports grid layout with multiple columns (if needed)",
+    "group": "commerce_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "common",
+            "name": "Common attributes",
+            "attribute_definitions": [
+                {
+                    "id": "wrapperCSSClasses",
+                    "name": "CSS helper classes for the wrapper",
+                    "description": "Please use any Bootstrap helpers (https://getbootstrap.com/docs/4.6/utilities/) for top/bottom paddings, margins for banner etc (i.e. 'mb-2 mb-lg-0')",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "contentCSSClasses",
+                    "name": "CSS helper classes for the content",
+                    "description": "Please use any Bootstrap helpers (https://getbootstrap.com/docs/4.6/utilities/) for top/bottom paddings, margins for banner etc (i.e. 'mb-2 mb-lg-0')",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "container",
+            "name": "Container & Content settings",
+            "attribute_definitions": [
+                {
+                    "id": "containerWidth",
+                    "name": "Container width",
+                    "description": "Please specify Container max-width (by default - u-site-width)",
+                    "type": "enum",
+                    "values": ["full-width", "site-container", "u-site-width-xxl", "u-site-width-xl", "u-site-width-lg", "u-site-width-md", "u-site-width-sm"],
+                    "default_value": "u-site-width-xxl",
+                    "required": false
+                },
+                {
+                    "id": "contentWidth",
+                    "name": "Inner content width",
+                    "description": "Please specify content columns width (by default - 12 columns or full container width)",
+                    "type": "enum",
+                    "values": ["12-columns width", "10-columns width", "8-columns width", "6-columns width"],
+                    "default_value": "12-columns width",
+                    "required": false
+                },
+                {
+                    "id": "columnsWidthConfig",
+                    "name": "Columns width config (by default: all equal width)",
+                    "description": "Specify string in format X Y ... N where each number is column width (0..12). Use spacebar as delimiter. Note - all column width in total should not exceed 12. Sample: '4 6' (2 columns, first one is narrower). If no config is applied - column width will be equal for all columns",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "decoration",
+            "name": "Decoration options",
+            "attribute_definitions": [
+                {
+                    "id": "containerBgColor",
+                    "name": "Container Background color",
+                    "description": "Hexadecimal color code (ex: #f9e9ee)",
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    },
+                    "required": false
+                },
+                {
+                    "id": "contentBgColor",
+                    "name": "Content Background color",
+                    "description": "Hexadecimal color code (ex: #f9e9ee)",
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    },
+                    "required": false
+                },
+                {
+                    "id": "textColor",
+                    "name": "Text color",
+                    "description": "Hexadecimal color code (ex: #000000)",
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    },
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id": "columns",
+            "name": "Columns",
+            "max_components": 6
+        }
+    ]
+}

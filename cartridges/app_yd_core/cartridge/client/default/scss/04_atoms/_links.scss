@@ -1,0 +1,25 @@
+/* stylelint-disable-next-line */
+/*md
+
+## Links
+
+### Standard inline link
+
+```html_example
+<p>Long text with <a href="#" class="">some link</a> inside</p>
+```
+### Styled-link (.a-link-dark)
+
+```html_example
+<a href="#" class="a-link-dark">footer example link</a>
+```
+
+*/
+
+.a-link-dark {
+    color: $c-yd-jet-black;
+
+    @include hover-and-focus {
+        color: rgba($c-yd-jet-black, .75);
+    }
+}
