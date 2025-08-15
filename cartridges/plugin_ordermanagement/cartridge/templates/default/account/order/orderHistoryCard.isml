@@ -1,4 +1,6 @@
 <div class="card">
+    <isset name="somPreferences" value="${require('*/cartridge/config/somPreferences')}" scope="page"/>
+
     <isif condition="${pdict.orderCardContext === 'account'}">
         <div class="card-header clearfix">
             <h2 class="pull-left">${Resource.msg('label.orderhistory','account',null)}</h2>
