@@ -82,7 +82,7 @@ function processRecord(record, columnIndexes) {
  * @param {object} record - attributes object from file
  */
 function getStatus(record) {
-    var balance = record.balance ? parseInt(record.balance, 10) : 0;
+    var balance = record.balance ? Number(record.balance) : 0;
 
     if (empty(record.email)) {
         return 'PENDING';

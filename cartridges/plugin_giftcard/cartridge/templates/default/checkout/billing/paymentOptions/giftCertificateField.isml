@@ -7,7 +7,7 @@
                     <div class="gift-cert-wrapper"
                         data-missing-error="${Resource.msg('error.missing', 'giftcard', null)}">
                         <input type="hidden" class="payment-method"
-                            name="${pdict.forms.billingForm.paymentMethod.htmlName}" value="${paymentOption.ID}" />
+                            name="${pdict.forms.billingForm.paymentMethod.htmlName}" value="GIFT_CERTIFICATE" />
                         <input type="text" class="form-control giftCertCode" id="giftCert"
                             aria-describedby="giftCertInvalidMessage"
                             placeholder="${Resource.msg('billing.entercode', 'giftcard', null)}" <isprint

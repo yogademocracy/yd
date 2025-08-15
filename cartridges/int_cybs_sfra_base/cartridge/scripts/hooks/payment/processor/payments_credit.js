@@ -250,7 +250,6 @@ function Authorize(orderNumber, paymentInstrument, paymentProcessor) {
     var order = OrderMgr.getOrder(orderNumber);
     var billingAddress = order.billingAddress;
     var shippingAddress = order.shipments[0].shippingAddress;
-    var paymentInstrumentAmount = paymentInstrument.paymentTransaction.amount
     var paymentForm = server.forms.getForm('billing');
     // eslint-disable-next-line no-shadow
     var mapper = require('~/cartridge/scripts/util/mapper.js');
@@ -273,7 +272,7 @@ function Authorize(orderNumber, paymentInstrument, paymentProcessor) {
     try {
         // process authorization
         var lineItems = mapper.MapOrderLineItems(order.allLineItems, true);
-        var result = payments.httpAuthorizeWithToken(card, customerEmail, orderNumber, paymentInstrumentAmount.value, currencyCode, billingAddress, shippingAddress, lineItems);
+        var result = payments.httpAuthorizeWithToken(card, customerEmail, orderNumber, paymentInstrument, currencyCode, billingAddress, shippingAddress, lineItems);
 
         Transaction.wrap(function () {
             // eslint-disable-next-line no-undef

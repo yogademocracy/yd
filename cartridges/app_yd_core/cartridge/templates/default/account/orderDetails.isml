@@ -5,6 +5,8 @@
         assets.addCss('/css/account/profile.css');
     </isscript>
 
+    <isset name="somPreferences" value="${require('*/cartridge/config/somPreferences')}" scope="page"/>
+
     <div class="container">
         <div class="row">
             <h1 class="page-title text-jet-black">${Resource.msg('heading.order.details','order',null)}</h1>
