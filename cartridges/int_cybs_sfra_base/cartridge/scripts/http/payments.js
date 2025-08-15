@@ -18,7 +18,7 @@ var Constants = require('*/cartridge/apiClient/constants');
  * @param {*} lineItems *
  * @returns {*} *
  */
-function httpAuthorizeWithToken(cardData, customerEmail, referenceInformationCode, total, currency, billingAddress, shippingAddress, lineItems) {
+function httpAuthorizeWithToken(cardData, customerEmail, referenceInformationCode, paymentInstrument, currency, billingAddress, shippingAddress, lineItems) {
     /* eslint-disable block-scoped-var */
     /* eslint-disable no-undef */
     var configObject = require('../../configuration/index');
@@ -31,6 +31,7 @@ function httpAuthorizeWithToken(cardData, customerEmail, referenceInformationCod
 
     var clientReferenceInformation = new cybersourceRestApi.Ptsv2paymentsClientReferenceInformation();
     clientReferenceInformation.code = referenceInformationCode;
+    var total = paymentInstrument.paymentTransaction.amount;
 
     var deviceSessionId = new cybersourceRestApi.Ptsv2paymentsDeviceInformation();
     deviceSessionId.fingerprintSessionId = session.privacy.dfID;
@@ -98,12 +99,12 @@ function httpAuthorizeWithToken(cardData, customerEmail, referenceInformationCod
 
     var OrderMgr = require('dw/order/OrderMgr');
     var order = OrderMgr.getOrder(referenceInformationCode);
-    if (order.paymentInstruments[0].paymentMethod === 'DW_GOOGLE_PAY') {
+    if (paymentInstrument.paymentMethod === 'DW_GOOGLE_PAY') {
         if (dw.system.Site.getCurrent().getCustomPreferenceValue('Cybersource_GooglePayTransactionType').value === 'sale' ) {
             request.processingInformation.capture = true;
         }
     }  
-    if (order.paymentInstruments[0].paymentMethod === 'CREDIT_CARD') {
+    if (paymentInstrument.paymentMethod === 'CREDIT_CARD') {
         if (dw.system.Site.getCurrent().getCustomPreferenceValue('Cybersource_CardTransactionType').value === 'sale' ) {
             request.processingInformation.capture = true;
         }
