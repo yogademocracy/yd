@@ -18,7 +18,6 @@ function updatePLIAttibutes(product, productLineItem, quantity) {
         Transaction.wrap(function () {
             try {
                 productLineItem.custom.weight = product.custom.weightGrams;
-                productLineItem.custom.weightUnit = 'grams';
                 productLineItem.custom.weightTotal = product.custom.weightGrams * quantity;
             } catch(e) {
                 //

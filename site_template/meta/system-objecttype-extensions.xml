@@ -2958,23 +2958,16 @@
                 <min-length>0</min-length>
             </attribute-definition>
             <attribute-definition attribute-id="weight">
-                <display-name xml:lang="x-default">Weight</display-name>
+                <display-name xml:lang="x-default">Weight Grams</display-name>
                 <type>double</type>
                 <mandatory-flag>false</mandatory-flag>
                 <externally-managed-flag>false</externally-managed-flag>
             </attribute-definition>
             <attribute-definition attribute-id="weightTotal">
-                <display-name xml:lang="x-default">Weight Total</display-name>
+                <display-name xml:lang="x-default">Weight Grams Total</display-name>
                 <type>double</type>
                 <mandatory-flag>false</mandatory-flag>
                 <externally-managed-flag>false</externally-managed-flag>
-            </attribute-definition>
-            <attribute-definition attribute-id="weightUnit">
-                <display-name xml:lang="x-default">Weight Unit</display-name>
-                <type>string</type>
-                <mandatory-flag>false</mandatory-flag>
-                <externally-managed-flag>false</externally-managed-flag>
-                <min-length>0</min-length>
             </attribute-definition>
         </custom-attribute-definitions>
         <group-definitions>
@@ -2982,7 +2975,6 @@
                 <display-name xml:lang="x-default">Weights</display-name>
                 <attribute attribute-id="weight"/>
                 <attribute attribute-id="weightTotal"/>
-                <attribute attribute-id="weightUnit"/>
             </attribute-group>
         </group-definitions>
     </type-extension>
