@@ -1,0 +1,15 @@
+<isdecorate template="common/layout/page">
+
+    <div class="container text-center my-5 py-5">
+        <h1 class="display-4 fw-semibold mb-4">${Resource.msg('heading.error.general', 'error', null)}</h1>
+        <p class="lead text-muted mt-3 text-jet-black">
+            <isprint value="${Resource.msgf(
+                'message.page.not.found',
+                'error',
+                null,
+                URLUtils.url('Home-Show'),
+                URLUtils.url('Search-Show')
+            )}" encoding="off"/>
+        </p>
+    </div>
+</isdecorate>
