@@ -8,7 +8,7 @@
         </p>
 
         <p style="margin:0 0 12px; font-size:15px; line-height:24px; color:#111827;">
-            ${Resource.msg('msg.email.order.info', 'confirmation', null)}
+            ${Resource.msgf('msg.email.order.info', 'confirmation', null, pdict.order.orderNumber)}
         </p>
 
         <p style="margin:0; font-size:15px; line-height:24px; color:#111827;">
