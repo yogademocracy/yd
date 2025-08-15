@@ -26,7 +26,7 @@
 <div class="container site-container search-results">
     <div class="search-nav">
         <isif condition="${!pdict.productSearch.isCategorySearch}">
-            <div class="nav-tabs-wrapper">
+            <iscomment> <div class="nav-tabs-wrapper">
                 <ul class="nav nav-tabs nav-fill" role="tablist">
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active product-search" href="#product-search-results" aria-controls="product-search-results" data-toggle="tab" role="tab" aria-selected="true" id="product-tab">
@@ -40,7 +40,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </div> </iscomment>
         </isif>
     </div>
     <div class="row">
