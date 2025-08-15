@@ -11,7 +11,7 @@ var Constants = require('*/cartridge/apiClient/constants');
  * @param {*} cardData *
  * @param {*} customerEmail *
  * @param {*} referenceInformationCode *
- * @param {*} total *
+ * @param {*} paymentInstrument *
  * @param {*} currency *
  * @param {*} billingAddress *
  * @param {*} shippingAddress *
