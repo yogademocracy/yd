@@ -31,7 +31,7 @@ function httpAuthorizeWithToken(cardData, customerEmail, referenceInformationCod
 
     var clientReferenceInformation = new cybersourceRestApi.Ptsv2paymentsClientReferenceInformation();
     clientReferenceInformation.code = referenceInformationCode;
-    var total = paymentInstrument.paymentTransaction.amount;
+    var total = paymentInstrument.paymentTransaction.amount.value;
 
     var deviceSessionId = new cybersourceRestApi.Ptsv2paymentsDeviceInformation();
     deviceSessionId.fingerprintSessionId = session.privacy.dfID;
