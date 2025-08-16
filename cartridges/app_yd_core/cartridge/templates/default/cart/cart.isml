@@ -22,14 +22,6 @@
 			<div class="col-sm-4 text-center">
 				<h2 class="number-of-items">${Resource.msgf('label.number.items.in.cart','cart', null, pdict.numItems)}</h2>
 			</div>
-			<div class="col-sm-4 text-right hidden-xs-down">
-				<div>
-					<span>${Resource.msg('info.need.help','cart',null)}</span>
-					<span>
-						<a class="help-phone-number" href="tel:${Resource.msg('info.phone.number','common',null)}">${Resource.msg('info.phone.number','common',null)}</a>
-					</span>
-				</div>
-			</div>
 			<div class="cart-error-messaging cart-error">
 				<isif condition="${pdict.valid.error && pdict.items.length !== 0}">
 					<div class="alert alert-danger alert-dismissible valid-cart-error fade show" role="alert">
