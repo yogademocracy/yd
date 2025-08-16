@@ -2957,7 +2957,26 @@
                 <externally-managed-flag>false</externally-managed-flag>
                 <min-length>0</min-length>
             </attribute-definition>
+            <attribute-definition attribute-id="weight">
+                <display-name xml:lang="x-default">Weight Grams</display-name>
+                <type>double</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="weightTotal">
+                <display-name xml:lang="x-default">Weight Grams Total</display-name>
+                <type>double</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
         </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="weights">
+                <display-name xml:lang="x-default">Weights</display-name>
+                <attribute attribute-id="weight"/>
+                <attribute attribute-id="weightTotal"/>
+            </attribute-group>
+        </group-definitions>
     </type-extension>
 
     <type-extension type-id="ProductList">
